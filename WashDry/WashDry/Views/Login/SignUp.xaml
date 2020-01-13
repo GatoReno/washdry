@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WashDry.Views.Login.SignUp">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <Label Text="Registrate!"
+                 HorizontalOptions="CenterAndExpand" />
+            <Entry
+                Placeholder="Nombre"/>
+            <Entry
+                Placeholder="Telefono"/>
+
+            <Entry
+                Placeholder="Email"/>
+            <Entry
+                Placeholder="Contraseña"
+                x:Name="Pass"
+                IsPassword="True"/>
+            <Entry
+                Placeholder="Confirmar contraseña"
+                x:Name="Pass2"/>
+
+
+            <Button
+                Text="Registrarte"
+                x:Name="btnRegistDone"
+                Clicked="btnRegistDone_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
