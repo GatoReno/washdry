@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "compile": {
+          "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -67,6 +79,18 @@
     }
   },
   "libraries": {
+    "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+      "sha512": "F5NZg7mmsoSoglar9Z5rSnl+dB1H2OWL8H3BFe6c96S5TmHKT/L3fM18BZsvADuS4bs/FvKfe9uNoUxPl3tt5Q==",
+      "type": "package",
+      "path": "amporis.xamarin.forms.colorpicker/1.0.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512",
+        "amporis.xamarin.forms.colorpicker.nuspec",
+        "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -549,6 +573,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Amporis.Xamarin.Forms.ColorPicker >= 1.0.23",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.2.0",
       "Xamarin.Forms >= 4.2.0.709249"
@@ -562,11 +587,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj",
+      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj",
       "projectName": "WashDry",
-      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj",
+      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj",
       "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\obj\\",
+      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -598,6 +623,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Amporis.Xamarin.Forms.ColorPicker": {
+            "target": "Package",
+            "version": "[1.0.23, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

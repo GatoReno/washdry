@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
         "projectName": "WashDry.Android",
-        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
         "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\obj\\",
+        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj": {
-                "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj"
+              "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+                "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj"
               }
             }
           }
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\obj\\",
+        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -97,6 +97,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Amporis.Xamarin.Forms.ColorPicker": {
+              "target": "Package",
+              "version": "[1.0.23, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

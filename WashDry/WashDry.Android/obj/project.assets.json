@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.293080"
+        },
+        "compile": {
+          "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -804,6 +816,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Amporis.Xamarin.Forms.ColorPicker": "1.0.23",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.2.0.709249"
         },
@@ -817,6 +830,18 @@
     }
   },
   "libraries": {
+    "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+      "sha512": "F5NZg7mmsoSoglar9Z5rSnl+dB1H2OWL8H3BFe6c96S5TmHKT/L3fM18BZsvADuS4bs/FvKfe9uNoUxPl3tt5Q==",
+      "type": "package",
+      "path": "amporis.xamarin.forms.colorpicker/1.0.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512",
+        "amporis.xamarin.forms.colorpicker.nuspec",
+        "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -1917,11 +1942,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry.Android\\obj\\",
+      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1942,8 +1967,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\source\\repos\\WashDry\\WashDry\\WashDry\\WashDry.csproj"
+            "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }

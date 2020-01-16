@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                                       xmlns:cp="clr-namespace:Amporis.Xamarin.Forms.ColorPicker;assembly=Amporis.Xamarin.Forms.ColorPicker"
+             mc:Ignorable="d"
+             x:Class="WashDry.Views.RegistCar.RegistCarPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,10,10,10">
+                <Label Text="Tipo"></Label>
+
+
+                <Label Text="Marca"></Label>
+                <Entry x:Name="Marca" />
+
+                <Label Text="Modelo"></Label>
+                <Entry x:Name="Modelo" />
+
+                <Label Text="Año"></Label>
+                <DatePicker
+                x:Name="Anio"
+                Format="yyyy"
+                />
+
+                <Label Text="Placas"></Label>
+                <Entry x:Name="Placas" />
+
+
+
+
+                <Grid x:Name="gMain">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label Text="Eliga el color de su auto" Margin="0,0,0,10" />
+                        <cp:ColorPickerEntry WidthRequest="150" HorizontalOptions="Start" Color="{Binding EditedColor}" />
+
+                    </StackLayout>
+                </Grid>
+
+
+                <Button
+                    Text="Agregar"
+                    x:Name="AgregarAutobtn"
+                    Clicked="AgregarAutobtn_Clicked"/>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
