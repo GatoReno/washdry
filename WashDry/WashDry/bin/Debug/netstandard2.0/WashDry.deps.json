@@ -12,7 +12,8 @@
           "Amporis.Xamarin.Forms.ColorPicker": "1.0.23",
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.2.0.709249",
+          "Xamarin.Forms.Maps": "4.1.0.581479"
         },
         "runtime": {
           "WashDry.dll": {}
@@ -69,6 +70,17 @@
             "fileVersion": "4.2.0.75"
           }
         }
+      },
+      "Xamarin.Forms.Maps/4.1.0.581479": {
+        "dependencies": {
+          "Xamarin.Forms": "4.2.0.709249"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.1.0.287"
+          }
+        }
       }
     }
   },
@@ -119,6 +131,13 @@
       "sha512": "sha512-3DWqPSn9kSKJW5mwjmICV/+4IpPQrequEN1VXUhsF0i9KKnfj49jFk9VbJnT9o2aesJAk00NED67XPbSmbxKjw==",
       "path": "xamarin.forms/4.2.0.709249",
       "hashPath": "xamarin.forms.4.2.0.709249.nupkg.sha512"
+    },
+    "Xamarin.Forms.Maps/4.1.0.581479": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8k8avA+XWN8DtWAt7ICwAn9xZ9cykMBZ8z/U1NppDW1u2xjjI5VD93LZ72YghweDvCgdGDoBmz2x6jugXZ3y1w==",
+      "path": "xamarin.forms.maps/4.1.0.581479",
+      "hashPath": "xamarin.forms.maps.4.1.0.581479.nupkg.sha512"
     }
   }
 }
