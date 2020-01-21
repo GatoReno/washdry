@@ -9,12 +9,24 @@
     ".NETStandard,Version=v2.0/": {
       "WashDry/1.0.0": {
         "dependencies": {
+          "Amporis.Xamarin.Forms.ColorPicker": "1.0.23",
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.2.0.709249"
         },
         "runtime": {
           "WashDry.dll": {}
+        }
+      },
+      "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+        "dependencies": {
+          "Xamarin.Forms": "4.2.0.709249"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {
+            "assemblyVersion": "1.0.23.0",
+            "fileVersion": "1.0.23.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -65,6 +77,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F5NZg7mmsoSoglar9Z5rSnl+dB1H2OWL8H3BFe6c96S5TmHKT/L3fM18BZsvADuS4bs/FvKfe9uNoUxPl3tt5Q==",
+      "path": "amporis.xamarin.forms.colorpicker/1.0.23",
+      "hashPath": "amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

@@ -33,12 +33,26 @@
                 <Label x:Name="UserNamelb" />
             </StackLayout>
             <StackLayout x:Name="s2" BackgroundColor="#128C7E" Grid.Row="0" Grid.Column="1" BindingContext="{x:Reference Name=s2}">
-                <Button Text="Lavado al instante"  BackgroundColor="#075E54"  TextColor="Accent" />
-                <Button Text="Direccion" BackgroundColor="#075E54"  TextColor="Accent" />
-                <Button Text="Agregar auto" BackgroundColor="#075E54"  TextColor="Accent" />
-                <Button Text="Registro"  BackgroundColor="#075E54" TextColor="Accent"/>
+                <Button Text="Lavado al instante"  BackgroundColor="#075E54"  TextColor="Accent" 
+                        Clicked="Lavadobtn_Clicked"
+                        x:Name="Lavadobtn" />
+                <Button Text="Direccion" BackgroundColor="#075E54"  TextColor="Accent" 
+                        x:Name="Direccionbtn"
+                        Clicked="Direccionbtn_Clicked"
+                        />
+                <Button Text="Agregar auto" BackgroundColor="#075E54"  TextColor="Accent" 
+                        x:Name="AddCarbtn"
+                        Clicked="AddCarbtn_Clicked"
+                        />
+                <Button Text="Registro"  BackgroundColor="#075E54" TextColor="Accent"
+                        x:Name="Registbtn"
+                        Clicked="Registbtn_Clicked"
+                        />
                 
-                <Button Text="Agendar fecha"  BackgroundColor="#075E54"  TextColor="Accent" />
+                <Button Text="Agendar fecha"  BackgroundColor="#075E54"  TextColor="Accent"
+                        x:Name="Agendarbtn"
+                        Clicked="Agendarbtn_Clicked"
+                        />
 
             </StackLayout>
 

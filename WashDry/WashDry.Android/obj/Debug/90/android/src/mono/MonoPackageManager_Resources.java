@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "WashDry.Android.dll" comes first in this list. */
 		"WashDry.Android.dll",
+		"Amporis.Xamarin.Forms.ColorPicker.dll",
 		"FormsViewGroup.dll",
 		"WashDry.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WashDry.Views.Lavado;
+using WashDry.Views.RegistCar;
 using Xamarin.Forms;
 
 namespace WashDry
@@ -17,5 +19,30 @@ namespace WashDry
         {
             InitializeComponent();
          }
+
+        private async void Lavadobtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LavadoAlInstante());
+        }
+
+        private void Direccionbtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddCarbtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void Registbtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistCarPage());
+        }
+
+        private void Agendarbtn_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
