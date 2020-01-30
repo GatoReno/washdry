@@ -1,4 +1,8 @@
 FormsViewGroup
+Plugin.Connectivity
+Plugin.CurrentActivity
+Plugin.Geolocator
+Plugin.Permissions
 SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms

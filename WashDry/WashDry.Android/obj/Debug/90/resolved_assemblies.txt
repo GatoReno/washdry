@@ -4,6 +4,11 @@ C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.An
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\mscorlib.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Plugin.Connectivity.Abstractions.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Plugin.Connectivity.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Plugin.CurrentActivity.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Plugin.Geolocator.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\SkiaSharp.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\SkiaSharp.Views.Android.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\SkiaSharp.Views.Forms.dll
@@ -75,4 +80,6 @@ C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.An
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\System.Web.Services.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\System.Threading.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Mono.Security.dll

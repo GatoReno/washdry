@@ -1,5 +1,6 @@
 ﻿using System;
 using WashDry.Splash;
+using WashDry.Views.Lavado;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,10 +9,10 @@ namespace WashDry
     public partial class App : Application
     {
         public App()
-        {
+        {   
             InitializeComponent();
             MainPage = new NavigationPage(new SplashScreen());
-//            MainPage = new MainPage();
+           // MainPage = new Agendar();
         }
 
         protected override void OnStart()

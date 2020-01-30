@@ -3,33 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
              x:Class="WashDry.Views.Lavado.Agendar">
-    <ContentPage.Content >
-        <StackLayout VerticalOptions="Center" Margin="20,20,20,20">
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" Margin="10,10,10,10"  >
+
+            <Label Text="Agenda tu lavado!" HorizontalOptions="Center"  />
+            <maps:Map x:Name="Mapx" WidthRequest="300"  />
+
+        
 
 
-            <Label Text="Agenda tu lavado!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    
 
             <DatePicker MinimumDate="01/01/2020"
           
              x:Name="DatePickx" />
 
             <TimePicker x:Name="TimePickx" />
-            
+
             <Picker x:Name="direcciones"
                 Title="Tus direcciones"
                 >
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Calle 1 #123 Puebla</x:String>
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Calle 1 #123 Puebla</x:String>
                         <x:String>Calle 2 #123 Puebla</x:String>
                         <x:String>Calle 3 #123 Puebla</x:String>
                     </x:Array>
-                    </Picker.ItemsSource>   
+                </Picker.ItemsSource>
             </Picker>
-        </StackLayout>
-    </ContentPage.Content>
+
+        <Button
+            Text="Agendar"/>
+    </StackLayout>
+        </ScrollView>
+    
 </ContentPage>
