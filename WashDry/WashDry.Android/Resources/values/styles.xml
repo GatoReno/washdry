@@ -15,8 +15,8 @@
     <!-- colorPrimaryDark is used for the status bar -->
     <item name="colorPrimaryDark">#075E54</item>
     <!-- colorAccent is used as the default value for colorControlActivated
-         which is used to tint widgets -->
-    <item name="colorAccent">#DCF8C6</item>
+         which is used to tint widgets    #DCF8C6 -->
+    <item name="colorAccent">#128C7E</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>
@@ -25,6 +25,6 @@
   </style>
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
-    <item name="colorAccent">#DCF8C6</item>
+    <item name="colorAccent">#128C7E</item>
   </style>
 </resources>

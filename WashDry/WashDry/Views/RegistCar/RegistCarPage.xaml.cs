@@ -15,7 +15,7 @@ namespace WashDry.Views.RegistCar
         public RegistCarPage()
         {
             InitializeComponent();
-            gMain.BindingContext = this;
+           
         }
 
         private Color editedColor;
@@ -34,7 +34,9 @@ namespace WashDry.Views.RegistCar
 
         private void AgregarAutobtn_Clicked(object sender, EventArgs e)
         {
-
+             
         }
+
+     
     }
 }

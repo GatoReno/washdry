@@ -29,7 +29,7 @@ namespace WashDry.Views.RegistCar {
         private global::Xamarin.Forms.Entry Placas;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Grid gMain;
+        private global::Spillman.Xamarin.Forms.ColorPicker.ColorPickerView colorx;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button AgregarAutobtn;
@@ -41,7 +41,7 @@ namespace WashDry.Views.RegistCar {
             Modelo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Modelo");
             Anio = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "Anio");
             Placas = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Placas");
-            gMain = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "gMain");
+            colorx = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Spillman.Xamarin.Forms.ColorPicker.ColorPickerView>(this, "colorx");
             AgregarAutobtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AgregarAutobtn");
         }
     }

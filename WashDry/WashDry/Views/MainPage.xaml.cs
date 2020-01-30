@@ -40,9 +40,9 @@ namespace WashDry
             await Navigation.PushAsync(new RegistCarPage());
         }
 
-        private void Agendarbtn_Clicked(object sender, EventArgs e)
+        private async void Agendarbtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Agendar());
         }
     }
 }
