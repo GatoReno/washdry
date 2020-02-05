@@ -1107,3 +1107,4 @@ C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.An
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\res\drawable\iko_72.png
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Mono.Android.pdb

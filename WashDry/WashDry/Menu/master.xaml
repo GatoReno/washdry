@@ -7,22 +7,28 @@
              x:Class="WashDry.Menu.master" Title="Master">
     <ContentPage.Content>
         <StackLayout
+            BackgroundColor="Accent"
         Orientation="Vertical"
         >
+
+            <Image
+                Margin="10,20,10,10"
+                Source="iko_72.png" />
+
             <Button Text="Prospectos"
             x:Name="btnPrimera"
-             
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
             <Button Text="Visitas"
             x:Name="btnVisita"
-             
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
 
             <Button Text="Cerrar Sesion"
             x:Name="btnCerrarSes"
-             
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
         </StackLayout>
     </ContentPage.Content>
