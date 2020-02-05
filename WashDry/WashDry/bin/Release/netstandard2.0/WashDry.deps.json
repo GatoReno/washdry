@@ -9,12 +9,28 @@
     ".NETStandard,Version=v2.0/": {
       "WashDry/1.0.0": {
         "dependencies": {
+          "Amporis.Xamarin.Forms.ColorPicker": "1.0.23",
           "NETStandard.Library": "2.0.3",
+          "Spillman.Xamarin.Forms.ColorPicker": "1.0.3",
+          "Xam.Plugin.Connectivity": "3.2.0",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.2.0.709249",
+          "Xamarin.Forms.Maps": "4.1.0.581479"
         },
         "runtime": {
           "WashDry.dll": {}
+        }
+      },
+      "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+        "dependencies": {
+          "Xamarin.Forms": "4.2.0.709249"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {
+            "assemblyVersion": "1.0.23.0",
+            "fileVersion": "1.0.23.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -23,11 +39,67 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
+      "SkiaSharp/1.68.0": {
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/1.68.0": {
+        "dependencies": {
+          "SkiaSharp": "1.68.0",
+          "Xamarin.Forms": "4.2.0.709249"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.0.0"
+          }
+        }
+      },
+      "Spillman.Xamarin.Forms.ColorPicker/1.0.3": {
+        "dependencies": {
+          "SkiaSharp": "1.68.0",
+          "SkiaSharp.Views.Forms": "1.68.0",
+          "Xamarin.Forms": "4.2.0.709249"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Spillman.Xamarin.Forms.ColorPicker.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "runtime": {
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
             "assemblyVersion": "4.1.4.0",
             "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          },
+          "lib/netstandard1.0/Plugin.Connectivity.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -57,6 +129,17 @@
             "fileVersion": "4.2.0.75"
           }
         }
+      },
+      "Xamarin.Forms.Maps/4.1.0.581479": {
+        "dependencies": {
+          "Xamarin.Forms": "4.2.0.709249"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.1.0.287"
+          }
+        }
       }
     }
   },
@@ -65,6 +148,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F5NZg7mmsoSoglar9Z5rSnl+dB1H2OWL8H3BFe6c96S5TmHKT/L3fM18BZsvADuS4bs/FvKfe9uNoUxPl3tt5Q==",
+      "path": "amporis.xamarin.forms.colorpicker/1.0.23",
+      "hashPath": "amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -80,12 +170,47 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
+    "SkiaSharp/1.68.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
+      "path": "skiasharp/1.68.0",
+      "hashPath": "skiasharp.1.68.0.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Forms/1.68.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VqxL96ywOA9HUj1MAEO6yvSzg4Tk03ZHvvxQFhbUKgCodDxk9lIUxmBcssTZ/wYjOUn9R2Lf/VIpDMQZlhVh/A==",
+      "path": "skiasharp.views.forms/1.68.0",
+      "hashPath": "skiasharp.views.forms.1.68.0.nupkg.sha512"
+    },
+    "Spillman.Xamarin.Forms.ColorPicker/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SOir9ijLbBsb0xWLVgK7hiPht/KovTLn0XyuzVP/rZqHmFEs2xN9dv1l4572DUo9Xe9QtKLbGptnwFWhr3F0yQ==",
+      "path": "spillman.xamarin.forms.colorpicker/1.0.3",
+      "hashPath": "spillman.xamarin.forms.colorpicker.1.0.3.nupkg.sha512"
+    },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "hashPath": "xam.plugin.connectivity.3.2.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "hashPath": "xam.plugin.geolocator.4.5.0.6.nupkg.sha512"
     },
     "Xamarin.Essentials/1.2.0": {
       "type": "package",
@@ -100,6 +225,13 @@
       "sha512": "sha512-3DWqPSn9kSKJW5mwjmICV/+4IpPQrequEN1VXUhsF0i9KKnfj49jFk9VbJnT9o2aesJAk00NED67XPbSmbxKjw==",
       "path": "xamarin.forms/4.2.0.709249",
       "hashPath": "xamarin.forms.4.2.0.709249.nupkg.sha512"
+    },
+    "Xamarin.Forms.Maps/4.1.0.581479": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8k8avA+XWN8DtWAt7ICwAn9xZ9cykMBZ8z/U1NppDW1u2xjjI5VD93LZ72YghweDvCgdGDoBmz2x6jugXZ3y1w==",
+      "path": "xamarin.forms.maps/4.1.0.581479",
+      "hashPath": "xamarin.forms.maps.4.1.0.581479.nupkg.sha512"
     }
   }
 }

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WashDry.Menu.detail">
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,0,0">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" x:Name="firstRow" />
+                    <RowDefinition Height="3*"   />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"  />
+                    <ColumnDefinition Width="100" />
+
+
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout 
+                Padding="5,0,5,0"
+                x:Name="s1"  
+                Grid.Row="0" Grid.Column="0" 
+                BindingContext="{x:Reference Name=s1}"  >
+
+                    <Label x:Name="Msn" />
+                    <Image
+                    Source="iko.png"
+                    x:Name="ImgProfile">
+                    </Image>
+                    <Label x:Name="UserNamelb" Text="Nombre de usuario" />
+                </StackLayout>
+                <StackLayout x:Name="s2" BackgroundColor="#128C7E" Grid.Row="0" Grid.Column="1" BindingContext="{x:Reference Name=s2}">
+                    <Button Text="Lavado al instante"  BackgroundColor="#075E54"  TextColor="#DCF8C6" 
+                        Clicked="Lavadobtn_Clicked"
+                        x:Name="Lavadobtn" />
+                    <Button Text="Direccion" BackgroundColor="#075E54"  TextColor="#DCF8C6" 
+                        x:Name="Direccionbtn"
+                        Clicked="Direccionbtn_Clicked"
+                        />
+                    <Button Text="Agregar auto" BackgroundColor="#075E54"  TextColor="#DCF8C6" 
+                        x:Name="AddCarbtn"
+                        Clicked="AddCarbtn_Clicked"
+                        />
+                    <Button Text="Registro"  BackgroundColor="#075E54" TextColor="#DCF8C6"
+                        x:Name="Registbtn"
+                        Clicked="Registbtn_Clicked"
+                        />
+
+                    <Button Text="Agendar fecha"  BackgroundColor="#075E54"  TextColor="#DCF8C6"
+                        x:Name="Agendarbtn"
+                        Clicked="Agendarbtn_Clicked"
+                        />
+
+                </StackLayout>
+
+                <StackLayout x:Name="s3" BackgroundColor="#DCF8C6"  Grid.Row="1"  
+                     Grid.Column="0"  
+                     Grid.ColumnSpan="2"  BindingContext="{x:Reference Name=s3}">
+                    <Label Text="  Aqui va mapa  " Grid.ColumnSpan="1"  TextColor="Black"/>
+                    <!--
+                    <maps:Map x:Name="Mapx" WidthRequest="300" Grid.Row="1"  
+                     Grid.Column="0"  
+                     Grid.ColumnSpan="2"  />-->
+
+                </StackLayout>
+
+
+
+                <StackLayout x:Name="s5" BackgroundColor="Black" Grid.Row="2" Grid.Column="0" BindingContext="{x:Reference Name=s5}">
+                    <Label Text="    "  TextColor="Accent"/>
+                    <Label Text="   " />
+                    <Label Text="   " />
+                </StackLayout>
+
+                <StackLayout x:Name="s6" BackgroundColor="Black" Grid.Row="2" Grid.Column="1" BindingContext="{x:Reference Name=s6}">
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

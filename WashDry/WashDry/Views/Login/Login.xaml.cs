@@ -19,7 +19,7 @@ namespace WashDry.Views.Login
 
         private void btnRegistDone_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new MainPage());
+            Application.Current.MainPage =  new MainPage();
         }
     }
 }

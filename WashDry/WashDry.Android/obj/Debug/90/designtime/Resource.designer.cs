@@ -5915,19 +5915,19 @@ namespace WashDry.Droid
 			public const int googleg_standard_color_18 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int ic_launcher = 2131165297;
+			public const int ic_mtrl_chip_checked_black = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int ic_mtrl_chip_checked_black = 2131165298;
+			public const int ic_mtrl_chip_checked_circle = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int ic_mtrl_chip_checked_circle = 2131165299;
+			public const int ic_mtrl_chip_close_circle = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int ic_mtrl_chip_close_circle = 2131165300;
+			public const int iko = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int iko = 2131165301;
+			public const int iko_72 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
 			public const int mtrl_snackbar_background = 2131165302;
