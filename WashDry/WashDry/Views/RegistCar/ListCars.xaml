@@ -28,7 +28,7 @@
                         >
                     <x:Array Type="{x:Type x:String}">
                         <x:String>BMW Serie 3 330iA Sport Line Plus</x:String>
-
+                        <x:String>BMW Serie 2 330iA Sport Line Plus</x:String>
                     </x:Array>
                 </ListView.ItemsSource>
             </ListView>

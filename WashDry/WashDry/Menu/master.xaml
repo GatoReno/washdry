@@ -15,19 +15,35 @@
                 Margin="10,20,10,10"
                 Source="iko_72.png" />
 
-            <Button Text="Prospectos"
-            x:Name="btnPrimera"
+            <Label
+                HorizontalOptions="Center"
+                Text="Nombre / Mail de usuario " />
+            <Button Text="estado de servicio"
+            x:Name="btnedoserv"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-            <Button Text="Visitas"
-            x:Name="btnVisita"
+            <Button Text="mis autos"
+            x:Name="btnautos"
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
+                    Clicked="btnautos_Clicked"
+           />
+            
+            
+
+
+            <Button Text="lavados"
+            x:Name="btnlavos"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
+            <Button Text="configuracion"
+            x:Name="btnconfiguracion"
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
+           />
 
-            <Button Text="Cerrar Sesion"
-            x:Name="btnCerrarSes"
+            <Button Text="compartir codigo"
+            x:Name="btncompartircod"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
         </StackLayout>
