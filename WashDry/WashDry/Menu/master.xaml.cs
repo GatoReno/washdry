@@ -17,10 +17,13 @@ namespace WashDry.Menu
             InitializeComponent();
         }
 
-        private async void btnautos_Clicked(object sender, EventArgs e)
+        private async   void btnautos_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegistCarPage());
 
+            //await Navigation.PushAsync(new NavigationPage(new ListCars()));
+            await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ListCars());
+            
+            //await Navigation.PushModalAsync(new NavigationPage (new ListCars())); //esto fue muy util
         }
     }
 }

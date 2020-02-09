@@ -64,6 +64,7 @@ namespace WashDry.Menu
         private async void Lavadobtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LavadoAlInstante());
+            //   await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new LavadoAlInstante());
         }
 
         private void Direccionbtn_Clicked(object sender, EventArgs e)
@@ -71,9 +72,9 @@ namespace WashDry.Menu
 
         }
 
-        private void AddCarbtn_Clicked(object sender, EventArgs e)
+        private async void AddCarbtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new RegistCarPage());
         }
 
         private async void Registbtn_Clicked(object sender, EventArgs e)
@@ -84,6 +85,11 @@ namespace WashDry.Menu
         private async void Agendarbtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Agendar());
+        }
+
+        private async void CarListbtrn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListCars());
         }
     }
 }

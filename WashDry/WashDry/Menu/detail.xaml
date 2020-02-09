@@ -15,7 +15,8 @@
                  HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6" 
                 WidthRequest="200"
                 Text="selecionar auto"
-                
+                x:Name="CarListbtrn"
+                Clicked="CarListbtrn_Clicked"
                 />
             <Button
                  HorizontalOptions="CenterAndExpand"  WidthRequest="200"
