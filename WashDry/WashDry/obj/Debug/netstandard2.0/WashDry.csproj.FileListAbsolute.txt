@@ -61,3 +61,5 @@ D:\chmix\projects\proj\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.
 D:\chmix\projects\proj\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\ref\WashDry.dll
 D:\chmix\projects\proj\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.pdb
 D:\chmix\projects\proj\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.csprojAssemblyReference.cache
+D:\chmix\projects\proj\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\InfoLavado.xaml.g.cs
+D:\chmix\projects\proj\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\ListLavado.xaml.g.cs

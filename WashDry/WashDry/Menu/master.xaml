@@ -34,6 +34,7 @@
 
             <Button Text="lavados"
             x:Name="btnlavos"
+                    Clicked="btnlavos_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 

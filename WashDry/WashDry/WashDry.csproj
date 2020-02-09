@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <UserSecretsId>fe7c13b8-f683-43c2-bef5-6efb7bfba2b1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +29,13 @@
     <EmbeddedResource Update="Views\Lavado\Agendar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Lavado\InfoLavado.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Lavado\LavadoAlInstante.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Lavado\ListLavado.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Login\FirstPage.xaml">
@@ -49,5 +56,10 @@
     <EmbeddedResource Update="Views\RegistCar\RegistCarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="FisrtTimeView\" />
   </ItemGroup>
 </Project>

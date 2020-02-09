@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WashDry.Views.Lavado.ListLavado">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,20">
+            <Label
+                HorizontalOptions="Center"
+                Text="Lavados Registrados"
+                />
+            <Label 
+                   x:Name="CatorT"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ActivityIndicator
+                x:Name="Cator"
+                IsRunning="true"
+                IsVisible="False"
+                />
+
+            <ListView 
+                x:Name="ListLavados"
+                   ItemTapped="ListLavados_ItemTapped"
+                    >
+                <ListView.ItemsSource                        
+                        >
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>20-10-19 18:35 pm direccion servicio express $80 </x:String>
+                        <x:String>20-9-21 08:15 am direccion servicio express $80</x:String>
+                        <x:String>20-9-14 08:51 am direccion servicio express $70</x:String>
+
+                        <x:String>20-9-11 15:35 am direccion servicio express $80</x:String>
+
+                        <x:String>20-8-19 14:52 pm direccion servicio express $40</x:String>
+
+                        <x:String>20-8-19 13:22 am direccion servicio express $80</x:String>
+
+                        <x:String>20-6-19 20:35 pm direccion servicio express $80</x:String>
+
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

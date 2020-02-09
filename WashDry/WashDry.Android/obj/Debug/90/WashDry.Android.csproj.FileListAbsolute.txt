@@ -1664,3 +1664,4 @@ D:\chmix\projects\proj\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_Conve
 D:\chmix\projects\proj\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\chmix\projects\proj\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\chmix\projects\proj\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\chmix\projects\proj\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
