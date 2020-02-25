@@ -36,10 +36,23 @@
                 Clicked="AddCarbtn_Clicked"
                 />
 
-            
+                <Button
+                    HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6"  WidthRequest="200"
+                        Text="Token Stripe"
+                        x:Name="StripeTokenBtn"
+                    Clicked="StripeTokenBtn_Clicked"
+                    
+                    />
 
 
-        </StackLayout>
+                <Label
+                     HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6"  WidthRequest="200"
+                         
+                        x:Name="StripeLbl" />
+
+
+
+            </StackLayout>
             </ScrollView >
     </ContentPage.Content>
 </ContentPage>

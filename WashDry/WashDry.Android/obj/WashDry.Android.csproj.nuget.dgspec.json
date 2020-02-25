@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
+    "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
   },
   "projects": {
-    "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
+    "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "projectUniqueName": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
         "projectName": "WashDry.Android",
-        "projectPath": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
-        "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-        "outputPath": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry.Android\\obj\\",
+        "projectPath": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "packagesPath": "C:\\Users\\edplu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edplu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-                "projectPath": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+              "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+                "projectPath": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry\\WashDry.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[34.25.0, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.1, )"
@@ -58,20 +62,20 @@
         }
       }
     },
-    "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-        "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-        "outputPath": "D:\\chmix\\projects\\proj\\washdry\\WashDry\\WashDry\\obj\\",
+        "projectPath": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "packagesPath": "C:\\Users\\edplu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\edplu\\Desktop\\eduhijo\\x1\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edplu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -110,6 +114,10 @@
               "target": "Package",
               "version": "[1.0.3, )"
             },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[34.25.0, )"
+            },
             "Xam.Plugin.Connectivity": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -141,7 +149,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "D:\\Programas\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

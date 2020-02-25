@@ -1,5 +1,6 @@
 ﻿using Plugin.Connectivity;
 using Plugin.Geolocator;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -90,6 +91,46 @@ namespace WashDry.Menu
         private async void CarListbtrn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ListCars());
+        }
+        private TokenService Tokenservice;
+        private Token stripeToken;
+        [Obsolete]
+        private void StripeTokenBtn_Clicked(object sender, EventArgs e)
+        {
+
+            try
+            {
+                StripeConfiguration.SetApiKey("pk_test_HQOqIXmo6C3MyZ2h9bBAcWKs00ngt4dRKC");
+                var service = new ChargeService();
+                var Tokenoptions = new TokenCreateOptions
+                {
+                    Card = new CreditCardOptions
+                    {
+                        Number = "4242424242424242",
+                        ExpYear = 22,
+                        ExpMonth = 11,
+                        Cvc = "111",
+                        Name = "Sonu Sharma",
+                        AddressLine1 = "18",
+                        AddressLine2 = "SpringBoard",
+                        AddressCity = "Gurgoan",
+                        AddressZip = "284005",
+                        AddressState = "Haryana",
+                        AddressCountry = "India",
+                        Currency = "inr",
+                    }
+                };
+
+                Tokenservice = new TokenService();
+                stripeToken = Tokenservice.Create(Tokenoptions);
+                StripeLbl.Text = stripeToken.Id;
+            }
+            catch (Exception ex)
+            {
+                StripeLbl.Text = ex.ToString() ;
+
+            }
+            
         }
     }
 }
