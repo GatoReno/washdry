@@ -29,6 +29,13 @@
                 Text="Registrarte"
                 x:Name="btnRegistDone"
                 Clicked="btnRegistDone_Clicked"/>
+
+            <Button
+                Text="Registrarte con google"
+                BackgroundColor="Red"
+                TextColor="White"
+                x:Name="btngoogle"
+                Clicked="btngoogle_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

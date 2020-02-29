@@ -22,5 +22,10 @@ namespace WashDry.Views.Login
             Application.Current.MainPage = new MainPage();
 
         }
+
+        private void btngoogle_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
