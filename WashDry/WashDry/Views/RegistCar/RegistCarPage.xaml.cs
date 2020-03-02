@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +39,28 @@ namespace WashDry.Views.RegistCar
              
         }
 
-     
+        private async void btnCamara_Clicked(object sender, EventArgs e)
+        {
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            {
+                await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
+                return;
+            }
+            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+            {
+                Directory = "Sample",
+                Name = "auto.jpg"
+            });
+            if (file == null)
+                return;
+            // await DisplayAlert("File Location Error", "Error parece que hubo un problema con la camara, confirme espacio en memoria o notifique a sistemas", "OK");
+
+            imgx.Source = ImageSource.FromStream(() => {
+                var stream = file.GetStream();
+                file.Dispose();
+                return stream;
+
+            });
+        }
     }
 }

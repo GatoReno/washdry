@@ -35,7 +35,17 @@
                 <Entry x:Name="Placas" />
 
 
+                <Button x:Name="btnCamara" 
+                    Text="Foto de vivienda " 
+             
+              Clicked="btnCamara_Clicked"
+                     />
 
+                <Image
+                    x:Name="imgx"
+                    WidthRequest="200"
+                   
+                    />
 
                 <colorPicker:ColorPickerView  x:Name="colorx"/>
 

@@ -2,6 +2,7 @@ FormsViewGroup
 Plugin.Connectivity
 Plugin.CurrentActivity
 Plugin.Geolocator
+Plugin.Media
 Plugin.Permissions
 SkiaSharp
 SkiaSharp.Views.Android
