@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WashDry.Views;
 using WashDry.Views.Lavado;
 using WashDry.Views.RegistCar;
 using Xamarin.Forms;
@@ -29,8 +30,15 @@ namespace WashDry.Menu
 
         private async void btnlavos_Clicked(object sender, EventArgs e)
         {
-            await((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ListLavado());
+            await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ListLavado());
 
+        }
+
+        private async void btnconfiguracion_Clicked(object sender, EventArgs e)
+        {
+            
+
+            await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new InfoUser());
         }
     }
 }

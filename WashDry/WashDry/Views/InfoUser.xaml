@@ -39,22 +39,22 @@
                     <Label x:Name="UserNamelb" Text="Nombre de usuario" />
                 </StackLayout>
                 <StackLayout x:Name="s2" BackgroundColor="#128C7E" Grid.Row="0" Grid.Column="1" BindingContext="{x:Reference Name=s2}">
-                    <Button Text="Lavado al instante"  BackgroundColor="#075E54"  TextColor="#DCF8C6" 
+                    <Button Text="Lavado al instante"  BackgroundColor="#075E54"  TextColor="#DCF8C6"  FontSize="Small"
                     
                         x:Name="Lavadobtn" />
                     <Button Text="Direccion" BackgroundColor="#075E54"  TextColor="#DCF8C6" 
-                        x:Name="Direccionbtn"
-                        
+                        x:Name="Direccionbtn" 
+                        FontSize="Small"
                         />
                     <Button Text="Agregar auto" BackgroundColor="#075E54"  TextColor="#DCF8C6" 
-                        x:Name="AddCarbtn"
+                        x:Name="AddCarbtn" FontSize="Small"
                          />
                     <Button Text="Registro"  BackgroundColor="#075E54" TextColor="#DCF8C6"
-                        x:Name="Registbtn"
+                        x:Name="Registbtn" FontSize="Small"
                          />
 
-                    <Button Text="Agendar fecha"  BackgroundColor="#075E54"  TextColor="#DCF8C6"
-                        x:Name="Agendarbtn"
+                    <Button Text="Cerrar session"  BackgroundColor="#075E54"  TextColor="#DCF8C6"
+                        x:Name="Agendarbtn" FontSize="Small"
                          />
 
                 </StackLayout>
@@ -62,7 +62,7 @@
                 <StackLayout x:Name="s3" BackgroundColor="#DCF8C6"  Grid.Row="1"  
                      Grid.Column="0"  
                      Grid.ColumnSpan="2"  BindingContext="{x:Reference Name=s3}">
-                    <Label Text="  Aqui va mapa  " Grid.ColumnSpan="1"  TextColor="Black"/>
+                    <Label Text="  Info de lavados  " Grid.ColumnSpan="1"  TextColor="Black"/>
                     <!--
                     <maps:Map x:Name="Mapx" WidthRequest="300" Grid.Row="1"  
                      Grid.Column="0"  

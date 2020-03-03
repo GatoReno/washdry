@@ -39,6 +39,7 @@
            />
 
             <Button Text="configuracion"
+                    Clicked="btnconfiguracion_Clicked"
             x:Name="btnconfiguracion"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
