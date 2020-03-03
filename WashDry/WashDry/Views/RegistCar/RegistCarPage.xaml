@@ -16,30 +16,44 @@
                  >
         <ScrollView>
             <StackLayout Margin="10,10,10,10">
-                <Label Text="Tipo"></Label>
-
+                <Label
+                    IsVisible="true"
+                    Text="10101"
+                    x:Name="iduser"></Label>
+ 
 
                 <Label Text="Marca"></Label>
-                <Entry x:Name="Marca" />
+                <Entry x:Name="Marca_" />
+
 
                 <Label Text="Modelo"></Label>
                 <Entry x:Name="Modelo" />
 
                 <Label Text="Año"></Label>
                 <DatePicker
-                x:Name="Anio"
+                x:Name="Ann_"
                 Format="yyyy"
                 />
 
                 <Label Text="Placas"></Label>
                 <Entry x:Name="Placas" />
 
+     
 
-                <Button x:Name="btnCamara" 
-                    Text="Foto de vivienda " 
+           
+
+
+                <Button x:Name="btnCamara"
+                    Text="Tomar foto"
              
               Clicked="btnCamara_Clicked"
                      />
+
+                <Button x:Name="btnGal"
+                    Text="Galeria "
+                    Clicked="btnGal_Clicked"
+                     />
+
 
                 <Image
                     x:Name="imgx"
@@ -52,7 +66,7 @@
                 <Button
                     Text="Agregar"
                     x:Name="AgregarAutobtn"
-                    
+                   
                     Clicked="AgregarAutobtn_Clicked"
                     />
             </StackLayout>

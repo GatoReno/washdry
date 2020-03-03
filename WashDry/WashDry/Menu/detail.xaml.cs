@@ -142,15 +142,15 @@ namespace WashDry.Menu
                 {
       
                     case System.Net.HttpStatusCode.BadRequest:
-                        await DisplayAlert("error", "yeah status 400 Unauthorized", "ok");
+                        await DisplayAlert("error", "error status 400 Unauthorized", "ok");
                         break;
  
                     case System.Net.HttpStatusCode.Forbidden:
-                        await DisplayAlert("error", "yeah status 403  ", "ok");
+                        await DisplayAlert("error", "error status 403  ", "ok");
                         break;
                     
                     case System.Net.HttpStatusCode.NotFound:
-                        await DisplayAlert("error", "yeah status 404  ", "ok");
+                        await DisplayAlert("error", "error status 404  ", "ok");
                         break;
                      
                     case System.Net.HttpStatusCode.OK:
@@ -160,10 +160,10 @@ namespace WashDry.Menu
                   
            
                     case System.Net.HttpStatusCode.RequestEntityTooLarge:
-                        await DisplayAlert("error", "yeah status 413  ", "ok");
+                        await DisplayAlert("error", "error status 413  ", "ok");
                         break;
                     case System.Net.HttpStatusCode.RequestTimeout:
-                        await DisplayAlert("error", "yeah status 408  ", "ok");
+                        await DisplayAlert("error", "error status 408  ", "ok");
                         break;
                   
                    

@@ -3058,11 +3058,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry.Android\\obj\\",
+      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3083,8 +3083,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+            "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }
