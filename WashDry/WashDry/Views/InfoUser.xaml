@@ -44,6 +44,7 @@
                         x:Name="Lavadobtn" />
                     <Button Text="Direccion" BackgroundColor="#075E54"  TextColor="#DCF8C6" 
                         x:Name="Direccionbtn" 
+                            Clicked="Direccionbtn_Clicked"
                         FontSize="Small"
                         />
                     <Button Text="Agregar auto" BackgroundColor="#075E54"  TextColor="#DCF8C6" 

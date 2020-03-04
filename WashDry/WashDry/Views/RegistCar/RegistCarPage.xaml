@@ -16,26 +16,38 @@
                  >
         <ScrollView>
             <StackLayout Margin="10,10,10,10">
+
+                <ActivityIndicator
+                    x:Name="Cator"
+                    IsVisible="False"
+                    IsRunning="False"/>
+
                 <Label
                     IsVisible="true"
+                    Text="Agregar tu auto"
+                    HorizontalOptions="Center"
+                    x:Name="lblError"></Label>
+                <Label
+                
                     Text="10101"
+                    IsVisible="false"
                     x:Name="iduser"></Label>
  
 
-                <Label Text="Marca"></Label>
+                <Label Text="Marca" x:Name="lblmarca"></Label>
                 <Entry x:Name="Marca_" />
 
 
-                <Label Text="Modelo"></Label>
+                <Label Text="Modelo" x:Name="lblmodelo"></Label>
                 <Entry x:Name="Modelo" />
 
-                <Label Text="Año"></Label>
+                <Label Text="Año" x:Name="lblamio"></Label>
                 <DatePicker
                 x:Name="Ann_"
                 Format="yyyy"
                 />
 
-                <Label Text="Placas"></Label>
+                <Label x:Name="lblPlacas" Text="Placas"></Label>
                 <Entry x:Name="Placas" />
 
      

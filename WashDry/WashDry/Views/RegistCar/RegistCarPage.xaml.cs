@@ -44,6 +44,22 @@ namespace WashDry.Views.RegistCar
         private string idx;
         private async void AgregarAutobtn_Clicked(object sender, EventArgs e)
         {
+            Cator.IsRunning = true;
+            Cator.IsVisible = true;
+            lblmodelo.IsVisible = false;
+            btnCamara.IsVisible = false;
+            btnGal.IsVisible = false;
+            imgx.IsVisible = false;
+            Marca_.IsVisible = false;
+            Modelo.IsVisible = false;
+            Placas.IsVisible = false;
+            Ann_.IsVisible = false;
+            lblamio.IsVisible = false;
+            lblmarca.IsVisible = false;
+            colorx.IsVisible = false;
+            lblPlacas.IsVisible = false;
+
+            lblError.Text = "Agregando su auto";
 
             try
             {
@@ -71,13 +87,13 @@ namespace WashDry.Views.RegistCar
 
 
                 var content = new MultipartFormDataContent();
-                content.Add(new StreamContent(_image.GetStream()), "\"file\"", $"\"{_image.Path}\"");
-                content.Add(id_usuario);
-                content.Add(placas);
-                content.Add(modelo);
-                content.Add(ann);
-                content.Add(marca);
-                content.Add(hex);
+                content.Add(new StreamContent(_image.GetStream()), "imagen" );
+                content.Add(id_usuario, "id_usuario");
+                content.Add(placas, "placas");
+                content.Add(modelo,"modelo");
+                content.Add(ann,"ann");
+                content.Add(marca,"marca");
+                content.Add(hex,"color");
 
                 // puedo agregar a este content puro formato de texto ?
                 // debo mandar un id y otros datos a mi servidor que espera el archivo
@@ -85,17 +101,94 @@ namespace WashDry.Views.RegistCar
 
                     // ... subir a internet
                 var httpClient = new System.Net.Http.HttpClient();
+                
                 var url = "http://www.washdryapp.com/app/public/auto/guardar";
+                
                 var responseMsg = await httpClient.PostAsync(url, content);
                 // ... subir a internet
-                var remotePath = await responseMsg.Content.ReadAsStringAsync();
+              
+
+                switch (responseMsg.StatusCode)
+                {
+
+                    case System.Net.HttpStatusCode.InternalServerError:
+                        await DisplayAlert("error", "error status 500 InternalServerError", "ok");
+                        btnCamara.IsVisible = true;
+                        btnGal.IsVisible = true;
+                        lblmarca.IsVisible = true;
+                        lblmodelo.IsVisible = true;
+                        imgx.IsVisible = true;
+                        Marca_.IsVisible = true;
+                        Modelo.IsVisible = true;
+                        Placas.IsVisible = true;
+                        lblamio.IsVisible = true;
+                        Ann_.IsVisible = true;
+                        lblPlacas.IsVisible = true;
+                        colorx.IsVisible = true;
+                        lblError.Text = "hubo un error status 500 ";
+                        break;
+                    case System.Net.HttpStatusCode.BadRequest:
+                        lblError.Text = "hubo un error status 400 ";
+                        await DisplayAlert("error", "error status 400 Unauthorized", "ok");
+                        break;
+
+                    case System.Net.HttpStatusCode.Forbidden:
+                        await DisplayAlert("error", "error status 403  ", "ok");
+                        lblError.Text = "hubo un error status 403 ";
+                        break;
+
+                    case System.Net.HttpStatusCode.NotFound:
+                        await DisplayAlert("error", "error status 404  ", "ok");
+                        lblError.Text = "hubo un error status 404 ";
+                        break;
+
+                    case System.Net.HttpStatusCode.OK:
+
+                        Cator.IsRunning = false;
+                        Cator.IsVisible = false;
+                        string xjson =  await responseMsg.Content.ReadAsStringAsync();
+                        await DisplayAlert("error", "yeah status 200 : " + xjson, "ok");
+
+                        btnCamara.IsVisible = true;
+                        btnGal.IsVisible = true;
+                        lblmarca.IsVisible = true;
+                        lblmodelo.IsVisible = true;
+                        imgx.IsVisible = true;
+                        Marca_.IsVisible = true;
+                        Modelo.IsVisible = true;
+                        Placas.IsVisible = true;
+                        lblamio.IsVisible = true;
+                        Ann_.IsVisible = true;
+                        colorx.IsVisible = true;
+
+                        break;
+
+
+                    case System.Net.HttpStatusCode.RequestEntityTooLarge:
+                        await DisplayAlert("error", "error status 413  ", "ok");
+                        lblError.Text = "hubo un error status 413 ";
+                        break;
+                    case System.Net.HttpStatusCode.RequestTimeout:
+                        await DisplayAlert("error", "error status 408  ", "ok");
+                        lblError.Text = "hubo un error status 408 ";
+                        break;
+
+
+
+                    case System.Net.HttpStatusCode.Unauthorized:
+                        await DisplayAlert("error", "yeah status 401 Unauthorized", "ok");
+                        break;
+
+                }
             }
             catch (Exception ex)
             {
 
                 await DisplayAlert("Error", "Error : "+ex.ToString(), "OK");
+                Cator.IsRunning = false;
+                Cator.IsVisible = false;
             }
-
+  
         }
 
         private async void btnCamara_Clicked(object sender, EventArgs e)
