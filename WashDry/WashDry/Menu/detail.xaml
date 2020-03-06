@@ -5,39 +5,46 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
-             x:Class="WashDry.Menu.detail">
+             x:Class="WashDry.Menu.detail"
+                  BackgroundColor="#225374">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="20,40,20,20">
+            <StackLayout Margin="20,40,20,20"
+                    
+                         >
              
 
             <Button
-                 HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6" 
+                 HorizontalOptions="CenterAndExpand"  BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"
                 Text="selecionar auto"
                 x:Name="CarListbtrn"
                 Clicked="CarListbtrn_Clicked"
                 />
             <Button
-                 HorizontalOptions="CenterAndExpand"  WidthRequest="200"
+                 HorizontalOptions="CenterAndExpand"   
                 Text="agendar fecha"
                 Clicked="Agendarbtn_Clicked"
-                 BackgroundColor="#075E54"  TextColor="#DCF8C6" 
+                 BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"
                 />
             <Button
-                 HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6"   WidthRequest="200"
+                 HorizontalOptions="CenterAndExpand"    BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"
                 Text="lavado al instante"
                 Clicked="Lavadobtn_Clicked"
                 />
 
             <Button
-                 HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6"   WidthRequest="200"
+                 HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"
                 Text="Agregar Auto"
                 Clicked="AddCarbtn_Clicked"
                 />
 
                 <Button
-                    HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6"  WidthRequest="200"
+                    HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"
                         Text="Token Stripe"
                         x:Name="StripeTokenBtn"
                     Clicked="StripeTokenBtn_Clicked"
@@ -46,7 +53,8 @@
 
 
                 <Label
-                     HorizontalOptions="CenterAndExpand"  BackgroundColor="#075E54"  TextColor="#DCF8C6"  WidthRequest="200"
+                     HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"
                          
                         x:Name="StripeLbl" />
 

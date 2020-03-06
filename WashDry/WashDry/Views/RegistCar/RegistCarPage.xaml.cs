@@ -12,6 +12,7 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System.Net.Http;
 using Spillman.Xamarin.Forms.ColorPicker;
+using System.Net.Http.Headers;
 
 namespace WashDry.Views.RegistCar
 {
@@ -85,29 +86,28 @@ namespace WashDry.Views.RegistCar
                 StringContent ann = new StringContent(annx);
                 StringContent marca = new StringContent(marcax);
 
+            
 
                 var content = new MultipartFormDataContent();
-                content.Add(new StreamContent(_image.GetStream()), "imagen" );
-                content.Add(id_usuario, "id_usuario");
-                content.Add(placas, "placas");
-                content.Add(modelo,"modelo");
-                content.Add(ann,"ann");
-                content.Add(marca,"marca");
-                content.Add(hex,"color");
+                content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/octet-stream");
+                content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "file",
+                    FileName = "my_uploaded_image.jpg"
+                };
 
-                // puedo agregar a este content puro formato de texto ?
-                // debo mandar un id y otros datos a mi servidor que espera el archivo
-                // y los otros strings
-
-                    // ... subir a internet
-                var httpClient = new System.Net.Http.HttpClient();
-                
-                var url = "http://www.washdryapp.com/app/public/auto/guardar";
-                
+                content.Add(new StreamContent(_image.GetStream()),"\"image\"",$"\"{_image.Path}\"");
+                content.Add(id_usuario , "id_usuario");
+                content.Add(placas , "placas");
+                content.Add(modelo ,"modelo");
+                content.Add(ann ,"ann");
+                content.Add(marca ,"marca");
+                content.Add(hex ,"color");
+    
+                var httpClient = new System.Net.Http.HttpClient();                
+                var url = "http://www.washdryapp.com/app/public/auto/guardar";                
                 var responseMsg = await httpClient.PostAsync(url, content);
-                // ... subir a internet
               
-
                 switch (responseMsg.StatusCode)
                 {
 
@@ -126,20 +126,26 @@ namespace WashDry.Views.RegistCar
                         lblPlacas.IsVisible = true;
                         colorx.IsVisible = true;
                         lblError.Text = "hubo un error status 500 ";
+                        Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
                     case System.Net.HttpStatusCode.BadRequest:
                         lblError.Text = "hubo un error status 400 ";
                         await DisplayAlert("error", "error status 400 Unauthorized", "ok");
+                        Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
 
                     case System.Net.HttpStatusCode.Forbidden:
                         await DisplayAlert("error", "error status 403  ", "ok");
-                        lblError.Text = "hubo un error status 403 ";
+                        lblError.Text = "hubo un error status 403 "; Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
 
                     case System.Net.HttpStatusCode.NotFound:
                         await DisplayAlert("error", "error status 404  ", "ok");
-                        lblError.Text = "hubo un error status 404 ";
+                        lblError.Text = "hubo un error status 404 "; Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
 
                     case System.Net.HttpStatusCode.OK:
@@ -167,16 +173,22 @@ namespace WashDry.Views.RegistCar
                     case System.Net.HttpStatusCode.RequestEntityTooLarge:
                         await DisplayAlert("error", "error status 413  ", "ok");
                         lblError.Text = "hubo un error status 413 ";
+                        Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
                     case System.Net.HttpStatusCode.RequestTimeout:
                         await DisplayAlert("error", "error status 408  ", "ok");
                         lblError.Text = "hubo un error status 408 ";
+                        Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
 
 
 
                     case System.Net.HttpStatusCode.Unauthorized:
                         await DisplayAlert("error", "yeah status 401 Unauthorized", "ok");
+                        Cator.IsRunning = false;
+                        Cator.IsVisible = false;
                         break;
 
                 }

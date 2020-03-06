@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.RegistCar.CarInfo">
+             x:Class="WashDry.Views.RegistCar.CarInfo"
+                  BackgroundColor="#225374">
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10">
             <Image  
@@ -19,37 +20,41 @@
             https://demotores.pxcrush.net/demotores/post/dealer/2abmwdgu9cadhge6wc00kzphe.jpg?pxc_method=crop&height=725&width=1087
             https://acroadtrip.blob.core.windows.net/catalogo-imagenes/l/RT_V_95c48fd07dd94b228a77afed5191b521.jpg -->
             <Label
-                Text="Placas"/>
+                Text="Placas"
+                   TextColor="#DCF8C6"
+                 />
             <Label
-                x:Name="Placas"
+                x:Name="Placas"  TextColor="#DCF8C6"
                 Text="HBX-34-53"/>
 
             <Label
-                Text="Modelo"/>
-            <Label
+                Text="Modelo"  TextColor="#DCF8C6"/>
+            <Label  TextColor="#DCF8C6"
                 Text="BMW Serie 3 330iA Sport Line Plus"
                 x:Name="Modelo"/>
 
-            <Label
+            <Label  TextColor="#DCF8C6"
                 Text="Año"/>
             <Label
-                x:Name="Anio"
+                x:Name="Anio"  TextColor="#DCF8C6"
                 Text="2017"/>
 
-            <Label
+            <Label  TextColor="#DCF8C6"
                 Text="Marca"/>
             <Label
-                Text="Wolkswagen"
+                Text="Wolkswagen"  TextColor="#DCF8C6"
                 x:Name="Marca"/>
 
             <Button
                 Text="Agendar"
                 x:Name="AegndarLavadobtn"
-                BackgroundColor="Accent"/>
+                   BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
+                 />
 
 
             <Button
                 Text="Eliminar de registro "
+                 TextColor="white" WidthRequest="200"
                 x:Name="EliminarAutobtn"
                 BackgroundColor="IndianRed"/>
 

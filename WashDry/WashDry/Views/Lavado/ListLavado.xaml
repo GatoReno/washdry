@@ -4,12 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Lavado.ListLavado">
+             x:Class="WashDry.Views.Lavado.ListLavado"
+                  BackgroundColor="#225374">
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,20">
             <Label
                 HorizontalOptions="Center"
                 Text="Lavados Registrados"
+                TextColor="#DCF8C6"
                 />
             <Label 
                    x:Name="CatorT"

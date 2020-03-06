@@ -4,10 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Lavado.InfoLavado">
+             x:Class="WashDry.Views.Lavado.InfoLavado"
+                  BackgroundColor="#225374">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Lavado del 11/11/11!"
+                   TextColor="#DCF8C6"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Image
@@ -17,14 +19,17 @@
                 />
 
             <Label Text="atendido por : Juan Carlos Bodoque"
+                   TextColor="#DCF8C6"
                  HorizontalOptions="CenterAndExpand" />
 
 
             <Label Text="cargo : $80"
+                   TextColor="#DCF8C6"
                  HorizontalOptions="CenterAndExpand" />
 
             <Label Text="tarjeta : **** **** **** *123"
                 VerticalOptions="CenterAndExpand" 
+                   TextColor="#DCF8C6"
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

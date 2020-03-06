@@ -5,12 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Lavado.Agendar">
+             x:Class="WashDry.Views.Lavado.Agendar"
+                  BackgroundColor="#225374">
 
     <ScrollView>
         <StackLayout HorizontalOptions="Center" Margin="10,10,10,10"  >
 
-            <Label Text="Agenda tu lavado!" HorizontalOptions="Center"  />
+            <Label Text="Agenda tu lavado!" HorizontalOptions="Center"  TextColor="#DCF8C6"  />
             <maps:Map x:Name="Mapx" WidthRequest="300"  />
 
         
@@ -19,13 +20,18 @@
     
 
             <DatePicker MinimumDate="01/01/2020"
-          
+           TextColor="#DCF8C6"
              x:Name="DatePickx" />
 
-            <TimePicker x:Name="TimePickx" />
+            <TimePicker x:Name="TimePickx" 
+                          TextColor="#DCF8C6"
+                   
+                        />
 
             <Picker x:Name="direcciones"
-                Title="Tus direcciones"
+                    TextColor="#DCF8C6"
+                    TitleColor="#DCF8C6"
+                Title="Tus direcciones" 
                 >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -37,6 +43,7 @@
             </Picker>
 
         <Button
+                BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
             Text="Agendar"/>
     </StackLayout>
         </ScrollView>

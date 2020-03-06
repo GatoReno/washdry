@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:colorPicker="clr-namespace:Spillman.Xamarin.Forms.ColorPicker;assembly=Spillman.Xamarin.Forms.ColorPicker"
              mc:Ignorable="d"
+     BackgroundColor="#225374"
              x:Class="WashDry.Views.RegistCar.RegistCarPage">
 
     <ContentPage.BindingContext>
@@ -25,30 +26,51 @@
                 <Label
                     IsVisible="true"
                     Text="Agregar tu auto"
+                     TextColor="#DCF8C6"
+      
                     HorizontalOptions="Center"
                     x:Name="lblError"></Label>
                 <Label
-                
+                 TextColor="#DCF8C6"
+              
                     Text="10101"
                     IsVisible="false"
                     x:Name="iduser"></Label>
- 
-
-                <Label Text="Marca" x:Name="lblmarca"></Label>
-                <Entry x:Name="Marca_" />
 
 
-                <Label Text="Modelo" x:Name="lblmodelo"></Label>
-                <Entry x:Name="Modelo" />
+                <Label   TextColor="#DCF8C6"
+                 Text="Marca" x:Name="lblmarca"></Label>
+                <Entry x:Name="Marca_" 
+                        TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"/>
 
-                <Label Text="Año" x:Name="lblamio"></Label>
+
+                <Label
+                     TextColor="#DCF8C6"
+                
+                    Text="Modelo" x:Name="lblmodelo"></Label>
+                <Entry x:Name="Modelo" 
+                        TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"/>
+
+                <Label Text="Año"
+                        TextColor="#DCF8C6"
+                
+                       x:Name="lblamio"></Label>
                 <DatePicker
                 x:Name="Ann_"
+                 TextColor="#DCF8C6"
+              
                 Format="yyyy"
                 />
 
-                <Label x:Name="lblPlacas" Text="Placas"></Label>
-                <Entry x:Name="Placas" />
+                <Label
+                    
+                     TextColor="#DCF8C6"
+                     x:Name="lblPlacas" Text="Placas"></Label>
+                <Entry x:Name="Placas"
+                        TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"/>
 
      
 
@@ -57,13 +79,16 @@
 
                 <Button x:Name="btnCamara"
                     Text="Tomar foto"
-             
+                                     BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
+
               Clicked="btnCamara_Clicked"
                      />
 
                 <Button x:Name="btnGal"
                     Text="Galeria "
                     Clicked="btnGal_Clicked"
+                                               BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
+
                      />
 
 
@@ -78,7 +103,7 @@
                 <Button
                     Text="Agregar"
                     x:Name="AgregarAutobtn"
-                   
+                       BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
                     Clicked="AgregarAutobtn_Clicked"
                     />
             </StackLayout>

@@ -4,37 +4,56 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Login.SignUp">
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
+             x:Class="WashDry.Views.Login.SignUp"
+             BackgroundColor="#225374">
+    <ContentPage.Content
+        BackgroundColor="#34B7F1"
+        >
+        <StackLayout Margin="10,10,10,10"
+                        >
             <Label Text="Registrate!"
+                   TextColor="#DCF8C6"
+                   
                  HorizontalOptions="CenterAndExpand" />
             <Entry
-                Placeholder="Nombre"/>
+                Placeholder="Nombre"
+                PlaceholderColor="#DCF8C6"
+                TextColor="#DCF8C6"/>
             <Entry
+                TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"
                 Placeholder="Telefono"/>
 
             <Entry
+                TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"
                 Placeholder="Email"/>
             <Entry
+                TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"
                 Placeholder="Contraseña"
                 x:Name="Pass"
                 IsPassword="True"/>
             <Entry
+                TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"
                 Placeholder="Confirmar contraseña"
                 x:Name="Pass2"/>
-
+            <DatePicker
+                TextColor="#DCF8C6"
+                x:Name="datepicker"
+                ></DatePicker>
 
             <Button
                 Text="Registrarte"
                 x:Name="btnRegistDone"
+                BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
                 Clicked="btnRegistDone_Clicked"/>
 
             <Button
                 Text="Registrarte con google"
                 BackgroundColor="Red"
-                TextColor="White"
-                x:Name="btngoogle"
+                 x:Name="btngoogle"  TextColor="white" WidthRequest="200"
                 Clicked="btngoogle_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

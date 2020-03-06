@@ -9,6 +9,7 @@ namespace WashDry.Splash
     class SplashScreen : ContentPage
     {
         Image splashImage;
+        
 
 
 
@@ -32,7 +33,7 @@ namespace WashDry.Splash
 
             sub.Children.Add(splashImage);
 
-            this.BackgroundColor = Color.FromHex("#FFFFFF");
+            this.BackgroundColor = Color.FromHex("225374");
             this.Content = sub;
         }
 
@@ -41,6 +42,7 @@ namespace WashDry.Splash
         {
             base.OnAppearing();
 
+  
 
             await splashImage.FadeTo(1, 150, null);
             await splashImage.ScaleTo(1, 1000); //Time-consuming processes such as initialization

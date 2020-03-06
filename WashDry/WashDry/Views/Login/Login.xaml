@@ -4,22 +4,30 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Login.Login">
+             x:Class="WashDry.Views.Login.Login"
+              BackgroundColor="#225374"
+             >
     <ContentPage.Content>
-        <StackLayout Margin="10,10,10,10">
-            <Label Text="Bienvenido!"
+        <StackLayout Margin="10,10,10,10"
+                       >
+            <Label Text="Bienvenido!"    TextColor="#DCF8C6"
                  HorizontalOptions="CenterAndExpand" />
             <Entry
-                Placeholder="Usuario o mail"/>
+                Placeholder="Usuario o mail"     TextColor="#DCF8C6"
+                
+                PlaceholderColor="#DCF8C6"/>
              
             <Entry
                 Placeholder="Contraseña"
                 x:Name="Pass"
+                    TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"
                 IsPassword="True"/>
              
      
 
             <Button
+             BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
                 Text="Iniciar sesion"
                 x:Name="btnRegistDone"
                 Clicked="btnRegistDone_Clicked"/>

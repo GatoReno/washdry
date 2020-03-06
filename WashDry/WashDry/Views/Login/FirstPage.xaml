@@ -4,9 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Login.FirstPage">
-    <ContentPage.Content>
-        <StackLayout Margin="10,10,10,100">
+             x:Class="WashDry.Views.Login.FirstPage"
+             BackgroundColor="#225374">
+    <ContentPage.Content  >
+        <StackLayout Margin="10,10,10,100"
+                       >
             <Image
                 HeightRequest="200"
                 WidthRequest="200"
@@ -14,15 +16,19 @@
                 HorizontalOptions="Center"
                 />
             <Label Text="Bienvendio a Wash Dry!"
+                       TextColor="#DCF8C6"
+                   FontSize="Medium"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Button
                 HorizontalOptions="CenterAndExpand"
                 x:Name="btnRegist"
                 Clicked="btnRegist_Clicked"
+                    BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
                 Text="Registro"/>
             <Button
                 Text="Iniciar sesion"
+                BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
                 Clicked="btnLogin_Clicked"
                 x:Name="btnLogin"
                  HorizontalOptions="CenterAndExpand"

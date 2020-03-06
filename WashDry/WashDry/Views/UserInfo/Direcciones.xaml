@@ -4,23 +4,30 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.UserInfo.Direcciones">
+             x:Class="WashDry.Views.UserInfo.Direcciones"      BackgroundColor="#225374">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="10,10,10,10">
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+                   TextColor="#DCF8C6"/>
 
             <Entry
-                x:Name="desc"/>
+                x:Name="desc"
+                TextColor="#DCF8C6"
+                PlaceholderColor="#DCF8C6"
+                Placeholder="Descripcion / Casa / Oficina / etc ..."/>
             <Label
                 x:Name="Latitud"
                 />
             <Label 
                 x:Name="Longitud"
                    />
-            <Button
+            <Button Margin="0,0,0,10"
+                    Text="Agregar direccion"
                 x:Name="btnAddDirecc"
+                
+                    BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
                 Clicked="btnAddDirecc_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

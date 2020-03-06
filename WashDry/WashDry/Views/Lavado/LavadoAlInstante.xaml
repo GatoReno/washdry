@@ -6,13 +6,15 @@
 
               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Lavado.LavadoAlInstante">
+             x:Class="WashDry.Views.Lavado.LavadoAlInstante"
+                  BackgroundColor="#225374">
 
 
     <ScrollView>
         <StackLayout HorizontalOptions="Center" Margin="10,10,10,10"  >
 
-            <Label Text="Buscar lavado!" HorizontalOptions="Center"  />
+            <Label Text="Buscar lavado!" HorizontalOptions="Center"
+                   TextColor="#DCF8C6"/>
             <maps:Map x:Name="Mapx" WidthRequest="300"  />
  
             <Button
