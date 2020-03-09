@@ -14,12 +14,12 @@
                  HorizontalOptions="CenterAndExpand" />
             <Entry
                 Placeholder="Usuario o mail"     TextColor="#DCF8C6"
-                
+                x:Name="User_"
                 PlaceholderColor="#DCF8C6"/>
              
             <Entry
                 Placeholder="Contraseña"
-                x:Name="Pass"
+                x:Name="Pass_"
                     TextColor="#DCF8C6"
                 PlaceholderColor="#DCF8C6"
                 IsPassword="True"/>

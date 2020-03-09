@@ -164,7 +164,8 @@ C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\WashDry.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\ref\WashDry.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\WashDry.pdb
-C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\ref\WashDry.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.pdb
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Test.xaml.g.cs
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\XamlC.stamp

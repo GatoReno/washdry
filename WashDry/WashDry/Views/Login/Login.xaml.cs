@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,9 +18,27 @@ namespace WashDry.Views.Login
             InitializeComponent();
         }
 
-        private void btnRegistDone_Clicked(object sender, EventArgs e)
+        private async void btnRegistDone_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage =  new MainPage();
+
+
+            var user = User_.Text;
+            var pass = Pass_.Text;
+
+            HttpClient client = new HttpClient();
+
+
+            var value_check = new Dictionary<string, string>
+                         {
+                            { "token", ""}
+                         };
+
+
+            var content = new FormUrlEncodedContent(value_check);
+            var response = await client.PostAsync("https://trustfundapp.herokuapp.com/m/ensureToken",content);
+
+
+            ///  Application.Current.MainPage =  new MainPage();
         }
     }
 }

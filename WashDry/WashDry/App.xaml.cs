@@ -1,5 +1,6 @@
 ﻿using System;
 using WashDry.Splash;
+using WashDry.Views;
 using WashDry.Views.Lavado;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,8 +14,8 @@ namespace WashDry
         public App()
         {   
             InitializeComponent();
-            MainPage = new NavigationPage(new SplashScreen());
-           // MainPage = new Agendar();
+           MainPage = new NavigationPage(new SplashScreen());
+           //  este la vista de test de sqlite  // MainPage = new Test();
         }
 
         protected override void OnStart()

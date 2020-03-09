@@ -20,7 +20,8 @@
           "Xam.Plugin.Media": "4.0.1.1",
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.2.0.709249",
-          "Xamarin.Forms.Maps": "4.1.0.581479"
+          "Xamarin.Forms.Maps": "4.1.0.581479",
+          "sqlite-net-pcl": "1.4.118"
         },
         "runtime": {
           "WashDry.dll": {}
@@ -117,6 +118,45 @@
           "lib/netstandard2.0/Spillman.Xamarin.Forms.ColorPicker.dll": {
             "assemblyVersion": "1.0.3.0",
             "fileVersion": "1.0.3.0"
+          }
+        }
+      },
+      "sqlite-net-pcl/1.4.118": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.bundle_green": "1.1.5"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.5": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.core": "1.1.5"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/1.1.5": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -385,6 +425,27 @@
       "sha512": "sha512-SOir9ijLbBsb0xWLVgK7hiPht/KovTLn0XyuzVP/rZqHmFEs2xN9dv1l4572DUo9Xe9QtKLbGptnwFWhr3F0yQ==",
       "path": "spillman.xamarin.forms.colorpicker/1.0.3",
       "hashPath": "spillman.xamarin.forms.colorpicker.1.0.3.nupkg.sha512"
+    },
+    "sqlite-net-pcl/1.4.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
+      "path": "sqlite-net-pcl/1.4.118",
+      "hashPath": "sqlite-net-pcl.1.4.118.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_green/1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rz+SPgp57CAWkEfCJmWqHXMd+fSqhgYmzOdjkSbCQ3OEG0I3+vUlycElvy5zTi0GAYg5pVrmRqbquotS0985CQ==",
+      "path": "sqlitepclraw.bundle_green/1.1.5",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.5.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NViT1KDYnPAQo7yoYmkAMWzT15ZjqbLTSZp9iTVwZDz7fBC5fQ9TYebOFUIxYxrD/RvBpYB8m9PtcL8x/QbKNg==",
+      "path": "sqlitepclraw.core/1.1.5",
+      "hashPath": "sqlitepclraw.core.1.1.5.nupkg.sha512"
     },
     "Stripe.net/34.25.0": {
       "type": "package",
