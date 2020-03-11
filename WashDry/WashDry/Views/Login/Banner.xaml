@@ -8,7 +8,7 @@
     <ContentPage.BindingContext>
         <viewmodels:MonkeysViewModel />
     </ContentPage.BindingContext>
-    <StackLayout>
+    <StackLayout Margin="50,10,10,10">
         <Label HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand">
             <Label.FormattedText>
@@ -24,6 +24,8 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+       
+        
         <CarouselView x:Name="carouselView"
                       ItemsSource="{Binding Monkeys}">
             <CarouselView.ItemTemplate>
@@ -32,7 +34,7 @@
                         <Frame HasShadow="True"
                                BorderColor="DarkGray"
                                CornerRadius="5"
-                               Margin="20"
+                               Margin="2"
                                HeightRequest="300"
                                HorizontalOptions="Center"
                                VerticalOptions="CenterAndExpand">

@@ -21,6 +21,7 @@ namespace WashDry.Menu
 
         private async   void btnautos_Clicked(object sender, EventArgs e)
         {
+            App.MasterD.IsPresented = false;
 
             //await Navigation.PushAsync(new NavigationPage(new ListCars()));
             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ListCars());
@@ -30,13 +31,16 @@ namespace WashDry.Menu
 
         private async void btnlavos_Clicked(object sender, EventArgs e)
         {
+            App.MasterD.IsPresented = false;
+
             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ListLavado());
 
         }
 
         private async void btnconfiguracion_Clicked(object sender, EventArgs e)
         {
-            
+
+            App.MasterD.IsPresented = false;
 
             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new InfoUser());
         }
