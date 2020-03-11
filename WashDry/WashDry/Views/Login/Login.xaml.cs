@@ -25,17 +25,29 @@ namespace WashDry.Views.Login
             var user = User_.Text;
             var pass = Pass_.Text;
 
-            HttpClient client = new HttpClient();
+            if (user.Length < 0 || pass.Length < 0)
+            {
+                User_.Focus();
+                Pass_.Focus();
+            }else {
+
+                HttpClient client = new HttpClient();
 
 
-            var value_check = new Dictionary<string, string>
+                var value_check = new Dictionary<string, string>
                          {
-                            { "token", ""}
+                            { "usuario", user},
+                            { "pass", pass}
                          };
 
 
-            var content = new FormUrlEncodedContent(value_check);
-            var response = await client.PostAsync("https://trustfundapp.herokuapp.com/m/ensureToken",content);
+                var content = new FormUrlEncodedContent(value_check);
+                var response = await client.PostAsync("http://washdryapp.com/app/public/login/app", content);
+
+            }
+
+
+         
 
 
             ///  Application.Current.MainPage =  new MainPage();

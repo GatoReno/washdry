@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              BackgroundColor="#225374"
+             Title="Indicators"
+             x:Class="WashDry.Views.Login.Banner">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Label HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="SALTAR"
+                            TextColor="#ffffff">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="Button_Clicked"
+                                    NumberOfTapsRequired="1" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <CarouselView x:Name="carouselView"
+                      ItemsSource="{Binding Monkeys}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="20"
+                               HeightRequest="300"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" 
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Image Source="{Binding ImageUrl}" 
+                                       Aspect="AspectFill"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Location}"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Details}"
+                                       FontAttributes="Italic"
+                                       HorizontalOptions="Center"
+                                       MaxLines="5"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+    </StackLayout>
+</ContentPage>

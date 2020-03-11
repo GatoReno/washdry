@@ -27,22 +27,20 @@
                           TextColor="#DCF8C6"
                    
                         />
+ 
 
-            <Picker x:Name="direcciones"
+            <Picker x:Name="direccionesPicker"
                     TextColor="#DCF8C6"
                     TitleColor="#DCF8C6"
-                Title="Tus direcciones" 
-                >
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Calle 1 #123 Puebla</x:String>
-                        <x:String>Calle 2 #123 Puebla</x:String>
-                        <x:String>Calle 3 #123 Puebla</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+                    Title="Tus direcciones" 
+                    ItemsSource="{Binding Table}"
+                    ItemDisplayBinding="{Binding PRODUCTO}"
+                    SelectedIndex="{Binding CLAVE_P}"
+                    VerticalOptions="Center"   />
+            
+            
 
-        <Button
+            <Button
                 BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
             Text="Agendar"/>
     </StackLayout>
