@@ -14,6 +14,23 @@
           "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {}
         }
       },
+      "CarouselView.FormsPlugin/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.CirclePageIndicator": "1.0.2",
+          "Xamarin.Android.Support.v4": "25.4.0.2",
+          "Xamarin.Android.VerticalViewPager": "1.0.1",
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Abstractions.dll": {},
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Abstractions.dll": {},
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Android.dll": {}
+        }
+      },
       "Microsoft.Bcl/1.1.10": {
         "type": "package",
         "dependencies": {
@@ -473,6 +490,18 @@
         },
         "build": {
           "build/monoandroid90/Xamarin.Android.Arch.Lifecycle.ViewModel.targets": {}
+        }
+      },
+      "Xamarin.Android.CirclePageIndicator/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v4": "23.3.0"
+        },
+        "compile": {
+          "lib/MonoAndroid/Com.ViewPagerIndicator.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Com.ViewPagerIndicator.dll": {}
         }
       },
       "Xamarin.Android.Support.Animated.Vector.Drawable/28.0.0.1": {
@@ -1083,6 +1112,18 @@
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
         }
       },
+      "Xamarin.Android.VerticalViewPager/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v4": "23.3.0"
+        },
+        "compile": {
+          "lib/MonoAndroid/Com.Android.DeskClock.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Com.Android.DeskClock.dll": {}
+        }
+      },
       "Xamarin.Build.Download/0.4.9": {
         "type": "package",
         "build": {
@@ -1225,6 +1266,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Amporis.Xamarin.Forms.ColorPicker": "1.0.23",
+          "CarouselView.FormsPlugin": "5.2.0",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Google": "1.0.1",
           "Spillman.Xamarin.Forms.ColorPicker": "1.0.3",
@@ -1257,6 +1299,28 @@
         "amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512",
         "amporis.xamarin.forms.colorpicker.nuspec",
         "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll"
+      ]
+    },
+    "CarouselView.FormsPlugin/5.2.0": {
+      "sha512": "h849lqz0wvmpyiXqCrN7EW+cCGqK5chcefCfS55CkoGMMQx238QWNknUTOl/CvIdZ4bgs0Oztb7kamYXDlQ5mQ==",
+      "type": "package",
+      "path": "carouselview.formsplugin/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carouselview.formsplugin.5.2.0.nupkg.sha512",
+        "carouselview.formsplugin.nuspec",
+        "lib/MonoAndroid/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/MonoAndroid/CarouselView.FormsPlugin.Android.dll",
+        "lib/UAP10/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/UAP10/CarouselView.FormsPlugin.UWP.dll",
+        "lib/UAP10/CarouselView.FormsPlugin.UWP.pri",
+        "lib/UAP10/CarouselView.FormsPlugin.UWP/CarouselView.FormsPlugin.UWP.xr.xml",
+        "lib/UAP10/FlipViewControl.xbf",
+        "lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll",
+        "lib/netstandard2.0/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll"
       ]
     },
     "Microsoft.Bcl/1.1.10": {
@@ -2209,6 +2273,18 @@
         "xamarin.android.arch.lifecycle.viewmodel.nuspec"
       ]
     },
+    "Xamarin.Android.CirclePageIndicator/1.0.2": {
+      "sha512": "KTebv8cI75vLIAAQcZWcMUc81L+0c/xAXVm45+FdLVgVihH6GlXkA049IN0A2OF7vMQ9ud/WxV7xBDkluuLUjg==",
+      "type": "package",
+      "path": "xamarin.android.circlepageindicator/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/Com.ViewPagerIndicator.dll",
+        "xamarin.android.circlepageindicator.1.0.2.nupkg.sha512",
+        "xamarin.android.circlepageindicator.nuspec"
+      ]
+    },
     "Xamarin.Android.Support.Animated.Vector.Drawable/28.0.0.1": {
       "sha512": "6J6mp9j+vseKZ5QZQxuOSlpXb7PSRLA/8cmkC1ShqUIc/AzXh19EEcu4EpUda9WbnhOObmI7pHAMAjpjVWf6zA==",
       "type": "package",
@@ -2817,6 +2893,18 @@
         "xamarin.android.support.viewpager.nuspec"
       ]
     },
+    "Xamarin.Android.VerticalViewPager/1.0.1": {
+      "sha512": "90gy22k7dMBxkNw21W1Z4lm+a6TyUVSU/QxTNXxAXHp9DEKKG/G4tKQadKQs/BZmHvhSuTxX5LjVBJUUVCiNoQ==",
+      "type": "package",
+      "path": "xamarin.android.verticalviewpager/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/Com.Android.DeskClock.dll",
+        "xamarin.android.verticalviewpager.1.0.1.nupkg.sha512",
+        "xamarin.android.verticalviewpager.nuspec"
+      ]
+    },
     "Xamarin.Build.Download/0.4.9": {
       "sha512": "HDQzyew/2Kb8sOjbzcHtFFxLbCclln+1T8bssKx9zAs9HNuK/1mugf077A9VxzID/fFBMmBXvL/z2jUpNlgX2A==",
       "type": "package",
@@ -3218,6 +3306,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
+      "CarouselView.FormsPlugin >= 5.2.0",
       "Stripe.net >= 34.25.0",
       "WashDry >= 1.0.0",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.1",
@@ -3226,24 +3315,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\M. Casas\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
-      "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-      "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\obj\\",
+      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3257,8 +3346,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+            "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }
@@ -3267,6 +3356,10 @@
     "frameworks": {
       "monoandroid90": {
         "dependencies": {
+          "CarouselView.FormsPlugin": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "Stripe.net": {
             "target": "Package",
             "version": "[34.25.0, )"

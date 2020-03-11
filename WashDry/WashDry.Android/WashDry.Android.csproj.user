@@ -4,5 +4,6 @@
     <SelectedDevice>HUAWEI FIG-LX3</SelectedDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
     <DefaultDevice>pixel_2_pie_9_0_api_28</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

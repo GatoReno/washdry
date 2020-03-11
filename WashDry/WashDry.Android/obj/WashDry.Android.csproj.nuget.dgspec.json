@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
   },
   "projects": {
-    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
         "projectName": "WashDry.Android",
-        "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
-        "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-        "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\obj\\",
+        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-                "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+              "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+                "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "CarouselView.FormsPlugin": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[34.25.0, )"
@@ -62,20 +66,21 @@
         }
       }
     },
-    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-        "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-        "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\obj\\",
+        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -103,6 +108,10 @@
             "Amporis.Xamarin.Forms.ColorPicker": {
               "target": "Package",
               "version": "[1.0.23, )"
+            },
+            "CarouselView.FormsPlugin": {
+              "target": "Package",
+              "version": "[5.2.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -165,7 +174,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "D:\\Programas\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

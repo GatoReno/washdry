@@ -96,22 +96,23 @@ namespace WashDry.Views.RegistCar
                     FileName = "my_uploaded_image.jpg"
                 };
 
-                content.Add(new StreamContent(_image.GetStream()),"\"image\"",$"\"{_image.Path}\"");
+                content.Add(new StreamContent(_image.GetStream()),"image");
                 content.Add(id_usuario , "id_usuario");
                 content.Add(placas , "placas");
-                content.Add(modelo ,"modelo");
+                content.Add(modelo ,"modelo");  
                 content.Add(ann ,"ann");
                 content.Add(marca ,"marca");
                 content.Add(hex ,"color");
     
                 var httpClient = new System.Net.Http.HttpClient();                
-                var url = "http://www.washdryapp.com/app/public/auto/guardar";                
+                var url = "http://www.washdryapp.com/app/public/auto/imagen";                
                 var responseMsg = await httpClient.PostAsync(url, content);
               
                 switch (responseMsg.StatusCode)
                 {
 
                     case System.Net.HttpStatusCode.InternalServerError:
+                        string xjsonerror = await responseMsg.Content.ReadAsStringAsync();
                         await DisplayAlert("error", "error status 500 InternalServerError", "ok");
                         btnCamara.IsVisible = true;
                         btnGal.IsVisible = true;

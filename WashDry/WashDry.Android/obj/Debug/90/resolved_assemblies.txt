@@ -1,5 +1,9 @@
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\WashDry.Android.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Amporis.Xamarin.Forms.ColorPicker.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\CarouselView.FormsPlugin.Abstractions.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\CarouselView.FormsPlugin.Android.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Com.Android.DeskClock.dll
+C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Com.ViewPagerIndicator.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\EjeDesarrolloCS-162\Desktop\ASPPROYECTS\dan1\n\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Mono.Android.dll

@@ -31,7 +31,7 @@ namespace WashDry.Views.Lavado
 
                 //ErrorBtn.IsVisible = true;
                 await DisplayAlert("Error", "Por favor activa tus datos o conectate a una red", "ok");
-                 
+
             }
             if (!CrossGeolocator.IsSupported)
             {
@@ -90,9 +90,9 @@ namespace WashDry.Views.Lavado
                         HttpContent content = response.Content;
                         var xjson = await content.ReadAsStringAsync();
 
-                      //  var json_ = JsonConvert.DeserializeObject<List<VisitasMod>>(xjson);
-                       // direccionesPicker.ItemsSource = json_;
-                       // Cator.IsVisible = false;
+                        //  var json_ = JsonConvert.DeserializeObject<List<VisitasMod>>(xjson);
+                        // direccionesPicker.ItemsSource = json_;
+                        // Cator.IsVisible = false;
 
 
 
@@ -103,9 +103,9 @@ namespace WashDry.Views.Lavado
             catch (Exception ex)
             {
                 await DisplayAlert("", "" + ex.ToString(), "ok");
-              //  Cator.IsVisible = false;
+                //  Cator.IsVisible = false;
 
-              //  CatorT.Text = "Ha habido un error";
+                //  CatorT.Text = "Ha habido un error";
                 return;
             }
 
@@ -113,3 +113,4 @@ namespace WashDry.Views.Lavado
 
         }
     }
+}

@@ -10,6 +10,7 @@
       "WashDry/1.0.0": {
         "dependencies": {
           "Amporis.Xamarin.Forms.ColorPicker": "1.0.23",
+          "CarouselView.FormsPlugin": "5.2.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Google": "1.0.1",
@@ -21,7 +22,8 @@
           "Xamarin.Essentials": "1.2.0",
           "Xamarin.Forms": "4.2.0.709249",
           "Xamarin.Forms.Maps": "4.1.0.581479",
-          "sqlite-net-pcl": "1.4.118"
+          "sqlite-net-pcl": "1.4.118",
+          "System.Drawing.Common": "4.0.0.0"
         },
         "runtime": {
           "WashDry.dll": {}
@@ -35,6 +37,14 @@
           "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {
             "assemblyVersion": "1.0.23.0",
             "fileVersion": "1.0.23.0"
+          }
+        }
+      },
+      "CarouselView.FormsPlugin/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/CarouselView.FormsPlugin.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -333,6 +343,14 @@
             "fileVersion": "4.1.0.287"
           }
         }
+      },
+      "System.Drawing.Common/4.0.0.0": {
+        "runtime": {
+          "System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
       }
     }
   },
@@ -348,6 +366,13 @@
       "sha512": "sha512-F5NZg7mmsoSoglar9Z5rSnl+dB1H2OWL8H3BFe6c96S5TmHKT/L3fM18BZsvADuS4bs/FvKfe9uNoUxPl3tt5Q==",
       "path": "amporis.xamarin.forms.colorpicker/1.0.23",
       "hashPath": "amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512"
+    },
+    "CarouselView.FormsPlugin/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h849lqz0wvmpyiXqCrN7EW+cCGqK5chcefCfS55CkoGMMQx238QWNknUTOl/CvIdZ4bgs0Oztb7kamYXDlQ5mQ==",
+      "path": "carouselview.formsplugin/5.2.0",
+      "hashPath": "carouselview.formsplugin.5.2.0.nupkg.sha512"
     },
     "Microsoft.Bcl/1.1.10": {
       "type": "package",
@@ -558,6 +583,11 @@
       "sha512": "sha512-8k8avA+XWN8DtWAt7ICwAn9xZ9cykMBZ8z/U1NppDW1u2xjjI5VD93LZ72YghweDvCgdGDoBmz2x6jugXZ3y1w==",
       "path": "xamarin.forms.maps/4.1.0.581479",
       "hashPath": "xamarin.forms.maps.4.1.0.581479.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

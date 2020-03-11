@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+//[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("fe7c13b8-f683-43c2-bef5-6efb7bfba2b1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("WashDry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

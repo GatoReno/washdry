@@ -41,16 +41,14 @@ namespace WashDry.Splash
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
   
-
             await splashImage.FadeTo(1, 150, null);
             await splashImage.ScaleTo(1, 1000); //Time-consuming processes such as initialization
             await splashImage.ScaleTo(0.6, 1500, Easing.BounceOut);
             await splashImage.FadeTo(0, 270, null);
 
 
-            Application.Current.MainPage = new NavigationPage(new FirstPage());
+            Application.Current.MainPage = new NavigationPage(new Banner());
 
         }
 
