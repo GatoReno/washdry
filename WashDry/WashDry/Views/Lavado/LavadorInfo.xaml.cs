@@ -16,6 +16,7 @@ namespace WashDry.Views.Lavado
         public LavadorInfo()
         {
             InitializeComponent();
+             
         }
 
         private void RatingConception_Voted(object sender, EventArgs e)
@@ -26,7 +27,8 @@ namespace WashDry.Views.Lavado
 
             index_star.Text = index.ToString();
             value_star.Text = value.ToString();
-           
+
+           // rating.InitialValue = 2; sobres así se asigna por default e buen rating
         }
     }
 }

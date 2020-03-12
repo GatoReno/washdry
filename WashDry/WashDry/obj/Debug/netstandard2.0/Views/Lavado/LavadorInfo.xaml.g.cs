@@ -23,10 +23,14 @@ namespace WashDry.Views.Lavado {
         private global::Xamarin.Forms.Label value_star;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::LaavorRatingConception.RatingConception ratingStar;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LavadorInfo));
             index_star = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "index_star");
             value_star = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "value_star");
+            ratingStar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::LaavorRatingConception.RatingConception>(this, "ratingStar");
         }
     }
 }

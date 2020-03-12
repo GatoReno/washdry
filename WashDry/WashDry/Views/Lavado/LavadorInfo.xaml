@@ -31,8 +31,10 @@
                 HorizontalOptions="CenterAndExpand"
                 />
             <lv:RatingConception ItemsNumber="5" DrawType="Star" 
-        ImageWidth="35" ImageHeight="35"  DesignType="Standard" ColorUI="YellowLight" 
-        Margin="0,15,0,15" Voted="RatingConception_Voted" />
+                    ImageWidth="35" ImageHeight="35"  DesignType="Standard" ColorUI="YellowLight" 
+                   
+                    x:Name="ratingStar"
+                    Margin="0,15,0,15" Voted="RatingConception_Voted" />
 
         </StackLayout>
     </ContentPage.Content>

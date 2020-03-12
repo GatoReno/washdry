@@ -20,17 +20,25 @@ namespace WashDry.Views.Login
 
         private async void btnRegistDone_Clicked(object sender, EventArgs e)
         {
-  
 
-            /*
+
+         
              var user = User_.Text;
             var pass = Pass_.Text;
 
-            if (user.Length < 0 || pass.Length < 0)
+            if (string.IsNullOrEmpty(User_.Text) || string.IsNullOrWhiteSpace(User_.Text)  )
             {
                 User_.Focus();
+               
+            }
+            else if(string.IsNullOrEmpty(Pass_.Text) || string.IsNullOrWhiteSpace(Pass_.Text))
+            {
+
+
                 Pass_.Focus();
-            }else {
+            }
+            
+            else {
 
                 HttpClient client = new HttpClient();
 
@@ -41,21 +49,24 @@ namespace WashDry.Views.Login
                             { "pass", pass}
                          };
 
-
+                   /*
                 var content = new FormUrlEncodedContent(value_check);
                 var response = await client.PostAsync("http://washdryapp.com/app/public/login/app", content);
 
-            }
-            */
- 
-         
-
-
+    */
              Application.Current.MainPage =  new MainPage();
  
 
          Application.Current.MainPage =  new MainPage();
  
+
+            }
+      
+         
+
+
         }
     }
 }
+ 
+ 
