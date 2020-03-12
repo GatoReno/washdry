@@ -14,7 +14,7 @@
 
             <ListView x:Name="ListDirecciones"                      
                       ItemsSource="{Binding DireccionesApiCall}"
-                    SelectionMode="None"
+                      SelectionMode="None"
                       ItemTapped="ListDirecciones_ItemTapped"
                       >
                 <ListView.ItemTemplate>

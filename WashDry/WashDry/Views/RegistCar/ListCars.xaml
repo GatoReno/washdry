@@ -27,7 +27,7 @@
                     ItemTapped="ListVisitas_ItemTapped"
                
                     >
-                <ListView.ItemsSource     
+                <ListView.ItemsSource     SelectionMode="None"
                  
                         >
                     <x:Array Type="{x:Type x:String}">

@@ -23,7 +23,7 @@
                 IsVisible="False"
                 />
 
-            <ListView 
+            <ListView SelectionMode="None"
                 x:Name="ListLavados"
                    ItemTapped="ListLavados_ItemTapped"
                     >

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaavorRatingConception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,17 @@ namespace WashDry.Views.Lavado
         public InfoLavado()
         {
             InitializeComponent();
+        }
+
+        private void RatingConception_Voted(object sender, EventArgs e)
+        {
+            RatingConception rating = (RatingConception)sender;
+            int index = rating.IndexVoted;
+            int value = rating.Value;
+
+       
+
+            // rating.InitialValue = 2; sobres así se asigna por default e buen rating
         }
     }
 }

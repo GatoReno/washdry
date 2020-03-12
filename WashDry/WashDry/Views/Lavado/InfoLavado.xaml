@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                          xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
              mc:Ignorable="d"
              x:Class="WashDry.Views.Lavado.InfoLavado"
                   BackgroundColor="#225374">
@@ -26,6 +27,11 @@
             <Label Text="cargo : $80"
                    TextColor="#DCF8C6"
                  HorizontalOptions="CenterAndExpand" />
+            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                    ImageWidth="25" ImageHeight="25"  DesignType="Standard" ColorUI="YellowLight" 
+                    InitialValue="4"
+                    x:Name="ratingStar"
+                    Margin="0,15,0,15" Voted="RatingConception_Voted" />
 
             <Label Text="tarjeta : **** **** **** *123"
                 VerticalOptions="CenterAndExpand" 
