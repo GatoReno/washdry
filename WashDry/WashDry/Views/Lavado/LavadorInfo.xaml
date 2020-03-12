@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
+             mc:Ignorable="d"
+             x:Class="WashDry.Views.Lavado.LavadorInfo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+<!--
+            <rating:SfRating x:Name="rating"  ItemCount="5" 
+                             VerticalOptions="CenterAndExpand" 
+                             HorizontalOptions="CenterAndExpand"     
+                             Precision="Standard"/>
+    -->
+
+            <Label  
+                x:Name="index_star"
+                 VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                />
+
+            <Label  
+                x:Name="value_star"
+                 VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                />
+            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+        ImageWidth="35" ImageHeight="35"  DesignType="Standard" ColorUI="YellowLight" 
+        Margin="0,15,0,15" Voted="RatingConception_Voted" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

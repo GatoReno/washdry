@@ -1,11 +1,9 @@
 ﻿using System;
 using WashDry.Splash;
-using WashDry.Views;
-using WashDry.Views.Login;
-using WashDry.Views.UserInfo;
+using WashDry.Views.Lavado;
+ 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+ 
 namespace WashDry
 {
     public partial class App : Application
@@ -17,8 +15,8 @@ namespace WashDry
             InitializeComponent();
 
 
-            MainPage = new Direcciones(); 
-                //new NavigationPage(new SplashScreen());
+            MainPage = new LavadorInfo(); 
+             //new NavigationPage(new SplashScreen());
             //  este la vista de test de sqlite  // MainPage = new Test();
         }
 

@@ -109,6 +109,18 @@
           "lib/monoandroid71/Plugin.Permissions.dll": {}
         }
       },
+      "RatingConception/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/netstandard2.0/RatingConception.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RatingConception.dll": {}
+        }
+      },
       "SkiaSharp/1.68.0": {
         "type": "package",
         "compile": {
@@ -1264,6 +1276,7 @@
           "CarouselView.FormsPlugin": "5.2.0",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Google": "1.0.1",
+          "RatingConception": "1.4.0",
           "Spillman.Xamarin.Forms.ColorPicker": "1.0.4",
           "Stripe.net": "35.3.0",
           "Xam.Plugin.Connectivity": "3.2.0",
@@ -1583,6 +1596,19 @@
         "plugin.permissions.3.0.0.12.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "RatingConception/1.4.0": {
+      "sha512": "RYSRLPdZHvMZNfylh49x4c7+H0N2t8gPep3n+OhEKrE3M7PTbubUwU3bIH7c/SQ7Gs+mBKndSz7N96CdDSi7Kg==",
+      "type": "package",
+      "path": "ratingconception/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/RatingConception.dll",
+        "lib/netstandard2.0/RatingConception.xml",
+        "ratingconception.1.4.0.nupkg.sha512",
+        "ratingconception.nuspec"
       ]
     },
     "SkiaSharp/1.68.0": {
@@ -3307,6 +3333,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "CarouselView.FormsPlugin >= 5.2.0",
+      "RatingConception >= 1.4.0",
       "Stripe.net >= 35.3.0",
       "WashDry >= 1.0.0",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
@@ -3315,24 +3342,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\M. Casas\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
-      "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-      "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\obj\\",
+      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3346,8 +3373,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+            "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }
@@ -3359,6 +3386,10 @@
           "CarouselView.FormsPlugin": {
             "target": "Package",
             "version": "[5.2.0, )"
+          },
+          "RatingConception": {
+            "target": "Package",
+            "version": "[1.4.0, )"
           },
           "Stripe.net": {
             "target": "Package",

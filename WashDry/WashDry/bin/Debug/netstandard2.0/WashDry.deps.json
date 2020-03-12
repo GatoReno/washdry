@@ -14,6 +14,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Google": "1.0.1",
+          "RatingConception": "1.4.0",
           "Spillman.Xamarin.Forms.ColorPicker": "1.0.4",
           "Stripe.net": "35.3.0",
           "Xam.Plugin.Connectivity": "3.2.0",
@@ -22,7 +23,8 @@
           "Xamarin.Essentials": "1.5.1",
           "Xamarin.Forms": "4.5.0.356",
           "Xamarin.Forms.Maps": "4.5.0.356",
-          "sqlite-net-pcl": "1.6.292"
+          "sqlite-net-pcl": "1.6.292",
+          "System.Drawing.Common": "4.0.0.0"
         },
         "runtime": {
           "WashDry.dll": {}
@@ -94,6 +96,17 @@
           "lib/netstandard2.0/Plugin.Permissions.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RatingConception/1.4.0": {
+        "dependencies": {
+          "Xamarin.Forms": "4.5.0.356"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RatingConception.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
           }
         }
       },
@@ -342,6 +355,14 @@
             "fileVersion": "4.5.0.143"
           }
         }
+      },
+      "System.Drawing.Common/4.0.0.0": {
+        "runtime": {
+          "System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
       }
     }
   },
@@ -420,6 +441,13 @@
       "sha512": "sha512-VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
       "path": "plugin.permissions/3.0.0.12",
       "hashPath": "plugin.permissions.3.0.0.12.nupkg.sha512"
+    },
+    "RatingConception/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RYSRLPdZHvMZNfylh49x4c7+H0N2t8gPep3n+OhEKrE3M7PTbubUwU3bIH7c/SQ7Gs+mBKndSz7N96CdDSi7Kg==",
+      "path": "ratingconception/1.4.0",
+      "hashPath": "ratingconception.1.4.0.nupkg.sha512"
     },
     "SkiaSharp/1.68.0": {
       "type": "package",
@@ -574,6 +602,11 @@
       "sha512": "sha512-U1yUOMqFmyPVvkGXAQFcZRsOaHiQv5xnBtKLtIW4/I11a1R0tC20utWaw+qtk1tL9CmNWJLlAjJEjqHawI5QPw==",
       "path": "xamarin.forms.maps/4.5.0.356",
       "hashPath": "xamarin.forms.maps.4.5.0.356.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

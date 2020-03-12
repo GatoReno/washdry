@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
   },
   "projects": {
-    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-        "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-        "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\obj\\",
+        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -63,6 +64,10 @@
             "Plugin.Google": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "RatingConception": {
+              "target": "Package",
+              "version": "[1.4.0, )"
             },
             "Spillman.Xamarin.Forms.ColorPicker": {
               "target": "Package",
@@ -111,7 +116,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "D:\\Programas\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

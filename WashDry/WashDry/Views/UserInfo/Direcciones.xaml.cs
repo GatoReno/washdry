@@ -56,7 +56,7 @@ namespace WashDry.Views.UserInfo
                         HttpContent contentD = responseMsg.Content;
                         var xjsonD = await contentD.ReadAsStringAsync();
 
-                        var json_d = JsonConvert.DeserializeObject<List<Direcciones>>(xjsonD);
+                        var json_d = JsonConvert.DeserializeObject<List<DireccionesApiCall>>(xjsonD);
                         ListDirecciones.ItemsSource = json_d;
 
                         break;
@@ -194,6 +194,14 @@ namespace WashDry.Views.UserInfo
             }
 
 
+        }
+
+        private async void ListDirecciones_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var dir = e.Item as DireccionesApiCall;
+             await DisplayAlert("direccion","   "+dir.descripcion, "ok");
+
+          //  await Navigation.PushAsync(new ProspectoInfo(content_X.index_prospecto));
         }
     }
 }

@@ -16,6 +16,7 @@ public class MonoPackageManager_Resources {
 		"Plugin.Geolocator.dll",
 		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
+		"RatingConception.dll",
 		"SkiaSharp.dll",
 		"SkiaSharp.Views.Android.dll",
 		"SkiaSharp.Views.Forms.dll",

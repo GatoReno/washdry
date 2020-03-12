@@ -7,14 +7,15 @@
              x:Class="WashDry.Views.UserInfo.Direcciones"      BackgroundColor="#225374">
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10">
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Tus direcciones!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                    TextColor="#DCF8C6"/>
 
             <ListView x:Name="ListDirecciones"                      
-                      ItemsSource="{Binding DireccCall}"
-                    
+                      ItemsSource="{Binding DireccionesApiCall}"
+                    SelectionMode="None"
+                      ItemTapped="ListDirecciones_ItemTapped"
                       >
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -102,6 +102,18 @@
           "lib/netstandard2.0/Plugin.Permissions.dll": {}
         }
       },
+      "RatingConception/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/netstandard2.0/RatingConception.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RatingConception.dll": {}
+        }
+      },
       "SkiaSharp/1.68.0": {
         "type": "package",
         "compile": {
@@ -837,6 +849,19 @@
         "plugin.permissions.3.0.0.12.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "RatingConception/1.4.0": {
+      "sha512": "RYSRLPdZHvMZNfylh49x4c7+H0N2t8gPep3n+OhEKrE3M7PTbubUwU3bIH7c/SQ7Gs+mBKndSz7N96CdDSi7Kg==",
+      "type": "package",
+      "path": "ratingconception/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/RatingConception.dll",
+        "lib/netstandard2.0/RatingConception.xml",
+        "ratingconception.1.4.0.nupkg.sha512",
+        "ratingconception.nuspec"
       ]
     },
     "SkiaSharp/1.68.0": {
@@ -1829,6 +1854,7 @@
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
       "Plugin.Google >= 1.0.1",
+      "RatingConception >= 1.4.0",
       "Spillman.Xamarin.Forms.ColorPicker >= 1.0.4",
       "Stripe.net >= 35.3.0",
       "Xam.Plugin.Connectivity >= 3.2.0",
@@ -1841,23 +1867,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\M. Casas\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+      "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
       "projectName": "WashDry",
-      "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-      "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-      "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\obj\\",
+      "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+      "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1903,6 +1931,10 @@
           "Plugin.Google": {
             "target": "Package",
             "version": "[1.0.1, )"
+          },
+          "RatingConception": {
+            "target": "Package",
+            "version": "[1.4.0, )"
           },
           "Spillman.Xamarin.Forms.ColorPicker": {
             "target": "Package",
@@ -1951,7 +1983,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "D:\\Programas\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
