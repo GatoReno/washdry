@@ -12,6 +12,17 @@
                 HorizontalOptions="CenterAndExpand" 
                    TextColor="#DCF8C6"/>
 
+            <ListView x:Name="ListDirecciones"                      
+                      ItemsSource="{Binding DireccCall}"
+                    
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell TextColor="white" Text="{Binding descripcion}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
             <Entry
                 x:Name="desc"
                 TextColor="#DCF8C6"

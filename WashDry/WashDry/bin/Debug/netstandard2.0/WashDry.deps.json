@@ -14,16 +14,15 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Google": "1.0.1",
-          "Spillman.Xamarin.Forms.ColorPicker": "1.0.3",
-          "Stripe.net": "34.25.0",
+          "Spillman.Xamarin.Forms.ColorPicker": "1.0.4",
+          "Stripe.net": "35.3.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugin.Geolocator": "4.5.0.6",
-          "Xam.Plugin.Media": "4.0.1.1",
-          "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249",
-          "Xamarin.Forms.Maps": "4.1.0.581479",
-          "sqlite-net-pcl": "1.4.118",
-          "System.Drawing.Common": "4.0.0.0"
+          "Xam.Plugin.Media": "4.0.1.5",
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.5.0.356",
+          "Xamarin.Forms.Maps": "4.5.0.356",
+          "sqlite-net-pcl": "1.6.292"
         },
         "runtime": {
           "WashDry.dll": {}
@@ -31,7 +30,7 @@
       },
       "Amporis.Xamarin.Forms.ColorPicker/1.0.23": {
         "dependencies": {
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard2.0/Amporis.Xamarin.Forms.ColorPicker.dll": {
@@ -109,7 +108,7 @@
       "SkiaSharp.Views.Forms/1.68.0": {
         "dependencies": {
           "SkiaSharp": "1.68.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {
@@ -118,67 +117,67 @@
           }
         }
       },
-      "Spillman.Xamarin.Forms.ColorPicker/1.0.3": {
+      "Spillman.Xamarin.Forms.ColorPicker/1.0.4": {
         "dependencies": {
           "SkiaSharp": "1.68.0",
           "SkiaSharp.Views.Forms": "1.68.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard2.0/Spillman.Xamarin.Forms.ColorPicker.dll": {
-            "assemblyVersion": "1.0.3.0",
-            "fileVersion": "1.0.3.0"
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "sqlite-net-pcl/1.6.292": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "SQLitePCLRaw.bundle_green": "1.1.5"
+          "SQLitePCLRaw.bundle_green": "1.1.13"
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.6.292.0",
+            "fileVersion": "1.6.292.0"
           }
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.5": {
+      "SQLitePCLRaw.bundle_green/1.1.13": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "SQLitePCLRaw.core": "1.1.5"
+          "SQLitePCLRaw.core": "1.1.13"
         },
         "runtime": {
           "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.1.13.388",
             "fileVersion": "1.0.0.0"
           },
           "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.1.13.388",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "SQLitePCLRaw.core/1.1.5": {
+      "SQLitePCLRaw.core/1.1.13": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
           "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.1.13.388",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Stripe.net/34.25.0": {
+      "Stripe.net/35.3.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "System.Configuration.ConfigurationManager": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Stripe.net.dll": {
-            "assemblyVersion": "34.25.0.0",
-            "fileVersion": "34.25.0.0"
+            "assemblyVersion": "35.3.0.0",
+            "fileVersion": "35.3.0.0"
           }
         }
       },
@@ -295,7 +294,7 @@
           }
         }
       },
-      "Xam.Plugin.Media/4.0.1.1": {
+      "Xam.Plugin.Media/4.0.1.5": {
         "dependencies": {
           "Plugin.Permissions": "3.0.0.12"
         },
@@ -306,7 +305,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.5.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -317,38 +316,30 @@
           }
         }
       },
-      "Xamarin.Forms/4.2.0.709249": {
+      "Xamarin.Forms/4.5.0.356": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.2.0.75"
+            "fileVersion": "4.5.0.143"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.2.0.75"
+            "fileVersion": "4.5.0.143"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.2.0.75"
+            "fileVersion": "4.5.0.143"
           }
         }
       },
-      "Xamarin.Forms.Maps/4.1.0.581479": {
+      "Xamarin.Forms.Maps/4.5.0.356": {
         "dependencies": {
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.5.0.356"
         },
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.287"
-          }
-        }
-      },
-      "System.Drawing.Common/4.0.0.0": {
-        "runtime": {
-          "System.Drawing.Common.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.5.0.143"
           }
         }
       }
@@ -444,40 +435,40 @@
       "path": "skiasharp.views.forms/1.68.0",
       "hashPath": "skiasharp.views.forms.1.68.0.nupkg.sha512"
     },
-    "Spillman.Xamarin.Forms.ColorPicker/1.0.3": {
+    "Spillman.Xamarin.Forms.ColorPicker/1.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SOir9ijLbBsb0xWLVgK7hiPht/KovTLn0XyuzVP/rZqHmFEs2xN9dv1l4572DUo9Xe9QtKLbGptnwFWhr3F0yQ==",
-      "path": "spillman.xamarin.forms.colorpicker/1.0.3",
-      "hashPath": "spillman.xamarin.forms.colorpicker.1.0.3.nupkg.sha512"
+      "sha512": "sha512-kNEzJ5thMP0OPk6ORDYdS5ZLi/CXDXQd4waLiKC+qk6szwsGR9S/ehcuJT72T160oy6p5n/sKqm+vdN9h1CPbg==",
+      "path": "spillman.xamarin.forms.colorpicker/1.0.4",
+      "hashPath": "spillman.xamarin.forms.colorpicker.1.0.4.nupkg.sha512"
     },
-    "sqlite-net-pcl/1.4.118": {
+    "sqlite-net-pcl/1.6.292": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
-      "path": "sqlite-net-pcl/1.4.118",
-      "hashPath": "sqlite-net-pcl.1.4.118.nupkg.sha512"
+      "sha512": "sha512-TZPs206/ZZXhDAgCzxE5Dmw1enkRmtpd1RKt+dLJA6Kvml4RxwkasRs4js2kijtGxik1SLCs39rh9nl9YFwrYg==",
+      "path": "sqlite-net-pcl/1.6.292",
+      "hashPath": "sqlite-net-pcl.1.6.292.nupkg.sha512"
     },
-    "SQLitePCLRaw.bundle_green/1.1.5": {
+    "SQLitePCLRaw.bundle_green/1.1.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rz+SPgp57CAWkEfCJmWqHXMd+fSqhgYmzOdjkSbCQ3OEG0I3+vUlycElvy5zTi0GAYg5pVrmRqbquotS0985CQ==",
-      "path": "sqlitepclraw.bundle_green/1.1.5",
-      "hashPath": "sqlitepclraw.bundle_green.1.1.5.nupkg.sha512"
+      "sha512": "sha512-E0Hm/XTfleE/LlrRZVucB1dQqDlIDPgqvkFymbGqMO7bSaoB6R2X5Cgzq/RDxBFSzHjpzet2Tp5Kar8faLSZ+Q==",
+      "path": "sqlitepclraw.bundle_green/1.1.13",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.13.nupkg.sha512"
     },
-    "SQLitePCLRaw.core/1.1.5": {
+    "SQLitePCLRaw.core/1.1.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NViT1KDYnPAQo7yoYmkAMWzT15ZjqbLTSZp9iTVwZDz7fBC5fQ9TYebOFUIxYxrD/RvBpYB8m9PtcL8x/QbKNg==",
-      "path": "sqlitepclraw.core/1.1.5",
-      "hashPath": "sqlitepclraw.core.1.1.5.nupkg.sha512"
+      "sha512": "sha512-I8Q9qL1urPegoyZ5uI32lgqsxl8aPRZAyVBJbO+0T/zlGz/LBc8vhRVyDyCOU9LWWpV8dYpT0nCpuLv1ua6zkA==",
+      "path": "sqlitepclraw.core/1.1.13",
+      "hashPath": "sqlitepclraw.core.1.1.13.nupkg.sha512"
     },
-    "Stripe.net/34.25.0": {
+    "Stripe.net/35.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uMQyYj5L5WwRhmTU0cLp6MH23fTuS2n3Ka1X451ar0lwnK6VifxuLHsy/yV83KCiiUV9VdRzsaDkl9PQsGKsdg==",
-      "path": "stripe.net/34.25.0",
-      "hashPath": "stripe.net.34.25.0.nupkg.sha512"
+      "sha512": "sha512-Cy3lIJ6m41CYftM0WJCcDqqMchrJEnudKiOilJf0foqK4yINUr8tb7JU52VRffenEuUMgQ5h1WY8kQhRXtEJWQ==",
+      "path": "stripe.net/35.3.0",
+      "hashPath": "stripe.net.35.3.0.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",
@@ -556,38 +547,33 @@
       "path": "xam.plugin.geolocator/4.5.0.6",
       "hashPath": "xam.plugin.geolocator.4.5.0.6.nupkg.sha512"
     },
-    "Xam.Plugin.Media/4.0.1.1": {
+    "Xam.Plugin.Media/4.0.1.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AtXsjiiipz6mBgqGfiBCoHKs7w7jxIZ1xJ5EmfOtoGXL0jT33u4hZwWqYpR1dBiF9ByG/ZmMnKfKdnhDMiq1Eg==",
-      "path": "xam.plugin.media/4.0.1.1",
-      "hashPath": "xam.plugin.media.4.0.1.1.nupkg.sha512"
+      "sha512": "sha512-a5l/M2Tl06BqBX/uhM/pr+q1jDkh2tRQr5Ne9rjAuD9VYn5STE+7kVFTzIUNPMnMr9PZLJkWP5WAr/tBN5oepw==",
+      "path": "xam.plugin.media/4.0.1.5",
+      "hashPath": "xam.plugin.media.4.0.1.5.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.2.0": {
+    "Xamarin.Essentials/1.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o3i5uAchUpAvAlJX0onYFFiDo6jpKl9vgvrdDtXEuEfum0UDrSx8oGGBUjlFyUoRpvWVumXwo0VS3AbzuwEofg==",
-      "path": "xamarin.essentials/1.2.0",
-      "hashPath": "xamarin.essentials.1.2.0.nupkg.sha512"
+      "sha512": "sha512-XEKAp7BXfZkTGbMqySXtuhwxb06ULjkJNQ8p44e8amOPm4m4VTVV92F13ov0a8NFNU+6JFm98510QK9Q/HBD5A==",
+      "path": "xamarin.essentials/1.5.1",
+      "hashPath": "xamarin.essentials.1.5.1.nupkg.sha512"
     },
-    "Xamarin.Forms/4.2.0.709249": {
+    "Xamarin.Forms/4.5.0.356": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3DWqPSn9kSKJW5mwjmICV/+4IpPQrequEN1VXUhsF0i9KKnfj49jFk9VbJnT9o2aesJAk00NED67XPbSmbxKjw==",
-      "path": "xamarin.forms/4.2.0.709249",
-      "hashPath": "xamarin.forms.4.2.0.709249.nupkg.sha512"
+      "sha512": "sha512-aOg3sUA2xuLhyhtLuihrDVFZ5ZCa71pgojyz/HdjEH7eW5HxEws+IIgvKTYUZbFOIGD7eK/f3x1lYj6HI/o+jg==",
+      "path": "xamarin.forms/4.5.0.356",
+      "hashPath": "xamarin.forms.4.5.0.356.nupkg.sha512"
     },
-    "Xamarin.Forms.Maps/4.1.0.581479": {
+    "Xamarin.Forms.Maps/4.5.0.356": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8k8avA+XWN8DtWAt7ICwAn9xZ9cykMBZ8z/U1NppDW1u2xjjI5VD93LZ72YghweDvCgdGDoBmz2x6jugXZ3y1w==",
-      "path": "xamarin.forms.maps/4.1.0.581479",
-      "hashPath": "xamarin.forms.maps.4.1.0.581479.nupkg.sha512"
-    },
-    "System.Drawing.Common/4.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
+      "sha512": "sha512-U1yUOMqFmyPVvkGXAQFcZRsOaHiQv5xnBtKLtIW4/I11a1R0tC20utWaw+qtk1tL9CmNWJLlAjJEjqHawI5QPw==",
+      "path": "xamarin.forms.maps/4.5.0.356",
+      "hashPath": "xamarin.forms.maps.4.5.0.356.nupkg.sha512"
     }
   }
 }

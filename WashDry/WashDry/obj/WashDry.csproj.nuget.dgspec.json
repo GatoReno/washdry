@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
+    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-        "packagesPath": "C:\\Users\\EjeDesarrolloCS-162\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EjeDesarrolloCS-162\\Desktop\\ASPPROYECTS\\dan1\\n\\washdry\\WashDry\\WashDry\\obj\\",
+        "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
+        "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\EjeDesarrolloCS-162\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\M. Casas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -67,11 +66,11 @@
             },
             "Spillman.Xamarin.Forms.ColorPicker": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.0.4, )"
             },
             "Stripe.net": {
               "target": "Package",
-              "version": "[34.25.0, )"
+              "version": "[35.3.0, )"
             },
             "Xam.Plugin.Connectivity": {
               "target": "Package",
@@ -83,23 +82,23 @@
             },
             "Xam.Plugin.Media": {
               "target": "Package",
-              "version": "[4.0.1.1, )"
+              "version": "[4.0.1.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.5.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.2.0.709249, )"
+              "version": "[4.5.0.356, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.1.0.581479, )"
+              "version": "[4.5.0.356, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
-              "version": "[1.4.118, )"
+              "version": "[1.6.292, )"
             }
           },
           "imports": [
@@ -112,7 +111,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "D:\\Programas\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -20,7 +20,7 @@ namespace WashDry.Views.Login
 
         private async void btnRegistDone_Clicked(object sender, EventArgs e)
         {
-
+            /*
 
             var user = User_.Text;
             var pass = Pass_.Text;
@@ -46,11 +46,11 @@ namespace WashDry.Views.Login
 
             }
 
-
+            */
          
 
 
-            ///  Application.Current.MainPage =  new MainPage();
+             Application.Current.MainPage =  new MainPage();
         }
     }
 }

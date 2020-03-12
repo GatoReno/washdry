@@ -17,7 +17,7 @@ namespace WashDry.Views.Login
         private void Button_Clicked(object sender, EventArgs e)
         {
             // Application.Current.MainPage = new SignUp();
-            Application.Current.MainPage = new NavigationPage(new Login());
+            Application.Current.MainPage = new NavigationPage(new FirstPage());
         }
 
     }
