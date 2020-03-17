@@ -23,7 +23,13 @@ namespace WashDry
         {
             InitializeComponent();
             this.Master = new master();
-            this.Detail = new NavigationPage(new detail());
+            this.Detail = new NavigationPage(new detail())
+            {
+                BarBackgroundColor = Color.FromHex("#DCF8C6"),
+                BarTextColor = Color.FromHex("#225374")
+            }; 
+
+           
             App.MasterD = this;
         }
        /* protected override async void OnAppearing()

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WashDry.Models.DbModels;
+using WashDry.SQLiteDb;
 using WashDry.Views;
 using WashDry.Views.Lavado;
 using WashDry.Views.RegistCar;
@@ -14,9 +16,17 @@ namespace WashDry.Menu
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class master : ContentPage
     {
+
+        public User user;
+        public UserDataBase userDataBase;
+       
         public master()
         {
             InitializeComponent();
+            userDataBase = new UserDataBase();
+            var user_exist = userDataBase.GetMembers().ToList();
+
+            namelbl.Text = user_exist[0].name;
         }
 
         private async   void btnautos_Clicked(object sender, EventArgs e)

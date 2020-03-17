@@ -40,8 +40,11 @@
                 WidthRequest="200"
                 Text="Agregar Auto"
                 Clicked="AddCarbtn_Clicked"
+                Margin="0,0,0,30"
                 />
 
+                
+                <!--
                 <Button
                     HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"
@@ -56,7 +59,10 @@
                      HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"
                          
-                        x:Name="StripeLbl" />
+                        x:Name="StripeLbl" /> -->
+
+
+                <maps:Map x:Name="Mapx" WidthRequest="100" HeightRequest="100"  />
 
 
 

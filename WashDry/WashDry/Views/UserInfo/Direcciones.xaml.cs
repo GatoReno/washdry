@@ -142,47 +142,59 @@ namespace WashDry.Views.UserInfo
                 var httpClient = new System.Net.Http.HttpClient();
 
                 var url = "http://washdryapp.com/app/public/direccion/guardar";
+                    //  IsSuccessStatusCode = false
 
-                var responseMsg = await httpClient.PostAsync(url, content);
-                // ... subir a internet
+                 
+                    var responseMsg = await httpClient.PostAsync(url, content);
+                    // ... subir a internet
 
-              
-                    switch (responseMsg.StatusCode)
+
+                    if (responseMsg.IsSuccessStatusCode == false)
                     {
-
-                        case System.Net.HttpStatusCode.BadRequest:
-                            await DisplayAlert("error", "error status 400 Unauthorized", "ok");
-                            break;
-
-                        case System.Net.HttpStatusCode.Forbidden:
-                            await DisplayAlert("error", "error status 403  ", "ok");
-                            break;
-
-                        case System.Net.HttpStatusCode.NotFound:
-                            await DisplayAlert("200", "error status 404  ", "ok");
-                            break;
-
-                        case System.Net.HttpStatusCode.OK:
-
-
-                            string xjson = await responseMsg.Content.ReadAsStringAsync();
-                            await DisplayAlert("error", "yeah status 200 : " + xjson, "ok");
-
-
-                            break;
-
-                        case System.Net.HttpStatusCode.RequestEntityTooLarge:
-                            await DisplayAlert("error", "error status 413  ", "ok");
-                            break;
-                        case System.Net.HttpStatusCode.RequestTimeout:
-                            await DisplayAlert("error", "error status 408  ", "ok");
-                            break;
-
-                        case System.Net.HttpStatusCode.Unauthorized:
-                            await DisplayAlert("error", "yeah status 401 Unauthorized", "ok");
-                            break;
-
+                        await DisplayAlert("error", "error status 419 Probelmas con respuesta del server, intente mas tarde o reinicie la aplicacion", "ok");
                     }
+                    else
+                    {
+                        switch (responseMsg.StatusCode)
+                        {
+
+                            case System.Net.HttpStatusCode.BadRequest:
+                                await DisplayAlert("error", "error status 400 Unauthorized", "ok");
+                                break;
+
+
+
+                            case System.Net.HttpStatusCode.Forbidden:
+                                await DisplayAlert("error", "error status 403  ", "ok");
+                                break;
+
+                            case System.Net.HttpStatusCode.NotFound:
+                                await DisplayAlert("200", "error status 404  ", "ok");
+                                break;
+
+                            case System.Net.HttpStatusCode.OK:
+
+
+                                string xjson = await responseMsg.Content.ReadAsStringAsync();
+                                await DisplayAlert("error", "yeah status 200 : " + xjson, "ok");
+
+
+                                break;
+
+                            case System.Net.HttpStatusCode.RequestEntityTooLarge:
+                                await DisplayAlert("error", "error status 413  ", "ok");
+                                break;
+                            case System.Net.HttpStatusCode.RequestTimeout:
+                                await DisplayAlert("error", "error status 408  ", "ok");
+                                break;
+
+                            case System.Net.HttpStatusCode.Unauthorized:
+                                await DisplayAlert("error", "yeah status 401 Unauthorized", "ok");
+                                break;
+
+                        }
+                    }
+                
                 }
                 catch (Exception ex)
                 {

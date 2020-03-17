@@ -24,43 +24,50 @@ namespace WashDry.Views
 
             userDb = new UserDataBase();
             var users = userDb.GetMembers();         
-            userView.ItemsSource = users;
+            //userView.ItemsSource = users;
         }
-      
-        private async void GuardarUser_Clicked(object sender, EventArgs e)
+
+        private void GuardarUser_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-
-                // insert user a db 
-                user = new User();
-                user.email = Email.Text;
-                user.pass = Pass.Text;
-                Random rnd = new Random();
-                user.id = rnd.Next(20);
-                userDb.AddMember(user);
-
-
-                // llamar users a list view
-                var users = userDb.GetMembers();
-                userView.ItemsSource = users; 
-            }
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Error", "Error : " + ex.ToString(), "ok");
-            }
-        }
-
-        private async void userView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-             
-                var content_X = e.Item as User;
-
-                await DisplayAlert("User", "userinfo : " + content_X.email
-                    + " "+ content_X.pass + " "+ content_X.id
-                    , "ok");
 
         }
+        /*
+ private async void GuardarUser_Clicked(object sender, EventArgs e)
+ {
+     try
+     {
+
+         // insert user a db 
+         user = new User();
+         user.email = Email.Text;
+         user.pass = Pass.Text;
+         Random rnd = new Random();
+         user.id = rnd.Next(20);
+         userDb.AddMember(user);
+
+
+         // llamar users a list view
+         var users = userDb.GetMembers();
+         userView.ItemsSource = users; 
+     }
+     catch (Exception ex)
+     {
+
+         await DisplayAlert("Error", "Error : " + ex.ToString(), "ok");
+     }
+ }
+
+ private async void userView_ItemTapped(object sender, ItemTappedEventArgs e)
+ {
+
+         var content_X = e.Item as User;
+
+         await DisplayAlert("User", "userinfo : " + content_X.email
+             + " "+ content_X.pass + " "+ content_X.id
+             , "ok");
+
+ }
+
+ */
     }
 }

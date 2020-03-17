@@ -38,13 +38,24 @@ namespace WashDry.Views.RegistCar
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, true);
 
-            idx = "1";
+            idx = "13";
         }
 
         private MediaFile _image;
         private string idx;
         private async void AgregarAutobtn_Clicked(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(Marca_.Text))
+            {
+                Marca_.Focus();
+            } else if (string.IsNullOrEmpty(Placas.Text)){
+                Placas.Focus();
+            }
+            else if (string.IsNullOrEmpty(Modelo.Text)){
+                Modelo.Focus();
+            }
+
             Cator.IsRunning = true;
             Cator.IsVisible = true;
             lblmodelo.IsVisible = false;
@@ -59,7 +70,7 @@ namespace WashDry.Views.RegistCar
             lblmarca.IsVisible = false;
             colorx.IsVisible = false;
             lblPlacas.IsVisible = false;
-
+       
             lblError.Text = "Agregando su auto";
 
             try

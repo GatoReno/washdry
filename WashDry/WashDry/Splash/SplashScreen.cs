@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using WashDry.Models.DbModels;
+using WashDry.SQLiteDb;
 using WashDry.Views.Login;
 using Xamarin.Forms;
 
@@ -16,6 +19,8 @@ namespace WashDry.Splash
         public SplashScreen()
         {
             NavigationPage.SetHasNavigationBar(this, false);
+            //            NavigationPage.BarBackgroundColorProperty(Color.FromHex("#225374"));
+         
 
             var sub = new AbsoluteLayout();
             splashImage = new Image
@@ -36,7 +41,8 @@ namespace WashDry.Splash
             this.BackgroundColor = Color.FromHex("225374");
             this.Content = sub;
         }
-
+        public User user;
+        public UserDataBase userDataBase;
 
         protected override async void OnAppearing()
         {
@@ -47,8 +53,21 @@ namespace WashDry.Splash
             await splashImage.ScaleTo(0.6, 1500, Easing.BounceOut);
             await splashImage.FadeTo(0, 270, null);
 
+            userDataBase = new UserDataBase();
+            var user_exist = userDataBase.GetMembers();
+            int RowCount = 0;
+            int usercount = user_exist.Count();
+            RowCount = Convert.ToInt32(usercount);
 
-            Application.Current.MainPage = new NavigationPage(new Banner());
+            if (RowCount > 0)
+            {
+
+                Application.Current.MainPage = new MainPage();
+            }
+            else { Application.Current.MainPage = new NavigationPage(new Banner()); }
+
+
+              
 
         }
 

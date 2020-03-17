@@ -33,11 +33,8 @@
             <Button
                 x:Name="GuardarUser"
                 Text="Guardar"
-                Clicked="GuardarUser_Clicked"
-                />
-
-
-            <ListView  x:Name="userView"
+                 />
+            <!--<ListView  x:Name="userView"
                        ItemTapped="userView_ItemTapped"
                        ItemsSource="{Binding User}"
                   >
@@ -67,8 +64,7 @@
             </ListView>
 
 
-
-
+-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

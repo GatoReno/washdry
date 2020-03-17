@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using WashDry.Models.DbModels;
+using WashDry.SQLiteDb;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,10 +16,18 @@ namespace WashDry.Views.Login
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+        public User user;
+        private UserDataBase UserDb;
+        public SQLiteConnection conn;
+
         public Login()
         {
             InitializeComponent();
+
+ 
         }
+
+      
 
         private async void btnRegistDone_Clicked(object sender, EventArgs e)
         {
@@ -42,22 +53,51 @@ namespace WashDry.Views.Login
 
                 HttpClient client = new HttpClient();
 
-
+                /*
                 var value_check = new Dictionary<string, string>
                          {
                             { "usuario", user},
                             { "pass", pass}
                          };
 
-                   /*
-                var content = new FormUrlEncodedContent(value_check);
-                var response = await client.PostAsync("http://washdryapp.com/app/public/login/app", content);
+                 var content = new FormUrlEncodedContent(value_check);
+                */
 
-    */
-             Application.Current.MainPage =  new MainPage();
- 
+                try
+                {
 
-         Application.Current.MainPage =  new MainPage();
+                    var response = await client.GetAsync("http://www.washdryapp.com/app/public/washer/loginChema");
+
+
+                    HttpContent content = response.Content;
+
+                    var json = await content.ReadAsStringAsync();
+                    var json_ = JsonConvert.DeserializeObject<List<User>>(json);
+
+                    var user_x = new User();
+                    var userDataBase = new UserDataBase();
+
+
+                    user_x.email = json_[0].email;
+                    user_x.google_id = json_[0].google_id;
+                    user_x.name = json_[0].name;
+                    user_x.nombre = json_[0].nombre;
+                    user_x.id = json_[0].id;
+                    user_x.username = json_[0].username;
+                    user_x.remember_token = json_[0].remember_token;//username id
+
+
+
+                    userDataBase.AddMember(user_x);
+
+
+                    Application.Current.MainPage = new MainPage();
+                }
+                catch (Exception ex)
+                {
+
+                    await DisplayAlert("", ""+ex.ToString(), "");
+                }
  
 
             }
@@ -65,6 +105,11 @@ namespace WashDry.Views.Login
          
 
 
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("ok", "ok", "ok");
         }
     }
 }

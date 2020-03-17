@@ -10,27 +10,49 @@
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10"
                        >
-            <Label Text="Bienvenido!"    TextColor="#DCF8C6"
+
+            <Image
+                Source="iko"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="200"
+                HeightRequest="200"/>
+            <Label Text="Inicia sesión!" FontSize="Large"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="#DCF8C6"
                  HorizontalOptions="CenterAndExpand" />
             <Entry
-                Placeholder="Usuario o mail"     TextColor="#DCF8C6"
-                x:Name="User_"
+                
+                Placeholder="Usuario / mail"     TextColor="#DCF8C6"
+                x:Name="User_" VerticalOptions="Center"
                 PlaceholderColor="#DCF8C6"/>
              
             <Entry
                 Placeholder="Contraseña"
-                x:Name="Pass_"
+                x:Name="Pass_"  VerticalOptions="Center"
                     TextColor="#DCF8C6"
                 PlaceholderColor="#DCF8C6"
                 IsPassword="True"/>
+            
+
              
      
 
             <Button
              BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
-                Text="Iniciar sesion"
-                x:Name="btnRegistDone"
+                Text="Iniciar sesion" VerticalOptions="Center"
+                x:Name="btnRegistDone"  
                 Clicked="btnRegistDone_Clicked"/>
+
+            <Label x:Name="fogtopassword"
+                   Margin="0,0,0,70"
+                   TextColor="#DCF8C6"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="End"
+                   Text="Olvidaste tu contrasña?">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

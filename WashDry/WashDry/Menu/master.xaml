@@ -13,9 +13,10 @@
 
             <Image
                 Margin="10,20,10,10"
-                Source="iko_72.png" />
+                Source="iko.png" />
 
             <Label
+                x:Name="namelbl"
                 HorizontalOptions="Center"
                 Text="Nombre / Mail de usuario " />
             <Button Text="estado de servicio"

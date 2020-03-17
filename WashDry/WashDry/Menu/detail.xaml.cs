@@ -25,10 +25,9 @@ namespace WashDry.Menu
         {
             InitializeComponent();
         }
+
         protected override async void OnAppearing()
         {
- 
-
 
             if (!CrossConnectivity.Current.IsConnected)
             {
@@ -43,7 +42,7 @@ namespace WashDry.Menu
 
             }
 
-            /*
+
             var pos = await CrossGeolocator.Current.GetPositionAsync();
 
 
@@ -60,7 +59,7 @@ namespace WashDry.Menu
                 Address = "  usted se encuentra aqui",
 
             };
-            Mapx.Pins.Add(pin);*/
+            Mapx.Pins.Add(pin);
 
         }
         private async void Lavadobtn_Clicked(object sender, EventArgs e)
@@ -124,7 +123,7 @@ namespace WashDry.Menu
 
                 Tokenservice = new TokenService();
                 stripeToken = Tokenservice.Create(Tokenoptions);
-                StripeLbl.Text = stripeToken.Id;
+               // StripeLbl.Text = stripeToken.Id;
 
 
                 HttpClient client = new HttpClient();
@@ -178,7 +177,7 @@ namespace WashDry.Menu
             catch (Exception ex)
             {
                 var x = ex.ToString();                 
-                StripeLbl.Text = ex.ToString() ;
+              //  StripeLbl.Text = ex.ToString() ;
 
             }
             
