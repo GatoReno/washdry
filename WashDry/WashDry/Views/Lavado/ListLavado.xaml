@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
              mc:Ignorable="d"
              x:Class="WashDry.Views.Lavado.ListLavado"
                   BackgroundColor="#225374">
     <ContentPage.Content>
-        <StackLayout Margin="10,10,10,20">
+        <StackLayout Margin="10,10,10,20" >
             <Label
                 HorizontalOptions="Center"
                 Text="Lavados Registrados"
@@ -23,27 +24,84 @@
                 IsVisible="False"
                 />
 
-            <ListView SelectionMode="None"
-                x:Name="ListLavados"
-                   ItemTapped="ListLavados_ItemTapped"
-                    >
-                <ListView.ItemsSource                        
-                        >
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>20-10-19 18:35 pm direccion servicio express $80 </x:String>
-                        <x:String>20-9-21 08:15 am direccion servicio express $80</x:String>
-                        <x:String>20-9-14 08:51 am direccion servicio express $70</x:String>
+            <ListView x:Name="ListLavados"   
+                 ItemsSource="{Binding Solicitudes}"
+                     BackgroundColor="#225374"
+                      VerticalOptions="FillAndExpand"
+              RowHeight="100"
+                  >
+                <!--Built in Cells-->
 
-                        <x:String>20-9-11 15:35 am direccion servicio express $80</x:String>
+                <ListView.ItemTemplate>
+                   
+                    
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
+                            BackgroundColor="white" Padding="0" >
+                          
+                            <StackLayout
+                                Orientation="Vertical"
+                                           Margin="10,10,10,10">
 
-                        <x:String>20-8-19 14:52 pm direccion servicio express $40</x:String>
 
-                        <x:String>20-8-19 13:22 am direccion servicio express $80</x:String>
+                                <StackLayout Orientation="Horizontal" 
+                                         
+                                              >
 
-                        <x:String>20-6-19 20:35 pm direccion servicio express $80</x:String>
 
-                    </x:Array>
-                </ListView.ItemsSource>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+
+                                            <RowDefinition Height="Auto"  />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+
+                                        </Grid.ColumnDefinitions>
+
+
+
+
+                                            <Image Source="{Binding foto_ine}" Grid.Row="0" Grid.Column="0"
+                                           
+                                           HeightRequest="50"
+                                           />
+                                        <Label Text="{Binding nombre}" 
+                                          FontSize="Small"
+                                        TextColor="#f35e20"
+                                        Grid.Row="0" Grid.Column="1" />
+                                        <Label Text="$80"
+                                        Grid.Row="0" Grid.Column="2" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    TextColor="#503026" />
+
+
+                                        <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                                                      Grid.Row="1" Grid.Column="2" 
+                                    ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="{Binding calificacion}"
+                                    x:Name="ratingStar"
+                                    Margin="0,0,0,0" />
+                                        <Label Text="{Binding fecha}" 
+                                        FontSize="Micro"
+                                        Grid.Row="1" Grid.Column="1" 
+                                        TextColor="#f35e20" />
+                                    </Grid>
+                                </StackLayout>
+
+
+                            </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                      
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>
