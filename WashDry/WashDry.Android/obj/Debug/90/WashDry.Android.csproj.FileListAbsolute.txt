@@ -4924,7 +4924,6 @@ D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\an
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\android\support\compat\R.java
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\crc648aad9efe354a1d8f\MapRenderer.java
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\bin\packaged_resources
-D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\com\washdry\washdry\R.java
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.o
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.o
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.o
@@ -4958,4 +4957,4 @@ D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\bin\co
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\bin\com.wash_dry.washdry.aab
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\bin\com.wash_dry.washdry.apks
 D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\com\wash_dry\washdry\R.java
-D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
+D:\chmix\projects\XO\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\crc6480ad309733e1aee5\CustomButton.java

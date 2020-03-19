@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WashDry.Views.Servicio.EstadoDeServicio"
+             BackgroundColor="#225374"
+             >
+    <ContentPage.Content>
+        
+
+        <Frame Margin="20,20,20,20"
+             
+               x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
+                            BackgroundColor="white" Padding="20">
+
+
+
+            <Grid>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+
+
+
+
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                
+
+                <ColumnDefinition Width="*" />
+
+
+            </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                       Text="Fecha de emsion!"
+                       TextColor="#128C7E"
+                       FontSize="Large"
+                       HorizontalOptions="CenterAndExpand" />
+
+                <Button
+                    Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                    Margin="0,10,0,10"
+                    BackgroundColor="#DCF8C6"
+                    TextColor="#225374"
+                    Text="Contrato de servicio"
+                    />
+
+                <Label Grid.Row="2" Grid.Column="0"
+                       Text="Fecha de emsion!"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+
+                <Label Grid.Row="2" Grid.Column="1"
+                       Text="10-10-20 / 23:21 hrs!" TextColor="#128C7E"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+
+                <Label />
+                <BoxView 
+                    Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                    HeightRequest="1" 
+                    BackgroundColor="#128C7E" 
+                    HorizontalOptions="FillAndExpand" />
+                <Label />
+                <Label Grid.Row="6" Grid.Column="0"
+                       Text="Fecha de emsion!"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+
+                <Label Grid.Row="6" Grid.Column="1"
+                       Text="10-10-20 / 23:21 hrs!" TextColor="#128C7E"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+
+                <Label />
+                <BoxView 
+                    Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
+                    HeightRequest="1" 
+                    BackgroundColor="#128C7E" 
+                    HorizontalOptions="FillAndExpand" />
+                <Label />
+
+
+
+                <Label Grid.Row="8" Grid.Column="0"
+                       Text="Estado actual"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+
+                <Label Grid.Row="8" Grid.Column="1"
+                       Text="Terminado  "
+                       TextColor="#128C7E"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+
+                <Label />
+                <BoxView 
+                    Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
+                    HeightRequest="1" 
+                    BackgroundColor="#128C7E" 
+                    HorizontalOptions="FillAndExpand" />
+                <Label />
+
+
+            </Grid>
+
+       
+
+    
+
+                </Frame>
+
+
+
+
+      
+    </ContentPage.Content>
+</ContentPage>
+
+
+

@@ -2,6 +2,7 @@
 using WashDry.Splash;
 using WashDry.Views.Lavado;
 using WashDry.Views.Login;
+using WashDry.Views.Servicio;
 using WashDry.Views.UserInfo;
 using Xamarin.Forms;
  
@@ -16,8 +17,8 @@ namespace WashDry
             InitializeComponent();
 
 
-            MainPage = new ListLavado(); 
-          //  MainPage = new NavigationPage(new SplashScreen());
+        MainPage = new Contratar(); 
+      // MainPage = new NavigationPage(new SplashScreen());
             //  este la vista de test de sqlite  // MainPage = new Test();
         }
 

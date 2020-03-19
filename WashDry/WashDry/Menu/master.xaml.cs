@@ -8,6 +8,7 @@ using WashDry.SQLiteDb;
 using WashDry.Views;
 using WashDry.Views.Lavado;
 using WashDry.Views.RegistCar;
+using WashDry.Views.Servicio;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -53,6 +54,14 @@ namespace WashDry.Menu
             App.MasterD.IsPresented = false;
 
             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new InfoUser());
+        }
+
+        private async void btnedoserv_Clicked(object sender, EventArgs e)
+        {
+            
+                 App.MasterD.IsPresented = false;
+
+            await((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new EstadoDeServicio());
         }
     }
 }

@@ -69,13 +69,13 @@
 
 
 
-                                            <Image Source="{Binding foto_ine}" Grid.Row="0" Grid.Column="0"
+                                            <Image Source="iko" Grid.Row="0" Grid.Column="0"
                                            
                                            HeightRequest="50"
                                            />
                                         <Label Text="{Binding nombre}" 
                                           FontSize="Small"
-                                        TextColor="#f35e20"
+                                        TextColor="#128C7E"
                                         Grid.Row="0" Grid.Column="1" />
                                         <Label Text="$80"
                                         Grid.Row="0" Grid.Column="2" 
@@ -91,7 +91,7 @@
                                         <Label Text="{Binding fecha}" 
                                         FontSize="Micro"
                                         Grid.Row="1" Grid.Column="1" 
-                                        TextColor="#f35e20" />
+                                        TextColor="#128C7E" />
                                     </Grid>
                                 </StackLayout>
 
@@ -106,3 +106,7 @@
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
+
+
+

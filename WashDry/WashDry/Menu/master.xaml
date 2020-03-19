@@ -21,6 +21,7 @@
                 Text="Nombre / Mail de usuario " />
             <Button Text="estado de servicio"
             x:Name="btnedoserv"
+                    Clicked="btnedoserv_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
