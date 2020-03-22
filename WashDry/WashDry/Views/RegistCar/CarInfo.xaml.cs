@@ -12,7 +12,7 @@ namespace WashDry.Views.RegistCar
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CarInfo : ContentPage
     {
-        public CarInfo()
+        public CarInfo(int id)
         {
             InitializeComponent();
         }

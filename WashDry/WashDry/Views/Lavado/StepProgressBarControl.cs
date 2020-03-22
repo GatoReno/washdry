@@ -37,6 +37,7 @@ namespace WashDry.Views
             Orientation = StackOrientation.Horizontal;
             HorizontalOptions = LayoutOptions.FillAndExpand;
             Padding = new Thickness(10, 0);
+           
             Spacing = 0;
             AddStyles();
 
@@ -108,7 +109,7 @@ namespace WashDry.Views
             var unselectedStyle = new Style(typeof(Button))
             {
                 Setters = {
-                    new Setter { Property = BackgroundColorProperty,   Value = Color.Transparent },
+                    new Setter { Property = BackgroundColorProperty,   Value = Color.White },
                     new Setter { Property = Button.BorderColorProperty,   Value = StepColor },
                     new Setter { Property = Button.TextColorProperty,   Value = StepColor },
                     new Setter { Property = Button.BorderWidthProperty,   Value = 0.5 },

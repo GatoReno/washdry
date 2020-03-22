@@ -1937,6 +1937,7 @@ namespace WashDry.Droid
 			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiStrokeWidth = global::WashDry.Droid.Resource.Styleable.CirclePageIndicator_vpiStrokeWidth;
 			global::Com.ViewPagerIndicator.Resource.Styleable.ViewPagerIndicator = global::WashDry.Droid.Resource.Styleable.ViewPagerIndicator;
 			global::Com.ViewPagerIndicator.Resource.Styleable.ViewPagerIndicator_vpiCirclePageIndicatorStyle = global::WashDry.Droid.Resource.Styleable.ViewPagerIndicator_vpiCirclePageIndicatorStyle;
+			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::WashDry.Droid.Resource.Drawable.plugin_lc_smallicon;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::WashDry.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::WashDry.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::WashDry.Droid.Resource.Attribute.font;
@@ -13219,14 +13220,17 @@ namespace WashDry.Droid
 			// aapt resource value: 0x7F070088
 			public const int notify_panel_notification_icon_bg = 2131165320;
 			
+			// aapt resource value: 0x7F070089
+			public const int plugin_lc_smallicon = 2131165321;
+			
 			// aapt resource value: 0x7F070002
 			public const int Prev = 2131165186;
 			
-			// aapt resource value: 0x7F070089
-			public const int tooltip_frame_dark = 2131165321;
-			
 			// aapt resource value: 0x7F07008A
-			public const int tooltip_frame_light = 2131165322;
+			public const int tooltip_frame_dark = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int tooltip_frame_light = 2131165323;
 			
 			// aapt resource value: 0x7F070003
 			public const int Up = 2131165187;

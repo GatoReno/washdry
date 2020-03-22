@@ -16,6 +16,7 @@
             <Label 
                    x:Name="CatorT"
                 VerticalOptions="CenterAndExpand" 
+                        TextColor="#DCF8C6"
                 HorizontalOptions="CenterAndExpand" />
             <ActivityIndicator
                 x:Name="Cator"
@@ -23,19 +24,20 @@
                 IsVisible="False"
                 />
 
-            <ListView 
-                    ItemTapped="ListVisitas_ItemTapped"
-               
-                    >
-                <ListView.ItemsSource     SelectionMode="None"
-                 
-                        >
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>BMW Serie 3 330iA Sport Line Plus</x:String>
-                        <x:String>BMW Serie 2 330iA Sport Line Plus</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+          
+
+
+            <ListView x:Name="ListAutos"                      
+                      ItemsSource="{Binding AutosModel}"
+                      ItemTapped="ListVisitas_ItemTapped"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell TextColor="Black" Text="{Binding marca}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
+
         </StackLayout>
 
     </ContentPage.Content>

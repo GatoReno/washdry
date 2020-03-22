@@ -14,6 +14,8 @@ public class MonoPackageManager_Resources {
 		"Plugin.Connectivity.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Geolocator.dll",
+		"Plugin.LocalNotifications.Abstractions.dll",
+		"Plugin.LocalNotifications.dll",
 		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
 		"RatingConception.dll",

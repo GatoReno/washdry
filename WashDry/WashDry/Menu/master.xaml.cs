@@ -63,5 +63,21 @@ namespace WashDry.Menu
 
             await((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new EstadoDeServicio());
         }
+
+        private async void btnsolicitardserv_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+
+            await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Solicitar());
+
+        }
+
+        private async void contratarbtn_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+
+            await((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Contratar());
+
+        }
     }
 }

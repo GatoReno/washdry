@@ -13,6 +13,7 @@
                 HorizontalOptions="Center"
                 Text="Lavados Registrados"
                 TextColor="#DCF8C6"
+                x:Name="lblMainlavados"
                 />
             <Label 
                    x:Name="CatorT"

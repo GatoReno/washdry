@@ -5,17 +5,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:WashDry.Views"
              mc:Ignorable="d"
+             BackgroundColor="#225374"
              x:Class="WashDry.Views.Lavado.Solicitar">
     <ContentPage.Content>
         <StackLayout Padding="20,20,20,20">
-            <local:StepProgressBarControl  StepColor="#128C7E" Steps="5" StepSelected="1" x:Name="stepBar"/>
+            <local:StepProgressBarControl
+                
+                StepColor="#128C7E" Steps="5" StepSelected="1" x:Name="stepBar"/>
 
             <Label BindingContext="{x:Reference stepBar}"
-               Text="{Binding StepSelected, StringFormat='The Step Selected is {0}'}"
+               Text="{Binding StepSelected, StringFormat='{0}'}"
                FontAttributes="Bold"
                FontSize="Large"
                HorizontalOptions="Center"
+                   BackgroundColor="White"
                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                BackgroundColor="White"
+                x:Name="lbltry"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

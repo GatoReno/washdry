@@ -50,6 +50,18 @@
             x:Name="btncompartircod"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
+
+            <Button Text="solicitar servicio"
+            x:Name="btnsolicitardserv"
+                    Clicked="btnsolicitardserv_Clicked"
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
+           />
+
+            <Button Text="contratar"
+            x:Name="contratarbtn"
+                 Clicked="contratarbtn_Clicked"
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
+           />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

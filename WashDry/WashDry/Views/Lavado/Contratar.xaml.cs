@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WashDry.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,10 @@ namespace WashDry.Views.Lavado
         public Contratar()
         {
             InitializeComponent();
+            BindingContext = new TimerModel();
+
+           
         }
+ 
     }
 }

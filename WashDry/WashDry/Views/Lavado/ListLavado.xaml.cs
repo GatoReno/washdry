@@ -18,7 +18,7 @@ namespace WashDry.Views.Lavado
         {
             InitializeComponent();
          }
-        protected override async void OnAppearing()
+        protected override  void OnAppearing()
         {
              
             _ = GetSolicitudesWeb();
@@ -68,8 +68,19 @@ namespace WashDry.Views.Lavado
                         HttpContent contentD = responseMsg.Content;
                        var xjsonD = await contentD.ReadAsStringAsync();
 
-                        var json_d = JsonConvert.DeserializeObject<List<Solicitudes>>(xjsonD);
-                        ListLavados.ItemsSource = json_d;
+
+                        if (xjsonD.Count()<=0)
+                        {
+                            lblMainlavados.Text = "Usted no tiene lavados aun";
+                        }
+                        else
+                        {
+                            var json_d = JsonConvert.DeserializeObject<List<Solicitudes>>(xjsonD);
+                            ListLavados.ItemsSource = json_d;
+                        }
+
+
+                
 
                         break;
 

@@ -16,7 +16,11 @@
                     <RowDefinition Height="Auto"  />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  /> 
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
 
@@ -80,16 +84,16 @@
                     HorizontalOptions="CenterAndExpand"
                          />
 
-                <Label />
+           
                 <BoxView 
                     Margin="0,10,0,0"
                      Grid.Row="5"
                     Grid.Column="0"  
                     Grid.ColumnSpan="2"
-            HeightRequest="1" 
-            BackgroundColor="#DCF8C6" 
-            HorizontalOptions="FillAndExpand" />
-                <Label />
+                    HeightRequest="1" 
+                    BackgroundColor="#DCF8C6" 
+                    HorizontalOptions="FillAndExpand" />
+           
 
 
                 <Label
@@ -104,7 +108,7 @@
                     Grid.Row="6"
                     Grid.Column="1"                    
                     TextColor="#DCF8C6"                    
-                    Text="Hora "
+                    Text="tiempo de llegada"
                     HorizontalOptions="CenterAndExpand"
                          />
 
@@ -116,18 +120,43 @@
                     TextColor="#DCF8C6"
                                 Text="Hoy"/>
 
-                <Label                     
-                    Margin="0,10,0,0"
-                    Grid.Row="7"
-                    Grid.Column="1"                    
-                    TextColor="#DCF8C6"                    
-                    Text="Hora "
-                    HorizontalOptions="CenterAndExpand"
-                         />
+            
+                <Frame
+                    HasShadow="True"
+                     Grid.Row="7"
+                    Grid.Column="1"
+                    BackgroundColor="#128C7E"
+                      CornerRadius="10"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label                     
+                            Margin="0,0,0,0"
+                                     
+                            TextColor="White"                    
+                        
+                            
+                            HorizontalOptions="CenterAndExpand"
+                         >
+                            <Label.FormattedText>
+                                <FormattedString>
+
+                                    <Span Text="{Binding StopWatchHours}"/>
+                                    <Span Text=":"/>
+                                    <Span Text="{Binding StopWatchMinutes}"/>
+                                    <Span Text=":"/>
+                                    <Span Text="{Binding StopWatchSeconds}"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+
+                        </Label>
+                    </StackLayout>
+                    
+                </Frame>
 
 
-
-                <Frame  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
+                <Frame  HasShadow="True"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
                         CornerRadius="10" 
                         >
                     <StackLayout
@@ -175,7 +204,52 @@
                     
                 </Frame>
 
-               
+
+                <Label
+                    Margin="10,0,10,10"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    Text="Formas de pago"
+                    TextColor="#128C7E"
+                     > </Label>
+
+                <Picker
+                      Grid.Row="10"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    TitleColor="#128C7E"
+                    TextColor="#128C7E"
+                     
+                    ></Picker>
+
+                <Label  
+                      TextColor="#DCF8C6"    
+                    Grid.Row="11"
+                          Text="total"
+                    Grid.Column="0"  
+                    Grid.ColumnSpan="1"  HorizontalOptions="EndAndExpand"/>
+
+
+                <Label  
+                      TextColor="#DCF8C6"    
+                    Grid.Row="11"
+                          Text="$ 80"
+                    Grid.Column="1"  
+                   
+                    HorizontalOptions="EndAndExpand"/>
+
+                <BoxView 
+                    Margin="0,10,0,0"
+                     Grid.Row="12"
+                    Grid.Column="0"  
+                    Grid.ColumnSpan="2"
+                           HeightRequest="1" 
+                    BackgroundColor="White" 
+                    HorizontalOptions="FillAndExpand" /> 
+             
+
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>

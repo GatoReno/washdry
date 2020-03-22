@@ -5,6 +5,7 @@ FormsViewGroup
 Plugin.Connectivity
 Plugin.CurrentActivity
 Plugin.Geolocator
+Plugin.LocalNotifications
 Plugin.Media
 Plugin.Permissions
 SkiaSharp
