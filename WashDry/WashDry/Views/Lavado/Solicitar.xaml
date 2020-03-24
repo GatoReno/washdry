@@ -19,7 +19,8 @@
                FontSize="Large"
                HorizontalOptions="Center"
                    BackgroundColor="White"
-               VerticalOptions="CenterAndExpand" />
+                            VerticalOptions="CenterAndExpand"
+                   x:Name="lblmain"/>
 
             <Label
                 BackgroundColor="White"

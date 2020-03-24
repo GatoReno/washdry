@@ -25,52 +25,36 @@
                 IsVisible="False"
                 />
 
-            <ListView x:Name="ListLavados"   
-                 ItemsSource="{Binding Solicitudes}"
-                     BackgroundColor="#225374"
-                      VerticalOptions="FillAndExpand"
-              RowHeight="100"
-                  >
-                <!--Built in Cells-->
+            <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
+                            BackgroundColor="white" Padding="0"  >
 
-                <ListView.ItemTemplate>
-                   
-                    
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0" >
-                          
-                            <StackLayout
+                <StackLayout
                                 Orientation="Vertical"
                                            Margin="10,10,10,10">
 
 
-                                <StackLayout Orientation="Horizontal" 
+                    <StackLayout Orientation="Horizontal" 
                                          
                                               >
 
 
-                                    <Grid>
-                                        <Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.RowDefinitions>
 
-                                            <RowDefinition Height="Auto"  />
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
+                                <RowDefinition Height="Auto"  />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
 
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
 
-                                        </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-
-
-
-                                            <Image Source="iko" Grid.Row="0" Grid.Column="0"
+                            <!--   <Image Source="iko" Grid.Row="0" Grid.Column="0"
                                            
                                            HeightRequest="50"
                                            />
@@ -93,12 +77,53 @@
                                         FontSize="Micro"
                                         Grid.Row="1" Grid.Column="1" 
                                         TextColor="#128C7E" />
-                                    </Grid>
-                                </StackLayout>
+                                    </Grid> -->
 
 
-                            </StackLayout>
-                            </Frame>
+                            <ImageButton  Source="iko" Grid.Row="0" Grid.Column="0"
+                                           Clicked="ImageButton_Clicked"
+                                           HeightRequest="50"
+                                           />
+                            <Label Text="Rodriguez Eduardo" 
+                                          FontSize="Small"
+                                        TextColor="#128C7E"
+                                        Grid.Row="0" Grid.Column="1" />
+                            <Label Text="$80"
+                                        Grid.Row="0" Grid.Column="2" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    TextColor="#503026" />
+
+
+                            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                                                      Grid.Row="1" Grid.Column="2" 
+                                    ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="4"
+                                    x:Name="ratingStar"
+                                    Margin="0,0,0,0" />
+                            <Label Text="20 / 20 / 20" 
+                                        FontSize="Micro"
+                                        Grid.Row="1" Grid.Column="1" 
+                                        TextColor="#128C7E" />
+                        </Grid>
+                    </StackLayout>
+
+
+                </StackLayout>
+            </Frame>
+
+            <ListView x:Name="ListLavados"   
+                SelectionMode="None" 
+                     BackgroundColor="#225374"
+                      VerticalOptions="FillAndExpand"
+              RowHeight="100"
+                  >
+                <!--Built in Cells  ItemsSource="{Binding Solicitudes}"-->
+
+                <ListView.ItemTemplate>
+                   
+                    
+                    <DataTemplate>
+                        <ViewCell>
+                      
                         </ViewCell>
                       
                     </DataTemplate>

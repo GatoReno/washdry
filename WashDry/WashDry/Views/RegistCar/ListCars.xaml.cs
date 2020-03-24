@@ -17,10 +17,15 @@ namespace WashDry.Views.RegistCar
         public ListCars()
         {
             InitializeComponent();
+            
+        }
+
+        protected override void OnAppearing()
+        {
+
             _ = GetVisitas();
         }
 
-       
 
         public async Task GetVisitas()
         {
@@ -73,7 +78,7 @@ namespace WashDry.Views.RegistCar
         private async void ListVisitas_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var content = e.Item as AutosModel;
-             await Navigation.PushAsync(new CarInfo(Int32.Parse(content.id)));
+             await Navigation.PushAsync(new CarInfo(Int32.Parse(content.id_auto)));
         }
 
     }

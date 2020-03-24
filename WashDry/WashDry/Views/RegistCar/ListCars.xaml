@@ -30,13 +30,75 @@
             <ListView x:Name="ListAutos"                      
                       ItemsSource="{Binding AutosModel}"
                       ItemTapped="ListVisitas_ItemTapped"
+                     RowHeight="100"
+                      SelectionMode="None" 
                       >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell TextColor="Black" Text="{Binding marca}" />
+                        <ViewCell>
+
+                            <StackLayout>
+
+                                <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
+                            BackgroundColor="white" Padding="0"  >
+
+                                    <StackLayout
+                                Orientation="Vertical"
+                                           Margin="10,10,10,10">
+
+
+                                        <StackLayout Orientation="Horizontal" 
+                                         
+                                              >
+
+
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+
+                                                    <RowDefinition Height="Auto"  />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+
+                                    
+
+                                                </Grid.ColumnDefinitions>
+
+                                                <Image Source="iko" Grid.Row="0" Grid.Column="0"  HeightRequest="50" HorizontalOptions="Center"   />
+                                                <Label Text="{Binding marca}" 
+                                                FontSize="Small" HorizontalOptions="Center" 
+                                                TextColor="#128C7E"
+                                                Grid.Row="0" Grid.Column="1" />
+                                                <Label Text="{Binding id_auto}" 
+                                                    Grid.Row="0" Grid.Column="2" 
+                                                    HorizontalOptions="EndAndExpand" 
+                                                    TextColor="#503026" />  
+
+
+
+                                            </Grid>
+
+
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+
+   
+
+
 
         </StackLayout>
 

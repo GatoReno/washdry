@@ -6,7 +6,7 @@ namespace WashDry.Models.ApiModels
 {
    public class AutosModel
     {
-        public string id { get; set; }
+        public string id_auto { get; set; }
         
               public string marca { get; set; }
     }

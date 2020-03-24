@@ -19,8 +19,9 @@ namespace WashDry
             InitializeComponent();
 
 
-     //  MainPage = new Solicitar(); 
-      MainPage = new NavigationPage(new SplashScreen());
+     
+            //MainPage = new Solicitar(); 
+     MainPage = new NavigationPage(new SplashScreen());
             //  este la vista de test de sqlite  // MainPage = new Test();
         }
 
