@@ -7,7 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using WashDry.Models.ApiModels;
 using Xamarin.Forms;
+using WashDry.Models.ApiModels;
+using WashDry.Models.DbModels;
 using Xamarin.Forms.Xaml;
+using WashDry.SQLiteDb;
 
 namespace WashDry.Views.RegistCar
 {
@@ -25,13 +28,18 @@ namespace WashDry.Views.RegistCar
 
             _ = GetVisitas();
         }
-
+        public User user;
+        public UserDataBase userDataBase;
 
         public async Task GetVisitas()
         {
 
+
+            userDataBase = new UserDataBase();
+            var user_exist = userDataBase.GetMembers().ToList();
             HttpClient client = new HttpClient();
-            var uri = "http://washdryapp.com/app/public/auto/listado";
+            var uri = "http://www.washdryapp.com/app/public/auto/listadoAutoUser/" + user_exist[0].id;
+     
 
             try
             {

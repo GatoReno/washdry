@@ -9,13 +9,13 @@
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10">
             <Image  
-                Source="https://demotores.pxcrush.net/demotores/post/dealer/2abmwdgu9cadhge6wc00kzphe.jpg"
+                
                 HorizontalOptions="CenterAndExpand" 
                 WidthRequest="200"
-                
+                x:Name="Logoimg"
                 Aspect="AspectFill"
                 />
-            <!-- 
+            <!-- Source="https://demotores.pxcrush.net/demotores/post/dealer/2abmwdgu9cadhge6wc00kzphe.jpg"
             https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6N76_srElwbAio_JmoxNmqo8hg8-OLfBl-8UEDEI9VsyDKFK&s
             https://demotores.pxcrush.net/demotores/post/dealer/2abmwdgu9cadhge6wc00kzphe.jpg?pxc_method=crop&height=725&width=1087
             https://acroadtrip.blob.core.windows.net/catalogo-imagenes/l/RT_V_95c48fd07dd94b228a77afed5191b521.jpg -->

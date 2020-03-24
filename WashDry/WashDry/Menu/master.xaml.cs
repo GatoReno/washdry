@@ -9,6 +9,7 @@ using WashDry.Views;
 using WashDry.Views.Lavado;
 using WashDry.Views.RegistCar;
 using WashDry.Views.Servicio;
+using WashDry.Views.UserInfo;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -39,7 +40,10 @@ namespace WashDry.Menu
             
             //await Navigation.PushModalAsync(new NavigationPage (new ListCars())); //esto fue muy util
         }
-
+        private async void Direccionbtn_Clicked(object sender, EventArgs e)
+        {
+             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Direcciones());
+        }
         private async void btnlavos_Clicked(object sender, EventArgs e)
         {
             App.MasterD.IsPresented = false;

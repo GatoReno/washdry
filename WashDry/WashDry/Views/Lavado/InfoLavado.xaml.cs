@@ -13,7 +13,7 @@ namespace WashDry.Views.Lavado
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InfoLavado : ContentPage
     {
-        public InfoLavado()
+        public InfoLavado(int idsol)
         {
             InitializeComponent();
         }

@@ -14,6 +14,7 @@
                  TextColor="#DCF8C6"
                  />
             <Label 
+        
                    x:Name="CatorT"
                 VerticalOptions="CenterAndExpand" 
                         TextColor="#DCF8C6"

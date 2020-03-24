@@ -25,95 +25,12 @@
                 IsVisible="False"
                 />
 
-            <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"  >
-
-                <StackLayout
-                                Orientation="Vertical"
-                                           Margin="10,10,10,10">
-
-
-                    <StackLayout Orientation="Horizontal" 
-                                         
-                                              >
-
-
-                        <Grid>
-                            <Grid.RowDefinitions>
-
-                                <RowDefinition Height="Auto"  />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-
-                            </Grid.ColumnDefinitions>
-
-                            <!--   <Image Source="iko" Grid.Row="0" Grid.Column="0"
-                                           
-                                           HeightRequest="50"
-                                           />
-                                        <Label Text="{Binding nombre}" 
-                                          FontSize="Small"
-                                        TextColor="#128C7E"
-                                        Grid.Row="0" Grid.Column="1" />
-                                        <Label Text="$80"
-                                        Grid.Row="0" Grid.Column="2" 
-                                    HorizontalOptions="EndAndExpand" 
-                                    TextColor="#503026" />
-
-
-                                        <lv:RatingConception ItemsNumber="5" DrawType="Star" 
-                                                      Grid.Row="1" Grid.Column="2" 
-                                    ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="{Binding calificacion}"
-                                    x:Name="ratingStar"
-                                    Margin="0,0,0,0" />
-                                        <Label Text="{Binding fecha}" 
-                                        FontSize="Micro"
-                                        Grid.Row="1" Grid.Column="1" 
-                                        TextColor="#128C7E" />
-                                    </Grid> -->
-
-
-                            <ImageButton  Source="iko" Grid.Row="0" Grid.Column="0"
-                                           Clicked="ImageButton_Clicked"
-                                           HeightRequest="50"
-                                           />
-                            <Label Text="Rodriguez Eduardo" 
-                                          FontSize="Small"
-                                        TextColor="#128C7E"
-                                        Grid.Row="0" Grid.Column="1" />
-                            <Label Text="$80"
-                                        Grid.Row="0" Grid.Column="2" 
-                                    HorizontalOptions="EndAndExpand" 
-                                    TextColor="#503026" />
-
-
-                            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
-                                                      Grid.Row="1" Grid.Column="2" 
-                                    ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="4"
-                                    x:Name="ratingStar"
-                                    Margin="0,0,0,0" />
-                            <Label Text="20 / 20 / 20" 
-                                        FontSize="Micro"
-                                        Grid.Row="1" Grid.Column="1" 
-                                        TextColor="#128C7E" />
-                        </Grid>
-                    </StackLayout>
-
-
-                </StackLayout>
-            </Frame>
 
             <ListView x:Name="ListLavados"   
                 SelectionMode="None" 
                      BackgroundColor="#225374"
                       VerticalOptions="FillAndExpand"
+                      ItemTapped="ListLavados_ItemTapped"
               RowHeight="100"
                   >
                 <!--Built in Cells  ItemsSource="{Binding Solicitudes}"-->
@@ -123,7 +40,72 @@
                     
                     <DataTemplate>
                         <ViewCell>
-                      
+
+                            <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
+                            BackgroundColor="white" Padding="0"  >
+
+                                <StackLayout
+                                Orientation="Vertical"
+                                           Margin="10,10,10,10">
+
+
+                                    <StackLayout Orientation="Horizontal" 
+                                         
+                                              >
+
+
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+
+                                                <RowDefinition Height="Auto"  />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image Source="{Binding foto_ine}" Grid.Row="0" Grid.Column="0"
+                                           
+                                           HeightRequest="50"
+                                           />
+                                            <Label Text="{Binding nombre}   "  
+                                          FontSize="Small"
+                                        TextColor="#128C7E"
+                                        Grid.Row="0" Grid.Column="1" />
+                                            <Label Text="$80"
+                                        Grid.Row="0" Grid.Column="2" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    TextColor="#503026" />
+                                           
+                                            <Label Text="$80"
+                                        Grid.Row="0" Grid.Column="2" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    TextColor="#503026" />
+
+
+
+                                            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                                                      Grid.Row="1" Grid.Column="2" 
+                                    ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="{Binding calificacion}"
+                                    x:Name="ratingStar"
+                                    Margin="0,0,0,0" />
+                                            <Label Text="{Binding fecha}" 
+                                        FontSize="Micro"
+                                        Grid.Row="1" Grid.Column="1" 
+                                        TextColor="#128C7E" />
+
+                                        </Grid>
+                                    </StackLayout>
+
+
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                       
                     </DataTemplate>

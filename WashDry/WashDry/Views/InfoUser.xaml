@@ -9,107 +9,42 @@
       
 
 
-        <StackLayout Padding="0,0,0,0">
+        <StackLayout Margin="10,10,10,10"  >
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="5*" x:Name="firstRow" />
-                    <RowDefinition Height="3*"   />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"  />
-                    <ColumnDefinition Width="100" />
+        
 
-
-                </Grid.ColumnDefinitions>
-
-
-                <StackLayout 
-                Padding="5,0,5,0"
-                x:Name="s1"  
-                Grid.Row="0" Grid.Column="0" 
-                BindingContext="{x:Reference Name=s1}"  >
-
-                    <Label x:Name="Msn" />
-                    <Image
+            <Image
                         HeightRequest="200"
                     Source="iko.png"
-                    x:Name="ImgProfile">
-                    </Image>
-                    <Label x:Name="Msn_2" />
-                    <Label x:Name="UserNamelb" Text="Nombre de usuario" TextColor="#DCF8C6"/>
-                    <Label x:Name="emaillb" Text="usuario@gmail.com" TextColor="#DCF8C6"/>
-                    <Label x:Name="telefonolb" Text="222-2222" TextColor="#DCF8C6"/>
-                    
-                </StackLayout>
-                <StackLayout x:Name="s2" BackgroundColor="#128C7E" Grid.Row="0" Grid.Column="1" BindingContext="{x:Reference Name=s2}">
-                    <Button Text="Lavado al instante"   BackgroundColor="#DCF8C6"  TextColor="#225374"   FontSize="Small"
-                    
-                        x:Name="Lavadobtn" />
-                    <Button Text="Direccion"     BackgroundColor="#DCF8C6"  TextColor="#225374"  
+                    x:Name="ImgProfile"/>
+
+            <Label x:Name="lbl1" />
+            <Label x:Name="lbl2" />
+            <Label x:Name="lbl3" />
+
+            <Entry 
+                Placeholder=""
+                />
+
+            <Entry 
+                Placeholder=""
+                />
+
+            <Entry 
+                IsPassword="True"
+                Placeholder=""
+                />
+
+            <Entry 
+                IsPassword="True"
+                Placeholder=""
+                />
+
+            <Button Text="Actualizar "     BackgroundColor="#DCF8C6"  TextColor="#225374"  
                         x:Name="Direccionbtn" 
-                            Clicked="Direccionbtn_Clicked"
-                        FontSize="Small"
+                         FontSize="Small"
                         />
-                    <Button Text="Agregar auto" BackgroundColor="#DCF8C6"  TextColor="#225374" 
-                        x:Name="AddCarbtn" FontSize="Small"
-                         />
-                    <Button Text="Registro"  BackgroundColor="#DCF8C6"  TextColor="#225374"
-                        x:Name="Registbtn" FontSize="Small"
-                         />
-
-                    <Button Text="Cerrar session"  BackgroundColor="#DCF8C6"  TextColor="#225374"
-                        x:Name="Agendarbtn" FontSize="Small"
-                         />
-
-                </StackLayout>
-
-                <StackLayout x:Name="s3" BackgroundColor="#DCF8C6"  Grid.Row="1"  
-                     Grid.Column="0"  
-                     Grid.ColumnSpan="2"  BindingContext="{x:Reference Name=s3}">
-                    <Label Text="  Info de lavados  " Grid.ColumnSpan="1"  TextColor="#225374"/>
-                    <!--
-                    <maps:Map x:Name="Mapx" WidthRequest="300" Grid.Row="1"  
-                     Grid.Column="0"  
-                     Grid.ColumnSpan="2"  />-->
-
-                    <ListView 
-                        x:Name="ListLavados"                        
-                    >
-                        <ListView.ItemsSource                        
-                        >
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>20-10-19 18:35 pm direccion servicio express $80</x:String>
-                                <x:String>20-9-21 08:15 am direccion servicio express $80</x:String>
-                                <x:String>20-9-14 08:51 am direccion servicio express $70</x:String>
-
-                                <x:String>20-9-11 15:35 am direccion servicio express $80</x:String>
-
-                                <x:String>20-8-19 14:52 pm direccion servicio express $40</x:String>
-
-                                <x:String>20-8-19 13:22 am direccion servicio express $80</x:String>
-
-                                <x:String>20-6-19 20:35 pm direccion servicio express $80</x:String>
-
-                            </x:Array>
-                        </ListView.ItemsSource>
-                    </ListView>
-
-                </StackLayout>
-
-
-
-                <StackLayout x:Name="s5" BackgroundColor="Black" Grid.Row="2" Grid.Column="0" BindingContext="{x:Reference Name=s5}">
-                    <Label Text="    "  TextColor="Accent"/>
-                    <Label Text="   " />
-                    <Label Text="   " />
-                </StackLayout>
-
-                <StackLayout x:Name="s6" BackgroundColor="Black" Grid.Row="2" Grid.Column="1" BindingContext="{x:Reference Name=s6}">
-
-                </StackLayout>
-            </Grid>
+          
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

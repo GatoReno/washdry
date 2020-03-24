@@ -8,6 +8,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WashDry.Models.ApiModels;
+using WashDry.Models.DbModels;
+using WashDry.SQLiteDb;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,18 +18,25 @@ namespace WashDry.Views.UserInfo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Direcciones : ContentPage
     {
+
+
+        public User user;
+        public UserDataBase userDataBase;
         public Direcciones()
         {
             InitializeComponent();
         }
         public async Task GetVisitasWeb()
         {
-          
+           
 
             try
             {
+
+                userDataBase = new UserDataBase();
+                var user_exist = userDataBase.GetMembers().ToList();
                 HttpClient client = new HttpClient();
-                var uri = "http://washdryapp.com/app/public/direccion/listado/10101";
+                var uri = "http://www.washdryapp.com/app/public/direccion/listado/" + user_exist[0].id;
                 var responseMsg = await client.GetAsync(uri);
              
                 

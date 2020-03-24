@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WashDry.Models.ApiModels;
+using WashDry.Models.DbModels;
+using WashDry.SQLiteDb;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,9 +30,12 @@ namespace WashDry.Views.Lavado
 
         private async void ListLavados_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new InfoLavado());
+            var content = e.Item as Solicitudes;
+            await Navigation.PushAsync(new InfoLavado(Int32.Parse(content.id_solicitud)));
         }
 
+        public User user;
+        public UserDataBase userDataBase;
 
         public async Task GetSolicitudesWeb()
         {
@@ -38,8 +43,14 @@ namespace WashDry.Views.Lavado
 
             try
             {
+
+                userDataBase = new UserDataBase();
+                var user_exist = userDataBase.GetMembers().ToList();
                 HttpClient client = new HttpClient();
-                var uri = "http://washdryapp.com/app/public/solicitud/listado/13";
+                var uri = "http://washdryapp.com/app/public/solicitud/listado/" + user_exist[0].id;
+
+
+            
                 var responseMsg = await client.GetAsync(uri);
 
 
@@ -99,10 +110,6 @@ namespace WashDry.Views.Lavado
 
         }
 
-        private async void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new InfoLavado());
-
-        }
+       
     }
 }

@@ -6,62 +6,71 @@
              mc:Ignorable="d"
              x:Class="WashDry.Menu.master" Title="Master">
     <ContentPage.Content>
-        <StackLayout
+        <ScrollView>
+            <StackLayout
             BackgroundColor="Accent"
         Orientation="Vertical"
         >
 
-            <Image
+                <Image
                 Margin="10,20,10,10"
                 Source="iko.png" />
 
-            <Label
+                <Label
                 x:Name="namelbl"
                 HorizontalOptions="Center"
                 Text="Nombre / Mail de usuario " />
-            <Button Text="estado de servicio"
+                <Button Text="estado de servicio"
             x:Name="btnedoserv"
                     Clicked="btnedoserv_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-            <Button Text="mis autos"
+                <Button Text="mis autos"
             x:Name="btnautos"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
                     Clicked="btnautos_Clicked"
            />
-            
-            
 
 
-            <Button Text="lavados"
+
+                <Button Text="Direcciones "       BackgroundColor="#075E54"  TextColor="#DCF8C6"  
+                        x:Name="Direccionbtn" 
+                            Clicked="Direccionbtn_Clicked"
+                        FontSize="Small"
+                        />
+
+                <Button Text="lavados"
             x:Name="btnlavos"
                     Clicked="btnlavos_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-            <Button Text="configuracion"
+                <Button Text="configuracion"
                     Clicked="btnconfiguracion_Clicked"
             x:Name="btnconfiguracion"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-            <Button Text="compartir codigo"
+                <Button Text="compartir codigo"
             x:Name="btncompartircod"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-            <Button Text="solicitar servicio"
+                <Button Text="solicitar servicio"
             x:Name="btnsolicitardserv"
                     Clicked="btnsolicitardserv_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-            <Button Text="contratar"
+                <Button Text="contratar"
             x:Name="contratarbtn"
                  Clicked="contratarbtn_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
-        </StackLayout>
+                <Label></Label>
+            </StackLayout>
+        </ScrollView>
+   
     </ContentPage.Content>
 </ContentPage>
