@@ -57,7 +57,7 @@ namespace WashDry.Views
                         ClassId = $"{i + 1}",
                         Style = Resources["unSelectedStyle"] as Style
                     };
-
+                
                     button.Clicked += Handle_Clicked;
 
                     this.Children.Add(button);
@@ -101,6 +101,8 @@ namespace WashDry.Views
 
             StepSelected = Convert.ToInt32(elementSelected.Text);
             _lastStepSelected = elementSelected;
+      
+
 
         }
 

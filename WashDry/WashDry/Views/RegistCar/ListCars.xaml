@@ -62,8 +62,8 @@
                                                 </Grid.RowDefinitions>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                
 
                                     
 
@@ -71,14 +71,11 @@
 
                                                 <Image Source="iko" Grid.Row="0" Grid.Column="0"  HeightRequest="50" HorizontalOptions="Center"   />
                                                 <Label Text="{Binding marca}" 
-                                                FontSize="Small" HorizontalOptions="Center" 
+                                                FontSize="Small" HorizontalOptions="EndAndExpand" 
+                                                       Margin="0,16,0,0"
                                                 TextColor="#128C7E"
-                                                Grid.Row="0" Grid.Column="1" />
-                                                <Label Text="{Binding id_auto}" 
-                                                    Grid.Row="0" Grid.Column="2" 
-                                                    HorizontalOptions="EndAndExpand" 
-                                                    TextColor="#503026" />  
-
+                                                Grid.Row="0" Grid.Column="2"   />
+                                                
 
 
                                             </Grid>

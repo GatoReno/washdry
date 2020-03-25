@@ -18,7 +18,7 @@
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
   <application android:label="WashDry.Android" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <!-- AIzaSyCsXJTnAOGLRRA7FXHhEFxcgZa8KYbjJ0I   AIzaSyDnxt86h-PIfB-KtbTUqoaI4LSgF13Dq6I  -->
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCsXJTnAOGLRRA7FXHhEFxcgZa8KYbjJ0I" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCQ4cOCS62pVsgAM4aOIrbxXw76sWcqKM0" />
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.wash_dry.washdry.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
     </provider>

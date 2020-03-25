@@ -42,7 +42,7 @@
                         <ViewCell>
 
                             <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"  >
+                            BackgroundColor="white" Padding="0"  Margin="2,2,2,2"  >
 
                                 <StackLayout
                                 Orientation="Vertical"
@@ -92,6 +92,8 @@
 
                                             <lv:RatingConception ItemsNumber="5" DrawType="Star" 
                                                       Grid.Row="1" Grid.Column="2" 
+                                                                BlockVote="True"
+                                                                 IsEnabled="False"
                                     ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="{Binding calificacion}"
                                     x:Name="ratingStar"
                                     Margin="0,0,0,0" />

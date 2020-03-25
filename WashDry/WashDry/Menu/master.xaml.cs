@@ -42,7 +42,8 @@ namespace WashDry.Menu
         }
         private async void Direccionbtn_Clicked(object sender, EventArgs e)
         {
-             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Direcciones());
+            App.MasterD.IsPresented = false;
+            await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Direcciones());
         }
         private async void btnlavos_Clicked(object sender, EventArgs e)
         {

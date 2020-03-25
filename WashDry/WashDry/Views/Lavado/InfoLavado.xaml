@@ -65,6 +65,8 @@
                             <lv:RatingConception ItemsNumber="5" DrawType="Star"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
                     ImageWidth="25" ImageHeight="25"  DesignType="Standard" ColorUI="YellowLight" 
                     InitialValue="4"
+                                                  BlockVote="True"
+                                                                 IsEnabled="False"
                     x:Name="ratingStar"
                     Margin="0,15,0,15" Voted="RatingConception_Voted" />
 

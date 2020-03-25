@@ -136,8 +136,9 @@ namespace WashDry.Views.UserInfo
             else {
                 try
                 {
-
-                    StringContent id_usuario = new StringContent("10101");
+                    userDataBase = new UserDataBase();
+                    var user_exist = userDataBase.GetMembers().ToList();
+                    StringContent id_usuario = new StringContent(user_exist[0].id);
                     StringContent latitude = new StringContent(Latitud.Text);
                     StringContent longitude = new StringContent(Longitud.Text);
                     StringContent descripcion = new StringContent(descx);
@@ -150,10 +151,14 @@ namespace WashDry.Views.UserInfo
 
                 var httpClient = new System.Net.Http.HttpClient();
 
-                var url = "http://washdryapp.com/app/public/direccion/guardar";
+
+               
+                    HttpClient client = new HttpClient();
+ 
+                    var url = "http://www.washdryapp.com/app/public/direccion/guardar" ;
                     //  IsSuccessStatusCode = false
 
-                 
+
                     var responseMsg = await httpClient.PostAsync(url, content);
                     // ... subir a internet
 
@@ -187,7 +192,7 @@ namespace WashDry.Views.UserInfo
                                 string xjson = await responseMsg.Content.ReadAsStringAsync();
                                 await DisplayAlert("error", "yeah status 200 : " + xjson, "ok");
 
-
+                                GetVisitasWeb();
                                 break;
 
                             case System.Net.HttpStatusCode.RequestEntityTooLarge:

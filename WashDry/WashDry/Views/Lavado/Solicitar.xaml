@@ -11,8 +11,12 @@
         <StackLayout Padding="20,20,20,20">
             <local:StepProgressBarControl
                 
-                StepColor="#128C7E" Steps="5" StepSelected="1" x:Name="stepBar"/>
+                StepColor="#128C7E" Steps="5" 
+                StepSelected="{Binding Steps}"
+                x:Name="stepBar"/>
 
+
+           
             <Label BindingContext="{x:Reference stepBar}"
                Text="{Binding StepSelected, StringFormat='{0}'}"
                FontAttributes="Bold"
@@ -20,10 +24,15 @@
                HorizontalOptions="Center"
                    BackgroundColor="White"
                             VerticalOptions="CenterAndExpand"
-                   x:Name="lblmain"/>
+                   x:Name="lblmain">
+
+             
+            </Label>
 
             <Label
+                BindingContext="{x:Reference stepBar}"
                 BackgroundColor="White"
+                 Text="{Binding StepSelected, StringFormat='{0}'}"
                 x:Name="lbltry"/>
         </StackLayout>
     </ContentPage.Content>

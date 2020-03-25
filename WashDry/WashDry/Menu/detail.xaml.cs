@@ -24,6 +24,9 @@ namespace WashDry.Menu
         public detail()
         {
             InitializeComponent();
+            _ = CurrentLocation();
+
+
         }
 
         protected override async void OnAppearing()
@@ -41,7 +44,13 @@ namespace WashDry.Menu
                 await DisplayAlert("Error", "Ha habido un error con el plugin", "ok");
 
             }
+       
 
+        }
+
+
+        public async Task CurrentLocation()
+        {
 
             var pos = await CrossGeolocator.Current.GetPositionAsync();
 
@@ -60,7 +69,6 @@ namespace WashDry.Menu
 
             };
             Mapx.Pins.Add(pin);
-
         }
         private async void Lavadobtn_Clicked(object sender, EventArgs e)
         {
