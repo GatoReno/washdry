@@ -3399,11 +3399,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "D:\\chmix\\projects\\oshishi\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectPath": "D:\\chmix\\projects\\oshishi\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "packagesPath": "C:\\Users\\M. Casas\\.nuget\\packages\\",
-      "outputPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry.Android\\obj\\",
+      "outputPath": "D:\\chmix\\projects\\oshishi\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3424,8 +3424,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "D:\\chmix\\projects\\XO\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+            "D:\\chmix\\projects\\oshishi\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "D:\\chmix\\projects\\oshishi\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }

@@ -52,6 +52,17 @@ namespace WashDry.Views.Lavado
 
             _timePicker.Time = new TimeSpan(Convert.ToInt32(hour), Convert.ToInt32(minute), Convert.ToInt32(sencond));
 
+
+            FDPPicker.SelectedIndexChanged += FDPPickerSelectedIndexChanged;
+
+        }
+
+        void FDPPickerSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            DisplayAlert("",""+selectedIndex.ToString(),"");
         }
         protected override void OnAppearing()
         {
@@ -555,19 +566,7 @@ namespace WashDry.Views.Lavado
             _ = CurrentLocation();
         }
 
-        private void btnSolicitar_Clicked(object sender, EventArgs e)
-        {
-            frame1.IsVisible = false;
-            frame2.IsVisible = false;
-            frame3.IsVisible = false;
-            frame4.IsVisible = false;
-            frame5.IsVisible = false;
-            stepBar.IsVisible = false;
-            Cator.IsVisible = true;
-            Cancelbtn.IsVisible = true;
-            LoadinImg.IsVisible = true;
-            loadinglbl.IsVisible = true;
-        }
+        
 
         private void Cancelbtn_Clicked(object sender, EventArgs e)
         {
@@ -580,9 +579,52 @@ namespace WashDry.Views.Lavado
             /*    */
         }
 
+       
+
+        private void ConfirmarServicio()
+        {
+            stepBar.IsVisible = false;
+            frame1.IsVisible = false;
+            frame2.IsVisible = false;
+            frame3.IsVisible = false;
+            frame4.IsVisible = false;
+            frame5.IsVisible = true;
+
+            stepBar.IsVisible = false;
+            LoadinImg.IsVisible = false;
+            Cator.IsVisible = false;
+            Cancelbtn.IsVisible = false;
+            loadinglbl.IsVisible = false;
+
+        }
+
+        private void btnSolicitar_Clicked(object sender, EventArgs e)
+        {
+            _ = btnSolicitar_Clickedx();
+        }
+
+        private async Task btnSolicitar_Clickedx()
+        {
+            frame1.IsVisible = false;
+            frame2.IsVisible = false;
+            frame3.IsVisible = false;
+            frame4.IsVisible = false;
+            frame5.IsVisible = false;
+
+            LoadinImg.IsVisible = true;
+            Cator.IsVisible = true;
+            Cancelbtn.IsVisible = true;
+            loadinglbl.IsVisible = true;
+
+            await Task.Delay(2800);
+            Cator.IsRunning = false;
+            await LoadinImg.ScaleTo(0.6, 1500, Easing.BounceOut);
+            await LoadinImg.FadeTo(0, 270, null);
+
+            //LoadinImg
 
 
-
-
+            ConfirmarServicio();
+        }
     }
 }

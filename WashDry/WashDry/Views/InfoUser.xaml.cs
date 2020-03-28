@@ -51,13 +51,9 @@ namespace WashDry.Views
                     case System.Net.HttpStatusCode.OK:
                         Console.WriteLine("----------------------------------------------_____:Here status 200");
 
-                        // ylabel.Text = "Ultimas noticas de proyectos";
+                      
 
-
-                        // var json_ = JsonConvert.DeserializeObject<List<VisitasMod>>(xjson);
-
-                        string xjson = await responseMsg.Content.ReadAsStringAsync();
-                        //DireccApiCall
+                   
 
                         HttpContent contentD = responseMsg.Content;
                         var xjsonD = await contentD.ReadAsStringAsync();
