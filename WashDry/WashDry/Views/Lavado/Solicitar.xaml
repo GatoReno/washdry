@@ -14,53 +14,10 @@
         <StackLayout Padding="20,20,20,20">
             <local:StepProgressBarControl
                 
-                StepColor="#128C7E" Steps="5" 
+                StepColor="#128C7E" Steps="4" 
                 StepSelected="{Binding Steps}"
                 x:Name="stepBar"/>
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="desc"
-                    />
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="longitude"
-                    />
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="latitud"
-                    />
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="id_washer"
-                    />
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="id_paquete"
-                    />
 
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="id_loc"
-                    />
-
-                <Label
-                IsVisible="false"
-                    
-                    
-                    x:Name="id_auto"
-                    />
 
 
 
@@ -109,16 +66,20 @@
                                          BackgroundColor="Black"
                                 HeightRequest="50"
                 
-                                /> 
+                                />
 
-
-                            <Picker 
+                                <Label 
+                                    Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                                    x:Name="lbldirecc_error"
+                                    Text="Usted no tiene direcciones registradas"
+                                    IsVisible="False"/>
+                                <Picker 
                                 
                                 Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
                                 Margin="0,15,0,0"
                                 
                                 x:Name="PickerDirecc" 
-                                  Title="Eliga un producto" 
+                                  Title="Eliga un direccion" 
                                 TextColor="Black"
                                 ItemsSource="{Binding DireccionesApiCall}"
                                 ItemDisplayBinding="{Binding descripcion}"
@@ -145,6 +106,7 @@
 
             <Frame x:Name="frame2" CornerRadius="10" OutlineColor="#DCF8C6"
                             BackgroundColor="white" Padding="0"
+                   IsVisible="False"
                    Margin="10,10,10,10"  >
 
                 <StackLayout
@@ -152,9 +114,7 @@
                                            Margin="10,10,10,10">
 
 
-                    <StackLayout Orientation="Horizontal" 
-                                         
-                                              >
+                    <StackLayout Orientation="Horizontal" >
 
 
                         <Grid>
@@ -169,33 +129,42 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
 
+                                    <ColumnDefinition Width="1000*" />
 
-                            </Grid.ColumnDefinitions>
+                                </Grid.ColumnDefinitions>
 
                             <Label Text="Auto y paquetes"
                                      FontSize="Medium"
-                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"
                    TextColor="#128C7E"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                            <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                            <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"
                 Source="iko.png"
                 HeightRequest="140"
                 
                 />
 
-                            <Label Text="atendido por : Juan Carlos Bodoque"
-                   TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-                 HorizontalOptions="CenterAndExpand" />
+                            <Button Text="ver paquetes"
+                                    BackgroundColor="Black" TextColor="#DCF8C6"  
+                                    Grid.Row="2" Grid.Column="0"   />
 
+ 
+                                <Picker 
+                                
+                                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"
+                                Margin="0,15,0,0"
+                                
+                                x:Name="PickerPaq" 
+                                Title="Eliga una paquete" 
+                                TextColor="Black"
+                                ItemsSource="{Binding Paquete}"
+                                ItemDisplayBinding="{Binding nombre}"
+                                SelectedIndex="{Binding id_auto}"
+                                VerticalOptions="Center"
+                                />
 
-                            <Label Text="cargo : $80"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                   TextColor="#DCF8C6"
-                 HorizontalOptions="CenterAndExpand" />
-                          
 
                                 <Picker 
                                 
@@ -203,24 +172,41 @@
                                 Margin="0,15,0,0"
                                 
                                 x:Name="PickerAuto" 
-                                  Title="Eliga un producto" 
+                                  Title="Eliga una Auto" 
                                 TextColor="Black"
                                 ItemsSource="{Binding AutosModel}"
-                                ItemDisplayBinding="{Binding modelo}"
+                                ItemDisplayBinding="{Binding marca}"
                                 SelectedIndex="{Binding id_auto}"
                                 VerticalOptions="Center"
                                 />
 
 
-                                <Label Text="tarjeta : **** **** **** *123" 
-                                   Grid.Row="6" Grid.Column="0"   Grid.ColumnSpan="1"
-                VerticalOptions="CenterAndExpand"   
-                   TextColor="#128C7E"
-                HorizontalOptions="CenterAndExpand" />
+                                <Picker 
+                                
+                                Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                                Margin="0,15,0,0"
+                                x:Name="pickertamanio"
+                                  Title="Tamaño de su auto" 
+                                 TextColor="Black"
+                      
+                                VerticalOptions="Center"
+                                >
+
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Pequeño</x:String>
+                                            <x:String>Mediano</x:String>
+                                            <x:String>Grande</x:String>
+                                            <x:String>Camioneta</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+
+                                </Picker>
 
 
 
-                        </Grid>
+
+                            </Grid>
                     </StackLayout>
 
 
@@ -231,7 +217,7 @@
 
 
                 <Frame x:Name="frame3" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"
+                            BackgroundColor="white" Padding="0"    
                    Margin="10,10,10,10"  >
 
                     <StackLayout
@@ -252,74 +238,111 @@
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
+                                 
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="1000*" />
+                              
 
 
                                 </Grid.ColumnDefinitions>
 
                                 <Label Text="Elije a tu washer"
                                       FontSize="Medium"
-                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                                   Grid.Row="0" Grid.Column="0"
                                        TextColor="#128C7E"
                                     VerticalOptions="CenterAndExpand" 
                                     HorizontalOptions="CenterAndExpand" />
-                                <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                <Image  Grid.Row="1" Grid.Column="0"
                                     Source="iko.png"
-                                    HeightRequest="140"
+                                    HeightRequest="40"
                 
-                                />          
+                                />
 
-                                <Label Text="atendido por : Juan Carlos Bodoque"
-                                       TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                                <Label Text="atendido por :  "
+                                       x:Name="wlbl"
+                                       TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" 
                                      HorizontalOptions="CenterAndExpand" />
 
 
-                                <Label 
-                                        Text="cargo : $80"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                                           TextColor="#DCF8C6"
-                                         HorizontalOptions="CenterAndExpand" />             
-                                
 
-                                <ListView x:Name="ProspectoList"   
-                      ItemsSource="{Binding Washer}"
-                                           Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                      ItemTapped="ProspectoList_ItemTapped"
-                  >
+                                <ListView x:Name="WasherList"   
+                                          ItemsSource="{Binding Washer}"
+                                          Grid.Row="3" Grid.Column="0" 
+                                          HeightRequest="180"
+                                          ItemTapped="PickerWasher_ItemTapped"
+                                          >
                                     <!--Built in Cells-->
 
                                     <ListView.ItemTemplate>
+
+
                                         <DataTemplate>
-
                                             <ViewCell>
-                                                <StackLayout    Orientation="Horizontal">
+
+                                                <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
+                                                BackgroundColor="white" Padding="0"  Margin="2,2,2,2"  >
+
+                                                    <StackLayout
+                                                    Orientation="Vertical"
+                                                              >
+
+
+                                                        <StackLayout Orientation="Horizontal">
+
+
+                                                            <Grid>
+                                                                <Grid.RowDefinitions>
+
+                                                                    <RowDefinition Height="Auto"  />
+                                                                   
+                                                                </Grid.RowDefinitions>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*" />
+                                                                    <ColumnDefinition Width="*" />
+                                                                     <ColumnDefinition Width="Auto" />
+
+                                                                </Grid.ColumnDefinitions>
+
+                                                                <Image Source="iko" Grid.Row="0" Grid.Column="0"
+                                           
+                                                                   HeightRequest="50"
+                                                                   />           
+                                                                <Label Text="{Binding nombre}   "  
+                                                                      FontSize="Small"
+                                                                       Margin="0,15,0,0"
+                                                                    TextColor="#128C7E"
+                                                                    Grid.Row="0" Grid.Column="1" />
+                                                                        
 
 
 
-                                                    <Label 
-                                Text="{Binding nombre}"
-                                Margin="0,10,0,10"
-                                    TextColor="#006140"
-                                />
 
-                                                </StackLayout>
+
+                                                                <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                                                                    Grid.Row="0" Grid.Column="2" 
+                                                                                                BlockVote="True"
+                                                                                                 IsEnabled="False"
+                                                                                      
+                                                                    ImageWidth="20" ImageHeight="20"  
+                                                                                     DesignType="Standard" ColorUI="YellowLight"                                                InitialValue="{Binding calificacion}"
+                                                                                     HorizontalOptions="EndAndExpand"
+                                                                    x:Name="ratingStar"
+                                                                                    
+                                                                     />
+                                                             
+
+                                                            </Grid>
+                                                        </StackLayout>
+
+
+                                                    </StackLayout>
+                                                </Frame>
                                             </ViewCell>
 
                                         </DataTemplate>
                                     </ListView.ItemTemplate>
                                 </ListView>
-
-                                <Label Text="tarjeta : **** **** **** *123" 
-                                   Grid.Row="6" Grid.Column="0"   Grid.ColumnSpan="1"
-                                    VerticalOptions="CenterAndExpand"   
-                                       TextColor="#128C7E"
-                                    HorizontalOptions="CenterAndExpand" />
-
-
 
                             </Grid>
                         </StackLayout>
@@ -351,47 +374,43 @@
                                     <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
+                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-
+                                    <ColumnDefinition Width="1000*" />
+                             
 
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="Frame 1"
+                                <Label Text="Programe su lavado"
+                                       FontSize="Medium"
                                    Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                                        TextColor="#128C7E"
                                     VerticalOptions="CenterAndExpand" 
                                     HorizontalOptions="CenterAndExpand" />
-                                                <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                                    Source="iko.png"
-                                    HeightRequest="140"
+                                
+                                <Button  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                                    BackgroundColor="Black" TextColor="#DCF8C6"
+                                   Text="Solicitar ya"
+                                         x:Name="btnSolicitar"
+                                         Clicked="btnSolicitar_Clicked"
                 
                                     />
 
-                                <Label Text="atendido por : Juan Carlos Bodoque"
+                                <Label Text="Agenadar para mañana o en un horas"
                                        TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                                      HorizontalOptions="CenterAndExpand" />
 
 
-                                <Label Text="cargo : $80"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                                       TextColor="#DCF8C6"
-                                     HorizontalOptions="CenterAndExpand" />         
-                                <lv:RatingConception ItemsNumber="5" DrawType="Star"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                                                ImageWidth="25" ImageHeight="25"  DesignType="Standard" ColorUI="YellowLight" 
-                                                InitialValue="4"
-                                                  BlockVote="True"
-                                                IsEnabled="False"
-                                                x:Name="ratingSta4"
-                                                Margin="0,15,0,15"   />
+                                <Label Text=""  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                       TextColor="#128C7E" FontSize="Medium" x:Name="lblprice"
+                                     HorizontalOptions="CenterAndExpand" />
+                                <DatePicker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                                           
+                                             TextColor="#128C7E" 
+                                            />
+                                <TimePicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                                             TextColor="#128C7E" x:Name="_timePicker"/>
 
-                                <Label Text="tarjeta : **** **** **** *123" 
-                                   Grid.Row="6" Grid.Column="0"   Grid.ColumnSpan="1"
-                                    VerticalOptions="CenterAndExpand"   
-                                       TextColor="#128C7E"
-                                    HorizontalOptions="CenterAndExpand" />
 
 
 
@@ -477,21 +496,91 @@
                     </StackLayout>
                 </Frame>
 
+                <Label
+                    Margin="0,40,0,0"
+                    FontSize="Medium"
+             Text="Un momento por favor"
+                      HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                     TextColor="#DCF8C6"
+                    IsVisible="False"
+                    x:Name="loadinglbl"
+                    />
+
+                <Image   
+                    IsVisible="False"
+                    x:Name="LoadinImg"
+                                        Source="iko.png"
+                                        HeightRequest="140"
+                 HorizontalOptions="CenterAndExpand"
+                                        />
+                <ActivityIndicator
+                    x:Name="Cator"
+                    IsRunning="True"
+                    IsVisible="False"
+                    Color="#DCF8C6"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    
+                   ></ActivityIndicator>
+                <Button
+                    Text="Cancelar"
+                    BackgroundColor="Black"
+                    IsVisible="False"
+                    x:Name="Cancelbtn"
+                    Clicked="Cancelbtn_Clicked"
+                    TextColor="IndianRed"
+                    />
 
                 <Entry BindingContext="{x:Reference stepBar}"
-               Text="{Binding StepSelected, StringFormat='{0}'}"
-               FontAttributes="Bold"
-                   IsVisible="true"
-               FontSize="Large"
-               HorizontalOptions="Center"
-                   TextChanged="lblmain_TextChanged"
-                   BackgroundColor="White"
-                            VerticalOptions="CenterAndExpand"
-                   x:Name="lblmain">
-
+                       Text="{Binding StepSelected, StringFormat='{0}'}"
+                       FontAttributes="Bold"
+                       IsVisible="False"
+                       FontSize="Large"  
+                       HorizontalOptions="Center"
+                           TextChanged="lblmain_TextChanged"
+                           BackgroundColor="White"
+                                    VerticalOptions="CenterAndExpand"
+                           x:Name="lblmain"></Entry>
+                <Label
              
-            </Entry>
+                    
+                    IsVisible="False"
+                    x:Name="desc"
+                    />
+                <Label
+             
+                    IsVisible="False"
+                    
+                    x:Name="longitude"
+                    />
+                <Label
+                     
+                    IsVisible="False"
+                    x:Name="latitud"
+                    />
+                <Label
+                     IsVisible="False"
+                    
+                    x:Name="id_washer"
+                    />
+                <Label
+                     IsVisible="False"
+                    
+                    x:Name="id_paquete"
+                    />
 
+                <Label
+                     
+                    IsVisible="False"
+                    x:Name="id_loc"
+                    />
+
+                <Label
+                     IsVisible="False"
+                    
+                    x:Name="id_auto"
+                    />
             
         </StackLayout>
         </ScrollView>

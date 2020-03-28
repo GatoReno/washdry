@@ -20,8 +20,8 @@ namespace WashDry
 
 
      
-            //MainPage = new Solicitar(); 
-            MainPage = new NavigationPage(new Solicitar());
+           /// MainPage = new Solicitar(); 
+            MainPage = new NavigationPage(new SplashScreen());
             //  este la vista de test de sqlite  // MainPage = new Test();
         }
 
