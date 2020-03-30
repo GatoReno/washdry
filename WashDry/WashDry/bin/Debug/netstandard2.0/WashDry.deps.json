@@ -24,7 +24,8 @@
           "Xamarin.Essentials": "1.5.1",
           "Xamarin.Forms": "4.5.0.356",
           "Xamarin.Forms.Maps": "4.5.0.356",
-          "sqlite-net-pcl": "1.6.292"
+          "sqlite-net-pcl": "1.6.292",
+          "System.Drawing.Common": "4.0.0.0"
         },
         "runtime": {
           "WashDry.dll": {}
@@ -367,6 +368,14 @@
             "fileVersion": "4.5.0.143"
           }
         }
+      },
+      "System.Drawing.Common/4.0.0.0": {
+        "runtime": {
+          "System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
       }
     }
   },
@@ -613,6 +622,11 @@
       "sha512": "sha512-U1yUOMqFmyPVvkGXAQFcZRsOaHiQv5xnBtKLtIW4/I11a1R0tC20utWaw+qtk1tL9CmNWJLlAjJEjqHawI5QPw==",
       "path": "xamarin.forms.maps/4.5.0.356",
       "hashPath": "xamarin.forms.maps.4.5.0.356.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

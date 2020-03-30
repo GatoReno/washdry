@@ -57,12 +57,15 @@ namespace WashDry.Views.Lavado
 
         }
 
-        void FDPPickerSelectedIndexChanged(object sender, EventArgs e)
+         FDPPickerSelectedIndexChangedAsync(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
             int selectedIndex = picker.SelectedIndex;
+            var itemSelect = picker.SelectedItem;
 
-            DisplayAlert("",""+selectedIndex.ToString(),"");
+           await DisplayAlert("",
+                              "" + selectedIndex.ToString(),
+                              "");
         }
         protected override void OnAppearing()
         {
