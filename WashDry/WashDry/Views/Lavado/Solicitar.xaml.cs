@@ -22,7 +22,8 @@ namespace WashDry.Views.Lavado
     {
         public string StepSelected { get; set; }
         public int idx;
-
+        public Boolean Efectivo = false;
+        public Boolean Tarjeta = false;
         public User user;
         public UserDataBase userDataBase;
 
@@ -33,11 +34,11 @@ namespace WashDry.Views.Lavado
             stepBar.FadeTo(1, 1000, null);
             stepBar.ScaleTo(1, 1000);
             //local: StepProgressBarControl
-            frame1.IsVisible = true;
+            frame1.IsVisible = false;
             frame2.IsVisible = false;
             frame3.IsVisible = false;
             frame4.IsVisible = false;
-            frame5.IsVisible = false;
+            frame5.IsVisible = true;
 
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
@@ -53,20 +54,13 @@ namespace WashDry.Views.Lavado
             _timePicker.Time = new TimeSpan(Convert.ToInt32(hour), Convert.ToInt32(minute), Convert.ToInt32(sencond));
 
 
-            FDPPicker.SelectedIndexChanged += FDPPickerSelectedIndexChanged;
+          FDPPicker.SelectedIndexChanged += FDPPickerSelectedIndexChanged;
 
         }
 
-         FDPPickerSelectedIndexChangedAsync(object sender, EventArgs e)
-        {
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
-            var itemSelect = picker.SelectedItem;
+   
 
-           await DisplayAlert("",
-                              "" + selectedIndex.ToString(),
-                              "");
-        }
+ 
         protected override void OnAppearing()
         {
 
@@ -74,11 +68,11 @@ namespace WashDry.Views.Lavado
             stepBar.FadeTo(1, 1000, null);
             stepBar.ScaleTo(1, 1000);
             //local: StepProgressBarControl
-            frame1.IsVisible = true;
+            frame1.IsVisible = false;
             frame2.IsVisible = false;
             frame3.IsVisible = false;
             frame4.IsVisible = false;
-            frame5.IsVisible = false;
+            frame5.IsVisible = true;
 
 
             _ = getdireccion(); _ = getAutos(); _ = getPaquetes(); _ = getWashers();
@@ -92,7 +86,31 @@ namespace WashDry.Views.Lavado
 
         }
 
+        private void FDPPickerSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
 
+            var itemSelect = picker.SelectedItem;
+
+             
+            
+            if (itemSelect == "Tarjeta")
+                 {
+                    modotarjeta.IsVisible = true;
+                    lblpayoption.Text = "Modo de pago";
+                    vapagarcon.IsVisible = false;
+
+                Tarjeta = true;
+                }
+             else if (itemSelect == "Efectivo")
+             {
+                lblpayoption.IsVisible = true;
+                lblpayoption.Text = "Con cuanto va a pagar?"; 
+                vapagarcon.IsVisible = true;
+                Efectivo = true;
+            }
+
+        }
         private void PickerPickerAuto_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             try
@@ -628,6 +646,50 @@ namespace WashDry.Views.Lavado
 
 
             ConfirmarServicio();
+        }
+
+        private void btnpedirservicio_Clicked(object sender, EventArgs e)
+        {
+
+            var idauto = id_auto.Text;
+            var iduser = 0;
+            var idwasher = id_washer.Text;
+            var idloc = id_loc.Text;
+            var lon = longitude.Text;
+            var lat = latitud.Text;
+            var idpaq = id_paquete.Text;
+
+            if (Tarjeta)
+            {
+
+            }
+            else if (Efectivo)
+            {
+
+                var vaapgar = vapagarcon.Text;
+            }
+            else {
+
+                errorlblconfir.IsVisible = true;
+                errorlblconfir.Text = "Selecione un metodo de pago";
+            }
+
+
+            if ( lon.Length < 5 || lat.Length < 5)
+            {
+                errorlblconfir.IsVisible = true;
+                errorlblconfir.Text = "Error con la ubicacion, intente nuevamente";
+            }
+
+            if (idauto.Length < 1)
+            {
+                errorlblconfir.IsVisible = true;
+                errorlblconfir.Text = "Error en los datos de su Auto";
+            }
+            if (idwasher.Length < 1)
+            {
+                errorlblconfir.Text = "Error en los datos de su Washer";
+            }
         }
     }
 }

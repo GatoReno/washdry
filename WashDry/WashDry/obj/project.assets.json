@@ -1914,23 +1914,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\samay\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\chmx\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+      "projectUniqueName": "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
       "projectName": "WashDry",
-      "projectPath": "C:\\Users\\ASUS\\Desktop\\chmx\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Desktop\\chmx\\washdry\\WashDry\\WashDry\\obj\\",
+      "projectPath": "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+      "packagesPath": "C:\\Users\\samay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

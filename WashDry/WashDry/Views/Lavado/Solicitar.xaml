@@ -270,7 +270,7 @@
                                 <ListView x:Name="WasherList"   
                                           ItemsSource="{Binding Washer}"
                                           Grid.Row="3" Grid.Column="0" 
-                                          HeightRequest="180"
+                                          HeightRequest="300"
                                           ItemTapped="PickerWasher_ItemTapped"
                                           >
                                     <!--Built in Cells-->
@@ -449,6 +449,9 @@
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
+                                    <!--14rows-->
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
 
 
                                 </Grid.RowDefinitions>
@@ -475,14 +478,12 @@
                    Grid.Column="0"   TextColor="#075E54"
                    Grid.ColumnSpan="2"
                 HorizontalOptions="CenterAndExpand" />
-
                                 <Label
                     Margin="0,10,0,0"
                     Grid.Row="3"
                     Grid.Column="0"
                     TextColor="#075E54" HorizontalOptions="CenterAndExpand"
                                 Text="Paquete Selecionado"/>
-
                                 <Label                     
                     Margin="0,10,0,0"
                     Grid.Row="3"
@@ -491,16 +492,12 @@
                     Text="Paquete 1"
                     HorizontalOptions="CenterAndExpand"
                          />
-
-
-
                                 <Label
                     Margin="0,10,0,0"
                     Grid.Row="4"
                     Grid.Column="0" HorizontalOptions="CenterAndExpand"
                     TextColor="#075E54"
                                 Text="Fragancia Selecionado"/>
-
                                 <Label                     
                     Margin="0,10,0,0"
                     Grid.Row="4"
@@ -509,8 +506,6 @@
                     Text="Fragancia 1"
                     HorizontalOptions="CenterAndExpand"
                          />
-
-
                                 <BoxView 
                     Margin="0,10,0,0"
                      Grid.Row="5"
@@ -519,16 +514,12 @@
                     HeightRequest="1" 
                     BackgroundColor="#DCF8C6" 
                     HorizontalOptions="FillAndExpand" />
-
-
-
                                 <Label
                     Margin="0,10,0,0"
                     Grid.Row="6"
                     Grid.Column="0" HorizontalOptions="CenterAndExpand"
                     TextColor="#075E54"
                                 Text="Fecha de servicio"/>
-
                                 <Label                     
                     Margin="0,10,0,0"
                     Grid.Row="6"
@@ -537,16 +528,12 @@
                     Text="tiempo de llegada"
                     HorizontalOptions="CenterAndExpand"
                          />
-
-
                                 <Label
                     Margin="0,10,0,0"
                     Grid.Row="7"
                     Grid.Column="0" HorizontalOptions="CenterAndExpand"
                     TextColor="#075E54"
                                 Text="Hoy"/>
-
-
                                 <Frame
                     HasShadow="True"
                      Grid.Row="7"
@@ -555,15 +542,11 @@
                       CornerRadius="10"
                     >
                                     <StackLayout
-                        Orientation="Horizontal">
+                                    Orientation="Horizontal">
                                         <Label                     
-                            Margin="0,0,0,0"
-                                     
-                            TextColor="White"                    
-                        
-                            
-                            HorizontalOptions="CenterAndExpand"
-                         >
+                                            Margin="0,0,0,0" 
+                                            TextColor="White"                    
+                                            HorizontalOptions="CenterAndExpand" >
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -580,8 +563,6 @@
                                     </StackLayout>
 
                                 </Frame>
-
-
                                 <Frame  HasShadow="True"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
                         CornerRadius="10" 
                         >
@@ -640,7 +621,7 @@
                      ></Label>
 
                                 <Picker
-                      Grid.Row="10"
+                      Grid.Row="11"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     TitleColor="#128C7E"
@@ -656,9 +637,31 @@
                                     </Picker.ItemsSource>
                                 </Picker>
 
+                                <Label 
+                                    Grid.Row="12" Grid.Column="0"  
+                                    Grid.ColumnSpan="1"  TextColor="#075E54"  
+                                    IsVisible="False"
+                                    x:Name="lblpayoption"
+                                    Text="  "
+                                    ></Label>
+                                <Entry
+                                    Grid.Row="12" Grid.Column="1"  
+                                    Grid.ColumnSpan="1" 
+                                    IsVisible="False"  TextColor="#075E54"  
+                                    x:Name="vapagarcon"
+                                    HorizontalOptions="EndAndExpand"
+                                    Placeholder="$100"
+                                    ></Entry>
+                                <Label 
+                                    Grid.Row="12" Grid.Column="1"  
+                                    Grid.ColumnSpan="1"   TextColor="#075E54"  
+                                    IsVisible="False"
+                                    x:Name="modotarjeta"
+                                    Text="Tarjeta"
+                                    ></Label>
                                 <Label  
                      TextColor="#075E54"     
-                    Grid.Row="11"
+                    Grid.Row="13"
                           Text="total"
                     Grid.Column="0"  
                     Grid.ColumnSpan="1"  HorizontalOptions="EndAndExpand"/>
@@ -666,7 +669,7 @@
 
                                 <Label  
                        TextColor="#075E54"    
-                    Grid.Row="11"
+                    Grid.Row="13"
                           Text="$ 80"
                     Grid.Column="1"  
                    
@@ -674,7 +677,7 @@
 
                                 <BoxView 
                     Margin="0,10,0,0"
-                     Grid.Row="12"
+                     Grid.Row="14"
                     Grid.Column="0"  
                     Grid.ColumnSpan="2"
                            HeightRequest="1" 
@@ -682,6 +685,23 @@
                     HorizontalOptions="FillAndExpand" />
 
 
+                                <Label  
+                                TextColor="IndianRed"    
+                                Grid.Row="14"
+                                Text=" "
+                                Grid.Column="2"  
+                                x:Name="errorlblconfir"
+                                HorizontalOptions="EndAndExpand"/>
+
+                                <Button Margin="0,10,0,0"
+                                    Text="Confirmar pedido"
+                                    TextColor="White"
+                               BackgroundColor="#075E54"
+                                        Clicked="btnpedirservicio_Clicked"
+                                        x:Name="btnpedirservicio"
+                                    Grid.Row="15"
+                                    Grid.Column="0"  
+                                    Grid.ColumnSpan="2" />
 
                             </Grid>
                         </StackLayout>
