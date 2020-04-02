@@ -6877,6 +6877,7 @@ C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\app_sh
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\app_shared_libraries\x86\libxamarin-app.so
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\android\bin\classes.dex
+C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_AndroidXJetifyEmbeddedFiles.stamp
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_CleanIntermediateIfNuGetsChange.stamp
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_CompileToDalvik.stamp
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp

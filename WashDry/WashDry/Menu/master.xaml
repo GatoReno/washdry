@@ -34,11 +34,29 @@
 
 
 
-                <Button Text="Direcciones "       BackgroundColor="#075E54"  TextColor="#DCF8C6"  
+               <!-- <Button Text="Direcciones "       BackgroundColor="#075E54"  TextColor="#DCF8C6"  
                         x:Name="Direccionbtn" 
                             Clicked="Direccionbtn_Clicked"
                         FontSize="Small"
                         />
+                
+                <Button Text="solicitar servicio"
+                    x:Name="btnsolicitardserv"
+                            Clicked="btnsolicitardserv_Clicked"
+                     BackgroundColor="#075E54"  TextColor="#DCF8C6"
+                   />
+
+                        <Button Text="contratar"
+                    x:Name="contratarbtn"
+                         Clicked="contratarbtn_Clicked"
+                     BackgroundColor="#075E54"  TextColor="#DCF8C6"
+                   />
+                       <Button Text="compartir codigo"
+            x:Name="btncompartircod"
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
+           />
+
+                -->
 
                 <Button Text="lavados"
             x:Name="btnlavos"
@@ -52,22 +70,12 @@
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-                <Button Text="compartir codigo"
-            x:Name="btncompartircod"
+                <Button Text="Cerrar sesion"
+            x:Name="btnCerrarSession"
+                        Clicked="btnCerrarSession_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
 
-                <Button Text="solicitar servicio"
-            x:Name="btnsolicitardserv"
-                    Clicked="btnsolicitardserv_Clicked"
-             BackgroundColor="#075E54"  TextColor="#DCF8C6"
-           />
-
-                <Button Text="contratar"
-            x:Name="contratarbtn"
-                 Clicked="contratarbtn_Clicked"
-             BackgroundColor="#075E54"  TextColor="#DCF8C6"
-           />
                 <Label></Label>
             </StackLayout>
         </ScrollView>

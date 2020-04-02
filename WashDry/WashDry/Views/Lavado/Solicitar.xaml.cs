@@ -34,11 +34,11 @@ namespace WashDry.Views.Lavado
             stepBar.FadeTo(1, 1000, null);
             stepBar.ScaleTo(1, 1000);
             //local: StepProgressBarControl
-            frame1.IsVisible = false;
+            frame1.IsVisible = true;
             frame2.IsVisible = false;
             frame3.IsVisible = false;
             frame4.IsVisible = false;
-            frame5.IsVisible = true;
+            frame5.IsVisible = false;
 
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
@@ -68,26 +68,25 @@ namespace WashDry.Views.Lavado
             stepBar.FadeTo(1, 1000, null);
             stepBar.ScaleTo(1, 1000);
             //local: StepProgressBarControl
-            frame1.IsVisible = false;
+            frame1.IsVisible = true;
             frame2.IsVisible = false;
             frame3.IsVisible = false;
             frame4.IsVisible = false;
-            frame5.IsVisible = true;
+            frame5.IsVisible = false;
 
 
-            _ = getdireccion(); _ = getAutos(); _ = getPaquetes(); _ = getWashers();
 
             string hour = DateTime.Now.ToString("HH");
             string minute = DateTime.Now.ToString("mm");
             string sencond = DateTime.Now.ToString("ss");
 
             _timePicker.Time = new TimeSpan(Convert.ToInt32(hour), Convert.ToInt32(minute), Convert.ToInt32(sencond));
-
+            getWashers();
 
         }
 
         private void FDPPickerSelectedIndexChanged(object sender, EventArgs e)
-        {
+            {
             var picker = (Picker)sender;
 
             var itemSelect = picker.SelectedItem;
@@ -173,71 +172,80 @@ namespace WashDry.Views.Lavado
 
         private async Task getWashers()
         {
-            if (CrossConnectivity.Current.IsConnected)
+            try
             {
-                var uri = "http://www.washdryapp.com/app/public/washer/lista";
-                var request = new HttpRequestMessage();
-                request.RequestUri = new Uri(uri);
-                var client = new HttpClient();
-
-
-
-                try
+                if (CrossConnectivity.Current.IsConnected)
                 {
-                    HttpResponseMessage response = await client.SendAsync(request);
+                    var uri = "http://www.washdryapp.com/app/public/washer/lista";
+                    var request = new HttpRequestMessage();
+                    request.RequestUri = new Uri(uri);
+                    var client = new HttpClient();
 
-                    switch (response.StatusCode)
+
+
+                    try
                     {
-                        case System.Net.HttpStatusCode.InternalServerError:
-                            Console.WriteLine("----------------------------------------------_____:Here status 500");
+                        HttpResponseMessage response = await client.SendAsync(request);
+
+                        switch (response.StatusCode)
+                        {
+                            case System.Net.HttpStatusCode.InternalServerError:
+                                Console.WriteLine("----------------------------------------------_____:Here status 500");
 
 
-                            break;
-                        case System.Net.HttpStatusCode.OK:
-                            Console.WriteLine("----------------------------------------------_____:Here status 200");
+                                break;
+                            case System.Net.HttpStatusCode.OK:
+                                Console.WriteLine("----------------------------------------------_____:Here status 200");
 
-                            try
-                            {
-                                HttpContent content = response.Content;
-                                string xjson = await content.ReadAsStringAsync();
-
-
-                                var result = JsonConvert.DeserializeObject<List<Washer>>(xjson);
-
-                                if (result.Count() > 0)
+                                try
                                 {
-                                    WasherList.ItemsSource = result;
-                                    WasherList.ItemTapped += PickerWasher_ItemTapped;
+                                    HttpContent content = response.Content;
+                                    string xjson = await content.ReadAsStringAsync();
+
+
+                                    var result = JsonConvert.DeserializeObject<List<Washer>>(xjson);
+
+                                    if (result.Count() > 0)
+                                    {
+                                        WasherList.ItemsSource = result;
+                                        WasherList.ItemTapped += PickerWasher_ItemTapped;
+                                    }
+                                    else
+                                    {
+
+                                        wlbl.Text = "Lo sentimos no hay washers cerca de momento, intenta mas tarde";
+
+                                        WasherList.IsVisible = false;
+                                    }
+
                                 }
-                                else
+                                catch (Exception ex)
                                 {
+                                    await DisplayAlert("", "" + ex.ToString(), "ok");
+                                    var x = ex.ToString();
 
-                                    wlbl.Text = "Lo sentimos no hay washers cerca de momento, intenta mas tarde";
-
-                                    WasherList.IsVisible = false;
+                                    return;
                                 }
+                                break;
+                            case System.Net.HttpStatusCode.NotFound:
 
-                            }
-                            catch (Exception ex)
-                            {
-                                await DisplayAlert("", "" + ex.ToString(), "ok");
-                                var x = ex.ToString();
+                                await DisplayAlert("error 404", "servidor no encontrado ", "ok");
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
 
-                                return;
-                            }
-                            break;
-                        case System.Net.HttpStatusCode.NotFound:
-
-                            await DisplayAlert("error 404", "servidor no encontrado ", "ok");
-                            break;
+                        await DisplayAlert("Error", "Intente en otro momento _ error: " + ex.ToString() + " _ ", "ok");
                     }
                 }
-                catch (Exception ex)
-                {
-
-                    await DisplayAlert("Error", "Intente en otro momento _ error: " + ex.ToString() + " _ ", "ok");
-                }
             }
+            catch (Exception exc)
+            {
+
+                await DisplayAlert("Error",""+exc.ToString(), "ok");
+            }
+           
         }
 
         private void PickerWasher_ItemTapped(object sender, ItemTappedEventArgs e)

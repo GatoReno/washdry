@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WashDry.Views.Lavado;
 using WashDry.Views.RegistCar;
+using WashDry.Views.UserInfo;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
@@ -72,14 +73,16 @@ namespace WashDry.Menu
         }
         private async void Lavadobtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LavadoAlInstante());
+            await Navigation.PushAsync(new Solicitar());
             //   await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new LavadoAlInstante());
         }
 
-        private void Direccionbtn_Clicked(object sender, EventArgs e)
+        private async void Direccionbtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Direcciones());
         }
+      
+
 
         private async void AddCarbtn_Clicked(object sender, EventArgs e)
         {
@@ -93,7 +96,7 @@ namespace WashDry.Menu
 
         private async void Agendarbtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Agendar());
+            await Navigation.PushAsync(new Solicitar());
         }
 
         private async void CarListbtrn_Clicked(object sender, EventArgs e)

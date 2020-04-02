@@ -12,37 +12,30 @@
             <StackLayout Margin="20,40,20,20"
                     
                          >
-             
 
-            <Button
-                 HorizontalOptions="CenterAndExpand"  BackgroundColor="#DCF8C6"  TextColor="#225374"
-                WidthRequest="200"
-                Text="selecionar auto"
-                x:Name="CarListbtrn"
-                Clicked="CarListbtrn_Clicked"
-                />
-            <Button
-                 HorizontalOptions="CenterAndExpand"   
-                Text="agendar fecha"
-                Clicked="Agendarbtn_Clicked"
-                 BackgroundColor="#DCF8C6"  TextColor="#225374"
-                WidthRequest="200"
-                />
-            <Button
+                <Button
                  HorizontalOptions="CenterAndExpand"    BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"
                 Text="lavado al instante"
                 Clicked="Lavadobtn_Clicked"
-                />
-
-            <Button
-                 HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
+                  />
+                <Button
+                   HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"
                 Text="Agregar Auto"
                 Clicked="AddCarbtn_Clicked"
-                Margin="0,0,0,30"
                 />
+            <Button
+                 HorizontalOptions="CenterAndExpand"   
+                Text="Direcciones"
+                  x:Name="Direccionbtn" 
+                            Clicked="Direccionbtn_Clicked"
+                 BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"  Margin="0,0,0,30"
+                />
+           
 
+        
                 
                 <!--
                 <Button
@@ -54,6 +47,12 @@
                     
                     />
 
+    <Button
+                 HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
+                WidthRequest="200"
+                Text="Agregar Auto"
+                Clicked="AddCarbtn_Clicked"
+                />
 
                 <Label
                      HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"

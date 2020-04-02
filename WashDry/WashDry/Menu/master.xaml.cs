@@ -7,6 +7,7 @@ using WashDry.Models.DbModels;
 using WashDry.SQLiteDb;
 using WashDry.Views;
 using WashDry.Views.Lavado;
+using WashDry.Views.Login;
 using WashDry.Views.RegistCar;
 using WashDry.Views.Servicio;
 using WashDry.Views.UserInfo;
@@ -45,7 +46,7 @@ namespace WashDry.Menu
             App.MasterD.IsPresented = false;
             await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Direcciones());
         }
-        private async void btnlavos_Clicked(object sender, EventArgs e)
+        private async void  btnlavos_Clicked(object sender, EventArgs e)
         {
             App.MasterD.IsPresented = false;
 
@@ -83,6 +84,17 @@ namespace WashDry.Menu
 
             await((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Contratar());
 
+        }
+
+        private void btnCerrarSession_Clicked(object sender, EventArgs e)
+        {
+            userDataBase = new UserDataBase();
+            var user_exist = userDataBase.GetMembers().ToList();
+            var idx = user_exist[0].id;
+            userDataBase.DeleteMember(Int32.Parse(idx));
+
+
+            Application.Current.MainPage = new Login();
         }
     }
 }
