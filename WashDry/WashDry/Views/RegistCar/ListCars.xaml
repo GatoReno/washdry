@@ -25,9 +25,25 @@
                 IsVisible="False"
                 />
 
-          
 
+            <AbsoluteLayout>
 
+             
+
+                <ImageButton Source="iko" 
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+             x:Name="btnaddcar"
+                             Clicked="btnaddcar_Clicked"/>
+              
+            </AbsoluteLayout>
+            <Label
+                    Text="Agregar Auto"
+                    HorizontalOptions="EndAndExpand"
+                     TextColor="#DCF8C6"
+                Margin="0,0,10,0"
+                    />
             <ListView x:Name="ListAutos"                      
                       ItemsSource="{Binding AutosModel}"
                       ItemTapped="ListVisitas_ItemTapped"

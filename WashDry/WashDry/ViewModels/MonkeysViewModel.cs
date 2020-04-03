@@ -48,24 +48,26 @@ namespace WashDry.ViewModels
             source.Add(new Monkey
             {
                 Name = "WASH DRY APP",
-                Location = "SOMOS",
-                Details = "BIENVENIDO",
+                Location = " ",
+                Details = "Somos una emprea consiente del medio ambiente principalmente al ahorro del agua" +
+                " que ofrece lavado de autos a domicilio . Incluyendo comodidad ,seguridad y rapidez. Gerenado empleos en la ciudad.",
                 ImageUrl = "iko.png"
             });
 
             source.Add(new Monkey
             {
-                Name = "¿Gana Dinero con Nosotros?",
+                Name = "Programa Cero Contaminacion ",
                 Location = "",
-                Details = "Ganar Dinero con Nosotros es muy Sencillo",
+                Details = "No usamos mas de 70 litros por auto, ni productos nocivos para el ambiente, sin grupo electrogeno, sin contaminacion acustica, sin contaminacion de acuiferos.",
                 ImageUrl = "iko.png"
             });
 
             source.Add(new Monkey
             {
-                Name = "",
-                Location = "Trabajar nunca fue tan fácil",
-                Details = "",
+                Name = "Como lo hacemos?",
+                Location = "",
+                Details = "Contamos con washers capacitados y equipamiento, que llegar hasta tu ubicacion  para brindarte el mejor servicio"+
+                ", lo unico que tienes que hacer es agendar con nosotros , registrate y vive la experiencia.",
                 ImageUrl = "iko.png"
             });
 

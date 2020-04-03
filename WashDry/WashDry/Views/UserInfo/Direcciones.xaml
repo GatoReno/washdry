@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
              x:Class="WashDry.Views.UserInfo.Direcciones"      BackgroundColor="#225374">
     <ContentPage.Content>
@@ -23,6 +24,11 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <maps:Map x:Name="Mapx"
+                                          WidthRequest="100" HeightRequest="300"
+                                                />
+
 
             <Entry
                 x:Name="desc"

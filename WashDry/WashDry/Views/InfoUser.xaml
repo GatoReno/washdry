@@ -18,26 +18,32 @@
                     Source="iko.png"
                     x:Name="ImgProfile"/>
 
-            <Label x:Name="lbl1" />
-            <Label x:Name="lbl2" />
-            <Label x:Name="lbl3" />
+            <Label TextColor="#DCF8C6"/>
+            <Label  TextColor="#DCF8C6"/>
+            <Label x:Name="lbl3" TextColor="#DCF8C6" />
 
             <Entry 
                 Placeholder=""
+                TextColor="#DCF8C6"
+                 x:Name="lbl1"
                 />
 
             <Entry 
+                TextColor="#DCF8C6"
                 Placeholder=""
+                x:Name="lbl2"
                 />
 
             <Entry 
                 IsPassword="True"
                 Placeholder=""
+                 
                 />
 
             <Entry 
                 IsPassword="True"
                 Placeholder=""
+             
                 />
 
             <Button Text="Actualizar "     BackgroundColor="#DCF8C6"  TextColor="#225374"  

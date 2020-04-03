@@ -96,10 +96,6 @@
               "target": "Package",
               "version": "[1.5.1, )"
             },
-            "Xamarin.Firebase.Messaging": {
-              "target": "Package",
-              "version": "[60.1142.1, )"
-            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.5.0.356, )"

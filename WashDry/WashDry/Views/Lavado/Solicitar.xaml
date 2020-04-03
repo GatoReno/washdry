@@ -405,15 +405,16 @@
                                     />
 
                                 <Label Text="Agenadar para mañana o en un horas"
-                                       TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-                                     HorizontalOptions="CenterAndExpand" />
+                                       TextColor="#128C7E"  Grid.Row="2" Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                         HorizontalOptions="CenterAndExpand" />
 
 
                                 <Label Text=""  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                                        TextColor="#128C7E" FontSize="Medium" x:Name="lblprice"
                                      HorizontalOptions="CenterAndExpand" />
                                 <DatePicker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                                           
+                                           x:Name="_datePicker"
                                              TextColor="#128C7E" 
                                             />
                                 <TimePicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"

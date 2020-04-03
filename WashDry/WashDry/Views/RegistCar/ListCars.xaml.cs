@@ -56,7 +56,7 @@ namespace WashDry.Views.RegistCar
 
 
                     case System.Net.HttpStatusCode.OK:
-                        Console.WriteLine("----------------------------------------------_____:Here status 200");
+                        //Console.WriteLine("----------------------------------------------_____:Here status 200");
 
                         // ylabel.Text = "Ultimas noticas de proyectos";
                         HttpContent content = response.Content;
@@ -89,5 +89,9 @@ namespace WashDry.Views.RegistCar
              await Navigation.PushAsync(new CarInfo(Int32.Parse(content.id_auto)));
         }
 
+        private void btnaddcar_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

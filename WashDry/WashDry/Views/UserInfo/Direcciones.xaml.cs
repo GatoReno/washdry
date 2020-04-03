@@ -11,6 +11,7 @@ using WashDry.Models.ApiModels;
 using WashDry.Models.DbModels;
 using WashDry.SQLiteDb;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 namespace WashDry.Views.UserInfo
@@ -25,7 +26,32 @@ namespace WashDry.Views.UserInfo
         public Direcciones()
         {
             InitializeComponent();
+            _ = CurrentLocation();
         }
+
+
+        public async Task CurrentLocation()
+        {
+
+            var pos = await CrossGeolocator.Current.GetPositionAsync();
+
+
+            Mapx.MoveToRegion(
+            MapSpan.FromCenterAndRadius(
+            new Position(pos.Latitude, pos.Longitude), Distance.FromMiles(1)));
+
+
+            var pin = new Pin
+            {
+                Type = PinType.Place,
+                Position = new Position(pos.Latitude, pos.Longitude),
+                Label = "Mi ubicacion",
+                Address = "  usted se encuentra aqui",
+
+            };
+            Mapx.Pins.Add(pin);
+        }
+
         public async Task GetVisitasWeb()
         {
            
@@ -226,8 +252,33 @@ namespace WashDry.Views.UserInfo
         {
             var dir = e.Item as DireccionesApiCall;
              await DisplayAlert("direccion","   "+dir.descripcion, "ok");
-
+            _ = SetCurrentLocation(dir.latitud,dir.longitud,dir.descripcion);
           //  await Navigation.PushAsync(new ProspectoInfo(content_X.index_prospecto));
+        }
+
+
+        public async Task SetCurrentLocation(string latitud, string longitude,string desc)
+        {
+            Mapx.Pins.Clear();
+            Mapx.IsVisible = true;
+            var pos = await CrossGeolocator.Current.GetPositionAsync();
+
+
+
+            Mapx.MoveToRegion(
+            MapSpan.FromCenterAndRadius(
+            new Position(Double.Parse(latitud ), Double.Parse(longitude )), Distance.FromMiles(1)));
+
+
+            var pin = new Pin
+            {
+                Type = PinType.Place,
+                Position = new Position(Double.Parse(latitud), Double.Parse(longitude)),
+                Label = "Mi ubicacion",
+                Address = desc,
+
+            };
+            Mapx.Pins.Add(pin);
         }
     }
 }

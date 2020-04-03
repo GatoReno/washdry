@@ -195,7 +195,7 @@ namespace WashDry.Views.Lavado
 
                                 break;
                             case System.Net.HttpStatusCode.OK:
-                                Console.WriteLine("----------------------------------------------_____:Here status 200");
+//                                Console.WriteLine("----------------------------------------------_____:Here status 200");
 
                                 try
                                 {
@@ -660,7 +660,7 @@ namespace WashDry.Views.Lavado
         {
 
             var idauto = id_auto.Text;
-            var iduser = 0;
+            
             var idwasher = id_washer.Text;
             var idloc = id_loc.Text;
             var lon = longitude.Text;
@@ -698,6 +698,34 @@ namespace WashDry.Views.Lavado
             {
                 errorlblconfir.Text = "Error en los datos de su Washer";
             }
+
+
+            HttpClient client = new HttpClient();
+
+            // pos.Latitude 
+
+            var value_check = new Dictionary<string, string>
+                         {
+                            
+                            {"id_washer" ,  idwasher},
+                            {"id_usuario" ,  idx.ToString()},
+                            {"id_paquete" ,  idpaq},
+                            {"id_auto" ,  idauto},
+                            {"latitud" ,  lat},
+                            {"longitud" ,  lon},
+                            {"foto","null" },
+                            {"fecha",_datePicker.Date.ToString("ddd, d:e MMMM") },
+                            {"calificacion","null" },
+                            {"comentario","" },
+                            {"cambio","null" },
+                            {"formacambio","" },
+
+
+
+                };
+            var content = new FormUrlEncodedContent(value_check);
+            //var response = await client.PostAsync("http://192.168.90.165:55751/cartas/InsertVisitaApp", content);
+
         }
     }
 }

@@ -30,7 +30,7 @@ namespace WashDry.Views
                 userDataBase = new UserDataBase();
                 var user_exist = userDataBase.GetMembers().ToList();
                 HttpClient client = new HttpClient();
-                var uri = "http://www.washdryapp.com/app/public/usuario/datos/" + user_exist[0].id;
+                var uri = "http://www.washdryapp.com/app/public/washer/loginChema"; //+ user_exist[0].id;
 
 
 

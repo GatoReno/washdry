@@ -282,7 +282,6 @@ C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\re
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\WashDry.pdb
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\System.Drawing.Common.dll
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\bin\Debug\netstandard2.0\System.Drawing.Common.pdb
-C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.csprojAssemblyReference.cache
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Menu\detail.xaml.g.cs
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Menu\master.xaml.g.cs
@@ -313,3 +312,4 @@ C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Wa
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.dll
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\ref\WashDry.dll
 C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.pdb
+C:\Users\samay\Desktop\chmix\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.csprojAssemblyReference.cache
