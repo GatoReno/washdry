@@ -248,12 +248,11 @@ namespace WashDry.Views.UserInfo
 
         }
 
-        private async void ListDirecciones_ItemTapped(object sender, ItemTappedEventArgs e)
+        private  void ListDirecciones_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var dir = e.Item as DireccionesApiCall;
-             await DisplayAlert("direccion","   "+dir.descripcion, "ok");
+           // await DisplayAlert("direccion","   "+dir.descripcion, "ok");
             _ = SetCurrentLocation(dir.latitud,dir.longitud,dir.descripcion);
-          //  await Navigation.PushAsync(new ProspectoInfo(content_X.index_prospecto));
         }
 
 

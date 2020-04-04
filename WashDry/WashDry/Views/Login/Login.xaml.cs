@@ -53,20 +53,19 @@ namespace WashDry.Views.Login
 
                 HttpClient client = new HttpClient();
 
-                /*
+                
                 var value_check = new Dictionary<string, string>
                          {
-                            { "usuario", user},
+                            { "email", user},
                             { "pass", pass}
                          };
 
-                 var content = new FormUrlEncodedContent(value_check);
-                */
+                 var contentx = new FormUrlEncodedContent(value_check);
 
                 try
                 {
 
-                    var response = await client.GetAsync("http://www.washdryapp.com/app/public/washer/loginChema");
+                    var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/login_cliente",contentx);
 
 
                     HttpContent content = response.Content;

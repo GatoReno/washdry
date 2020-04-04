@@ -13,6 +13,7 @@ using Xamarin.Essentials;
 using System.Net.Http;
 using Spillman.Xamarin.Forms.ColorPicker;
 using System.Net.Http.Headers;
+using WashDry.SQLiteDb;
 
 namespace WashDry.Views.RegistCar
 {
@@ -32,13 +33,17 @@ namespace WashDry.Views.RegistCar
             get => editedColor;
             set { editedColor = value; OnPropertyChanged(); }
         }
+        public UserDataBase userDataBase;
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, true);
 
-            idx = "13";
+            userDataBase = new UserDataBase();
+            var user_exist = userDataBase.GetMembers().ToList();
+
+            idx = user_exist[0].id;
         }
 
         private MediaFile _image;
@@ -165,7 +170,7 @@ namespace WashDry.Views.RegistCar
                         Cator.IsRunning = false;
                         Cator.IsVisible = false;
                         string xjson =  await responseMsg.Content.ReadAsStringAsync();
-                        await DisplayAlert("error", "yeah status 200 : " + xjson, "ok");
+                        await DisplayAlert("Exito", "yeah status 200 : " + xjson, "ok");
 
                         btnCamara.IsVisible = true;
                         btnGal.IsVisible = true;
@@ -178,6 +183,7 @@ namespace WashDry.Views.RegistCar
                         lblamio.IsVisible = true;
                         Ann_.IsVisible = true;
                         colorx.IsVisible = true;
+                                                            await Navigation.PopToRootAsync();
 
                         break;
 

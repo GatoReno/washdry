@@ -22,7 +22,7 @@
                 <Button
                    HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"
-                Text="Agregar Auto"
+                Text="Registrar Auto"
                 Clicked="AddCarbtn_Clicked"
                 />
             <Button

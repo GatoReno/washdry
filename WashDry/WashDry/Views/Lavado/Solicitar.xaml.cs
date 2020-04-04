@@ -441,7 +441,7 @@ namespace WashDry.Views.Lavado
                                 {
 
                                     await DisplayAlert("No has registrado autos", "Lo sentimos pero para poder solicitar un servicio primero necesitas registrar un auto", "ok");
-                                    await Navigation.PopModalAsync();
+                                    await Navigation.PopToRootAsync();
 
                                 }
 

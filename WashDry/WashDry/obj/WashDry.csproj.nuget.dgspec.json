@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
-        "packagesPath": "C:\\Users\\samay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samay\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\obj\\",
+        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\samay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pepe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -119,7 +119,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

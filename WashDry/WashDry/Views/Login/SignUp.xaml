@@ -17,21 +17,39 @@
                  HorizontalOptions="CenterAndExpand" />
             <Entry
                 Placeholder="Nombre"
+                x:Name="entnombre"
+                PlaceholderColor="#DCF8C6"
+                TextColor="#DCF8C6"/>
+            <Entry
+                Placeholder="Nombre de usuario "
+                x:Name="entusername"
                 PlaceholderColor="#DCF8C6"
                 TextColor="#DCF8C6"/>
             <Entry
                 TextColor="#DCF8C6"
                 PlaceholderColor="#DCF8C6"
+                x:Name="enttelefono"
                 Placeholder="Telefono"/>
 
             <Entry
                 TextColor="#DCF8C6"
                 PlaceholderColor="#DCF8C6"
+                x:Name="entemail"
+                
                 Placeholder="Email"/>
+
+            <Label
+                IsVisible="False"
+                x:Name="errorpasslbl"
+                TextColor="IndianRed"
+                
+                />
             <Entry
                 TextColor="#DCF8C6"
                 PlaceholderColor="#DCF8C6"
                 Placeholder="Contraseña"
+                                
+
                 x:Name="Pass"
                 IsPassword="True"/>
             <Entry
@@ -39,10 +57,10 @@
                 PlaceholderColor="#DCF8C6"
                 Placeholder="Confirmar contraseña"
                 x:Name="Pass2"/>
-            <DatePicker
+           <!-- <DatePicker
                 TextColor="#DCF8C6"
-                x:Name="datepicker"
-                ></DatePicker>
+                x:Name="_datepicker"
+                ></DatePicker> -->
 
             <Button
                 Text="Registrarte"
@@ -53,6 +71,7 @@
             <Button
                 Text="Registrarte con google"
                 BackgroundColor="Red"
+                IsVisible="False"
                  x:Name="btngoogle"  TextColor="white" WidthRequest="200"
                 Clicked="btngoogle_Clicked"/>
         </StackLayout>
