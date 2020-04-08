@@ -16,6 +16,7 @@ using System.Net.Http.Headers;
 using WashDry.SQLiteDb;
 using System.Reflection;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace WashDry.Views.RegistCar
 {
@@ -243,18 +244,13 @@ namespace WashDry.Views.RegistCar
             });
             if (_image == null)
                 return;
-            // await DisplayAlert("File Location Error", "Error parece que hubo un problema con la camara, confirme espacio en memoria o notifique a sistemas", "OK");
-            var xlocal = _image.Path;
+             var xlocal = _image.Path;
            
             imgx.Source = ImageSource.FromStream(() => {
-               
-                return _image.GetStream();
-
-
-            });
+                return _image.GetStream();  });
 
             //_image.Path
-        //    _ = b64img();
+          _ = b64img();
 
 
         }
@@ -309,6 +305,53 @@ namespace WashDry.Views.RegistCar
 
 
             });
+
+            //
+            try
+            {
+                var bytes = default(byte[]);
+                using (var StreamReader = new StreamReader(_image.Path))
+                {
+                    using (var mstream = new MemoryStream())
+                    {
+                        StreamReader.BaseStream.CopyTo(mstream);
+                        bytes = mstream.ToArray();
+                    }
+                }
+                string imgstr = Convert.ToBase64String(bytes);
+
+                using (var client = new HttpClient())
+                {
+                        var content = new FormUrlEncodedContent(new[] {
+                        new KeyValuePair<string,string>("id",idx),
+                        new KeyValuePair<string, string>("image", imgstr)
+                    });
+
+                    var resp = await client.PostAsync("http://www.washdryapp.com/app/public/washer/guardar_img", content);
+                    if (!resp.IsSuccessStatusCode)
+
+                    await DisplayAlert("Error", "Nothing retrieved from server.", "ok");
+                    else
+                    {
+                        var respjson = resp.Content.ReadAsStringAsync().Result;
+                        // var result = JsonConvert.DeserializeObject<General_Response>(resp.Content.ReadAsStringAsync().Result);
+                       
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.ToString(), "ok");
+                throw;
+            }
+            
+
+
+
+
+
+            // end try
         }
     }
 }
