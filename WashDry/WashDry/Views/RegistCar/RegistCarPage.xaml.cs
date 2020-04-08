@@ -14,6 +14,8 @@ using System.Net.Http;
 using Spillman.Xamarin.Forms.ColorPicker;
 using System.Net.Http.Headers;
 using WashDry.SQLiteDb;
+using System.Reflection;
+using System.IO;
 
 namespace WashDry.Views.RegistCar
 {
@@ -34,7 +36,7 @@ namespace WashDry.Views.RegistCar
             set { editedColor = value; OnPropertyChanged(); }
         }
         public UserDataBase userDataBase;
-
+            
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -102,14 +104,15 @@ namespace WashDry.Views.RegistCar
                 StringContent ann = new StringContent(annx);
                 StringContent marca = new StringContent(marcax);
 
-            
+
+                DateTime dtnow = DateTime.Now;
 
                 var content = new MultipartFormDataContent();
                 content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/octet-stream");
                 content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
                 {
                     Name = "file",
-                    FileName = "my_uploaded_image.jpg"
+                    FileName = "car"+dtnow.ToString()+"_"+idx+".jpg"
                 };
 
                 content.Add(new StreamContent(_image.GetStream()),"image");
@@ -121,13 +124,13 @@ namespace WashDry.Views.RegistCar
                 content.Add(hex ,"color");
     
                 var httpClient = new System.Net.Http.HttpClient();                
-                var url = "http://www.washdryapp.com/app/public/auto/imagen";                
+                var url = "http://www.washdryapp.com/app/public/auto/guardar";                
                 var responseMsg = await httpClient.PostAsync(url, content);
               
                 switch (responseMsg.StatusCode)
                 {
 
-                    case System.Net.HttpStatusCode.InternalServerError:
+                    case System.Net.HttpStatusCode.InternalServerError: 
                         string xjsonerror = await responseMsg.Content.ReadAsStringAsync();
                         await DisplayAlert("error", "error status 500 InternalServerError", "ok");
                         btnCamara.IsVisible = true;
@@ -183,7 +186,7 @@ namespace WashDry.Views.RegistCar
                         lblamio.IsVisible = true;
                         Ann_.IsVisible = true;
                         colorx.IsVisible = true;
-                                                            await Navigation.PopToRootAsync();
+                        await Navigation.PopToRootAsync();
 
                         break;
 
@@ -221,6 +224,8 @@ namespace WashDry.Views.RegistCar
   
         }
 
+        string result;
+
         private async void btnCamara_Clicked(object sender, EventArgs e)
         {
 
@@ -240,17 +245,45 @@ namespace WashDry.Views.RegistCar
                 return;
             // await DisplayAlert("File Location Error", "Error parece que hubo un problema con la camara, confirme espacio en memoria o notifique a sistemas", "OK");
             var xlocal = _image.Path;
+           
             imgx.Source = ImageSource.FromStream(() => {
-
+               
                 return _image.GetStream();
 
 
             });
 
+            //_image.Path
+        //    _ = b64img();
 
 
+        }
+
+        private async Task b64img() {
+            try
+            {
+                Cator.IsVisible = true;
+                Cator.IsRunning = true;
+                byte[] b =  System.IO.File.ReadAllBytes(_image.Path);
+                String s = Convert.ToBase64String(b);
+                b64.Text = s;
+
+                colorx.IsVisible = false;
+                btnCamara.IsVisible = false;
+                btnGal.IsVisible = false;
+
+                
+
+            }
+            catch (Exception ex)
+            {
+
+               await DisplayAlert("error", ex.ToString(), "ok");
+            }
 
 
+            Cator.IsVisible = false;
+            Cator.IsRunning = false;
         }
 
         private async void btnGal_Clicked(object sender, EventArgs e)

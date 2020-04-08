@@ -7,64 +7,21 @@
              x:Class="WashDry.Views.Test">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Users!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-
-            <Entry
-                x:Name="Username"
-                Placeholder="Usernamer"
-                />
-
-
-            <Entry
-                x:Name="Email"
-                Placeholder="Email"
-                />
-
-
-
-            <Entry
-                x:Name="Pass"
-                Placeholder="password"
-                IsPassword="True"
-                />
-
+            <Image
+               x:Name="Imagen"
+               HeightRequest="350"/>
             <Button
                 x:Name="GuardarUser"
-                Text="Guardar"
-                 />
-            <!--<ListView  x:Name="userView"
-                       ItemTapped="userView_ItemTapped"
-                       ItemsSource="{Binding User}"
-                  >
-               
+                Clicked="btnCamara_Clicked"
+                Text="Guardar"/>
+            <Button
+                    x:Name="xtlx"
+                    Clicked="xtlx_Clicked"
+                    Text="Try 64bit"
+                IsVisible="False"
+                    />
 
-
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-
-                        <ViewCell>
-                            <StackLayout                                           Orientation="Horizontal">
-                                
-                                <Label 
-                                Text="{Binding username}"
-                                Margin="0,10,0,10"
-                                 />
-                                <Label 
-                                Text="{Binding email}"
-                                Margin="0,10,0,10"
-                                 />
-
-                            </StackLayout>
-                        </ViewCell>
-
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-
--->
+            <Label x:Name="lbl64"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

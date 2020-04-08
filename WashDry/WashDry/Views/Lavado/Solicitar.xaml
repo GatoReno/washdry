@@ -669,6 +669,7 @@
                                 <Label  
                      TextColor="#075E54"     
                     Grid.Row="13"
+                                    
                           Text="total"
                     Grid.Column="0"  
                     Grid.ColumnSpan="1"  HorizontalOptions="EndAndExpand"/>
@@ -677,6 +678,7 @@
                                 <Label  
                        TextColor="#075E54"    
                     Grid.Row="13"
+                                    x:Name="FinalPrice"
                           Text="$ 80"
                     Grid.Column="1"  
                    

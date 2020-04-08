@@ -2,8 +2,10 @@
 using System;
 using System.Threading.Tasks;
 using WashDry.Splash;
+using WashDry.Views;
 using WashDry.Views.Lavado;
 using WashDry.Views.Login;
+using WashDry.Views.RegistCar;
 using WashDry.Views.Servicio;
 using WashDry.Views.UserInfo;
 using Xamarin.Forms;

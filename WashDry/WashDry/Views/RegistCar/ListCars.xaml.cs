@@ -89,9 +89,11 @@ namespace WashDry.Views.RegistCar
              await Navigation.PushAsync(new CarInfo(Int32.Parse(content.id_auto)));
         }
 
+     
+
         private void btnaddcar_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new RegistCarPage());
         }
     }
 }

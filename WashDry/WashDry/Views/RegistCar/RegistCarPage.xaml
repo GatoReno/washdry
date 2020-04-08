@@ -31,6 +31,13 @@
                     HorizontalOptions="Center"
                     x:Name="lblError"></Label>
                 <Label
+                    x:Name="b64"
+                    />
+
+
+                <Label
+                    
+                    
                  TextColor="#DCF8C6"
               
                     Text="10101"
@@ -99,6 +106,8 @@
                     />
 
                 <colorPicker:ColorPickerView  x:Name="colorx"/>
+
+               
 
                 <Button
                     Text="Agregar"

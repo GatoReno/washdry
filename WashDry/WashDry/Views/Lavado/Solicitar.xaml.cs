@@ -55,12 +55,16 @@ namespace WashDry.Views.Lavado
 
 
           FDPPicker.SelectedIndexChanged += FDPPickerSelectedIndexChanged;
-
+            pickertamanio.SelectedIndexChanged += TamPickerSelected;
         }
 
-   
+        private void TamPickerSelected(object sender, EventArgs e)
+        {
+            Picker picker = sender as Picker;
+            var selectedItem = picker.SelectedItem;
+            _ = GetPrice(selectedItem.ToString());
+        }
 
- 
         protected override void OnAppearing()
         {
 
@@ -84,6 +88,78 @@ namespace WashDry.Views.Lavado
             getWashers();
 
         }
+        private async Task GetPrice(string tipo) {
+            var idp = id_paquete.Text;
+            if (string.IsNullOrEmpty(idp))
+            {
+                await DisplayAlert("Elija un paquete", "Por favor elija un paquete para continuar", "ok");
+
+            }
+            else {
+
+                var uri = "http://www.washdryapp.com/app/public/paquete/precio_individual";
+                var request = new HttpRequestMessage();
+                request.RequestUri = new Uri(uri);
+                var client = new HttpClient();
+                var value_check = new Dictionary<string, string>
+                         {
+                            { "id_paquete", id_paquete.Text},
+                            { "tipo" , tipo },
+                         
+
+                         };
+                var body = new FormUrlEncodedContent(value_check);
+                try
+                {
+
+                    HttpResponseMessage  response = await client.PostAsync(uri, body);
+
+
+                    switch (response.StatusCode)
+                    {
+                        case System.Net.HttpStatusCode.InternalServerError:
+                            Console.WriteLine("----------------------------------------------_____:Here status 500");
+
+
+                            break;
+                        case System.Net.HttpStatusCode.OK:
+                            //                                Console.WriteLine("----------------------------------------------_____:Here status 200");
+
+                            try
+                            {
+                                HttpContent content = response.Content;
+                                string xjson = await content.ReadAsStringAsync();
+
+
+                                var result = JsonConvert.DeserializeObject<List<Precios>>(xjson);
+                                var price = result[0].precio;
+                                FinalPrice.Text = "$ "+ price+" Mx";
+                                lblprice.Text = "cargo : $ " + price + " Mx";
+                            }
+                            catch (Exception ex)
+                            {
+                                await DisplayAlert("", "" + ex.ToString(), "ok");
+                                var x = ex.ToString();
+
+                                return;
+                            }
+                            break;
+                        case System.Net.HttpStatusCode.NotFound:
+
+                            await DisplayAlert("error 404", "servidor no encontrado ", "ok");
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    await DisplayAlert("Error", "Intente en otro momento _ error: " + ex.ToString() + " _ ", "ok");
+                }
+
+            }
+
+        }
+
 
         private void FDPPickerSelectedIndexChanged(object sender, EventArgs e)
             {
@@ -137,7 +213,7 @@ namespace WashDry.Views.Lavado
                 var i = (Paquete)PickerPaq.SelectedItem;
                 var id = i.id_paquete.ToString();
                 id_paquete.Text = id;
-                lblprice.Text = "cargo : $ ";
+              
 
 
 
@@ -441,7 +517,7 @@ namespace WashDry.Views.Lavado
                                 {
 
                                     await DisplayAlert("No has registrado autos", "Lo sentimos pero para poder solicitar un servicio primero necesitas registrar un auto", "ok");
-                                    await Navigation.PopToRootAsync();
+                                    //await Navigation.PopToRootAsync();
 
                                 }
 
