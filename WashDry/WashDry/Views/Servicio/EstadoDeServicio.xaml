@@ -36,6 +36,9 @@
                     <RowDefinition Height="Auto"  />
                     <RowDefinition Height="Auto"  />
                     <RowDefinition Height="Auto"  />
+
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto"  />
                 </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -115,8 +118,24 @@
                     BackgroundColor="#128C7E" 
                     HorizontalOptions="FillAndExpand" />
                 <Label />
+                <Button
+                    x:Name="btnpagartest"
+                    Clicked="StripeTokenBtn_Clicked"
+                    Text="Prueba de pago"
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    Grid.RowSpan="2"
+                    
+                    />
 
+                <ActivityIndicator
+                    x:Name="Cator"
+                     Grid.Row="10"
+                    Grid.Column="1"
+                    IsRunning="false"
+                    Grid.RowSpan="1"
 
+                    />
             </Grid>
 
        
