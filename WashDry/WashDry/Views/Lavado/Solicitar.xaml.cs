@@ -732,11 +732,12 @@ namespace WashDry.Views.Lavado
             ConfirmarServicio();
         }
 
-        private void btnpedirservicio_Clicked(object sender, EventArgs e)
+        private async void btnpedirservicio_Clicked(object sender, EventArgs e)
         {
-
+                    
             var idauto = id_auto.Text;
-            
+            var vaapgar = "";
+            var forma = "";
             var idwasher = id_washer.Text;
             var idloc = id_loc.Text;
             var lon = longitude.Text;
@@ -745,12 +746,13 @@ namespace WashDry.Views.Lavado
 
             if (Tarjeta)
             {
-
+                  vaapgar = vapagarcon.Text;
+                forma = "Tarjeta";
             }
             else if (Efectivo)
             {
-
-                var vaapgar = vapagarcon.Text;
+                forma = "Efectivo";
+                vaapgar = vapagarcon.Text;
             }
             else {
 
@@ -793,14 +795,22 @@ namespace WashDry.Views.Lavado
                             {"fecha",_datePicker.Date.ToString("ddd, d:e MMMM") },
                             {"calificacion","null" },
                             {"comentario","" },
-                            {"cambio","null" },
-                            {"formacambio","" },
+                            {"cambio",vaapgar },
+                            {"forma_pago",forma },
 
 
 
                 };
-            var content = new FormUrlEncodedContent(value_check);
-            //var response = await client.PostAsync("http://192.168.90.165:55751/cartas/InsertVisitaApp", content);
+            var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
+            var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/agrega", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                await DisplayAlert("Exito", "solcitud hecha", "ok");
+            }
+            else {
+                await DisplayAlert("Error", "intente en otro momento", "ok");
+            }
 
         }
     }
