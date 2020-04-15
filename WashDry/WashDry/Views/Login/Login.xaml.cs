@@ -71,26 +71,41 @@ namespace WashDry.Views.Login
                     HttpContent content = response.Content;
 
                     var json = await content.ReadAsStringAsync();
+
+                    if (json == "[{\"nombre\":\"fail\"}]")
+                    {
+                        await DisplayAlert("Error","su nombre o contraseña son invalidos","ok");
+                    }
+                    else {
                     var json_ = JsonConvert.DeserializeObject<List<User>>(json);
 
-                    var user_x = new User();
-                    var userDataBase = new UserDataBase();
+                    
 
+                    var user_x = new User();
+                    //var userDataBase = new UserDataBase();
+                    UserDb = new UserDataBase();
+                    var tk = UserDb.GetMembers().ToList().FirstOrDefault();
 
                     user_x.email = json_[0].email;
                     user_x.google_id = json_[0].google_id;
                     user_x.name = json_[0].name;
                     user_x.nombre = json_[0].nombre;
-                    user_x.id = json_[0].id;
+                        user_x.password = "";
+                        user_x.status = 0;
+                        user_x.remember_token = "";
+                        user_x.id = json_[0].id;
+                        user_x.id_cliente = json_[0].id;
                     user_x.username = json_[0].username;
-                    user_x.remember_token = json_[0].remember_token;//username id
+                    user_x.remember_token = "";//username id
+                    user_x.token = tk.token;
 
 
-
-                    userDataBase.AddMember(user_x);
+                    UserDb.AddMember(user_x);
+                    UserDb.DeleteMember(0);
 
 
                     Application.Current.MainPage = new MainPage();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -108,7 +123,7 @@ namespace WashDry.Views.Login
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await DisplayAlert("ok", "ok", "ok");
+            await Navigation.PushAsync(new RecuperarPass());
         }
     }
 }

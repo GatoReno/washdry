@@ -46,7 +46,7 @@ namespace WashDry.Views.RegistCar
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            idx = user_exist[0].id;
+            idx = user_exist[0].id.ToString();
         }
 
         private MediaFile _image;

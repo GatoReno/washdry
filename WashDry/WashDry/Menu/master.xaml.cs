@@ -29,7 +29,7 @@ namespace WashDry.Menu
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            namelbl.Text = user_exist[0].name;
+            namelbl.Text = user_exist[0].name + user_exist[0].token;
         }
 
         private async   void btnautos_Clicked(object sender, EventArgs e)
@@ -91,10 +91,10 @@ namespace WashDry.Menu
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
             var idx = user_exist[0].id;
-            userDataBase.DeleteMember(Int32.Parse(idx));
+            userDataBase.DeleteMember(idx);
 
 
-            Application.Current.MainPage = new Login();
+            Application.Current.MainPage = new NavigationPage(new Login());
         }
     }
 }

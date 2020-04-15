@@ -4114,37 +4114,32 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiScrollGesturesDuringRotateOrZoom=0x7f0301e8;
+    public static final int uiTiltGestures=0x7f0301e8;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiTiltGestures=0x7f0301e9;
+    public static final int uiZoomControls=0x7f0301e9;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiZoomControls=0x7f0301ea;
+    public static final int uiZoomGestures=0x7f0301ea;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiZoomGestures=0x7f0301eb;
+    public static final int useCompatPadding=0x7f0301eb;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int useCompatPadding=0x7f0301ec;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int useViewLifecycle=0x7f0301ed;
+    public static final int useViewLifecycle=0x7f0301ec;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int viewInflaterClass=0x7f0301ee;
+    public static final int viewInflaterClass=0x7f0301ed;
     /**
      * Voice button icon
      * <p>May be a reference to another resource, in the form
@@ -4152,13 +4147,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int voiceIcon=0x7f0301ef;
+    public static final int voiceIcon=0x7f0301ee;
     /**
      * Whether or not the indicators should be centered.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int vpiCentered=0x7f0301f0;
+    public static final int vpiCentered=0x7f0301ef;
     /**
      * Style of the circle indicator.
      * <p>May be a reference to another resource, in the form
@@ -4166,14 +4161,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int vpiCirclePageIndicatorStyle=0x7f0301f1;
+    public static final int vpiCirclePageIndicatorStyle=0x7f0301f0;
     /**
      * Color of the filled circle that represents the current page.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int vpiFillColor=0x7f0301f2;
+    public static final int vpiFillColor=0x7f0301f1;
     /**
      * Orientation of the indicator.
      * <p>Must be one of the following constant values.</p>
@@ -4186,14 +4181,14 @@ public final class R {
      * <tr><td>vertical</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int vpiOrientation=0x7f0301f3;
+    public static final int vpiOrientation=0x7f0301f2;
     /**
      * Color of the filled circles that represents pages.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int vpiPageColor=0x7f0301f4;
+    public static final int vpiPageColor=0x7f0301f3;
     /**
      * Radius of the circles. This is also the spacing between circles.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4202,20 +4197,20 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int vpiRadius=0x7f0301f5;
+    public static final int vpiRadius=0x7f0301f4;
     /**
      * Whether or not the selected indicator snaps to the circles.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int vpiSnap=0x7f0301f6;
+    public static final int vpiSnap=0x7f0301f5;
     /**
      * Color of the open circles.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int vpiStrokeColor=0x7f0301f7;
+    public static final int vpiStrokeColor=0x7f0301f6;
     /**
      * Width of the stroke used to draw the circles.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4224,14 +4219,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int vpiStrokeWidth=0x7f0301f8;
+    public static final int vpiStrokeWidth=0x7f0301f7;
     /**
      * Flag indicating whether this window should have an Action Bar
      * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBar=0x7f0301f9;
+    public static final int windowActionBar=0x7f0301f8;
     /**
      * Flag indicating whether this window's Action Bar should overlay
      * application content. Does nothing if the window would not
@@ -4239,14 +4234,14 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBarOverlay=0x7f0301fa;
+    public static final int windowActionBarOverlay=0x7f0301f9;
     /**
      * Flag indicating whether action modes should overlay window content
      * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionModeOverlay=0x7f0301fb;
+    public static final int windowActionModeOverlay=0x7f0301fa;
     /**
      * A fixed height for the window along the major axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -4261,7 +4256,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMajor=0x7f0301fc;
+    public static final int windowFixedHeightMajor=0x7f0301fb;
     /**
      * A fixed height for the window along the minor axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -4276,7 +4271,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMinor=0x7f0301fd;
+    public static final int windowFixedHeightMinor=0x7f0301fc;
     /**
      * A fixed width for the window along the major axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -4291,7 +4286,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMajor=0x7f0301fe;
+    public static final int windowFixedWidthMajor=0x7f0301fd;
     /**
      * A fixed width for the window along the minor axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -4306,7 +4301,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMinor=0x7f0301ff;
+    public static final int windowFixedWidthMinor=0x7f0301fe;
     /**
      * The minimum width the window is allowed to be, along the major
      * axis of the screen.  That is, when in landscape.  Can be either
@@ -4322,7 +4317,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMajor=0x7f030200;
+    public static final int windowMinWidthMajor=0x7f0301ff;
     /**
      * The minimum width the window is allowed to be, along the minor
      * axis of the screen.  That is, when in portrait.  Can be either
@@ -4338,18 +4333,18 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMinor=0x7f030201;
+    public static final int windowMinWidthMinor=0x7f030200;
     /**
      * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowNoTitle=0x7f030202;
+    public static final int windowNoTitle=0x7f030201;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int zOrderOnTop=0x7f030203;
+    public static final int zOrderOnTop=0x7f030202;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f040000;
@@ -5269,30 +5264,37 @@ public final class R {
     public static final int common_google_play_services_install_button=0x7f0d002e;
     public static final int common_google_play_services_install_text=0x7f0d002f;
     public static final int common_google_play_services_install_title=0x7f0d0030;
-    public static final int common_google_play_services_notification_channel_name=0x7f0d0031;
-    public static final int common_google_play_services_notification_ticker=0x7f0d0032;
-    public static final int common_google_play_services_unknown_issue=0x7f0d0033;
-    public static final int common_google_play_services_unsupported_text=0x7f0d0034;
-    public static final int common_google_play_services_update_button=0x7f0d0035;
-    public static final int common_google_play_services_update_text=0x7f0d0036;
-    public static final int common_google_play_services_update_title=0x7f0d0037;
-    public static final int common_google_play_services_updating_text=0x7f0d0038;
-    public static final int common_google_play_services_wear_update_text=0x7f0d0039;
-    public static final int common_open_on_phone=0x7f0d003a;
-    public static final int common_signin_button_text=0x7f0d003b;
-    public static final int common_signin_button_text_long=0x7f0d003c;
+    public static final int common_google_play_services_notification_ticker=0x7f0d0031;
+    public static final int common_google_play_services_unknown_issue=0x7f0d0032;
+    public static final int common_google_play_services_unsupported_text=0x7f0d0033;
+    public static final int common_google_play_services_update_button=0x7f0d0034;
+    public static final int common_google_play_services_update_text=0x7f0d0035;
+    public static final int common_google_play_services_update_title=0x7f0d0036;
+    public static final int common_google_play_services_updating_text=0x7f0d0037;
+    public static final int common_google_play_services_wear_update_text=0x7f0d0038;
+    public static final int common_open_on_phone=0x7f0d0039;
+    public static final int common_signin_button_text=0x7f0d003a;
+    public static final int common_signin_button_text_long=0x7f0d003b;
+    public static final int default_web_client_id=0x7f0d003c;
     public static final int fab_transformation_scrim_behavior=0x7f0d003d;
     public static final int fab_transformation_sheet_behavior=0x7f0d003e;
-    public static final int hide_bottom_view_on_scroll_behavior=0x7f0d003f;
-    public static final int library_name=0x7f0d0040;
-    public static final int mtrl_chip_close_icon_content_description=0x7f0d0041;
-    public static final int password_toggle_content_description=0x7f0d0042;
-    public static final int path_password_eye=0x7f0d0043;
-    public static final int path_password_eye_mask_strike_through=0x7f0d0044;
-    public static final int path_password_eye_mask_visible=0x7f0d0045;
-    public static final int path_password_strike_through=0x7f0d0046;
-    public static final int search_menu_title=0x7f0d0047;
-    public static final int status_bar_notification_info_overflow=0x7f0d0048;
+    public static final int fcm_fallback_notification_channel_label=0x7f0d003f;
+    public static final int firebase_database_url=0x7f0d0040;
+    public static final int gcm_defaultSenderId=0x7f0d0041;
+    public static final int google_api_key=0x7f0d0042;
+    public static final int google_app_id=0x7f0d0043;
+    public static final int google_crash_reporting_api_key=0x7f0d0044;
+    public static final int google_storage_bucket=0x7f0d0045;
+    public static final int hide_bottom_view_on_scroll_behavior=0x7f0d0046;
+    public static final int library_name=0x7f0d0047;
+    public static final int mtrl_chip_close_icon_content_description=0x7f0d0048;
+    public static final int password_toggle_content_description=0x7f0d0049;
+    public static final int path_password_eye=0x7f0d004a;
+    public static final int path_password_eye_mask_strike_through=0x7f0d004b;
+    public static final int path_password_eye_mask_visible=0x7f0d004c;
+    public static final int path_password_strike_through=0x7f0d004d;
+    public static final int search_menu_title=0x7f0d004e;
+    public static final int status_bar_notification_info_overflow=0x7f0d004f;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;
@@ -7860,10 +7862,10 @@ public final class R {
       0x7f0301b5, 0x7f0301b6, 0x7f0301b7, 0x7f0301b8, 
       0x7f0301ba, 0x7f0301bb, 0x7f0301bc, 0x7f0301bd, 
       0x7f0301c0, 0x7f0301c1, 0x7f0301db, 0x7f0301dc, 
-      0x7f0301dd, 0x7f0301de, 0x7f0301ee, 0x7f0301f9, 
-      0x7f0301fa, 0x7f0301fb, 0x7f0301fc, 0x7f0301fd, 
-      0x7f0301fe, 0x7f0301ff, 0x7f030200, 0x7f030201, 
-      0x7f030202
+      0x7f0301dd, 0x7f0301de, 0x7f0301ed, 0x7f0301f8, 
+      0x7f0301f9, 0x7f0301fa, 0x7f0301fb, 0x7f0301fc, 
+      0x7f0301fd, 0x7f0301fe, 0x7f0301ff, 0x7f030200, 
+      0x7f030201
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
@@ -10702,8 +10704,8 @@ public final class R {
      * @see #CirclePageIndicator_vpiStrokeWidth
      */
     public static final int[] CirclePageIndicator={
-      0x7f0301f0, 0x7f0301f2, 0x7f0301f3, 0x7f0301f4, 
-      0x7f0301f5, 0x7f0301f6, 0x7f0301f7, 0x7f0301f8
+      0x7f0301ef, 0x7f0301f1, 0x7f0301f2, 0x7f0301f3, 
+      0x7f0301f4, 0x7f0301f5, 0x7f0301f6, 0x7f0301f7
     };
     /**
      * <p>
@@ -11678,7 +11680,7 @@ public final class R {
       0x7f030035, 0x7f030036, 0x7f03003e, 0x7f0300c0, 
       0x7f0300d2, 0x7f0300d3, 0x7f0300ee, 0x7f0300f6, 
       0x7f03013c, 0x7f030156, 0x7f030160, 0x7f03016d, 
-      0x7f0301ec
+      0x7f0301eb
     };
     /**
      * <p>
@@ -12942,7 +12944,6 @@ public final class R {
      * <tr><td><code>{@link #MapAttrs_uiMapToolbar com.wash_dry.washdry:uiMapToolbar}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiRotateGestures com.wash_dry.washdry:uiRotateGestures}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiScrollGestures com.wash_dry.washdry:uiScrollGestures}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MapAttrs_uiScrollGesturesDuringRotateOrZoom com.wash_dry.washdry:uiScrollGesturesDuringRotateOrZoom}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiTiltGestures com.wash_dry.washdry:uiTiltGestures}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiZoomControls com.wash_dry.washdry:uiZoomControls}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiZoomGestures com.wash_dry.washdry:uiZoomGestures}</code></td><td></td></tr>
@@ -12967,7 +12968,6 @@ public final class R {
      * @see #MapAttrs_uiMapToolbar
      * @see #MapAttrs_uiRotateGestures
      * @see #MapAttrs_uiScrollGestures
-     * @see #MapAttrs_uiScrollGesturesDuringRotateOrZoom
      * @see #MapAttrs_uiTiltGestures
      * @see #MapAttrs_uiZoomControls
      * @see #MapAttrs_uiZoomGestures
@@ -12980,7 +12980,7 @@ public final class R {
       0x7f030116, 0x7f030117, 0x7f030118, 0x7f030119, 
       0x7f030134, 0x7f030137, 0x7f0301e4, 0x7f0301e5, 
       0x7f0301e6, 0x7f0301e7, 0x7f0301e8, 0x7f0301e9, 
-      0x7f0301ea, 0x7f0301eb, 0x7f0301ed, 0x7f030203
+      0x7f0301ea, 0x7f0301ec, 0x7f030202
     };
     /**
      * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#ambientEnabled}
@@ -13162,16 +13162,6 @@ public final class R {
      */
     public static final int MapAttrs_uiScrollGestures=17;
     /**
-     * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#uiScrollGesturesDuringRotateOrZoom}
-     * attribute's value can be found in the {@link #MapAttrs} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.wash_dry.washdry:uiScrollGesturesDuringRotateOrZoom
-     */
-    public static final int MapAttrs_uiScrollGesturesDuringRotateOrZoom=18;
-    /**
      * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#uiTiltGestures}
      * attribute's value can be found in the {@link #MapAttrs} array.
      *
@@ -13180,7 +13170,7 @@ public final class R {
      *
      * @attr name com.wash_dry.washdry:uiTiltGestures
      */
-    public static final int MapAttrs_uiTiltGestures=19;
+    public static final int MapAttrs_uiTiltGestures=18;
     /**
      * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#uiZoomControls}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -13190,7 +13180,7 @@ public final class R {
      *
      * @attr name com.wash_dry.washdry:uiZoomControls
      */
-    public static final int MapAttrs_uiZoomControls=20;
+    public static final int MapAttrs_uiZoomControls=19;
     /**
      * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#uiZoomGestures}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -13200,7 +13190,7 @@ public final class R {
      *
      * @attr name com.wash_dry.washdry:uiZoomGestures
      */
-    public static final int MapAttrs_uiZoomGestures=21;
+    public static final int MapAttrs_uiZoomGestures=20;
     /**
      * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#useViewLifecycle}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -13210,7 +13200,7 @@ public final class R {
      *
      * @attr name com.wash_dry.washdry:useViewLifecycle
      */
-    public static final int MapAttrs_useViewLifecycle=22;
+    public static final int MapAttrs_useViewLifecycle=21;
     /**
      * <p>This symbol is the offset where the {@link com.wash_dry.washdry.R.attr#zOrderOnTop}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -13220,7 +13210,7 @@ public final class R {
      *
      * @attr name com.wash_dry.washdry:zOrderOnTop
      */
-    public static final int MapAttrs_zOrderOnTop=23;
+    public static final int MapAttrs_zOrderOnTop=22;
     /**
      * Attributes that can be used with a MaterialButton.
      * <p>Includes the following attributes:</p>
@@ -15310,7 +15300,7 @@ public final class R {
       0x7f030081, 0x7f03009a, 0x7f0300b0, 0x7f0300e8, 
       0x7f0300ff, 0x7f03011a, 0x7f030159, 0x7f03015a, 
       0x7f030165, 0x7f030166, 0x7f030186, 0x7f03018b, 
-      0x7f0301ef
+      0x7f0301ee
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -18037,7 +18027,7 @@ public final class R {
      * @see #ViewPagerIndicator_vpiCirclePageIndicatorStyle
      */
     public static final int[] ViewPagerIndicator={
-      0x7f0301f1
+      0x7f0301f0
     };
     /**
      * <p>

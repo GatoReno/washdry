@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9atcg7JAgZeSw4t/TKcfMt9C4aXVm31TrICoAVtyEbpuAGbW/erB9orsmvu5JVlHMVXjQgaY2qrLab2LGPdUGg==",
+  "dgSpecHash": "p1qsi1iiBBEgoSAB2PWyqI2gosb7Y77hDV63lZ7ARsOwb/FwOUXPREEVigplC5kCAWCEsb5EfXS8vgVgeHliKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+  "projectFilePath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pepe\\.nuget\\packages\\amporis.xamarin.forms.colorpicker\\1.0.23\\amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\carouselview.formsplugin\\5.2.0\\carouselview.formsplugin.5.2.0.nupkg.sha512",
@@ -28,6 +28,7 @@
     "C:\\Users\\Pepe\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\xam.plugin.geolocator\\4.5.0.6\\xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
@@ -71,14 +72,88 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.android.verticalviewpager\\1.0.1\\xamarin.android.verticalviewpager.1.0.1.nupkg.sha512",
-    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.build.download\\0.4.11\\xamarin.build.download.0.4.11.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.build.download\\0.4.7\\xamarin.build.download.0.4.7.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.essentials\\1.5.1\\xamarin.essentials.1.5.1.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.firebase.common\\60.1142.0\\xamarin.firebase.common.60.1142.0.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.firebase.iid\\60.1142.0\\xamarin.firebase.iid.60.1142.0.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.firebase.messaging\\60.1142.0\\xamarin.firebase.messaging.60.1142.0.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.forms\\4.5.0.356\\xamarin.forms.4.5.0.356.nupkg.sha512",
-    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.forms.maps\\4.5.0.356\\xamarin.forms.maps.4.5.0.356.nupkg.sha512",
-    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.base\\71.1610.0\\xamarin.googleplayservices.base.71.1610.0.nupkg.sha512",
-    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.basement\\71.1620.0\\xamarin.googleplayservices.basement.71.1620.0.nupkg.sha512",
-    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.maps\\71.1610.0\\xamarin.googleplayservices.maps.71.1610.0.nupkg.sha512",
-    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.0\\xamarin.googleplayservices.tasks.71.1601.0.nupkg.sha512"
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.forms.maps\\4.4.0.991265\\xamarin.forms.maps.4.4.0.991265.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.base\\60.1142.0\\xamarin.googleplayservices.base.60.1142.0.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.basement\\60.1142.0\\xamarin.googleplayservices.basement.60.1142.0.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.maps\\60.1142.1\\xamarin.googleplayservices.maps.60.1142.1.nupkg.sha512",
+    "C:\\Users\\Pepe\\.nuget\\packages\\xamarin.googleplayservices.tasks\\60.1142.0\\xamarin.googleplayservices.tasks.60.1142.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "WashDry.Android depende de Xamarin.Firebase.Messaging (>= 60.0.0), pero no se encontró Xamarin.Firebase.Messaging 60.0.0. Se resolvió una mejor coincidencia aproximada de Xamarin.Firebase.Messaging 60.1142.0.",
+      "libraryId": "Xamarin.Firebase.Messaging",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "WashDry.Android depende de Xamarin.Forms.Maps (>= 4.4.0), pero no se encontró Xamarin.Forms.Maps 4.4.0. Se resolvió una mejor coincidencia aproximada de Xamarin.Forms.Maps 4.4.0.991265.",
+      "libraryId": "Xamarin.Forms.Maps",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "WashDry.Android depende de Xamarin.GooglePlayServices.Base (>= 60.0.0), pero no se encontró Xamarin.GooglePlayServices.Base 60.0.0. Se resolvió una mejor coincidencia aproximada de Xamarin.GooglePlayServices.Base 60.1142.0.",
+      "libraryId": "Xamarin.GooglePlayServices.Base",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "WashDry.Android depende de Xamarin.GooglePlayServices.Basement (>= 60.0.0), pero no se encontró Xamarin.GooglePlayServices.Basement 60.0.0. Se resolvió una mejor coincidencia aproximada de Xamarin.GooglePlayServices.Basement 60.1142.0.",
+      "libraryId": "Xamarin.GooglePlayServices.Basement",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms.Maps de 4.5.0.356 a 4.4.0.991265. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n WashDry.Android -> WashDry -> Xamarin.Forms.Maps (>= 4.5.0.356) \r\n WashDry.Android -> Xamarin.Forms.Maps (>= 4.4.0)",
+      "libraryId": "Xamarin.Forms.Maps",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.GooglePlayServices.Base de 60.1142.1 a 60.1142.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n WashDry.Android -> Xamarin.Forms.Maps 4.4.0.991265 -> Xamarin.GooglePlayServices.Maps 60.1142.1 -> Xamarin.GooglePlayServices.Base (= 60.1142.1) \r\n WashDry.Android -> Xamarin.GooglePlayServices.Base (>= 60.0.0)",
+      "libraryId": "Xamarin.GooglePlayServices.Base",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.GooglePlayServices.Basement de 60.1142.1 a 60.1142.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n WashDry.Android -> Xamarin.Forms.Maps 4.4.0.991265 -> Xamarin.GooglePlayServices.Maps 60.1142.1 -> Xamarin.GooglePlayServices.Basement (= 60.1142.1) \r\n WashDry.Android -> Xamarin.GooglePlayServices.Basement (>= 60.0.0)",
+      "libraryId": "Xamarin.GooglePlayServices.Basement",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    }
+  ]
 }

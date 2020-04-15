@@ -54,16 +54,22 @@ namespace WashDry.Splash
             await splashImage.FadeTo(0, 270, null);
 
             userDataBase = new UserDataBase();
-            var user_exist = userDataBase.GetMembers();
+            var user_exist = userDataBase.GetMembers().ToList();
             int RowCount = 0;
             int usercount = user_exist.Count();
             RowCount = Convert.ToInt32(usercount);
 
-            if (RowCount > 0)
+            if (RowCount == 1)
             {
-
-                Application.Current.MainPage = new MainPage();
-            }
+                var ux = user_exist[0].id_cliente;
+                if (ux > 0)
+                {
+                    Application.Current.MainPage = new MainPage();
+                }
+                else {
+                    Application.Current.MainPage = new NavigationPage(new FirstPage());
+                }
+            }                           
             else { Application.Current.MainPage = new NavigationPage(new Banner()); }
 
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\obj\\",
+        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -95,10 +95,6 @@
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.1, )"
-            },
-            "Xamarin.Firebase.Messaging": {
-              "target": "Package",
-              "version": "[60.1142.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

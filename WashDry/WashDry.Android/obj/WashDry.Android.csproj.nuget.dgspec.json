@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
         "projectName": "WashDry.Android",
-        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
         "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry.Android\\obj\\",
+        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-                "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+              "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+                "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj"
               }
             }
           }
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[35.3.0, )"
             },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
             "Xam.Plugins.Notifier": {
               "target": "Package",
               "version": "[3.0.1, )"
@@ -68,24 +72,36 @@
             },
             "Xamarin.Firebase.Messaging": {
               "target": "Package",
-              "version": "[60.1142.1, )"
+              "version": "[60.0.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.5.0.356, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Xamarin.GooglePlayServices.Base": {
+              "target": "Package",
+              "version": "[60.0.0, )"
+            },
+            "Xamarin.GooglePlayServices.Basement": {
+              "target": "Package",
+              "version": "[60.0.0, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+    "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "projectName": "WashDry",
-        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+        "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
         "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\obj\\",
+        "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

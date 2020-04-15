@@ -9,71 +9,149 @@
     <ContentPage.Content
         BackgroundColor="#34B7F1"
         >
-        <StackLayout Margin="10,10,10,10"
-                        >
-            <Label Text="Registrate!"
-                   TextColor="#DCF8C6"
-                   
-                 HorizontalOptions="CenterAndExpand" />
-            <Entry
-                Placeholder="Nombre"
-                x:Name="entnombre"
-                PlaceholderColor="#DCF8C6"
-                TextColor="#DCF8C6"/>
-            <Entry
-                Placeholder="Nombre de usuario "
-                x:Name="entusername"
-                PlaceholderColor="#DCF8C6"
-                TextColor="#DCF8C6"/>
-            <Entry
+        <ScrollView>
+            <StackLayout Margin="30,20,30,20">
+                <Label 
+                Margin="10,10,10,10"
+                Text="REGISTRO"
+                FontSize="26"
                 TextColor="#DCF8C6"
-                PlaceholderColor="#DCF8C6"
-                x:Name="enttelefono"
-                Placeholder="Telefono"/>
+                HorizontalOptions="CenterAndExpand" />
+                <Label 
+                    x:Name="IdPaquete" 
+                    IsVisible="False"/>
 
-            <Entry
-                TextColor="#DCF8C6"
-                PlaceholderColor="#DCF8C6"
-                x:Name="entemail"
-                
-                Placeholder="Email"/>
-
-            <Label
-                IsVisible="False"
-                x:Name="errorpasslbl"
-                TextColor="IndianRed"
-                
+                <!--<StackLayout Margin="5,5,5,5">
+                    <Label 
+                       Text="Correo"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        BackgroundColor="transparent"
+                        TextColor="white"
+                        x:Name="Email"
+                        Placeholder="ejemplo@tu.com"
+                    />
+                </StackLayout>-->
+                <StackLayout Margin="5,5,5,5">
+                    <Label 
+                       Text="Nombre"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        BackgroundColor="transparent"
+                        TextColor="white"
+                        x:Name="Nombre"
+                    />
+                </StackLayout>
+                <StackLayout Margin="5,5,5,5">
+                    <Label 
+                       Text="Apellido Paterno"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        TextColor="white"
+                        x:Name="Appaterno"
+                    />
+                    <Label 
+                       Text="Apellido Materno"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        TextColor="white"
+                        x:Name="Apmaterno"
+                    />
+                </StackLayout>
+                <StackLayout Margin="5,5,5,5">
+                    <Label 
+                       Text="Fecha Nacimiento"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <DatePicker
+                        x:Name="Fca_nac"
+                        TextColor="white"
+                        MinimumDate="01/01/1970"
+                        MaximumDate="12/31/2003"
+                        Format="yyyy-MM-dd"
+                    />
+                    <Label 
+                       Text="Telefono"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        Keyboard="Telephone"
+                        TextColor="white"
+                        x:Name="Telefono"
+                        MaxLength="10"
+                    />
+                </StackLayout>
+                <StackLayout Margin="5,5,5,5">
+                    <Label 
+                       Text="Correo"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        TextColor="white"
+                        x:Name="Correo"
+                    />
+                    <Label 
+                       Text="Password"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        TextColor="white"
+                        x:Name="Password"
+                        IsPassword="True"
+                    />
+                    <Label 
+                       Text="Confirmar Password"
+                       TextColor="white"
+                       HorizontalOptions="CenterAndExpand" />
+                    <Entry
+                        TextColor="white"
+                        x:Name="ConfirmaPass"
+                        IsPassword="True"
+                    />
+                </StackLayout>
+                <!--
+                <Button 
+                Text="PAQUETE A OFRECER"
+                x:Name="btnPaquetes"
+                TextColor="#255371"
+                FontSize="20"
+                BackgroundColor="#c1f3d3"
+                Clicked="Paquetes_Clicked"
                 />
-            <Entry
-                TextColor="#DCF8C6"
-                PlaceholderColor="#DCF8C6"
-                Placeholder="Contraseña"
-                                
+                -->
+                <StackLayout Margin="0,0,0,10">
 
-                x:Name="Pass"
-                IsPassword="True"/>
-            <Entry
-                TextColor="#DCF8C6"
-                PlaceholderColor="#DCF8C6"
-                Placeholder="Confirmar contraseña"
-                x:Name="Pass2"/>
-           <!-- <DatePicker
-                TextColor="#DCF8C6"
-                x:Name="_datepicker"
-                ></DatePicker> -->
 
-            <Button
-                Text="Registrarte"
-                x:Name="btnRegistDone"
-                BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"
-                Clicked="btnRegistDone_Clicked"/>
-
-            <Button
-                Text="Registrarte con google"
-                BackgroundColor="Red"
-                IsVisible="False"
-                 x:Name="btngoogle"  TextColor="white" WidthRequest="200"
-                Clicked="btngoogle_Clicked"/>
-        </StackLayout>
+                    <Button 
+                Text="FOTO INE"
+                x:Name="btnFoto"
+                TextColor="#255371"
+                FontSize="20"
+                BackgroundColor="#c1f3d3"
+                    Clicked="BtnFoto_Clicked"
+                />
+                    <Image
+                    x:Name="imgx"
+                    WidthRequest="200"
+                   
+                    />
+                    <ActivityIndicator
+                        x:Name="Cator"
+                        IsRunning="True"
+                        IsVisible="False"/>
+                    <Button 
+                Text="REGISTRAR"
+                x:Name="btnRegistrar"
+                TextColor="#255371"
+                BackgroundColor="#7ee596"
+                Clicked="Registrar_Clicked"
+                />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

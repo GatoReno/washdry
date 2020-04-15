@@ -43,7 +43,7 @@ namespace WashDry.Views.Lavado
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            idx = Int32.Parse(user_exist[0].id);
+            idx = user_exist[0].id_cliente;
             _ = getdireccion(); _ = getAutos(); _ = CurrentLocation();
             _ = getPaquetes(); _ = getWashers();
 

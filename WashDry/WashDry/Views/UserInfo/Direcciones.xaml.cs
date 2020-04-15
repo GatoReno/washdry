@@ -164,7 +164,7 @@ namespace WashDry.Views.UserInfo
                 {
                     userDataBase = new UserDataBase();
                     var user_exist = userDataBase.GetMembers().ToList();
-                    StringContent id_usuario = new StringContent(user_exist[0].id);
+                    StringContent id_usuario = new StringContent(user_exist[0].id_cliente.ToString());
                     StringContent latitude = new StringContent(Latitud.Text);
                     StringContent longitude = new StringContent(Longitud.Text);
                     StringContent descripcion = new StringContent(descx);

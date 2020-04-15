@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZrluUZhsS7P6xzsoWKHqBdvIBXWS9/xqCu7/yukR7lgsBjKBxDzSAEwjSPprxBKLKSOZAULiU2AGF+ovhhOLZA==",
+  "dgSpecHash": "81aEBrnW/ApjHaQIWUKFASb/KDHxbvRzOxpryPJ7GJRfULh/7wzkTp+DrGZlfNCfJQ0TWaIsnh7Akqca1E5RvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+  "projectFilePath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pepe\\.nuget\\packages\\amporis.xamarin.forms.colorpicker\\1.0.23\\amporis.xamarin.forms.colorpicker.1.0.23.nupkg.sha512",
     "C:\\Users\\Pepe\\.nuget\\packages\\carouselview.formsplugin\\5.2.0\\carouselview.formsplugin.5.2.0.nupkg.sha512",

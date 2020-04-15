@@ -670,6 +670,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -1502,6 +1503,7 @@
         "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.xml",
         "lib/MonoAndroid10/Plugin.LocalNotifications.XML",
         "lib/MonoAndroid10/Plugin.LocalNotifications.dll",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.dll.mdb",
         "lib/MonoAndroid10/Plugin.LocalNotifications.pdb",
         "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll",
         "lib/UAP10/Plugin.LocalNotifications.Abstractions.xml",
@@ -1920,11 +1922,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+      "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
       "projectName": "WashDry",
-      "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\WashDry.csproj",
+      "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj",
       "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdry\\WashDry\\WashDry\\obj\\",
+      "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
