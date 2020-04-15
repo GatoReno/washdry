@@ -52,6 +52,12 @@ plugin.localnotifications.ScheduledAlarmHandler;crc640f9a3bf7250ef269.ScheduledA
 Plugin.Media.MediaPickerActivity, Plugin.Media;crc646957603ea1820544.MediaPickerActivity
 Plugin.Media.MediaPickerActivity;crc646957603ea1820544.MediaPickerActivity
 plugin.media.MediaPickerActivity;crc646957603ea1820544.MediaPickerActivity
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer, Rg.Plugins.Popup.Droid;crc6460d2b0234674b457.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer;crc6460d2b0234674b457.PopupPageRenderer
+rg.plugins.popup.droid.renderers.PopupPageRenderer;crc6460d2b0234674b457.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener, Rg.Plugins.Popup.Droid;crc647a155f775cb6802f.RgGestureDetectorListener
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener;crc647a155f775cb6802f.RgGestureDetectorListener
+rg.plugins.popup.droid.gestures.RgGestureDetectorListener;crc647a155f775cb6802f.RgGestureDetectorListener
 SkiaSharp.Views.Android.GLTextureView, SkiaSharp.Views.Android;crc648e35430423bd4943.GLTextureView
 SkiaSharp.Views.Android.GLTextureView;crc648e35430423bd4943.GLTextureView
 skiasharp.views.android.GLTextureView;crc648e35430423bd4943.GLTextureView

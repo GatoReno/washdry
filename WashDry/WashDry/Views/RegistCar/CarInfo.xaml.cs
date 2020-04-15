@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,6 +93,14 @@ namespace WashDry.Views.RegistCar
                 return;
             }
 
+
+        }
+
+        private void EliminarAutobtn_Clicked(object sender, EventArgs e)
+        {// 
+
+            var url = "http://www.washdryapp.com/app/public/auto/delete/"+idx;
+            PopupNavigation.PushAsync(new PopUpDeleteCar(url));
 
         }
     }

@@ -37,7 +37,8 @@ namespace WashDry.Views.RegistCar
             set { editedColor = value; OnPropertyChanged(); }
         }
         public UserDataBase userDataBase;
-            
+        public string imagen_name;
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -87,10 +88,10 @@ namespace WashDry.Views.RegistCar
                 var color2 = colorx.ViewModel.Color;
                 var colorhex = colorx.ViewModel.Hex;
                 var color22 = colorx.ViewModel.HueColor;
-                var modelox = Modelo.ToString();
+                var modelox = Modelo.Text.ToString();
                 var marcax = Marca_.Text.ToString();
-                var annx = Ann_.Date.ToString();
-                var placasx = Placas.ToString();
+                var annx = Ann_.Date.Year.ToString();
+                var placasx = Placas.Text.ToString();
                 
                 var current = Connectivity.NetworkAccess;
                 if (current != NetworkAccess.Internet)
@@ -106,26 +107,30 @@ namespace WashDry.Views.RegistCar
                 StringContent marca = new StringContent(marcax);
 
 
-                DateTime dtnow = DateTime.Now;
+                var content1 = new MultipartFormDataContent();
+                content1.Add(new StreamContent(_image.GetStream()), "\"file\"", $"\"{_image.Path}\"");
 
-                var content = new MultipartFormDataContent();
-                content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/octet-stream");
-                content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
-                {
-                    Name = "file",
-                    FileName = "car"+dtnow.ToString()+"_"+idx+".jpg"
+                var httpClient1 = new System.Net.Http.HttpClient();
+                httpClient1.BaseAddress = new Uri("http://www.washdryapp.com");
+                var url1 = "http://www.washdryapp.com/oficial/ImagenesPerfil.php";
+                var responseMsg1 = await httpClient1.PostAsync(url1, content1);
+                var remotePath = await responseMsg1.Content.ReadAsStringAsync();
+                imagen_name = remotePath;
+                //*************
+                var value_check = new Dictionary<string, string>
+                { 
+                    { "id_usuario", idx },
+                        { "placas", placasx},
+                        { "modelo", modelox},                   
+                        { "ann", annx },
+                        { "marca", marcax },
+                        { "color", colorhex },
+                    { "image",  imagen_name}
                 };
+            var httpClient = new System.Net.Http.HttpClient();                
+                var url = "http://www.washdryapp.com/app/public/auto/guardar";
+                var content = new FormUrlEncodedContent(value_check);
 
-                content.Add(new StreamContent(_image.GetStream()),"image");
-                content.Add(id_usuario , "id_usuario");
-                content.Add(placas , "placas");
-                content.Add(modelo ,"modelo");  
-                content.Add(ann ,"ann");
-                content.Add(marca ,"marca");
-                content.Add(hex ,"color");
-    
-                var httpClient = new System.Net.Http.HttpClient();                
-                var url = "http://www.washdryapp.com/app/public/auto/guardar";                
                 var responseMsg = await httpClient.PostAsync(url, content);
               
                 switch (responseMsg.StatusCode)
@@ -250,7 +255,7 @@ namespace WashDry.Views.RegistCar
                 return _image.GetStream();  });
 
             //_image.Path
-          _ = b64img();
+         // _ = b64img();
 
 
         }
@@ -307,50 +312,7 @@ namespace WashDry.Views.RegistCar
             });
 
             //
-            try
-            {
-                var bytes = default(byte[]);
-                using (var StreamReader = new StreamReader(_image.Path))
-                {
-                    using (var mstream = new MemoryStream())
-                    {
-                        StreamReader.BaseStream.CopyTo(mstream);
-                        bytes = mstream.ToArray();
-                    }
-                }
-                string imgstr = Convert.ToBase64String(bytes);
-
-                using (var client = new HttpClient())
-                {
-                        var content = new FormUrlEncodedContent(new[] {
-                        new KeyValuePair<string,string>("id",idx),
-                        new KeyValuePair<string, string>("image", imgstr)
-                    });
-
-                    var resp = await client.PostAsync("http://www.washdryapp.com/app/public/washer/guardar_img", content);
-                    if (!resp.IsSuccessStatusCode)
-
-                    await DisplayAlert("Error", "Nothing retrieved from server.", "ok");
-                    else
-                    {
-                        var respjson = resp.Content.ReadAsStringAsync().Result;
-                        // var result = JsonConvert.DeserializeObject<General_Response>(resp.Content.ReadAsStringAsync().Result);
-                       
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", ex.ToString(), "ok");
-                throw;
-            }
-            
-
-
-
-
-
+           
             // end try
         }
     }

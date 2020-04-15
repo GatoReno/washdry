@@ -29,7 +29,7 @@ namespace WashDry.Menu
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            namelbl.Text = user_exist[0].name + user_exist[0].token;
+            namelbl.Text = user_exist[0].name; //+ user_exist[0].token;
         }
 
         private async   void btnautos_Clicked(object sender, EventArgs e)

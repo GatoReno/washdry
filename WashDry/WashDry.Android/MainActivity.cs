@@ -30,7 +30,7 @@ namespace WashDry.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
-
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.SetFlags(new[] { "CollectionView_Experimental", "Shell_Experimental" });
