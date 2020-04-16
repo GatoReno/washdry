@@ -193,5 +193,10 @@ namespace WashDry.Menu
             }
             
         }
+
+        private async void btnAgendar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Agendar());
+        }
     }
 }

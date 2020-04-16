@@ -16,7 +16,11 @@ namespace WashDry.Models.DbModels
         public string username { get; set; }
         public string password { get; set; }
         public string token { get; set; }
+
+        public string fecha_nac { get; set; }
         public int status { get; set; }
+        public string foto { get; set; }
+
         public string email { get; set; }
         public string remember_token { get; set; }
         public string name { get; set; }

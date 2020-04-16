@@ -256,6 +256,7 @@
 
                                 <Label Text="Elije a tu washer"
                                       FontSize="Medium"
+                                       x:Name="washertitle"
                                    Grid.Row="0" Grid.Column="0"
                                        TextColor="#128C7E"
                                     VerticalOptions="CenterAndExpand" 
@@ -393,6 +394,7 @@
                                        FontSize="Medium"
                                    Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                                        TextColor="#128C7E"
+                                       x:Name="confirmartitle"
                                     VerticalOptions="CenterAndExpand" 
                                     HorizontalOptions="CenterAndExpand" />
                                 
@@ -497,6 +499,7 @@
                                     Grid.Column="1"                    
                                     TextColor="#075E54"                   
                                     Text="Paquete 1"
+                                    x:Name="paq1"
                                     HorizontalOptions="CenterAndExpand"
                                          />     
                             <Label
@@ -511,6 +514,7 @@
                                 Grid.Column="1"                    
                                TextColor="#075E54"                  
                                 Text="Fragancia 1"
+                                    x:Name="frag1"
                                 HorizontalOptions="CenterAndExpand"
                                 />
                                 <BoxView 
@@ -596,12 +600,13 @@
                                  
                                            />
                                             <Label Text="Eduardo Rodriguez P" 
+                                                   x:Name="nameWasher"
                                   HorizontalOptions="Fill"
                                    Margin="0,18,0,0"  Grid.Row="0" Grid.Column="1" />
                                             <lv:RatingConception ItemsNumber="5" DrawType="Star" 
                                                       Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"
                                     ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="4"
-                                    x:Name="ratingStar"
+                                    x:Name="ratingStarWasher"
                                                   
                                      />
 
@@ -710,6 +715,14 @@
                                         x:Name="btnpedirservicio"
                                     Grid.Row="15"
                                     Grid.Column="0"  
+                                    Grid.ColumnSpan="2" />
+                                <ActivityIndicator
+                                        x:Name="CatorResponse"
+                                    IsVisible="False"
+                                    IsRunning="True"
+                                     Grid.Row="15"
+                                    Grid.Column="0"  
+                                    HorizontalOptions="CenterAndExpand"
                                     Grid.ColumnSpan="2" />
 
                             </Grid>

@@ -656,3 +656,5 @@ C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.Droid.dll.mdb
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.pdb
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\android\src\crc647a155f775cb6802f\RgGestureDetectorListener.java
+C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\res\drawable\fondo1.png
+C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\res\drawable\fondo2.png

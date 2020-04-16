@@ -36,3 +36,4 @@ C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Release\
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Release\netstandard2.0\WashDry.dll
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Release\netstandard2.0\ref\WashDry.dll
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Release\netstandard2.0\WashDry.pdb
+C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Release\netstandard2.0\Views\RegistCar\PopUpDeleteCar.xaml.g.cs

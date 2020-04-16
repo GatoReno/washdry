@@ -62,12 +62,12 @@ namespace WashDry.Splash
             if (RowCount == 1)
             {
                 var ux = user_exist[0].id_cliente;
-                if (ux > 0)
+                if (ux != 0)
                 {
                     Application.Current.MainPage = new MainPage();
                 }
                 else {
-                    Application.Current.MainPage = new NavigationPage(new FirstPage());
+                    Application.Current.MainPage = new NavigationPage(new Banner());
                 }
             }                           
             else { Application.Current.MainPage = new NavigationPage(new Banner()); }

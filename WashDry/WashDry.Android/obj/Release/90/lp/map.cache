@@ -8,6 +8,7 @@ Plugin.Geolocator
 Plugin.LocalNotifications
 Plugin.Media
 Plugin.Permissions
+Rg.Plugins.Popup.Droid
 SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms

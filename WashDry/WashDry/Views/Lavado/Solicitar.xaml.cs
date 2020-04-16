@@ -213,6 +213,7 @@ namespace WashDry.Views.Lavado
                 var i = (Paquete)PickerPaq.SelectedItem;
                 var id = i.id_paquete.ToString();
                 id_paquete.Text = id;
+                paq1.Text = i.nombre;
               
 
 
@@ -330,6 +331,8 @@ namespace WashDry.Views.Lavado
             wlbl.Text = "atendido por : " + content_X.nombre;
             var idw = content_X.id_washer;
             id_washer.Text = idw.ToString();
+            nameWasher.Text = content_X.nombre + " ";
+            ratingStarWasher.InitialValue = content_X.calificacion;
 
         }
 
@@ -710,31 +713,59 @@ namespace WashDry.Views.Lavado
 
         private async Task btnSolicitar_Clickedx()
         {
-            frame1.IsVisible = false;
-            frame2.IsVisible = false;
-            frame3.IsVisible = false;
-            frame4.IsVisible = false;
-            frame5.IsVisible = false;
-
-            LoadinImg.IsVisible = true;
-            Cator.IsVisible = true;
-            Cancelbtn.IsVisible = true;
-            loadinglbl.IsVisible = true;
-
-            await Task.Delay(2800);
-            Cator.IsRunning = false;
-            await LoadinImg.ScaleTo(0.6, 1500, Easing.BounceOut);
-            await LoadinImg.FadeTo(0, 270, null);
+            
 
             //LoadinImg
+            if (string.IsNullOrEmpty(id_auto.Text))
+            {
+                confirmartitle.TextColor = Color.IndianRed;
+                PickerAuto.Focus();
+                confirmartitle.Text
+                     = "Faltan datos del auto! - paso 2";
+            }
+            else if (string.IsNullOrEmpty(id_paquete.Text))
+            {
+                confirmartitle.TextColor = Color.IndianRed;
+                PickerPaq.Focus();
+                confirmartitle.Text
+                     = "Faltan datos del paquete de lavado! - paso 2";
+            }
+
+            else if (string.IsNullOrEmpty(id_washer.Text))
+            {
+                confirmartitle.TextColor = Color.IndianRed;
+                confirmartitle.Text
+                     = "No ha elegido a su washer! - paso 3";
+                washertitle.TextColor = Color.IndianRed;
+            }
+            else {
+
+                frame1.IsVisible = false;
+                frame2.IsVisible = false;
+                frame3.IsVisible = false;
+                frame4.IsVisible = false;
+                frame5.IsVisible = false;
+
+                LoadinImg.IsVisible = true;
+                Cator.IsVisible = true;
+                Cancelbtn.IsVisible = true;
+                loadinglbl.IsVisible = true;
+
+                await Task.Delay(2800);
+                Cator.IsRunning = false;
+                await LoadinImg.ScaleTo(0.6, 1500, Easing.BounceOut);
+                await LoadinImg.FadeTo(0, 270, null);
+                ConfirmarServicio();
+            }
 
 
-            ConfirmarServicio();
+           
         }
-
+        
         private async void btnpedirservicio_Clicked(object sender, EventArgs e)
         {
-                    
+            btnpedirservicio.IsVisible = false;
+            CatorResponse.IsVisible = true;
             var idauto = id_auto.Text;
             var vaapgar = "";
             var forma = "";
@@ -791,9 +822,9 @@ namespace WashDry.Views.Lavado
                             {"id_auto" ,  idauto},
                             {"latitud" ,  lat},
                             {"longitud" ,  lon},
-                            {"foto","null" },
-                            {"fecha",_datePicker.Date.ToString("ddd, d:e MMMM") },
-                            {"calificacion","null" },
+                            {"foto"," " },
+                            {"fecha",_datePicker.Date.ToString("Yyyy-mm-dd") },//"ddd, d:e MMMM"
+                            {"calificacion"," " },
                             {"comentario","" },
                             {"cambio",vaapgar },
                             {"forma_pago",forma },
@@ -811,7 +842,8 @@ namespace WashDry.Views.Lavado
             else {
                 await DisplayAlert("Error", "intente en otro momento", "ok");
             }
-
+            btnpedirservicio.IsVisible = true;
+            CatorResponse.IsVisible = false;
         }
     }
 }

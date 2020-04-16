@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:WashDry.ViewModels"
              x:Class="WashDry.Views.Login.Banner"
-             BackgroundColor="#225374"
+             BackgroundImageSource="fondo1.png"
              Title="Indicators">
     <ContentPage.BindingContext>
         <viewmodels:MonkeysViewModel />
@@ -14,6 +14,7 @@
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="SALTAR"
+                          FontSize="Large"
                             TextColor="#ffffff">
                         <Span.GestureRecognizers>
                             <TapGestureRecognizer

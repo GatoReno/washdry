@@ -29,8 +29,9 @@ namespace WashDry.Views
 
                 userDataBase = new UserDataBase();
                 var user_exist = userDataBase.GetMembers().ToList();
+                var idx = user_exist[0].id_cliente;
                 HttpClient client = new HttpClient();
-                var uri = "http://www.washdryapp.com/app/public/washer/loginChema"; //+ user_exist[0].id;
+                var uri = "http://washdryapp.com/app/public/cliente/getPerfil/"+idx; //+ user_exist[0].id;
 
 
 
@@ -63,8 +64,14 @@ namespace WashDry.Views
                         var json_d = JsonConvert.DeserializeObject<List<User>>(xjsonD);
 
 
-                        lbl3.Text = json_d[0].password;
-                        
+                        ImgProfile.Source = json_d[0].foto; //email
+                        fname.Text = json_d[0].nombre;
+
+                        lbl1.Text = json_d[0].name;
+                        lbl2.Text = json_d[0].email;
+                        lbl3.Text = json_d[0].fecha_nac;
+
+                    
 
 
                         break;
@@ -80,7 +87,7 @@ namespace WashDry.Views
                 //  CatorT.Text = "Ha habido un error";
                 return;
             }
-
+            Cator.IsVisible = false;
 
         }
 
@@ -91,15 +98,13 @@ namespace WashDry.Views
         public User user;
         public UserDataBase userDataBase;
         protected override void OnAppearing() {
+            Cator.IsVisible = true;
 
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
             if (user_exist.Count() > 0)
             {
-                lbl1.Text = user_exist[0].nombre;
-                lbl2.Text = user_exist[0].email;
-
-
+                
 
                 _ = GetInfoUser();
 
@@ -111,9 +116,37 @@ namespace WashDry.Views
             {
 
                 lbl1.Text = "Error. No hay info de usuario en SQLite";
+                Cator.IsVisible = false;
 
             }
 
+        }
+
+        private void btnUpdate_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(ent1.Text))
+            {
+                ent1.Focus();
+            }
+            else if (string.IsNullOrEmpty(ent2.Text))
+            {
+                ent2.Focus();
+            }
+            else {
+
+                userDataBase = new UserDataBase();
+                var user_exist = userDataBase.GetMembers().ToList();
+                var idx = user_exist[0].id_cliente;
+
+                HttpClient client = new HttpClient();
+                var uri = "http://washdryapp.com/app/public/cliente/actualiza";
+                var value_check = new Dictionary<string, string>
+                         {
+                            {"id_usuario" ,  idx.ToString()}
+                            
+                };
+                var content = new FormUrlEncodedContent(value_check);
+            }
         }
     }
 }

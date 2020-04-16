@@ -19,6 +19,8 @@ public class MonoPackageManager_Resources {
 		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
 		"RatingConception.dll",
+		"Rg.Plugins.Popup.dll",
+		"Rg.Plugins.Popup.Droid.dll",
 		"SkiaSharp.dll",
 		"SkiaSharp.Views.Android.dll",
 		"SkiaSharp.Views.Forms.dll",

@@ -30,8 +30,9 @@
  
 
             <Picker x:Name="direccionesPicker"
-                    TextColor="#DCF8C6"
-                    TitleColor="#DCF8C6"
+                    TextColor="#225374"
+                    IsVisible="False"
+                    TitleColor="#225374"
                     Title="Tus direcciones" 
                     ItemsSource="{Binding Table}"
                     ItemDisplayBinding="{Binding PRODUCTO}"

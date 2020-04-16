@@ -11,43 +11,49 @@
 
         <StackLayout Margin="10,10,10,10"  >
 
-        
+            <ActivityIndicator
+                IsRunning="true"
+                IsVisible="False"
+                x:Name="Cator"
+                HorizontalOptions="CenterAndExpand"
+                />
 
             <Image
-                        HeightRequest="200"
-                    Source="iko.png"
+                        HeightRequest="180"
+                    
                     x:Name="ImgProfile"/>
 
-            <Label TextColor="#DCF8C6"/>
-            <Label  TextColor="#DCF8C6"/>
+            <Label x:Name="lbl2" TextColor="#DCF8C6"/>
+            <Label    x:Name="lbl1" TextColor="#DCF8C6"/>
             <Label x:Name="lbl3" TextColor="#DCF8C6" />
 
-            <Entry 
-                Placeholder=""
+            <Label 
+                HorizontalOptions="CenterAndExpand"
+                 x:Name="fname"
                 TextColor="#DCF8C6"
-                 x:Name="lbl1"
+               
                 />
 
             <Entry 
                 TextColor="#DCF8C6"
-                Placeholder=""
-                x:Name="lbl2"
+                Placeholder="Nombre de usuario"
+                x:Name="ent1"
                 />
 
             <Entry 
                 IsPassword="True"
-                Placeholder=""
+                Placeholder="email.ejemplo@tumail.com"
+                x:Name="ent2"
                  
                 />
 
-            <Entry 
-                IsPassword="True"
-                Placeholder=""
-             
+            <DatePicker
+                x:Name="datepicker"
                 />
 
             <Button Text="Actualizar "     BackgroundColor="#DCF8C6"  TextColor="#225374"  
-                        x:Name="Direccionbtn" 
+                        x:Name="btnUpdate" 
+                    Clicked="btnUpdate_Clicked"
                          FontSize="Small"
                         />
           

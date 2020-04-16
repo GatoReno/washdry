@@ -19,6 +19,14 @@
                 Text="lavado al instante"
                 Clicked="Lavadobtn_Clicked"
                   />
+
+                <Button
+                 HorizontalOptions="CenterAndExpand"    BackgroundColor="#DCF8C6"  TextColor="#225374"
+                    x:Name="btnAgendar"
+                WidthRequest="200"
+                Text="Agendar lavado"
+                Clicked="btnAgendar_Clicked"
+                  />
                 <Button
                    HorizontalOptions="CenterAndExpand"   BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"

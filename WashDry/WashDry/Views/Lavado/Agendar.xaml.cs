@@ -7,7 +7,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using WashDry.Models.ApiModels;
+using WashDry.SQLiteDb;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
@@ -17,10 +18,19 @@ namespace WashDry.Views.Lavado
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Agendar : ContentPage
     {
+        public int idx;
+        public UserDataBase db;
+        public UserDataBase usr;
         public Agendar()
         {
             InitializeComponent();
-            _ = GetDirecciones();
+
+
+            db = new UserDataBase();
+            var user_exist = db.GetMembers().ToList();
+            idx = user_exist[0].id_cliente;
+
+
         }
 
         protected override async void OnAppearing()
@@ -39,7 +49,7 @@ namespace WashDry.Views.Lavado
 
             }
 
-
+            await GetDirecciones();
             var pos = await CrossGeolocator.Current.GetPositionAsync();
 
 
@@ -67,7 +77,7 @@ namespace WashDry.Views.Lavado
         {
 
             HttpClient client = new HttpClient();
-            var uri = "http://washdryapp.com/app/public/auto/listado";
+            var uri = "http://washdryapp.com/app/public/direccion/listado/" + idx;
 
             try
             {
@@ -89,6 +99,18 @@ namespace WashDry.Views.Lavado
                         // ylabel.Text = "Ultimas noticas de proyectos";
                         HttpContent content = response.Content;
                         var xjson = await content.ReadAsStringAsync();
+
+                        if (xjson == "[]" || xjson == null)
+                        {
+                            direccionesPicker.IsVisible = false;    
+                        }
+                        else{
+                            var result = JsonConvert.DeserializeObject<List<DireccionesApiCall>>(xjson);
+                            direccionesPicker.IsVisible = true;
+
+
+                            direccionesPicker.ItemsSource = result;
+                        }
 
                         //  var json_ = JsonConvert.DeserializeObject<List<VisitasMod>>(xjson);
                         // direccionesPicker.ItemsSource = json_;

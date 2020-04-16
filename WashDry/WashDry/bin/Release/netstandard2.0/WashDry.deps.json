@@ -15,6 +15,7 @@
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Google": "1.0.1",
           "RatingConception": "1.4.0",
+          "Rg.Plugins.Popup": "1.1.4.168",
           "Spillman.Xamarin.Forms.ColorPicker": "1.0.4",
           "Stripe.net": "35.3.0",
           "Xam.Plugin.Connectivity": "3.2.0",
@@ -108,6 +109,17 @@
           "lib/netstandard2.0/RatingConception.dll": {
             "assemblyVersion": "1.4.0.0",
             "fileVersion": "1.4.0.0"
+          }
+        }
+      },
+      "Rg.Plugins.Popup/1.1.4.168": {
+        "dependencies": {
+          "Xamarin.Forms": "4.5.0.356"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Rg.Plugins.Popup.dll": {
+            "assemblyVersion": "1.1.4.168",
+            "fileVersion": "1.1.4.168"
           }
         }
       },
@@ -461,6 +473,13 @@
       "sha512": "sha512-RYSRLPdZHvMZNfylh49x4c7+H0N2t8gPep3n+OhEKrE3M7PTbubUwU3bIH7c/SQ7Gs+mBKndSz7N96CdDSi7Kg==",
       "path": "ratingconception/1.4.0",
       "hashPath": "ratingconception.1.4.0.nupkg.sha512"
+    },
+    "Rg.Plugins.Popup/1.1.4.168": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pARxyFFrnOoCZfRbAiE8v3+8py/sH5SX8NJAjfaydJJO3cm13yNaNw8EelEONJVQY2T0zFhCfZSc4CDjjaSylQ==",
+      "path": "rg.plugins.popup/1.1.4.168",
+      "hashPath": "rg.plugins.popup.1.1.4.168.nupkg.sha512"
     },
     "SkiaSharp/1.68.0": {
       "type": "package",
