@@ -182,6 +182,7 @@ namespace WashDry.Views.Lavado
                 lblpayoption.IsVisible = true;
                 lblpayoption.Text = "Con cuanto va a pagar?"; 
                 vapagarcon.IsVisible = true;
+                modotarjeta.IsVisible = false;
                 Efectivo = true;
             }
 
@@ -763,7 +764,7 @@ namespace WashDry.Views.Lavado
         }
         
         private async void btnpedirservicio_Clicked(object sender, EventArgs e)
-        {
+            {
             btnpedirservicio.IsVisible = false;
             CatorResponse.IsVisible = true;
             var idauto = id_auto.Text;
@@ -774,25 +775,10 @@ namespace WashDry.Views.Lavado
             var lon = longitude.Text;
             var lat = latitud.Text;
             var idpaq = id_paquete.Text;
-
-            if (Tarjeta)
-            {
-                  vaapgar = vapagarcon.Text;
-                forma = "Tarjeta";
-            }
-            else if (Efectivo)
-            {
-                forma = "Efectivo";
-                vaapgar = vapagarcon.Text;
-            }
-            else {
-
-                errorlblconfir.IsVisible = true;
-                errorlblconfir.Text = "Selecione un metodo de pago";
-            }
+            var tipoP = FDPPicker.SelectedItem;
 
 
-            if ( lon.Length < 5 || lat.Length < 5)
+            if (lon.Length < 5 || lat.Length < 5)
             {
                 errorlblconfir.IsVisible = true;
                 errorlblconfir.Text = "Error con la ubicacion, intente nuevamente";
@@ -807,15 +793,17 @@ namespace WashDry.Views.Lavado
             {
                 errorlblconfir.Text = "Error en los datos de su Washer";
             }
-
-
-            HttpClient client = new HttpClient();
-
-            // pos.Latitude 
-
-            var value_check = new Dictionary<string, string>
+            if (tipoP != null)
+            {
+                if (tipoP == "Tarjeta")
+                {
+                    vaapgar = "Tarjeta";
+                    forma = "Tarjeta";
+                    var dt = _datePicker.Date.ToString("yyyy-MM-dd");
+                    // Date dt = new Date();
+                    HttpClient client = new HttpClient();
+                    var value_check = new Dictionary<string, string>
                          {
-                            
                             {"id_washer" ,  idwasher},
                             {"id_usuario" ,  idx.ToString()},
                             {"id_paquete" ,  idpaq},
@@ -823,25 +811,86 @@ namespace WashDry.Views.Lavado
                             {"latitud" ,  lat},
                             {"longitud" ,  lon},
                             {"foto"," " },
-                            {"fecha",_datePicker.Date.ToString("Yyyy-mm-dd") },//"ddd, d:e MMMM"
+                            {"fecha",dt },//"ddd, d:e MMMM"
+                            {"calificacion"," " },
+                            {"comentario","" },
+                            {"cambio","0.00" },
+                            {"forma_pago",forma },
+                };
+                        var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
+                    var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/agrega", content);
+
+                            if (response.IsSuccessStatusCode)
+                    {
+                        await DisplayAlert("Exito", "solcitud hecha", "ok");
+                        HttpContent respx = response.Content;
+                        var json = await content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        HttpContent contentpost = response.Content;
+
+                        var json = await contentpost.ReadAsStringAsync();
+                        await DisplayAlert("Error", "intente en otro momento", "ok");
+                    }
+                    btnpedirservicio.IsVisible = true;
+                    CatorResponse.IsVisible = false;
+                }
+                else if (tipoP == "Efectivo")
+                {
+                    if (string.IsNullOrEmpty(vapagarcon.Text))
+                    {
+                        vapagarcon.Focus();
+                        errorlblconfir.IsVisible = true;
+                        errorlblconfir.Text = "Selecione un metodo de pago";
+                    }
+                    else
+                    {
+                        forma = "Efectivo";
+                        vaapgar = vapagarcon.Text;
+
+                        // Date dt = new Date();
+                        var dt = _datePicker.Date.ToString("yyyy-MM-dd");
+                        HttpClient client = new HttpClient();
+                        var value_check = new Dictionary<string, string>
+                         {
+                            {"id_washer" ,  idwasher},
+                            {"id_usuario" ,  idx.ToString()},
+                            {"id_paquete" ,  idpaq},
+                            {"id_auto" ,  idauto},
+                            {"latitud" ,  lat},
+                            {"longitud" ,  lon},
+                            {"foto"," " },
+                            {"fecha",dt },//"ddd, d:e MMMM"
                             {"calificacion"," " },
                             {"comentario","" },
                             {"cambio",vaapgar },
                             {"forma_pago",forma },
-
-
-
                 };
-            var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
-            var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/agrega", content);
+                        var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
+                        var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/agrega", content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                await DisplayAlert("Exito", "solcitud hecha", "ok");
+                        if (response.IsSuccessStatusCode)
+                        {
+                            await DisplayAlert("Exito", "solcitud hecha", "ok");
+                            HttpContent respx = response.Content;
+                            var json = await content.ReadAsStringAsync();
+
+                        }
+                        else
+                        {
+                            await DisplayAlert("Error", "intente en otro momento", "ok");
+                        }
+                        btnpedirservicio.IsVisible = true;
+                        CatorResponse.IsVisible = false;
+                    }
+                }
             }
             else {
-                await DisplayAlert("Error", "intente en otro momento", "ok");
+                FDPPicker.Focus();
             }
+
+            
             btnpedirservicio.IsVisible = true;
             CatorResponse.IsVisible = false;
         }

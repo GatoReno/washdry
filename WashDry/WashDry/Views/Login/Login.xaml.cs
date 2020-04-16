@@ -32,8 +32,9 @@ namespace WashDry.Views.Login
         private async void btnRegistDone_Clicked(object sender, EventArgs e)
         {
 
-
-         
+            Cator.IsRunning = true;
+            Cator.IsVisible = true;
+            btnRegistDone.IsEnabled = false;
              var user = User_.Text;
             var pass = Pass_.Text;
 
@@ -53,11 +54,18 @@ namespace WashDry.Views.Login
 
                 HttpClient client = new HttpClient();
 
-                
+                UserDb = new UserDataBase();
+                var userW = new User();
+                var user_exista = UserDb.GetMembers().ToList();
+                var token = user_exista[0].token;
+
+
                 var value_check = new Dictionary<string, string>
                          {
                             { "email", user},
-                            { "pass", pass}
+                            { "pass", pass},
+                            { "token", token}
+
                          };
 
                  var contentx = new FormUrlEncodedContent(value_check);
@@ -115,9 +123,11 @@ namespace WashDry.Views.Login
  
 
             }
-      
-         
 
+
+            Cator.IsRunning = false;
+            Cator.IsVisible = false;
+            btnRegistDone.IsEnabled = true;
 
         }
 

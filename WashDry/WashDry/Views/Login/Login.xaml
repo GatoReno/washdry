@@ -32,10 +32,13 @@
                     TextColor="#DCF8C6"
                 PlaceholderColor="#DCF8C6"
                 IsPassword="True"/>
-            
 
-             
-     
+
+            <ActivityIndicator
+                 IsVisible="False"
+                 x:Name="Cator"
+                 />
+
 
             <Button
              BackgroundColor="#DCF8C6"  TextColor="#225374" WidthRequest="200"

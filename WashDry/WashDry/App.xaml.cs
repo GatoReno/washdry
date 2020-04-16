@@ -39,18 +39,18 @@ namespace WashDry
 
             // Handle when your app sleeps
 
-            Device.StartTimer(TimeSpan.FromMinutes(1), () => //Will start after 1 min
-            {
-                Task.Run(() =>
-                {
-                    CrossLocalNotifications.Current.Show("Washdry", "Estas contectado a washdry  🚗");
+            //Device.StartTimer(TimeSpan.FromMinutes(1), () => //Will start after 1 min
+            //{
+            //    Task.Run(() =>
+            //    {
+            //        CrossLocalNotifications.Current.Show("Washdry", "Estas contectado a washdry  🚗");
 
 
-                    // do something with time...
-                });
+            //        // do something with time...
+            //    });
 
-                return false; // To repeat timer,always return true.If you want to stop the timer,return false
-            });
+            //    return false; // To repeat timer,always return true.If you want to stop the timer,return false
+            //});
 
             //if (!sleepin)
             //{

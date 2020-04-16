@@ -6,7 +6,6 @@
              mc:Ignorable="d"
              x:Class="WashDry.Views.InfoUser"      BackgroundColor="#225374">
     <ContentPage.Content>
-      
 
 
         <StackLayout Margin="10,10,10,10"  >
@@ -52,11 +51,10 @@
                 />
 
             <Button Text="Actualizar "     BackgroundColor="#DCF8C6"  TextColor="#225374"  
-                        x:Name="btnUpdate" 
-                    Clicked="btnUpdate_Clicked"
-                         FontSize="Small"
+                        x:Name="btnUpdate"  FontSize="Small"
                         />
-          
-        </StackLayout>
+
+            </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

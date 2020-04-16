@@ -1,202 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:WashDry.Views"
-             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-             mc:Ignorable="d"
-             BackgroundColor="#225374"
-             x:Class="WashDry.Views.Lavado.Solicitar">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:WashDry.Views"
+  xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" mc:Ignorable="d" BackgroundColor="#225374" x:Class="WashDry.Views.Lavado.Solicitar">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Padding="20,20,20,20">
-            <local:StepProgressBarControl
-                
-                StepColor="#128C7E" Steps="4" 
-                StepSelected="{Binding Steps}"
-                x:Name="stepBar"/>
+            <StackLayout Padding="20,20,20,20">
+                <local:StepProgressBarControl StepColor="#128C7E" Steps="4" StepSelected="{Binding Steps}" x:Name="stepBar" />
 
 
 
 
-                <Frame x:Name="frame1" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"
-                   IsVisible="false"
-                   Margin="10,10,10,10"  >
+                <Frame x:Name="frame1" CornerRadius="10" OutlineColor="#DCF8C6" BackgroundColor="white" Padding="0" IsVisible="false" Margin="10,10,10,10">
 
-                <StackLayout
-                                Orientation="Vertical"
-                                           Margin="10,10,10,10">
+                    <StackLayout Orientation="Vertical" Margin="10,10,10,10">
 
 
-                    <StackLayout Orientation="Horizontal" 
-                                         
-                                              >
+                        <StackLayout Orientation="Horizontal">
 
 
-                        <Grid>
-                            <Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.RowDefinitions>
 
-                                <RowDefinition Height="Auto"  />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto"  />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1000*" />
-                                 
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1000*" />
+
 
 
 
                                 </Grid.ColumnDefinitions>
 
-                            <Label Text="Ubicacion"
-                                 Grid.Row="0" Grid.Column="0"
-                                   Grid.ColumnSpan="2"
-                                  FontSize="Medium"
-                                TextColor="#128C7E"
-                            
-                                HorizontalOptions="CenterAndExpand" />
+                                <Label Text="Ubicacion" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Medium" TextColor="#128C7E" HorizontalOptions="CenterAndExpand" />
 
-                                <ImageButton  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-                                Source="iko.png"
-                                              Clicked="ImageButton_Clicked"
-                                         BackgroundColor="Black"
-                                HeightRequest="50"
-                
-                                />
-                                <Label 
-                                    Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                                     FontSize="Small"
-                                    Text="click para tu ubicaion actual"
-                                    HorizontalOptions="CenterAndExpand"
-                                    />
-                                <Label 
-                                    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-                                    x:Name="lbldirecc_error"
-                                    Text="Usted no tiene direcciones registradas"
-                                    IsVisible="False"/>
-                                <Picker 
-                                
-                                Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-                                Margin="0,15,0,0"
-                                
-                                x:Name="PickerDirecc" 
-                                  Title="Eliga un direccion" 
-                                TextColor="Black"
-                                ItemsSource="{Binding DireccionesApiCall}"
-                                ItemDisplayBinding="{Binding descripcion}"
-                                SelectedIndex="{Binding id_direccion}"
-                                VerticalOptions="Center"
-                                />
-                            
-                            
-
-
-                                <maps:Map x:Name="Mapx"
-                                          WidthRequest="100" HeightRequest="300"
-                                            Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"     />
-                                
+                                <ImageButton Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="iko.png" Clicked="ImageButton_Clicked" BackgroundColor="Black" HeightRequest="50" />
+                                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Small" Text="click para tu ubicaion actual" HorizontalOptions="CenterAndExpand" />
+                                <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lbldirecc_error" Text="Usted no tiene direcciones registradas" IsVisible="False" />
+                                <Picker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="PickerDirecc" Title="Eliga un direccion" TextColor="Black" ItemsSource="{Binding DireccionesApiCall}" ItemDisplayBinding="{Binding descripcion}" SelectedIndex="{Binding id_direccion}"
+                             VerticalOptions="Center" />
 
 
 
-                        </Grid>
+
+                                <maps:Map x:Name="Mapx" WidthRequest="100" HeightRequest="300" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+
+
+
+
+                            </Grid>
+                        </StackLayout>
+
+
                     </StackLayout>
+                </Frame>
+
+                <Frame x:Name="frame2" CornerRadius="10" OutlineColor="#DCF8C6" BackgroundColor="white" Padding="0" IsVisible="False" Margin="10,10,10,10">
+
+                    <StackLayout Orientation="Vertical" Margin="10,10,10,10">
 
 
-                </StackLayout>
-            </Frame>
-
-            <Frame x:Name="frame2" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"
-                   IsVisible="False"
-                   Margin="10,10,10,10"  >
-
-                <StackLayout
-                                Orientation="Vertical"
-                                           Margin="10,10,10,10">
+                        <StackLayout Orientation="Horizontal">
 
 
-                    <StackLayout Orientation="Horizontal" >
+                            <Grid>
+                                <Grid.RowDefinitions>
 
-
-                        <Grid>
-                            <Grid.RowDefinitions>
-
-                                <RowDefinition Height="Auto"  />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto"  />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
 
                                     <ColumnDefinition Width="1000*" />
 
                                 </Grid.ColumnDefinitions>
 
-                            <Label Text="Auto y paquetes"
-                                     FontSize="Medium"
-                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"
-                   TextColor="#128C7E"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                            <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"
-                Source="iko.png"
-                HeightRequest="140"
-                
+                                <Label Text="Auto y paquetes" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" TextColor="#128C7E" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Source="iko.png" HeightRequest="140" />
+
+                                <Button Text="ver paquetes" BackgroundColor="Black" TextColor="#DCF8C6" Grid.Row="2" Grid.Column="0" />
+
+
+                                <Picker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,15,0,0" x:Name="PickerPaq" Title="Eliga una paquete" TextColor="Black" ItemsSource="{Binding Paquete}" ItemDisplayBinding="{Binding nombre}" SelectedIndex="{Binding id_auto}" VerticalOptions="Center"
                 />
 
-                            <Button Text="ver paquetes"
-                                    BackgroundColor="Black" TextColor="#DCF8C6"  
-                                    Grid.Row="2" Grid.Column="0"   />
 
- 
-                                <Picker 
-                                
-                                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"
-                                Margin="0,15,0,0"
-                                
-                                x:Name="PickerPaq" 
-                                Title="Eliga una paquete" 
-                                TextColor="Black"
-                                ItemsSource="{Binding Paquete}"
-                                ItemDisplayBinding="{Binding nombre}"
-                                SelectedIndex="{Binding id_auto}"
-                                VerticalOptions="Center"
-                                />
+                                <Picker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="PickerAuto" Title="Eliga una Auto" TextColor="Black" ItemsSource="{Binding AutosModel}" ItemDisplayBinding="{Binding marca}" SelectedIndex="{Binding id_auto}" VerticalOptions="Center"
+                />
 
 
-                                <Picker 
-                                
-                                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                                Margin="0,15,0,0"
-                                
-                                x:Name="PickerAuto" 
-                                  Title="Eliga una Auto" 
-                                TextColor="Black"
-                                ItemsSource="{Binding AutosModel}"
-                                ItemDisplayBinding="{Binding marca}"
-                                SelectedIndex="{Binding id_auto}"
-                                VerticalOptions="Center"
-                                />
-
-
-                                <Picker 
-                                
-                                Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-                                Margin="0,15,0,0"
-                                x:Name="pickertamanio"
-                                  Title="Tamaño de su auto" 
-                                 TextColor="Black"
-                      
-                                VerticalOptions="Center"
-                                >
+                                <Picker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="pickertamanio" Title="Tamaño de su auto" TextColor="Black" VerticalOptions="Center">
 
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
@@ -213,73 +113,48 @@
 
 
                             </Grid>
+                        </StackLayout>
+
+
                     </StackLayout>
+                </Frame>
 
 
-                </StackLayout>
-            </Frame>
-
-              
 
 
-                <Frame x:Name="frame3" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"    
-                       IsVisible ="False"
-                   Margin="10,10,10,10"  >
+                <Frame x:Name="frame3" CornerRadius="10" OutlineColor="#DCF8C6" BackgroundColor="white" Padding="0" IsVisible="False" Margin="10,10,10,10">
 
-                    <StackLayout
-                                Orientation="Vertical"
-                                           Margin="10,10,10,10">
+                    <StackLayout Orientation="Vertical" Margin="10,10,10,10">
 
 
-                        <StackLayout Orientation="Horizontal" 
-                                         
-                                              >
+                        <StackLayout Orientation="Horizontal">
 
 
                             <Grid>
                                 <Grid.RowDefinitions>
 
-                                    <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
-                                 
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1000*" />
-                              
+
 
 
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="Elije a tu washer"
-                                      FontSize="Medium"
-                                       x:Name="washertitle"
-                                   Grid.Row="0" Grid.Column="0"
-                                       TextColor="#128C7E"
-                                    VerticalOptions="CenterAndExpand" 
-                                    HorizontalOptions="CenterAndExpand" />
-                                <Image  Grid.Row="1" Grid.Column="0"
-                                    Source="iko.png"
-                                    HeightRequest="40"
-                
-                                />
+                                <Label Text="Elije a tu washer" FontSize="Medium" x:Name="washertitle" Grid.Row="0" Grid.Column="0" TextColor="#128C7E" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                <Image Grid.Row="1" Grid.Column="0" Source="iko.png" HeightRequest="40" />
 
-                                <Label Text="atendido por :  "
-                                       x:Name="wlbl"
-                                       TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" 
-                                     HorizontalOptions="CenterAndExpand" />
+                                <Label Text="atendido por :  " x:Name="wlbl" TextColor="#128C7E" Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand" />
 
 
 
-                                <ListView x:Name="WasherList"   
-                                          ItemsSource="{Binding Washer}"
-                                          Grid.Row="3" Grid.Column="0" 
-                                          HeightRequest="300"
-                                          ItemTapped="PickerWasher_ItemTapped"
-                                          >
+                                <ListView x:Name="WasherList" ItemsSource="{Binding Washer}" Grid.Row="3" Grid.Column="0" HeightRequest="300" ItemTapped="PickerWasher_ItemTapped">
                                     <!--Built in Cells-->
 
                                     <ListView.ItemTemplate>
@@ -288,12 +163,9 @@
                                         <DataTemplate>
                                             <ViewCell>
 
-                                                <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6"
-                                                BackgroundColor="white" Padding="0"  Margin="2,2,2,2"  >
+                                                <Frame x:Name="frame" CornerRadius="10" OutlineColor="#DCF8C6" BackgroundColor="white" Padding="0" Margin="2,2,2,2">
 
-                                                    <StackLayout
-                                                    Orientation="Vertical"
-                                                              >
+                                                    <StackLayout Orientation="Vertical">
 
 
                                                         <StackLayout Orientation="Horizontal">
@@ -302,43 +174,27 @@
                                                             <Grid>
                                                                 <Grid.RowDefinitions>
 
-                                                                    <RowDefinition Height="Auto"  />
-                                                                   
+                                                                    <RowDefinition Height="Auto" />
+
                                                                 </Grid.RowDefinitions>
                                                                 <Grid.ColumnDefinitions>
                                                                     <ColumnDefinition Width="*" />
                                                                     <ColumnDefinition Width="*" />
-                                                                     <ColumnDefinition Width="Auto" />
+                                                                    <ColumnDefinition Width="Auto" />
 
                                                                 </Grid.ColumnDefinitions>
 
-                                                                <Image Source="iko" Grid.Row="0" Grid.Column="0"
-                                           
-                                                                   HeightRequest="50"
-                                                                   />           
-                                                                <Label Text="{Binding nombre}   "  
-                                                                      FontSize="Small"
-                                                                       Margin="0,15,0,0"
-                                                                    TextColor="#128C7E"
-                                                                    Grid.Row="0" Grid.Column="1" />
-                                                                        
+                                                                <Image Source="iko" Grid.Row="0" Grid.Column="0" HeightRequest="50" />
+                                                                <Label Text="{Binding nombre}   " FontSize="Small" Margin="0,15,0,0" TextColor="#128C7E" Grid.Row="0" Grid.Column="1" />
 
 
 
 
 
-                                                                <lv:RatingConception ItemsNumber="5" DrawType="Star" 
-                                                                    Grid.Row="0" Grid.Column="2" 
-                                                                                                BlockVote="True"
-                                                                                                 IsEnabled="False"
-                                                                                      
-                                                                    ImageWidth="20" ImageHeight="20"  
-                                                                                     DesignType="Standard" ColorUI="YellowLight"                                                InitialValue="{Binding calificacion}"
-                                                                                     HorizontalOptions="EndAndExpand"
-                                                                    x:Name="ratingStar"
-                                                                                    
-                                                                     />
-                                                             
+
+                                                                <lv:RatingConception ItemsNumber="5" DrawType="Star" Grid.Row="0" Grid.Column="2" BlockVote="True" IsEnabled="False" ImageWidth="20" ImageHeight="20" DesignType="Standard" ColorUI="YellowLight" InitialValue="{Binding calificacion}" HorizontalOptions="EndAndExpand"
+                                  x:Name="ratingStar" />
+
 
                                                             </Grid>
                                                         </StackLayout>
@@ -359,68 +215,40 @@
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="frame4" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"
-                       IsVisible="false"
-                   Margin="10,10,10,10"  >
+                <Frame x:Name="frame4" CornerRadius="10" OutlineColor="#DCF8C6" BackgroundColor="white" Padding="0" IsVisible="false" Margin="10,10,10,10">
 
-                    <StackLayout
-                                Orientation="Vertical"
-                                           Margin="10,10,10,10">
+                    <StackLayout Orientation="Vertical" Margin="10,10,10,10">
 
 
-                        <StackLayout Orientation="Horizontal" 
-                                         
-                                              >
+                        <StackLayout Orientation="Horizontal">
 
 
                             <Grid>
                                 <Grid.RowDefinitions>
 
-                                    <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                 </Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1000*" />
-                             
+
 
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="Programe su lavado"
-                                       FontSize="Medium"
-                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-                                       TextColor="#128C7E"
-                                       x:Name="confirmartitle"
-                                    VerticalOptions="CenterAndExpand" 
-                                    HorizontalOptions="CenterAndExpand" />
-                                
-                                <Button  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-                                    BackgroundColor="Black" TextColor="#DCF8C6"
-                                   Text="Solicitar ya"
-                                         x:Name="btnSolicitar"
-                                         Clicked="btnSolicitar_Clicked"
-                
-                                    />
+                                <Label Text="Programe su lavado" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#128C7E" x:Name="confirmartitle" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
 
-                                <Label Text="Agenadar para mañana o en un horas"
-                                       TextColor="#128C7E"  Grid.Row="2" Grid.Column="0"
-                                        Grid.ColumnSpan="2"
-                                         HorizontalOptions="CenterAndExpand" />
+                                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" TextColor="#DCF8C6" Text="Solicitar ya" x:Name="btnSolicitar" Clicked="btnSolicitar_Clicked" />
+
+                                <Label Text="Agenadar para mañana o en un horas" TextColor="#128C7E" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" />
 
 
-                                <Label Text=""  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                                       TextColor="#128C7E" FontSize="Medium" x:Name="lblprice"
-                                     HorizontalOptions="CenterAndExpand" />
-                                <DatePicker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                                           x:Name="_datePicker"
-                                             TextColor="#128C7E" 
-                                            />
-                                <TimePicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                                             TextColor="#128C7E" x:Name="_timePicker"/>
+                                <Label Text="" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#128C7E" FontSize="Medium" x:Name="lblprice" HorizontalOptions="CenterAndExpand" />
+                                <DatePicker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="_datePicker" TextColor="#128C7E" />
+                                <TimePicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#128C7E" x:Name="_timePicker" />
 
 
 
@@ -433,25 +261,21 @@
                 </Frame>
 
 
-                <Frame x:Name="frame5" CornerRadius="10" OutlineColor="#DCF8C6"
-                            BackgroundColor="white" Padding="0"
-                   Margin="10,10,10,10"  >
+                <Frame x:Name="frame5" CornerRadius="10" OutlineColor="#DCF8C6" BackgroundColor="white" Padding="0" Margin="10,10,10,10">
 
-                    <StackLayout
-                                Orientation="Vertical"
-                                           Margin="10,10,10,10">
+                    <StackLayout Orientation="Vertical" Margin="10,10,10,10">
 
 
-                        <StackLayout Margin="10,20,10,10" >
+                        <StackLayout Margin="10,20,10,10">
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto"  />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto"  />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
@@ -461,7 +285,8 @@
                                     <!--14rows-->
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-
+                                    <RowDefinition Height="Auto" />
+                                    
 
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
@@ -472,92 +297,53 @@
                                 </Grid.ColumnDefinitions>
 
 
-                                <Label Text="ESTAS MUY CERCA DE TENER TU AUTO LIMPIO!"
-                                       FontSize="Medium"
-           
-                                       Grid.Row="0"
-                                       Grid.Column="0"   TextColor="#075E54"
-                                       Grid.ColumnSpan="2"
-                                    HorizontalOptions="CenterAndExpand" />
-                                <Label Text="WASHER SELECCIONADO!"
-                                    VerticalOptions="CenterAndExpand" 
-                                           Margin="0,10,0,10"
-                                           FontSize="Micro"
-                                       Grid.Row="1"
-                                       Grid.Column="0"   TextColor="#075E54"
-                                       Grid.ColumnSpan="2"
-                                    HorizontalOptions="CenterAndExpand" />
-                            <Label
-                                Margin="0,10,0,0"
-                                Grid.Row="3"
-                                Grid.Column="0"
-                                TextColor="#075E54" HorizontalOptions="CenterAndExpand"
-                                Text="Paquete Selecionado"/>
-                                <Label                     
-                                    Margin="0,10,0,0"
-                                    Grid.Row="3"
-                                    Grid.Column="1"                    
-                                    TextColor="#075E54"                   
-                                    Text="Paquete 1"
-                                    x:Name="paq1"
-                                    HorizontalOptions="CenterAndExpand"
-                                         />     
-                            <Label
-                                Margin="0,10,0,0"
-                                Grid.Row="4"
-                                Grid.Column="0" HorizontalOptions="CenterAndExpand"
-                                TextColor="#075E54"
-                                Text="Fragancia Selecionado"/>
-                                <Label                     
-                                Margin="0,10,0,0"
-                                Grid.Row="4"
-                                Grid.Column="1"                    
-                               TextColor="#075E54"                  
-                                Text="Fragancia 1"
-                                    x:Name="frag1"
-                                HorizontalOptions="CenterAndExpand"
-                                />
-                                <BoxView 
-                                    Margin="0,10,0,0"
-                                     Grid.Row="5"
-                                    Grid.Column="0"  
-                                    Grid.ColumnSpan="2"
-                                    HeightRequest="1" 
-                                    BackgroundColor="#DCF8C6" 
-                                    HorizontalOptions="FillAndExpand" />        
-                                <Label
-                                        Margin="0,10,0,0"
-                                        Grid.Row="6"
-                                        Grid.Column="0" HorizontalOptions="CenterAndExpand"
-                                        TextColor="#075E54"
-                                Text="Fecha de servicio"/>
-                                <Label                     
-                                    Margin="0,10,0,0"
-                                    Grid.Row="6"
-                                    Grid.Column="1"                    
-                                    TextColor="#075E54"                    
-                                    Text="tiempo de llegada"
-                                    HorizontalOptions="CenterAndExpand"
-                                         />
-                                <Label
-                                Margin="0,10,0,0"
-                                Grid.Row="7"
-                                Grid.Column="0" HorizontalOptions="CenterAndExpand"
-                                TextColor="#075E54"
-                                Text="Hoy"/>
-                                <Frame
-                                        HasShadow="True"
-                                         Grid.Row="7"
-                                        Grid.Column="1"
-                                        BackgroundColor="#128C7E"
-                                          CornerRadius="10"
-                                        >       
-                                    <StackLayout
-                                    Orientation="Horizontal">
-                                        <Label                     
-                                            Margin="0,0,0,0" 
-                                            TextColor="White"                    
-                                            HorizontalOptions="CenterAndExpand" >
+                                <Label Text="ESTAS MUY CERCA DE TENER TU AUTO LIMPIO!" FontSize="Medium" Grid.Row="0" Grid.Column="0" TextColor="#075E54" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" />
+                                <Label Text="WASHER SELECCIONADO!" VerticalOptions="CenterAndExpand" Margin="0,10,0,10" FontSize="Micro" Grid.Row="1" Grid.Column="0" TextColor="#075E54" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" />
+
+
+                                <Frame HasShadow="True"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="10">
+                                    <StackLayout Orientation="Vertical">
+
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+
+
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="iko" Grid.Row="0" Margin="0,10,0,0" Grid.Column="0" HeightRequest="50" />
+                                            <Label Text="" x:Name="nameWasher" HorizontalOptions="Fill" Margin="0,18,0,0" Grid.Row="0" Grid.Column="1" />
+                                            <lv:RatingConception ItemsNumber="5" DrawType="Star" Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill" ImageWidth="20" ImageHeight="20" DesignType="Standard" ColorUI="YellowLight" InitialValue="4" x:Name="ratingStarWasher" />
+
+
+                                        </Grid>
+
+
+
+                                    </StackLayout>
+
+
+
+
+                                </Frame>
+
+
+                                <Label Margin="0,10,0,0" Grid.Row="3" Grid.Column="0" TextColor="#075E54" HorizontalOptions="CenterAndExpand" Text="Paquete Selecionado" />
+                                <Label Margin="0,10,0,0" Grid.Row="3" Grid.Column="1" TextColor="#075E54" Text="Paquete 1" x:Name="paq1" HorizontalOptions="CenterAndExpand" />
+                                <Label Margin="0,10,0,0" Grid.Row="4" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="#075E54" Text="Fragancia Selecionado" />
+                                <Label Margin="0,10,0,0" Grid.Row="4" Grid.Column="1" TextColor="#075E54" Text="Fragancia 1" x:Name="frag1" HorizontalOptions="CenterAndExpand" />
+                                <BoxView Margin="0,10,0,0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="#DCF8C6" HorizontalOptions="FillAndExpand" />
+                                <Label Margin="0,10,0,0" Grid.Row="6" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="#075E54" Text="Fecha de servicio" />
+                                <Label Margin="0,10,0,0" Grid.Row="6" Grid.Column="1" TextColor="#075E54" Text="tiempo de llegada" HorizontalOptions="CenterAndExpand" />
+                                <Label Margin="0,10,0,0" Grid.Row="7" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="#075E54" Text="Hoy" />
+                                <Frame HasShadow="True" Grid.Row="7" Grid.Column="1" BackgroundColor="#128C7E" CornerRadius="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Margin="0,0,0,0" TextColor="White" HorizontalOptions="CenterAndExpand">
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -574,156 +360,37 @@
                                     </StackLayout>
 
                                 </Frame>
-                                <Frame  HasShadow="True"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
-                        CornerRadius="10" 
-                        >
-                                    <StackLayout
-                      
-                        Orientation="Vertical"
-                        >
+                                
 
-                                        <Grid>
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto"  />
-                                                <RowDefinition Height="Auto"  />
+                                <Label Margin="10,0,10,10" Grid.Row="9" Grid.Column="0" FontSize="Medium" Text="Formas de pago" TextColor="#128C7E"></Label>
 
-
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                             </Grid.ColumnDefinitions>
-                                            <Image Source="iko" Grid.Row="0" Margin="0,10,0,0" Grid.Column="0"
-                                   HeightRequest="50"
-                        
-                                 
-                                           />
-                                            <Label Text="Eduardo Rodriguez P" 
-                                                   x:Name="nameWasher"
-                                  HorizontalOptions="Fill"
-                                   Margin="0,18,0,0"  Grid.Row="0" Grid.Column="1" />
-                                            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
-                                                      Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"
-                                    ImageWidth="20" ImageHeight="20"  DesignType="Standard" ColorUI="YellowLight"                    InitialValue="4"
-                                    x:Name="ratingStarWasher"
-                                                  
-                                     />
-
-
-                                        </Grid>
-
-
-
-                                    </StackLayout>
-
-
-
-
-                                </Frame>
-
-
-                                <Label
-                    Margin="10,0,10,10"
-                    Grid.Row="9"
-                    Grid.Column="0"
-                    FontSize="Medium"
-                    Text="Formas de pago"
-                    TextColor="#128C7E"
-                     ></Label>
-
-                                <Picker
-                      Grid.Row="11"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    TitleColor="#128C7E"
-                    TextColor="#128C7E"
-                     x:Name="FDPPicker"
-                    >
+                                <Picker Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" TitleColor="#128C7E" TextColor="#128C7E" x:Name="FDPPicker">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>Efectivo</x:String>
                                             <x:String>Tarjeta</x:String>
-                                           
+
                                         </x:Array>
                                     </Picker.ItemsSource>
                                 </Picker>
 
-                                <Label 
-                                    Grid.Row="12" Grid.Column="0"  
-                                    Grid.ColumnSpan="1"  TextColor="#075E54"  
-                                    IsVisible="False"
-                                    x:Name="lblpayoption"
-                                    Text="  "
-                                    ></Label>
-                                <Entry
-                                    Grid.Row="12" Grid.Column="1"  
-                                    Grid.ColumnSpan="1" 
-                                    IsVisible="False"  TextColor="#075E54"  
-                                    x:Name="vapagarcon"
-                                    HorizontalOptions="EndAndExpand"
-                                    Placeholder="$100"
-                                    ></Entry>
-                                <Label 
-                                    Grid.Row="12" Grid.Column="1"  
-                                    Grid.ColumnSpan="1"   TextColor="#075E54"  
-                                    IsVisible="False"
-                                    x:Name="modotarjeta"
-                                    Text="Tarjeta"
-                                    ></Label>
-                                <Label  
-                     TextColor="#075E54"     
-                    Grid.Row="13"
-                                    
-                          Text="total"
-                    Grid.Column="0"  
-                    Grid.ColumnSpan="1"  HorizontalOptions="EndAndExpand"/>
+                                <Label Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="1" TextColor="#075E54" IsVisible="False" x:Name="lblpayoption" Text="  "></Label>
+                                <Entry Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="1" IsVisible="False" TextColor="#075E54" x:Name="vapagarcon" HorizontalOptions="EndAndExpand" Placeholder="$100"></Entry>
+                                <Label Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#075E54" IsVisible="False" x:Name="modotarjeta" Text="Tarjeta"></Label>
+                                <Label TextColor="#075E54" Grid.Row="13" Text="total" Grid.Column="0" Grid.ColumnSpan="1" HorizontalOptions="EndAndExpand" />
 
 
-                                <Label  
-                       TextColor="#075E54"    
-                    Grid.Row="13"
-                                    x:Name="FinalPrice"
-                          Text="$ 80"
-                    Grid.Column="1"  
-                   
-                    HorizontalOptions="EndAndExpand"/>
+                                <Label TextColor="#075E54" Grid.Row="13" x:Name="FinalPrice" Text="$ 80" Grid.Column="1" HorizontalOptions="EndAndExpand" />
 
-                                <BoxView 
-                    Margin="0,10,0,0"
-                     Grid.Row="14"
-                    Grid.Column="0"  
-                    Grid.ColumnSpan="2"
-                           HeightRequest="1" 
-                    BackgroundColor="White" 
-                    HorizontalOptions="FillAndExpand" />
+                                <!--<BoxView Margin="0,10,0,0" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="White" HorizontalOptions="FillAndExpand" />-->
 
 
-                                <Label  
-                                TextColor="IndianRed"    
-                                Grid.Row="14"
-                                Text=" "
-                                Grid.Column="2"  
-                                x:Name="errorlblconfir"
-                                HorizontalOptions="EndAndExpand"/>
+                                <Label TextColor="IndianRed" Grid.Row="14" Text=" " Grid.Column="2" IsVisible="False" x:Name="errorlblconfir" HorizontalOptions="EndAndExpand" />
 
-                                <Button Margin="0,10,0,0"
-                                    Text="Confirmar pedido"
-                                    TextColor="White"
-                               BackgroundColor="#075E54"
-                                        Clicked="btnpedirservicio_Clicked"
-                                        x:Name="btnpedirservicio"
-                                    Grid.Row="15"
-                                    Grid.Column="0"  
-                                    Grid.ColumnSpan="2" />
-                                <ActivityIndicator
-                                        x:Name="CatorResponse"
-                                    IsVisible="False"
-                                    IsRunning="True"
-                                     Grid.Row="15"
-                                    Grid.Column="0"  
-                                    HorizontalOptions="CenterAndExpand"
-                                    Grid.ColumnSpan="2" />
+                                <Button Margin="0,10,0,0" Text="Confirmar pedido" TextColor="White" BackgroundColor="#075E54" 
+                                        HeightRequest="80"
+                                        Clicked="btnpedirservicio_Clicked" x:Name="btnpedirservicio" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" />
+                                <ActivityIndicator x:Name="CatorResponse" IsVisible="False" IsRunning="True" Grid.Row="14" Grid.Column="0" HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="2" />
 
                             </Grid>
                         </StackLayout>
@@ -732,93 +399,25 @@
                     </StackLayout>
                 </Frame>
 
-                <Label
-                    Margin="0,40,0,0"
-                    FontSize="Medium"
-             Text="Un momento por favor"
-                      HorizontalOptions="CenterAndExpand"
-                VerticalOptions="Center"
-                     TextColor="#DCF8C6"
-                    IsVisible="False"
-                    x:Name="loadinglbl"
-                    />
+                <Label Margin="0,40,0,0" FontSize="Medium" Text="Un momento por favor" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="#DCF8C6" IsVisible="False" x:Name="loadinglbl" />
 
-                <Image   
-                    IsVisible="False"
-                    x:Name="LoadinImg"
-                                        Source="iko.png"
-                                        HeightRequest="140"
-                 HorizontalOptions="CenterAndExpand"
-                                        />
-                <ActivityIndicator
-                    x:Name="Cator"
-                    IsRunning="True"
-                    IsVisible="False"
-                    Color="#DCF8C6"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="Center"
-                    
-                   ></ActivityIndicator>
-                <Button
-                    Text="Cancelar"
-                    BackgroundColor="Black"
-                    IsVisible="False"
-                    x:Name="Cancelbtn"
-                    Clicked="Cancelbtn_Clicked"
-                    TextColor="IndianRed"
-                    />
+                <Image IsVisible="False" x:Name="LoadinImg" Source="iko.png" HeightRequest="140" HorizontalOptions="CenterAndExpand" />
+                <ActivityIndicator x:Name="Cator" IsRunning="True" IsVisible="False" Color="#DCF8C6" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></ActivityIndicator>
+                <Button Text="Cancelar" BackgroundColor="Black" IsVisible="False" x:Name="Cancelbtn" Clicked="Cancelbtn_Clicked" TextColor="IndianRed" />
 
-                <Entry BindingContext="{x:Reference stepBar}"
-                       Text="{Binding StepSelected, StringFormat='{0}'}"
-                       FontAttributes="Bold"
-                       IsVisible="False"
-                       FontSize="Large"  
-                       HorizontalOptions="Center"
-                           TextChanged="lblmain_TextChanged"
-                           BackgroundColor="White"
-                                    VerticalOptions="CenterAndExpand"
-                           x:Name="lblmain"></Entry>
-                <Label
-             
-                    
-                    IsVisible="False"
-                    x:Name="desc"
-                    />
-                <Label
-             
-                    IsVisible="False"
-                    
-                    x:Name="longitude"
-                    />
-                <Label
-                     
-                    IsVisible="False"
-                    x:Name="latitud"
-                    />
-                <Label
-                     IsVisible="False"
-                    
-                    x:Name="id_washer"
-                    />
-                <Label
-                     IsVisible="False"
-                    
-                    x:Name="id_paquete"
-                    />
+                <Entry BindingContext="{x:Reference stepBar}" Text="{Binding StepSelected, StringFormat='{0}'}" FontAttributes="Bold" IsVisible="False" FontSize="Large" HorizontalOptions="Center" TextChanged="lblmain_TextChanged" BackgroundColor="White" VerticalOptions="CenterAndExpand"
+          x:Name="lblmain"></Entry>
+                <Label IsVisible="False" x:Name="desc" />
+                <Label IsVisible="False" x:Name="longitude" />
+                <Label IsVisible="False" x:Name="latitud" />
+                <Label IsVisible="False" x:Name="id_washer" />
+                <Label IsVisible="False" x:Name="id_paquete" />
 
-                <Label
-                     
-                    IsVisible="False"
-                    x:Name="id_loc"
-                    />
+                <Label IsVisible="False" x:Name="id_loc" />
 
-                <Label
-                     IsVisible="False"
-                    
-                    x:Name="id_auto"
-                    />
-            
-        </StackLayout>
+                <Label IsVisible="False" x:Name="id_auto" />
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

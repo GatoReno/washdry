@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WashDry.Models.DbModels;
@@ -23,13 +25,68 @@ namespace WashDry.Menu
         public User user;
         public UserDataBase userDataBase;
        
-        public master()
+        public  master()
         {
             InitializeComponent();
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            namelbl.Text = user_exist[0].name; //+ user_exist[0].token;
+            namelbl.Text = user_exist[0].name + user_exist[0].token;
+            InfoUserweb(user_exist[0].id);
+
+
+
+        }
+
+        private async void InfoUserweb(int idx) {
+
+            HttpClient client = new HttpClient();
+            var uri = "http://washdryapp.com/app/public/cliente/getPerfil/" + idx; //+ user_exist[0].id;
+
+
+
+            var responseMsg = await client.GetAsync(uri);
+
+
+
+            switch (responseMsg.StatusCode)
+            {
+                case System.Net.HttpStatusCode.InternalServerError:
+                    Console.WriteLine("----------------------------------------------_____:Here status 500");
+
+                    //xlabel.Text = "error 500";
+                    // Cator.IsVisible = false;
+                    break;
+
+
+                case System.Net.HttpStatusCode.OK:
+                    Console.WriteLine("----------------------------------------------_____:Here status 200");
+
+
+
+
+
+                    HttpContent contentD = responseMsg.Content;
+                    var xjsonD = await contentD.ReadAsStringAsync();
+
+
+
+                    var json_d = JsonConvert.DeserializeObject<List<User>>(xjsonD);
+
+
+                    if (json_d[0].foto.Length > 1)
+                    {
+                        logo.Source = json_d[0].foto;
+                    }
+                    else { logo.Source = "iko.png"; }
+
+
+
+
+
+                    break;
+
+            }
         }
 
         private async   void btnautos_Clicked(object sender, EventArgs e)
