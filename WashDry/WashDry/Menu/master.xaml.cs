@@ -14,6 +14,7 @@ using WashDry.Views.RegistCar;
 using WashDry.Views.Servicio;
 using WashDry.Views.UserInfo;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace WashDry.Menu
@@ -31,7 +32,7 @@ namespace WashDry.Menu
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            namelbl.Text = user_exist[0].name + user_exist[0].token;
+            namelbl.Text = user_exist[0].name;//+ user_exist[0].token;
             InfoUserweb(user_exist[0].id);
 
 
@@ -148,9 +149,27 @@ namespace WashDry.Menu
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
             var idx = user_exist[0].id;
+            var tok = user_exist[0].token;
+
+            var userW = new User();
+            
+            userW.id_cliente = 0;
+
+            userW.name = "";
+            userW.nombre = "";
+            userW.password = "";
+            userW.username = "";
+            userW.remember_token = "";
+            userW.google_id = "";
+            userW.email = "";
+            userW.token = tok;
+            userW.status = 0;
             userDataBase.DeleteMember(idx);
+            userDataBase.AddMember(userW);
 
+           
 
+           
             Application.Current.MainPage = new NavigationPage(new Login());
         }
     }
