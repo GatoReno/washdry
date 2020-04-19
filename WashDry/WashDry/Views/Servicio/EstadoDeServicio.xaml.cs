@@ -14,16 +14,33 @@ namespace WashDry.Views.Servicio
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EstadoDeServicio : ContentPage
     {
-        public EstadoDeServicio()
+        public int idsol ;
+        public HttpClient httpc;
+        public EstadoDeServicio(int id_sol)
         {
             InitializeComponent();
+            id_sol = idsol;
+            
         }
+        private async Task GetSolicitud(int id)
+        {
+           var info = await httpc.GetAsync("http://washdryapp.com/app/public/washer/get_solicitud/"+id);
+            if (info.IsSuccessStatusCode) {
+                var content = info.Content;
 
+            
+            }
+            else {
+
+                Navigation.PopModalAsync();
+            }
+        }
         private TokenService Tokenservice;
         private Token stripeToken;
         [Obsolete]
         private async void StripeTokenBtn_Clicked(object sender, EventArgs e)
         {
+            btnpagartest.IsEnabled = false;
             Cator.IsRunning = true;
             try
             {
@@ -111,8 +128,9 @@ namespace WashDry.Views.Servicio
                 //  StripeLbl.Text = ex.ToString() ;
                 Cator.IsRunning = false;
             }
-
             Cator.IsRunning = false;
+            btnpagartest.IsEnabled = true;
+
 
         }
 
@@ -120,6 +138,12 @@ namespace WashDry.Views.Servicio
         private async Task btnpagartest_Clicked(object sender, EventArgs e)
         {
            
+        }
+
+        private async void btnCancel_Clicked(object sender, EventArgs e)
+        {
+            CatorCancel.IsRunning = true;
+            btnCancel.IsEnabled = false;
         }
     }
 }

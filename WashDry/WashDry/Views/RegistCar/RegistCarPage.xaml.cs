@@ -17,6 +17,7 @@ using WashDry.SQLiteDb;
 using System.Reflection;
 using System.IO;
 using Newtonsoft.Json;
+using WashDry.Models.ApiModels;
 
 namespace WashDry.Views.RegistCar
 {
@@ -179,7 +180,8 @@ namespace WashDry.Views.RegistCar
                         Cator.IsRunning = false;
                         Cator.IsVisible = false;
                         string xjson =  await responseMsg.Content.ReadAsStringAsync();
-                        await DisplayAlert("Exito", "yeah status 200 : " + xjson, "ok");
+                        var mess = JsonConvert.DeserializeObject<AutoRegistResp200>(xjson);
+                        await DisplayAlert("Exito", " " + mess.message + " ", "ok");
 
                         btnCamara.IsVisible = true;
                         btnGal.IsVisible = true;

@@ -8,8 +8,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using WashDry.Models.ApiModels;
+using WashDry.SQLiteDb;
 using WashDry.Views.Lavado;
 using WashDry.Views.RegistCar;
+using WashDry.Views.Servicio;
 using WashDry.Views.UserInfo;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -22,10 +25,26 @@ namespace WashDry.Menu
 
     public partial class detail : ContentPage
     {
+        public UserDataBase userDataBase;
         public detail()
         {
             InitializeComponent();
-            _ = CurrentLocation();
+          
+
+            // var solicitudes = userDataBase.GetSolicitudes();
+            userDataBase = new UserDataBase();
+            var solicitudes = userDataBase.GetSolicitudes();
+
+            if (solicitudes.Count() > 0)
+            {
+                ListSolicitudes.ItemsSource = solicitudes;
+                ListSolicitudes.ItemTapped += ListSolicitudes_ItemTapped;
+
+            }
+            else {
+
+                ListSolicitudes.IsVisible = false;
+            }
 
 
         }
@@ -45,7 +64,40 @@ namespace WashDry.Menu
                 await DisplayAlert("Error", "Ha habido un error con el plugin", "ok");
 
             }
-       
+            userDataBase = new UserDataBase();
+            var solicitudes = userDataBase.GetSolicitudes().ToList();
+            Mapx.Pins.Clear();
+            if (solicitudes.Count() > 0)
+            {
+                ListSolicitudes.ItemsSource = solicitudes;
+
+                /*
+                var lat = Convert.ToDouble(solicitudes[0].latitud);
+                var lon = Convert.ToDouble(solicitudes[0].longitud);
+
+                Mapx.MoveToRegion(
+           MapSpan.FromCenterAndRadius(
+           new Position(lat,lon), Distance.FromMiles(1)));
+
+
+                var pin = new Pin
+                {
+                    Type = PinType.Place,
+                    Position = new Position(lat, lon),
+                    Label = "Servicio Actual",
+                    Address = " Destino del servicio ",
+
+                };
+                 Mapx.Pins.Add(pin);*/
+
+                _ = CurrentLocation();
+
+            }
+            else
+            {
+                _ = CurrentLocation();
+                ListSolicitudes.IsVisible = false;
+            }
 
         }
 
@@ -197,6 +249,12 @@ namespace WashDry.Menu
         private async void btnAgendar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Agendar());
+        }
+
+        private async void ListSolicitudes_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var content = e.Item as Solicitudes;
+            await Navigation.PushAsync(new EstadoDeServicio(Int32.Parse(content.id_solicitud)));
         }
     }
 }

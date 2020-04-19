@@ -8,10 +8,14 @@
              x:Class="WashDry.Menu.detail"
                   BackgroundColor="#225374">
     <ContentPage.Content>
-        <ScrollView>
+        
             <StackLayout Margin="20,40,20,20"
                     
                          >
+
+                
+
+
 
                 <Button
                  HorizontalOptions="CenterAndExpand"    BackgroundColor="#DCF8C6"  TextColor="#225374"
@@ -39,7 +43,7 @@
                   x:Name="Direccionbtn" 
                             Clicked="Direccionbtn_Clicked"
                  BackgroundColor="#DCF8C6"  TextColor="#225374"
-                WidthRequest="200"  Margin="0,0,0,30"
+                WidthRequest="200"  Margin="0,0,0,10"
                 />
            
 
@@ -69,11 +73,47 @@
                         x:Name="StripeLbl" /> -->
 
 
-                <maps:Map x:Name="Mapx" WidthRequest="100" HeightRequest="100"  />
+                <maps:Map x:Name="Mapx" WidthRequest="100" HeightRequest="180"  />
 
 
+                <Label
+                    Text="Lavados"
+                    TextColor="White"
+                    ></Label>
+                <ListView x:Name="ListSolicitudes"                      
+                      ItemsSource="{Binding Solicitudes}"
+                      
+                          
+                      
+                      >
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+                            <ViewCell>
+                                <ScrollView>
+                                    <StackLayout  Orientation="Horizontal">
+                                        <Label 
+                                            Text="{Binding fecha}"
+                                                TextColor="White"
+                                            Margin="0,10,0,10"
+                                            />
+                                        <Label 
+                                            Text="{Binding modelo}"
+                                            Margin="0,10,0,10"
+                                                TextColor="White"
+                                            />
+                                    </StackLayout>
+                                </ScrollView>
+                            </ViewCell>
+
+                        </DataTemplate>
+
+
+                    </ListView.ItemTemplate>
+                </ListView>
+         
 
             </StackLayout>
-            </ScrollView >
+           
     </ContentPage.Content>
 </ContentPage>

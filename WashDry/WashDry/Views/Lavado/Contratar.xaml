@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.Lavado.Contratar"   BackgroundColor="#225374">
+             x:Class="WashDry.Views.Lavado.Contratar"   BackgroundImageSource="fondo2.png">
     <ContentPage.Content>
         <StackLayout Margin="10,20,10,10" >
             <Grid>

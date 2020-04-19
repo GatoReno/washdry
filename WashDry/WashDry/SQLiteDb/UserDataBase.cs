@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using WashDry.Interface;
+using WashDry.Models.ApiModels;
 using WashDry.Models.DbModels;
 using Xamarin.Forms;
 
@@ -17,15 +18,40 @@ namespace WashDry.SQLiteDb
         {
             conn = DependencyService.Get<ISQLite>().GetConnection();
             conn.CreateTable<User>();
+            conn.CreateTable<Solicitudes>();
        
         }
+        public IEnumerable<Solicitudes> GetSolicitudes() {
+            var members = (from mem in conn.Table<Solicitudes>() select mem);
+            return members.ToList();
+        }
+        public void DeleteSolicitud(int ID)
+        {
+            conn.Delete<Solicitudes>(ID);
+        }
+        public string AddSolicitudes(Solicitudes member)
+        {
+            try
+            {
+                conn.Insert(member);
+                return "success Solicitudes added ";
+            }
+            catch (Exception ex)
+            {
 
+                return ex.ToString();
+            }
+
+        }
+
+
+
+        // Member areas
         public IEnumerable<User> GetMembers()
         {
             var members = (from mem in conn.Table<User>() select mem);
             return members.ToList();
         }
-
 
         public string AddMember(User member)
         {
@@ -70,8 +96,6 @@ namespace WashDry.SQLiteDb
                 return ex.ToString();
             }
         }
-
-
 
         public string UpdateMember(int id,  string username, string email, string nombre, string password,   int status)
         {

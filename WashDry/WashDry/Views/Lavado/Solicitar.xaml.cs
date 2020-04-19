@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using WashDry.Models;
 using WashDry.Models.ApiModels;
 using WashDry.Models.DbModels;
 using WashDry.SQLiteDb;
@@ -60,9 +61,15 @@ namespace WashDry.Views.Lavado
 
         private void TamPickerSelected(object sender, EventArgs e)
         {
-            Picker picker = sender as Picker;
-            var selectedItem = picker.SelectedItem;
-            _ = GetPrice(selectedItem.ToString());
+            var i = (PaqueteIndividual)pickertamanio.SelectedItem;
+
+
+             id_paqindividual.Text = i.id;
+            FinalPrice.Text = "$ " +i.precio + " Mx";
+            lblprice.Text = "cargo : $ " + i.precio + " Mx";
+            //id_paqindividual.Text = selectedItem.id;
+
+            // _ = GetPrice(selectedItem.ToString());
         }
 
         protected override void OnAppearing()
@@ -207,7 +214,7 @@ namespace WashDry.Views.Lavado
         }
 
 
-        private void PickerPaquetes_SelectedIndexChanged(System.Object sender, System.EventArgs e)
+        private async void  PickerPaquetes_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             try
             {
@@ -215,6 +222,36 @@ namespace WashDry.Views.Lavado
                 var id = i.id_paquete.ToString();
                 id_paquete.Text = id;
                 paq1.Text = i.nombre;
+
+                HttpClient client = new HttpClient();
+                var getpaqueteprecio = await client.GetAsync("http://www.washdryapp.com/app/public/paquete/individual/"+id) ;
+
+                if (getpaqueteprecio.IsSuccessStatusCode)
+                {
+                    HttpContent content = getpaqueteprecio.Content;
+
+                    string xjson = await content.ReadAsStringAsync();
+
+
+                    var result = JsonConvert.DeserializeObject<List<PaqueteIndividual>>(xjson);
+
+                    if (result.Count > 1)
+                    {
+                        pickertamanio.ItemsSource = result;
+                        pickertamanio.IsVisible = true;
+                       
+
+                    }
+                    else {
+                        await DisplayAlert("Error", "Pudo haber un error del sistema intente en otro momento por favor", "Ok");
+                        await Navigation.PopToRootAsync();
+                    }
+                   
+                }
+                else {
+                    await DisplayAlert("Error","Pudo haber un error del sistema intente en otro momento por favor","Ok");
+                    await Navigation.PopToRootAsync();
+                }
               
 
 
@@ -377,6 +414,7 @@ namespace WashDry.Views.Lavado
                                 {
                                     PickerPaq.ItemsSource = result;
                                     PickerPaq.SelectedIndexChanged += PickerPaquetes_SelectedIndexChanged;
+                                    
                                 }
                                 else
                                 {
@@ -720,9 +758,10 @@ namespace WashDry.Views.Lavado
             if (string.IsNullOrEmpty(id_auto.Text))
             {
                 confirmartitle.TextColor = Color.IndianRed;
-                PickerAuto.Focus();
+               
                 confirmartitle.Text
                      = "Faltan datos del auto! - paso 2";
+                PickerAuto.Focus();
             }
             else if (string.IsNullOrEmpty(id_paquete.Text))
             {
@@ -774,7 +813,7 @@ namespace WashDry.Views.Lavado
             var idloc = id_loc.Text;
             var lon = longitude.Text;
             var lat = latitud.Text;
-            var idpaq = id_paquete.Text;
+            var idpaq = id_paqindividual.Text;
             var tipoP = FDPPicker.SelectedItem;
 
 
@@ -810,21 +849,56 @@ namespace WashDry.Views.Lavado
                             {"id_auto" ,  idauto},
                             {"latitud" ,  lat},
                             {"longitud" ,  lon},
-                            {"foto"," " },
+                            {"foto","no hay aun " },
                             {"fecha",dt },//"ddd, d:e MMMM"
-                            {"calificacion"," " },
-                            {"comentario","" },
+                            {"calificacion","0" },
+                            {"comentario"," " },
                             {"cambio","0.00" },
                             {"forma_pago",forma },
                 };
-                        var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
+                            var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
                     var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/agrega", content);
 
                             if (response.IsSuccessStatusCode)
                     {
-                        await DisplayAlert("Exito", "solcitud hecha", "ok");
+                      
                         HttpContent respx = response.Content;
-                        var json = await content.ReadAsStringAsync();
+                        var json = await respx.ReadAsStringAsync();
+                        var respjson = JsonConvert.DeserializeObject<SolicitudResp200>(json);
+
+
+                            
+                        var response_ = await client.GetAsync("http://www.washdryapp.com/app/public/solicitud/lista_solicitud/"+respjson.id);
+
+                        if (response_.IsSuccessStatusCode)
+                        {
+                            HttpContent resp_x = response_.Content;
+                            var json_X = await resp_x.ReadAsStringAsync();
+                            var respjson_sol = JsonConvert.DeserializeObject<List<Solicitudes>>(json_X);
+
+                            Solicitudes solicitudx = new Solicitudes();
+                            solicitudx = respjson_sol[0];
+                            userDataBase.AddSolicitudes(solicitudx);
+
+                            await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
+
+                            await Navigation.PopToRootAsync();
+
+                        }
+                        else {
+
+                            var cancel_values = new Dictionary<string, string> {
+                                { "id_solicitud", respjson.id.ToString() },
+                                { "comentario", "Cancelado por error con SQLite"}
+                            };
+                            var cancel_content = new FormUrlEncodedContent(cancel_values); //solicitud/agrega
+
+                            var cancelpost = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/cliente_cancelar/", cancel_content);
+                            await DisplayAlert("Error", "Pudo haber un error. Intente en otro momento." , "ok");
+
+                        }
+
+                        await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
                     }
                     else
                     {
@@ -862,8 +936,8 @@ namespace WashDry.Views.Lavado
                             {"longitud" ,  lon},
                             {"foto"," " },
                             {"fecha",dt },//"ddd, d:e MMMM"
-                            {"calificacion"," " },
-                            {"comentario","" },
+                            {"calificacion","0" },
+                            {"comentario","     " },
                             {"cambio",vaapgar },
                             {"forma_pago",forma },
                 };

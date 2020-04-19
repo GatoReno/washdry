@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:colorPicker="clr-namespace:Spillman.Xamarin.Forms.ColorPicker;assembly=Spillman.Xamarin.Forms.ColorPicker"
              mc:Ignorable="d"
-     BackgroundColor="#225374"
+      BackgroundImageSource="fondo2.png"
              x:Class="WashDry.Views.RegistCar.RegistCarPage">
 
     <ContentPage.BindingContext>

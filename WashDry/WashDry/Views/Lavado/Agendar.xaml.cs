@@ -124,7 +124,7 @@ namespace WashDry.Views.Lavado
             }
             catch (Exception ex)
             {
-                await DisplayAlert("", "" + ex.ToString(), "ok");
+                await DisplayAlert("Error - Intente en otro momento", "" + ex.ToString(), "ok");
                 //  Cator.IsVisible = false;
 
                 //  CatorT.Text = "Ha habido un error";

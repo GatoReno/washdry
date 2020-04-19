@@ -279,5 +279,10 @@ namespace WashDry.Views.UserInfo
             };
             Mapx.Pins.Add(pin);
         }
+
+        private void ListDirecciones_ItemTapped_1(object sender, ItemTappedEventArgs e)
+        {
+
+        }
     }
 }

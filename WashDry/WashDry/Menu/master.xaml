@@ -24,11 +24,7 @@
                 x:Name="namelbl"
                 HorizontalOptions="Center"
                 Text="Nombre / Mail de usuario " />
-                <Button Text="estado de servicio"
-            x:Name="btnedoserv"
-                    Clicked="btnedoserv_Clicked"
-             BackgroundColor="#075E54"  TextColor="#DCF8C6"
-           />
+        
 
                 <Button Text="mis autos"
             x:Name="btnautos"
@@ -38,7 +34,14 @@
 
 
 
-               <!-- <Button Text="Direcciones "       BackgroundColor="#075E54"  TextColor="#DCF8C6"  
+               <!--
+                        <Button Text="estado de servicio"
+            x:Name="btnedoserv"
+                    Clicked="btnedoserv_Clicked"
+             BackgroundColor="#075E54"  TextColor="#DCF8C6"
+           />
+                
+                <Button Text="Direcciones "       BackgroundColor="#075E54"  TextColor="#DCF8C6"  
                         x:Name="Direccionbtn" 
                             Clicked="Direccionbtn_Clicked"
                         FontSize="Small"
@@ -79,8 +82,10 @@
                         Clicked="btnCerrarSession_Clicked"
              BackgroundColor="#075E54"  TextColor="#DCF8C6"
            />
+                
+                
 
-                <Label></Label>
+                <Label ></Label>
             </StackLayout>
         </ScrollView>
    

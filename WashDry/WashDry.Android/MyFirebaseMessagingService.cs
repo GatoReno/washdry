@@ -42,7 +42,7 @@ namespace WashDry.Droid
             var pendingIntent = PendingIntent.GetActivity(this, MainActivity.NOTIFICATION_ID, intent, PendingIntentFlags.OneShot);
 
             var notificationBuilder = new NotificationCompat.Builder(this, MainActivity.CHANNEL_ID)
-                                      //.SetSmallIcon(Resource.Drawable.ic_stat_ic_notification)
+                                      .SetSmallIcon(Resource.Drawable.iko_72)
                                       .SetContentTitle("FCM Message")
                                       .SetContentText(messageBody)
                                       .SetAutoCancel(true)

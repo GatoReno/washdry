@@ -18,14 +18,6 @@ C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\Xamarin.Firebase.Common.dll.stamp
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\Xamarin.Firebase.Iid.dll.stamp
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\Xamarin.Firebase.Messaging.dll.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\proguard\dc663e480.txt
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\dc663e48.proguard.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\0757626b.proguard.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\2f4d086a.proguard.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\ea5c07c4.proguard.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\1f4fd9cc.proguard.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\d9f2c52f.proguard.stamp
-C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\XbdMerge\04db0838.proguard.stamp
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\googsvcsjson\values\goog_svcs_json.xml
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry.Android\obj\Debug\90\res.flag

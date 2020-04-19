@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
               xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
-             x:Class="WashDry.Views.UserInfo.Direcciones"      BackgroundColor="#225374">
+             x:Class="WashDry.Views.UserInfo.Direcciones"     
+              BackgroundImageSource="fondo2.png"
+             >
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10">
             <Label Text="Tus direcciones!"
@@ -15,6 +17,7 @@
 
             <ListView x:Name="ListDirecciones"                      
                       ItemsSource="{Binding DireccionesApiCall}"
+                      
                       SelectionMode="None"
                       ItemTapped="ListDirecciones_ItemTapped"
                       >
@@ -25,8 +28,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <maps:Map x:Name="Mapx"
-                                          WidthRequest="100" HeightRequest="300"
+            <maps:Map x:Name="Mapx"  WidthRequest="100" HeightRequest="300"
                                                 />
 
 
@@ -37,11 +39,13 @@
                 Placeholder="Descripcion / Casa / Oficina / etc ..."/>
             <Label
                 x:Name="Latitud"
+                IsVisible="False"
                 />
             <Label 
+                IsVisible="False"
                 x:Name="Longitud"
                    />
-            <Button Margin="0,0,0,10"
+            <Button Margin="0,10,0,10"
                     Text="Agregar direccion"
                 x:Name="btnAddDirecc"
                 

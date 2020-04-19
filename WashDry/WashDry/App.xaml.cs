@@ -92,7 +92,7 @@ namespace WashDry
         {
             // Handle when your app resumes
        
-                    CrossLocalNotifications.Current.Show("Washdry", "Pide tu proximo lavado ya 🚗");
+                //    CrossLocalNotifications.Current.Show("Washdry", "Pide tu proximo lavado ya 🚗");
             
 
         }

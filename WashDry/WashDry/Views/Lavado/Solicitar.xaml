@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:WashDry.Views"
-  xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" mc:Ignorable="d" BackgroundColor="#225374" x:Class="WashDry.Views.Lavado.Solicitar">
+  xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" mc:Ignorable="d" BackgroundImageSource="fondo2.png" x:Class="WashDry.Views.Lavado.Solicitar">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20,20,20,20">
@@ -96,18 +96,9 @@
                 />
 
 
-                                <Picker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="pickertamanio" Title="Tamaño de su auto" TextColor="Black" VerticalOptions="Center">
-
-                                    <Picker.ItemsSource>
-                                        <x:Array Type="{x:Type x:String}">
-                                            <x:String>Pequeño</x:String>
-                                            <x:String>Mediano</x:String>
-                                            <x:String>Grande</x:String>
-                                            <x:String>Camioneta</x:String>
-                                        </x:Array>
-                                    </Picker.ItemsSource>
-
-                                </Picker>
+                                <Picker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="pickertamanio" Title="Tamaño de su auto"
+                                        ItemsSource="{Binding PaqueteIndividual}" ItemDisplayBinding="{Binding tipo_vehiculo}" SelectedIndex="{Binding id}"
+                                        TextColor="Black" IsVisible="False" VerticalOptions="Center"></Picker>
 
 
 
@@ -412,7 +403,9 @@
                 <Label IsVisible="False" x:Name="latitud" />
                 <Label IsVisible="False" x:Name="id_washer" />
                 <Label IsVisible="False" x:Name="id_paquete" />
-
+                <Label
+                    x:Name="id_paqindividual"
+                    IsVisible="False"/>
                 <Label IsVisible="False" x:Name="id_loc" />
 
                 <Label IsVisible="False" x:Name="id_auto" />
