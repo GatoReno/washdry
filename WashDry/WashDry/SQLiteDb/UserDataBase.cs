@@ -29,6 +29,17 @@ namespace WashDry.SQLiteDb
         {
             conn.Delete<Solicitudes>(ID);
         }
+
+         
+        public IEnumerable<Solicitudes> GetSolicitud(int id) {
+            var data = conn.Table<Solicitudes>();
+            var xs = id.ToString();
+            var  d1 = (from values in data
+                      where values.id_solicitud == xs
+                      select values).ToList();
+
+            return d1;
+        }
         public string AddSolicitudes(Solicitudes member)
         {
             try

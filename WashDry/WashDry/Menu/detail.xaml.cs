@@ -38,7 +38,8 @@ namespace WashDry.Menu
             if (solicitudes.Count() > 0)
             {
                 ListSolicitudes.ItemsSource = solicitudes;
-                ListSolicitudes.ItemTapped += ListSolicitudes_ItemTapped;
+                lblestados.IsVisible = false;
+                //ListSolicitudes.ItemTapped += ListSolicitudes_ItemTapped;
 
             }
             else {
@@ -180,7 +181,7 @@ namespace WashDry.Menu
                         AddressZip = "284005",
                         AddressState = "Haryana",
                         AddressCountry = "India",
-                        Currency = "inr",
+                        Currency = "Mx",
                     }
                 };
 

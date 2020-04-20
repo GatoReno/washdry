@@ -26,7 +26,7 @@ namespace WashDry.Droid
             Log.Debug(TAG, "From: " + message.From);
 
             var body = message.GetNotification().Body;
-            Log.Debug(TAG, "Notification Message Body: " + body);
+            Log.Debug(TAG, "Notification Message Body: 💀 check me " + body);
             SendNotification(body, message.Data);
         }
 

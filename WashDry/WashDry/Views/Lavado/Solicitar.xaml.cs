@@ -898,7 +898,7 @@ namespace WashDry.Views.Lavado
 
                         }
 
-                        await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
+                     //   await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
                     }
                     else
                     {

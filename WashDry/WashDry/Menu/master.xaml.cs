@@ -32,7 +32,7 @@ namespace WashDry.Menu
             userDataBase = new UserDataBase();
             var user_exist = userDataBase.GetMembers().ToList();
 
-            namelbl.Text = user_exist[0].name;//+ user_exist[0].token;
+            namelbl.Text = user_exist[0].name + user_exist[0].id_cliente;
             InfoUserweb(user_exist[0].id);
 
 

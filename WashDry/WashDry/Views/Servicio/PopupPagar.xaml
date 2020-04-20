@@ -1,0 +1,69 @@
+﻿<popup:PopupPage xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WashDry.Views.Servicio.PopupPagar">
+       
+
+
+    <StackLayout Padding="30" Margin="30,30,30,30"
+                 
+                 BackgroundColor="Azure">
+
+        <Entry MaxLength="16"
+               Keyboard="Numeric"
+               Placeholder="numero de tarjeta"
+               PlaceholderColor="SeaGreen"
+                 x:Name="Card_"
+               TextColor="Wheat"
+                 />
+
+
+
+        <Entry MaxLength="4"
+                IsPassword="True"
+               TextColor="LightGreen"
+               Placeholder="***"
+               PlaceholderColor="SeaGreen"
+                 x:Name="Secret"
+                 />
+
+        <Entry MaxLength="2"
+               TextColor="Wheat"
+               Keyboard="Numeric"
+                Placeholder="MM"
+                 x:Name="Month"
+               PlaceholderColor="SeaGreen"
+                 />
+
+        <Entry MaxLength="2"
+               TextColor="Wheat"
+               PlaceholderColor="SeaGreen"
+              Keyboard="Numeric"
+               Placeholder="YY"
+                 x:Name="Year"
+                 />
+
+
+
+
+     
+        <ActivityIndicator
+            Color="LightGreen"
+            IsVisible="False"
+                        VerticalOptions="EndAndExpand"
+
+            x:Name="Cator"
+            />
+        <Button
+            Text="Pagar ahora"
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="Fill"
+            x:Name="bntstripepayment"
+            Clicked="StripeTokenBtn_Clicked"
+            />
+        
+    </StackLayout>
+
+</popup:PopupPage>

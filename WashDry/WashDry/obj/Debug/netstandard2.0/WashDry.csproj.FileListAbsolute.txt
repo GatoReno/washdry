@@ -37,3 +37,5 @@ C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Debug\ne
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.dll
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\ref\WashDry.dll
 C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.pdb
+C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Servicio\PopupCancelServicio.xaml.g.cs
+C:\Users\Pepe\Desktop\chmix\washdryabril\ww\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Servicio\PopupPagar.xaml.g.cs

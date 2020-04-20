@@ -1,4 +1,5 @@
-﻿using Stripe;
+﻿using Rg.Plugins.Popup.Services;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,29 +20,33 @@ namespace WashDry.Views.Servicio
         public EstadoDeServicio(int id_sol)
         {
             InitializeComponent();
-            id_sol = idsol;
+            idsol = id_sol;
             
         }
         private async Task GetSolicitud(int id)
         {
-           var info = await httpc.GetAsync("http://washdryapp.com/app/public/washer/get_solicitud/"+id);
+           var info = await httpc.GetAsync("http://washdryapp.com/app/public/solicitud/lista_solicitud/" + id);
             if (info.IsSuccessStatusCode) {
                 var content = info.Content;
+
 
             
             }
             else {
 
-                Navigation.PopModalAsync();
+                await Navigation.PopModalAsync();
             }
         }
-        private TokenService Tokenservice;
-        private Token stripeToken;
+     
         [Obsolete]
         private async void StripeTokenBtn_Clicked(object sender, EventArgs e)
         {
             btnpagartest.IsEnabled = false;
             Cator.IsRunning = true;
+
+            await PopupNavigation.PushAsync(new PopupPagar(idsol));
+
+            /*
             try
             {
                 StripeConfiguration.SetApiKey("pk_test_HQOqIXmo6C3MyZ2h9bBAcWKs00ngt4dRKC");
@@ -127,7 +132,7 @@ namespace WashDry.Views.Servicio
                 var x = ex.ToString();
                 //  StripeLbl.Text = ex.ToString() ;
                 Cator.IsRunning = false;
-            }
+            }  */
             Cator.IsRunning = false;
             btnpagartest.IsEnabled = true;
 
@@ -144,6 +149,8 @@ namespace WashDry.Views.Servicio
         {
             CatorCancel.IsRunning = true;
             btnCancel.IsEnabled = false;
+
+            // lblestados
         }
     }
 }

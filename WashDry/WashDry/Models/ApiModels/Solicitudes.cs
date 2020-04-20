@@ -13,6 +13,7 @@ namespace WashDry.Models.ApiModels
         public string latitud { get; set; }
         public string longitud { get; set; }
         public string fecha { get; set; }
+        public string precio { get; set; }
         public string forma_pago { get; set; }
         public string cambio { get; set; }
         public string calificacion { get; set; }
