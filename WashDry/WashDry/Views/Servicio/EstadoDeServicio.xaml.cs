@@ -204,7 +204,11 @@ namespace WashDry.Views.Servicio
             CatorCancel.IsRunning = true;
             btnCancel.IsEnabled = false;
 
+            await PopupNavigation.PushAsync(new PopupCancelServicio(idsol));
             // lblestados
+
+            CatorCancel.IsRunning = false;
+            btnCancel.IsEnabled = true;
         }
     }
 }

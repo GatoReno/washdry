@@ -4,7 +4,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="WashDry.Views.Servicio.PopupCancelServicio">
-    <StackLayout>
+    <StackLayout
+        BackgroundColor="DarkSalmon"
+        
+        Margin="30,130,30,60"
+        Padding="30">
+        <ActivityIndicator
+            x:Name="Cator"
+            Color="IndianRed"
+            IsRunning="False"
+            />
+        <Editor
+            VerticalOptions="Center"
+            Placeholder="Motivo de su cancelacion"
+            x:Name="Message"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            />
+        <Label
+            Text="Gracias por ayudarnos a mejorar tu servicio."
+            FontSize="Micro"
+            />
+        <Button
+            BackgroundColor="IndianRed"
+            x:Name="btnCancel"
+            Clicked="btnCancel_Clicked"
+            Text="Cancelar"
+             VerticalOptions="Center"
+            />
 
     </StackLayout>
 </popup:PopupPage>

@@ -39,7 +39,8 @@ namespace WashDry.Views.Lavado
 
         public async Task GetSolicitudesWeb()
         {
-
+            CatorMain.IsVisible = true;
+            CatorMain.IsRunning = true;
 
             try
             {
@@ -107,7 +108,8 @@ namespace WashDry.Views.Lavado
                 return;
             }
 
-
+            CatorMain.IsVisible = false;
+            CatorMain.IsRunning = false;
         }
 
        

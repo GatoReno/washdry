@@ -9,6 +9,11 @@
               BackgroundImageSource="fondo2.png">
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,20" >
+            <ActivityIndicator
+                x:Name="CatorMain"
+                IsVisible="False"
+                HorizontalOptions="Center"
+                />
             <Label
                 HorizontalOptions="Center"
                 Text="Lavados Registrados"
