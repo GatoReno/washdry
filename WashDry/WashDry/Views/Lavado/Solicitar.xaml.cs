@@ -895,7 +895,7 @@ namespace WashDry.Views.Lavado
 
                             var cancelpost = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/cliente_cancelar/", cancel_content);
                             await DisplayAlert("Error", "Pudo haber un error. Intente en otro momento." , "ok");
-
+                            await Navigation.PopToRootAsync();
                         }
 
                      //   await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
@@ -906,6 +906,7 @@ namespace WashDry.Views.Lavado
 
                         var json = await contentpost.ReadAsStringAsync();
                         await DisplayAlert("Error", "intente en otro momento", "ok");
+                        await Navigation.PopToRootAsync();
                     }
                     btnpedirservicio.IsVisible = true;
                     CatorResponse.IsVisible = false;
@@ -946,10 +947,18 @@ namespace WashDry.Views.Lavado
 
                         if (response.IsSuccessStatusCode)
                         {
-                            await DisplayAlert("Exito", "solcitud hecha", "ok");
                             HttpContent respx = response.Content;
                             var json = await content.ReadAsStringAsync();
+                            //falta algo aqui
 
+                            var respjson_sol = JsonConvert.DeserializeObject<List<Solicitudes>>(json);
+                            Solicitudes solicitudx = new Solicitudes();
+                            solicitudx = respjson_sol[0];
+                            userDataBase.AddSolicitudes(solicitudx);
+
+                            await DisplayAlert("Exito", "solcitud hecha", "ok");
+
+                            await Navigation.PopToRootAsync();
                         }
                         else
                         {

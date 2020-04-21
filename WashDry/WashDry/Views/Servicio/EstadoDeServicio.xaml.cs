@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Services;
+﻿using Newtonsoft.Json;
+using Rg.Plugins.Popup.Services;
 using Stripe;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using WashDry.Models.ApiModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,26 +17,79 @@ namespace WashDry.Views.Servicio
     public partial class EstadoDeServicio : ContentPage
     {
         public int idsol ;
-        public HttpClient httpc;
-        public EstadoDeServicio(int id_sol)
+         public EstadoDeServicio(int id_sol)
         {
             InitializeComponent();
             idsol = id_sol;
-            
+            _ = GetSolicitud(idsol);
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+           await GetSolicitud(idsol);
         }
         private async Task GetSolicitud(int id)
         {
-           var info = await httpc.GetAsync("http://washdryapp.com/app/public/solicitud/lista_solicitud/" + id);
+
+            CatorMain.IsVisible = true;
+            CatorMain.IsRunning = true;
+
+            HttpClient client = new HttpClient();
+            var info = await client.GetAsync("http://washdryapp.com/app/public/solicitud/lista_solicitud/" + id);
             if (info.IsSuccessStatusCode) {
                 var content = info.Content;
+                var json = await content.ReadAsStringAsync();
+                var xjson = JsonConvert.DeserializeObject<List<Solicitudes>>(json);
 
+                if(xjson.Count > 0)
+                {
+                    lbltitle.Text = xjson[0].paquete;
+                    lbldate.Text = xjson[0].fecha;
+                    lblprecio.Text = xjson[0].precio;
+                    lbldestino.Text = xjson[0].modelo + " " + xjson[0].placas;
+                    var status = xjson[0].status;
+                    switch (status)
+                    {
+                        case "1":
+                            status = "En proceso";
+                            break;
+                        case "2":
+                            status = "Aceptado";
+                            break;
+                        case "3":
+                            status = "Lavado en proceso";
+                            break;
+                        case "4":
+                            status = "En espera de pago";
+                            break;
+                        case "5":
+                            status = "otro";
+                            break;
+                        case "6":
+                            status = "otro";
+                            break;
+                        case "7":
+                            status = "Terminado";
+                            break;
+                    }
+                    lblstatus.Text = status;
 
-            
+                }
+                else {
+                    btnCancel.IsVisible = true;
+
+                    await DisplayAlert("Pudo haber un error","Intenta otra ves mas tarde, recuerda que siempre puedes cancelar tus servicios.","ok");
+                }
+
             }
             else {
 
                 await Navigation.PopModalAsync();
             }
+
+            CatorMain.IsVisible = false;
+            CatorMain.IsRunning = false;
         }
      
         [Obsolete]
@@ -133,7 +187,7 @@ namespace WashDry.Views.Servicio
                 //  StripeLbl.Text = ex.ToString() ;
                 Cator.IsRunning = false;
             }  */
-            Cator.IsRunning = false;
+            CatorMain.IsRunning = false;
             btnpagartest.IsEnabled = true;
 
 

@@ -1,4 +1,5 @@
 ﻿using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Services;
 using Stripe;
 using System;
 using System.Collections.Generic;
@@ -119,7 +120,7 @@ namespace WashDry.Views.Servicio
                         await DisplayAlert("error", "yeah status 200", "ok");
                         userDataBase.DeleteSolicitud(Int32.Parse(solx[0].id_solicitud));
                         string xjson = await response.Content.ReadAsStringAsync();
-                        await Navigation.PopAsync();
+                        await  PopupNavigation.PopAsync();
                         break;
 
 
