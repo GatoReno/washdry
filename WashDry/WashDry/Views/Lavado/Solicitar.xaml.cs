@@ -941,7 +941,7 @@ namespace WashDry.Views.Lavado
                             {"comentario","     " },
                             {"cambio",vaapgar },
                             {"forma_pago",forma },
-                };
+                             };
                         var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
                         var response = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/agrega", content);
 

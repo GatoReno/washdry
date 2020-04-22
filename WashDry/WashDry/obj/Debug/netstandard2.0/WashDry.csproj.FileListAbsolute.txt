@@ -50,6 +50,7 @@ C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstan
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Menu\master.xaml.g.cs
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\InfoUser.xaml.g.cs
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\Agendar.xaml.g.cs
+C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\Calificar.xaml.g.cs
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\Contratar.xaml.g.cs
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\InfoLavado.xaml.g.cs
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\Views\Lavado\LavadoAlInstante.xaml.g.cs
@@ -79,4 +80,3 @@ C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstan
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.dll
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\ref\WashDry.dll
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.pdb
-C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,9 @@ namespace WashDry.Models.ApiModels
 {
    public class Solicitudes
     {
+
+        [PrimaryKey]
+        public int id { get; set; }
         public string id_solicitud { get; set; }
         public string id_usuario { get; set; }
         public string id_washer { get; set; }
@@ -26,5 +30,6 @@ namespace WashDry.Models.ApiModels
         public string paquete { get; set; }
         public string usuario { get; set; }
         public string foto { get; set; }
+         
     }
 }

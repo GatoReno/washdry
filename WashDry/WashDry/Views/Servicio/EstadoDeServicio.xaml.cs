@@ -62,7 +62,7 @@ namespace WashDry.Views.Servicio
                             status = "Lavado en proceso";
                             break;
                         case "4":
-                            imgxwasher.Source = xjson[0].foto;
+                            imgxwasher.Source = xjson[0].foto_washer;
                             btnpagartest.IsEnabled = true;
                             btnpagartest.IsVisible = true;
                             imgxwasher.IsVisible = true;

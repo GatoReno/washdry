@@ -71,9 +71,11 @@
                     Text="Contrato de servicio"</Button>
 
                     -->
-                <Image Grid.Row="0" Grid.Column="0"
+                <Image Grid.Row="1" Grid.Column="0"
+                       Grid.ColumnSpan="1"
                        x:Name="imgxwasher"
                        IsVisible="False"
+                       HorizontalOptions="Center"
                         />
                 <Label Grid.Row="1" Grid.Column="0"
                        Text="Fecha de emsion!"

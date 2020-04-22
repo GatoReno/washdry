@@ -16,7 +16,7 @@
                Placeholder="numero de tarjeta"
                PlaceholderColor="SeaGreen"
                  x:Name="Card_"
-               TextColor="Wheat"
+               TextColor="SeaGreen"
                  />
 
 
@@ -30,7 +30,7 @@
                  />
 
         <Entry MaxLength="2"
-               TextColor="Wheat"
+               TextColor="SeaGreen"
                Keyboard="Numeric"
                 Placeholder="MM"
                  x:Name="Month"
@@ -38,7 +38,7 @@
                  />
 
         <Entry MaxLength="2"
-               TextColor="Wheat"
+               TextColor="SeaGreen"
                PlaceholderColor="SeaGreen"
               Keyboard="Numeric"
                Placeholder="YY"

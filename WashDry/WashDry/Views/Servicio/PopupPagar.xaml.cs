@@ -29,31 +29,38 @@ namespace WashDry.Views.Servicio
 
         private async void StripeTokenBtn_Clicked(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(Card_.Text))
+            var Card = Card_.Text;
+            var Monthx = Month.Text;
+            var Yearx = Year.Text;
+            var Secretx = Secret.Text;
+            if (string.IsNullOrEmpty(Card))
             {
                 Card_.Focus();
             }
 
-            else if (string.IsNullOrEmpty(Month.Text))
+            else if (string.IsNullOrEmpty(Monthx))
             {
                 Month.Focus();
             }
-            else if (string.IsNullOrEmpty(Year.Text))
+            else if (string.IsNullOrEmpty(Yearx))
             {
                 Year.Focus();
             }
 
-            else if (string.IsNullOrEmpty(Secret.Text))
+            else if (string.IsNullOrEmpty(Secretx))
             {
                 Secret.Focus();
             }
+            else { 
 
             
 
             try
             {
 
+
+                Cator.IsVisible = true;
+                Cator.IsRunning = true;
                 userDataBase = new UserDataBase();
                 var user = userDataBase.GetMembers().ToList();
                 var solx = userDataBase.GetSolicitud(sid).ToList();
@@ -146,7 +153,9 @@ namespace WashDry.Views.Servicio
                 //  StripeLbl.Text = ex.ToString() ;
 
             }
-
+            }
+            Cator.IsVisible = false;
+            Cator.IsRunning = true;
         }
 
     }
