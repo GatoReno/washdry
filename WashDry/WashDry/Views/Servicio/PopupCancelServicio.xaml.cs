@@ -55,7 +55,7 @@ namespace WashDry.Views.Servicio
                     userDataBase.DeleteSolicitud(id);
  
 
-                    await DisplayAlert("Error", "Solicitud de servicio cancelada.", "ok");
+                    await DisplayAlert("Lavado cancelado", "Solicitud de servicio cancelada.", "ok");
                     await PopupNavigation.PopAsync();
 
                 }

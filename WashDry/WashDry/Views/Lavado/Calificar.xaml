@@ -6,13 +6,23 @@
              mc:Ignorable="d"
              x:Class="WashDry.Views.Lavado.Calificar">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+        <StackLayout Margin="10,20,10,10">
+
+            <Label Text="Califica el servicio!"
+                   FontSize="Large"
+                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="Gracias por la confianza!"
+     
                 HorizontalOptions="CenterAndExpand" />
 
+            <Editor
+                x:Name="Message"
+                Placeholder="Deseas dejar algun comentario?"
+                />
+            
+
             <lv:RatingConception ItemsNumber="5" DrawType="Star"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                    ImageWidth="25" ImageHeight="25"  DesignType="Standard" ColorUI="YellowLight" 
+                    ImageWidth="50" ImageHeight="50"  DesignType="Standard" ColorUI="YellowLight" 
                     InitialValue="4"
                                   
                                        

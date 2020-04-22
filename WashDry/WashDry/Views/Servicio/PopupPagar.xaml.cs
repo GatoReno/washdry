@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WashDry.SQLiteDb;
+using WashDry.Views.Lavado;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -128,6 +129,7 @@ namespace WashDry.Views.Servicio
                         userDataBase.DeleteSolicitud(Int32.Parse(solx[0].id_solicitud));
                         string xjson = await response.Content.ReadAsStringAsync();
                         await  PopupNavigation.PopAsync();
+                            await Navigation.PushModalAsync(new Calificar());
                         break;
 
 

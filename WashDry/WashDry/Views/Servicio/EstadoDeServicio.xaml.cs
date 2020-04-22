@@ -47,8 +47,8 @@ namespace WashDry.Views.Servicio
                 {
                     lbltitle.Text = xjson[0].paquete;
                     lbldate.Text = xjson[0].fecha;
-                    lblprecio.Text = xjson[0].precio;
-                    lbldestino.Text = xjson[0].modelo + " " + xjson[0].placas;
+                    lblprecio.Text = "$ "+xjson[0].precio+ " Mxn ";
+                    lbldestino.Text =  xjson[0].modelo + " " + xjson[0].placas;
                     var status = xjson[0].status;
                     switch (status)
                     {
@@ -81,6 +81,18 @@ namespace WashDry.Views.Servicio
                             break;
                     }
                     lblstatus.Text = status;
+
+                    if (string.IsNullOrEmpty(xjson[0].foto))
+                    {
+                        lblimg.IsVisible = true;
+                        lblimg.Text = "Iamgen no disponible";
+                    }
+                    else
+                    {
+                        imgxwasher.IsVisible = true;
+                        imgxwasher.Source = xjson[0].foto;
+
+                    }
 
                 }
                 else {

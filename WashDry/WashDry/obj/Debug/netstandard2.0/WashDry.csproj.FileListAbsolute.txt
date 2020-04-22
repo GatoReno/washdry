@@ -80,3 +80,4 @@ C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstan
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.dll
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\ref\WashDry.dll
 C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.pdb
+C:\Users\samay\Desktop\chmix\abrilwash\washdry\WashDry\WashDry\obj\Debug\netstandard2.0\WashDry.csprojAssemblyReference.cache

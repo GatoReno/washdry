@@ -21,6 +21,12 @@ namespace WashDry.SQLiteDb
             conn.CreateTable<Solicitudes>();
        
         }
+
+        public void DeleteSolicitudes()
+        {
+            conn.DeleteAll<Solicitudes>();
+        }
+
         public IEnumerable<Solicitudes> GetSolicitudes() {
             var members = (from mem in conn.Table<Solicitudes>() select mem);
             return members.ToList();

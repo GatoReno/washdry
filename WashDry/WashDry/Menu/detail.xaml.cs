@@ -29,17 +29,17 @@ namespace WashDry.Menu
         public detail()
         {
             InitializeComponent();
-          
+            _ = GetSolicitudesfromWeb();
 
-            // var solicitudes = userDataBase.GetSolicitudes();
+        
             userDataBase = new UserDataBase();
-            var solicitudes = userDataBase.GetSolicitudes();
+            var solicitudes = userDataBase.GetSolicitudes().ToList();
 
             if (solicitudes.Count() > 0)
             {
                 ListSolicitudes.ItemsSource = solicitudes;
                 lblestados.IsVisible = false;
-                //ListSolicitudes.ItemTapped += ListSolicitudes_ItemTapped;
+             
 
             }
             else {
@@ -49,7 +49,21 @@ namespace WashDry.Menu
 
 
         }
+        private async Task GetSolicitudesfromWeb()
+        {
+            try
+            {
+                userDataBase = new UserDataBase();
+                userDataBase.DeleteSolicitudes();
+            }
+            catch (Exception es)
+            {
 
+                await DisplayAlert("", es.ToString(), "ok");
+            }
+         
+
+        }
         protected override async void OnAppearing()
         {
 
