@@ -71,7 +71,11 @@
                     Text="Contrato de servicio"</Button>
 
                     -->
-                    <Label Grid.Row="1" Grid.Column="0"
+                <Image Grid.Row="0" Grid.Column="0"
+                       x:Name="imgxwasher"
+                       IsVisible="False"
+                        />
+                <Label Grid.Row="1" Grid.Column="0"
                        Text="Fecha de emsion!"
                                 VerticalOptions="Center" 
                                 HorizontalOptions="CenterAndExpand" />
@@ -132,9 +136,11 @@
                     <Button
                     x:Name="btnpagartest"
                     Clicked="StripeTokenBtn_Clicked"
-                    Text="Prueba de pago"
+                    Text="Pagar"
                     Grid.Row="11"
+                        IsEnabled="False"
                     Grid.Column="0"
+                        IsVisible="False"
                     Grid.ColumnSpan="1"
                     
                     />
@@ -145,7 +151,7 @@
                     TextColor="White"
                     x:Name="btnCancel"
                     Clicked="btnCancel_Clicked"
-                    HeightRequest="10"
+                 
                     Text="Cancelar "
                     Grid.Row="11"
                     Grid.Column="1"

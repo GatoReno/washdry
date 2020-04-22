@@ -48,7 +48,7 @@ namespace WashDry.Views.Lavado
                 userDataBase = new UserDataBase();
                 var user_exist = userDataBase.GetMembers().ToList();
                 HttpClient client = new HttpClient();
-                var uri = "http://washdryapp.com/app/public/solicitud/listado/" + user_exist[0].id;
+                var uri = "http://www.washdryapp.com/app/public/solicitud/lista_all/" + user_exist[0].id;
 
 
             

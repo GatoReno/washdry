@@ -3565,24 +3565,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pepe\\.nuget\\packages\\": {},
+    "C:\\Users\\samay\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
-      "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry.Android\\obj\\",
+      "projectPath": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "packagesPath": "C:\\Users\\samay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pepe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3596,8 +3596,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "C:\\Users\\Pepe\\Desktop\\chmix\\washdryabril\\ww\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+            "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }

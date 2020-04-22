@@ -370,7 +370,7 @@ namespace WashDry.Views.Lavado
             var idw = content_X.id_washer;
             id_washer.Text = idw.ToString();
             nameWasher.Text = content_X.nombre + " ";
-            ratingStarWasher.InitialValue = content_X.calificacion;
+            ratingStarWasher.InitialValue =Int32.Parse(content_X.calificacion);
 
         }
 

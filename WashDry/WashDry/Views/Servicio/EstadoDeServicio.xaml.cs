@@ -41,8 +41,9 @@ namespace WashDry.Views.Servicio
                 var content = info.Content;
                 var json = await content.ReadAsStringAsync();
                 var xjson = JsonConvert.DeserializeObject<List<Solicitudes>>(json);
+              
 
-                if(xjson.Count > 0)
+                if (xjson.Count > 0)
                 {
                     lbltitle.Text = xjson[0].paquete;
                     lbldate.Text = xjson[0].fecha;
@@ -61,15 +62,21 @@ namespace WashDry.Views.Servicio
                             status = "Lavado en proceso";
                             break;
                         case "4":
+                            imgxwasher.Source = xjson[0].foto;
+                            btnpagartest.IsEnabled = true;
+                            btnpagartest.IsVisible = true;
+                            imgxwasher.IsVisible = true;
                             status = "En espera de pago";
                             break;
                         case "5":
-                            status = "otro";
+                            btnCancel.IsVisible = false;
+                            status = "Lavado pagado";
                             break;
                         case "6":
-                            status = "otro";
+                            status = "Cancelado";
                             break;
                         case "7":
+                            btnCancel.IsVisible = false;
                             status = "Terminado";
                             break;
                     }

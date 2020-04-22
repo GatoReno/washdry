@@ -20,10 +20,13 @@
     -->
 
             <Label  
-                x:Name="index_star"
+                x:Name="washername"
                  VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
                 />
+            <Image
+                x:Name="imgwash"
+                ></Image>
 
             <Label  
                 x:Name="value_star"
