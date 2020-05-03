@@ -56,6 +56,14 @@ namespace WashDry.Menu
                     {
                         foreach (var item in respjson_sol)
                         {
+
+                            var exist = userDataBase.GetSolicitud(Int32.Parse(item.id_solicitud));
+                            if (exist.Count() > 0)
+                            {
+
+                            }
+                            else { 
+
                             Solicitudes solicitudx = new Solicitudes();
                             solicitudx = item;
                             solicitudx.calificacion = "0";
@@ -74,7 +82,7 @@ namespace WashDry.Menu
                             solicitudx.precio = "";
 
                             userDataBase.AddSolicitudes(solicitudx);
-                            //ListSolicitudes.IsVisible = true;
+                            } 
 
                         }
 
