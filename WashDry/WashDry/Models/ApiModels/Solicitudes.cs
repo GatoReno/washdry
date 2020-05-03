@@ -8,7 +8,7 @@ namespace WashDry.Models.ApiModels
    public class Solicitudes
     {
 
-        [PrimaryKey]
+        [PrimaryKey,AutoIncrement]
         public int id { get; set; }
         public string id_solicitud { get; set; }
         public string id_usuario { get; set; }

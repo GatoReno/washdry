@@ -8,33 +8,37 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
-            BackgroundColor="Accent"
-        Orientation="Vertical"
-        >
+                BackgroundColor="Accent"
+                Orientation="Vertical" >
 
-                     <Image
-                         Margin="5,30,5,5"
-                       WidthRequest="78" HeightRequest="78"
-                        
-                        Source="iko.png"
-                    x:Name="logo"/>
+                <Frame CornerRadius="100" 
+                                                      BackgroundColor="transparent"
+                           WidthRequest="78" HeightRequest="78"
+                           Margin="5,30,5,5"
+                           HorizontalOptions="Center"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                    <Image x:Name="logo"
+                           Source="iko.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />  
+                </Frame>
 
-                 
                 <Label
                 x:Name="namelbl"
                 HorizontalOptions="Center"
                 Text="Nombre / Mail de usuario " />
-        
+
 
                 <Button Text="mis autos"
-            x:Name="btnautos"
-             BackgroundColor="#075E54"  TextColor="#DCF8C6"
-                    Clicked="btnautos_Clicked"
-           />
+                x:Name="btnautos"
+                BackgroundColor="#075E54"  TextColor="#DCF8C6"
+                        Clicked="btnautos_Clicked"
+               />   
 
 
 
-               <!--
+                <!--
                         <Button Text="estado de servicio"
             x:Name="btnedoserv"
                     Clicked="btnedoserv_Clicked"

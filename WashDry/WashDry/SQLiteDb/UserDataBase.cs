@@ -31,12 +31,23 @@ namespace WashDry.SQLiteDb
             var members = (from mem in conn.Table<Solicitudes>() select mem);
             return members.ToList();
         }
-        public void DeleteSolicitud(int ID)
+        public string  DeleteSolicitud(int ID)
         {
-            conn.Delete<Solicitudes>(ID);
+
+            try
+            {
+                conn.Delete<Solicitudes>(ID);
+                return "success Solicitudes deleted ";
+            }
+            catch (Exception ex)
+            {
+
+                return ex.ToString();
+            }
+
         }
 
-         
+
         public IEnumerable<Solicitudes> GetSolicitud(int id) {
             var data = conn.Table<Solicitudes>();
             var xs = id.ToString();

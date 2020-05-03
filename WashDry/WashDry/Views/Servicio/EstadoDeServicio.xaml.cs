@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WashDry.Models.ApiModels;
+using WashDry.SQLiteDb;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,10 +18,13 @@ namespace WashDry.Views.Servicio
     public partial class EstadoDeServicio : ContentPage
     {
         public int idsol ;
-         public EstadoDeServicio(int id_sol)
+        public int id_lite;
+
+        public EstadoDeServicio(int id_sol,int idlite)
         {
             InitializeComponent();
             idsol = id_sol;
+            id_lite = idlite;
             _ = GetSolicitud(idsol);
         }
 
@@ -41,7 +45,7 @@ namespace WashDry.Views.Servicio
                 var content = info.Content;
                 var json = await content.ReadAsStringAsync();
                 var xjson = JsonConvert.DeserializeObject<List<Solicitudes>>(json);
-              
+                UserDataBase udb = new UserDataBase();
 
                 if (xjson.Count > 0)
                 {
@@ -70,12 +74,15 @@ namespace WashDry.Views.Servicio
                             break;
                         case "5":
                             btnCancel.IsVisible = false;
+                            
                             status = "Lavado pagado";
                             break;
                         case "6":
+                            udb.DeleteSolicitud(id_lite);
                             status = "Cancelado";
                             break;
                         case "7":
+                            udb.DeleteSolicitud(id_lite);
                             btnCancel.IsVisible = false;
                             status = "Terminado";
                             break;

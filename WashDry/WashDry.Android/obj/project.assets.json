@@ -3565,24 +3565,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samay\\.nuget\\packages\\": {},
+    "C:\\Users\\erpre\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "projectUniqueName": "C:\\Users\\erpre\\Documents\\Work\\DaniWashDry\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
       "projectName": "WashDry.Android",
-      "projectPath": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
-      "packagesPath": "C:\\Users\\samay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry.Android\\obj\\",
+      "projectPath": "C:\\Users\\erpre\\Documents\\Work\\DaniWashDry\\washdry\\WashDry\\WashDry.Android\\WashDry.Android.csproj",
+      "packagesPath": "C:\\Users\\erpre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\erpre\\Documents\\Work\\DaniWashDry\\washdry\\WashDry\\WashDry.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\samay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\erpre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3596,8 +3596,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
-              "projectPath": "C:\\Users\\samay\\Desktop\\chmix\\abrilwash\\washdry\\WashDry\\WashDry\\WashDry.csproj"
+            "C:\\Users\\erpre\\Documents\\Work\\DaniWashDry\\washdry\\WashDry\\WashDry\\WashDry.csproj": {
+              "projectPath": "C:\\Users\\erpre\\Documents\\Work\\DaniWashDry\\washdry\\WashDry\\WashDry\\WashDry.csproj"
             }
           }
         }
@@ -3667,7 +3667,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "WashDry.Android depende de Xamarin.Firebase.Messaging (>= 60.0.0), pero no se encontró Xamarin.Firebase.Messaging 60.0.0. Se resolvió una mejor coincidencia aproximada de Xamarin.Firebase.Messaging 60.1142.0.",
+      "message": "WashDry.Android depends on Xamarin.Firebase.Messaging (>= 60.0.0) but Xamarin.Firebase.Messaging 60.0.0 was not found. An approximate best match of Xamarin.Firebase.Messaging 60.1142.0 was resolved.",
       "libraryId": "Xamarin.Firebase.Messaging",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3677,7 +3677,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "WashDry.Android depende de Xamarin.Forms.Maps (>= 4.4.0), pero no se encontró Xamarin.Forms.Maps 4.4.0. Se resolvió una mejor coincidencia aproximada de Xamarin.Forms.Maps 4.4.0.991265.",
+      "message": "WashDry.Android depends on Xamarin.Forms.Maps (>= 4.4.0) but Xamarin.Forms.Maps 4.4.0 was not found. An approximate best match of Xamarin.Forms.Maps 4.4.0.991265 was resolved.",
       "libraryId": "Xamarin.Forms.Maps",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3687,7 +3687,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "WashDry.Android depende de Xamarin.GooglePlayServices.Base (>= 60.0.0), pero no se encontró Xamarin.GooglePlayServices.Base 60.0.0. Se resolvió una mejor coincidencia aproximada de Xamarin.GooglePlayServices.Base 60.1142.0.",
+      "message": "WashDry.Android depends on Xamarin.GooglePlayServices.Base (>= 60.0.0) but Xamarin.GooglePlayServices.Base 60.0.0 was not found. An approximate best match of Xamarin.GooglePlayServices.Base 60.1142.0 was resolved.",
       "libraryId": "Xamarin.GooglePlayServices.Base",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3697,7 +3697,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "WashDry.Android depende de Xamarin.GooglePlayServices.Basement (>= 60.0.0), pero no se encontró Xamarin.GooglePlayServices.Basement 60.0.0. Se resolvió una mejor coincidencia aproximada de Xamarin.GooglePlayServices.Basement 60.1142.0.",
+      "message": "WashDry.Android depends on Xamarin.GooglePlayServices.Basement (>= 60.0.0) but Xamarin.GooglePlayServices.Basement 60.0.0 was not found. An approximate best match of Xamarin.GooglePlayServices.Basement 60.1142.0 was resolved.",
       "libraryId": "Xamarin.GooglePlayServices.Basement",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3707,7 +3707,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.Forms.Maps de 4.5.0.356 a 4.4.0.991265. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n WashDry.Android -> WashDry -> Xamarin.Forms.Maps (>= 4.5.0.356) \r\n WashDry.Android -> Xamarin.Forms.Maps (>= 4.4.0)",
+      "message": "Detected package downgrade: Xamarin.Forms.Maps from 4.5.0.356 to 4.4.0.991265. Reference the package directly from the project to select a different version. \r\n WashDry.Android -> WashDry -> Xamarin.Forms.Maps (>= 4.5.0.356) \r\n WashDry.Android -> Xamarin.Forms.Maps (>= 4.4.0)",
       "libraryId": "Xamarin.Forms.Maps",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3717,7 +3717,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.GooglePlayServices.Base de 60.1142.1 a 60.1142.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n WashDry.Android -> Xamarin.Forms.Maps 4.4.0.991265 -> Xamarin.GooglePlayServices.Maps 60.1142.1 -> Xamarin.GooglePlayServices.Base (= 60.1142.1) \r\n WashDry.Android -> Xamarin.GooglePlayServices.Base (>= 60.0.0)",
+      "message": "Detected package downgrade: Xamarin.GooglePlayServices.Base from 60.1142.1 to 60.1142.0. Reference the package directly from the project to select a different version. \r\n WashDry.Android -> Xamarin.Forms.Maps 4.4.0.991265 -> Xamarin.GooglePlayServices.Maps 60.1142.1 -> Xamarin.GooglePlayServices.Base (= 60.1142.1) \r\n WashDry.Android -> Xamarin.GooglePlayServices.Base (>= 60.0.0)",
       "libraryId": "Xamarin.GooglePlayServices.Base",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3727,7 +3727,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.GooglePlayServices.Basement de 60.1142.1 a 60.1142.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n WashDry.Android -> Xamarin.Forms.Maps 4.4.0.991265 -> Xamarin.GooglePlayServices.Maps 60.1142.1 -> Xamarin.GooglePlayServices.Basement (= 60.1142.1) \r\n WashDry.Android -> Xamarin.GooglePlayServices.Basement (>= 60.0.0)",
+      "message": "Detected package downgrade: Xamarin.GooglePlayServices.Basement from 60.1142.1 to 60.1142.0. Reference the package directly from the project to select a different version. \r\n WashDry.Android -> Xamarin.Forms.Maps 4.4.0.991265 -> Xamarin.GooglePlayServices.Maps 60.1142.1 -> Xamarin.GooglePlayServices.Basement (= 60.1142.1) \r\n WashDry.Android -> Xamarin.GooglePlayServices.Basement (>= 60.0.0)",
       "libraryId": "Xamarin.GooglePlayServices.Basement",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"

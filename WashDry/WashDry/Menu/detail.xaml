@@ -23,12 +23,17 @@
                       ItemsSource="{Binding Solicitudes}"
                           SelectionMode="None"
                           ItemTapped="ListSolicitudes_ItemTapped"
+                     VerticalOptions="Start"
+                      HeightRequest="50"
+                      SeparatorColor="Accent"
                       >
                 <ListView.ItemTemplate>
 
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout  Orientation="Horizontal">
+                            <StackLayout 
+                                 VerticalOptions="Fill"
+                                Orientation="Horizontal">
                                 <Label 
                                             Text="{Binding fecha}"
                                                 TextColor="White"
@@ -50,6 +55,7 @@
             </ListView>
 
 
+            <Label/>
             <Button
                  HorizontalOptions="CenterAndExpand"    BackgroundColor="#DCF8C6"  TextColor="#225374"
                 WidthRequest="200"

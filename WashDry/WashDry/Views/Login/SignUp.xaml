@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="WashDry.Views.Login.SignUp"
-              BackgroundImageSource="fondo2.png">
+              BackgroundImageSource="fondo1.png">
     <ContentPage.Content
         BackgroundColor="#34B7F1"
         >
@@ -127,7 +127,7 @@
 
 
                     <Button 
-                Text="FOTO INE"
+                Text="FOTO DE PERFIL"
                 x:Name="btnFoto"
                 TextColor="#255371"
                 FontSize="20"

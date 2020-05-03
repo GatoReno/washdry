@@ -22,36 +22,36 @@
                     
                     x:Name="ImgProfile"/>
 
-            <Label x:Name="lbl2" TextColor="#DCF8C6"/>
-            <Label    x:Name="lbl1" TextColor="#DCF8C6"/>
-            <Label x:Name="lbl3" TextColor="#DCF8C6" />
-
             <Label 
                 HorizontalOptions="CenterAndExpand"
                  x:Name="fname"
                 TextColor="#DCF8C6"
                
                 />
+            <Label x:Name="lbl2" TextColor="#DCF8C6"/>
+            <Label    x:Name="lbl1" TextColor="#DCF8C6"/>
+            <Label x:Name="lbl3" TextColor="#DCF8C6" />
 
+           
             <Entry 
                 TextColor="#DCF8C6"
                 Placeholder="Nombre de usuario"
-                x:Name="ent1"
+                x:Name="ent1" IsVisible="False"
                 />
 
             <Entry 
                 IsPassword="True"
                 Placeholder="email.ejemplo@tumail.com"
-                x:Name="ent2"
+                x:Name="ent2" IsVisible="False"
                  
                 />
 
             <DatePicker
-                x:Name="datepicker"
+                x:Name="datepicker" IsVisible="False"
                 />
 
-            <Button Text="Actualizar "     BackgroundColor="#DCF8C6"  TextColor="#225374"  
-                        x:Name="btnUpdate"  FontSize="Small"
+            <Button Text="Actualizar "   Clicked="btnUpdate_Clicked"  BackgroundColor="#DCF8C6"  TextColor="#225374"  
+                        x:Name="btnUpdate"  FontSize="Small" IsVisible="False"
                         />
 
             </StackLayout>

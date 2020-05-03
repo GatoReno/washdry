@@ -1,4 +1,5 @@
-﻿using Plugin.Connectivity;
+﻿using Newtonsoft.Json;
+using Plugin.Connectivity;
 using Plugin.Geolocator;
 using Stripe;
 using System;
@@ -32,20 +33,7 @@ namespace WashDry.Menu
             _ = GetSolicitudesfromWeb();
 
         
-            userDataBase = new UserDataBase();
-            var solicitudes = userDataBase.GetSolicitudes().ToList();
-
-            if (solicitudes.Count() > 0)
-            {
-                ListSolicitudes.ItemsSource = solicitudes;
-                lblestados.IsVisible = false;
-             
-
-            }
-            else {
-
-                ListSolicitudes.IsVisible = false;
-            }
+          
 
 
         }
@@ -54,7 +42,64 @@ namespace WashDry.Menu
             try
             {
                 userDataBase = new UserDataBase();
-                userDataBase.DeleteSolicitudes();
+                HttpClient client = new HttpClient();
+                var id = userDataBase.GetMembers().ToList();
+                
+                var getsol = await client.GetAsync("http://www.washdryapp.com/app/public/solicitud/listado/"+id[0].id_cliente);
+                if (getsol.IsSuccessStatusCode)
+                {
+                    HttpContent respx = getsol.Content;
+                    var res = await respx.ReadAsStringAsync();
+                    var respjson_sol = JsonConvert.DeserializeObject<List<Solicitudes>>(res);
+
+                    if (respjson_sol.Count > 0)
+                    {
+                        foreach (var item in respjson_sol)
+                        {
+                            Solicitudes solicitudx = new Solicitudes();
+                            solicitudx = item;
+                            solicitudx.calificacion = "0";
+                            solicitudx.ann = "";
+                            solicitudx.id_washer = "";
+                            solicitudx.id_usuario = "";
+                            solicitudx.cambio = "";
+                            solicitudx.forma_pago = "";
+                            solicitudx.foto_washer = "";
+                            solicitudx.comentario = "";
+                            solicitudx.modelo = "";
+                            solicitudx.placas = "";
+                            solicitudx.paquete = "";
+                            solicitudx.usuario = "";
+
+                            solicitudx.precio = "";
+
+                            userDataBase.AddSolicitudes(solicitudx);
+                            //ListSolicitudes.IsVisible = true;
+
+                        }
+
+                    }
+
+
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Error con las solicitudess, intenten en otro momento. Verifique sus datos o wifi", "ok");
+                }
+
+                userDataBase = new UserDataBase();
+                var solicitudes = userDataBase.GetSolicitudes().ToList();
+
+                if (solicitudes.Count() > 0)
+                {
+                    ListSolicitudes.ItemsSource = solicitudes;
+                    ListSolicitudes.IsVisible = true;
+                }
+                else
+                {
+
+                    ListSolicitudes.IsVisible = false;
+                }
             }
             catch (Exception es)
             {
@@ -85,28 +130,8 @@ namespace WashDry.Menu
             if (solicitudes.Count() > 0)
             {
                 ListSolicitudes.ItemsSource = solicitudes;
-
-                /*
-                var lat = Convert.ToDouble(solicitudes[0].latitud);
-                var lon = Convert.ToDouble(solicitudes[0].longitud);
-
-                Mapx.MoveToRegion(
-           MapSpan.FromCenterAndRadius(
-           new Position(lat,lon), Distance.FromMiles(1)));
-
-
-                var pin = new Pin
-                {
-                    Type = PinType.Place,
-                    Position = new Position(lat, lon),
-                    Label = "Servicio Actual",
-                    Address = " Destino del servicio ",
-
-                };
-                 Mapx.Pins.Add(pin);*/
-
                 _ = CurrentLocation();
-
+                ListSolicitudes.IsVisible = true;
             }
             else
             {
@@ -170,97 +195,8 @@ namespace WashDry.Menu
         {
             await Navigation.PushAsync(new ListCars());
         }
-        private TokenService Tokenservice;
-        private Token stripeToken;
-        [Obsolete]
-        private async void StripeTokenBtn_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-                StripeConfiguration.SetApiKey("pk_test_HQOqIXmo6C3MyZ2h9bBAcWKs00ngt4dRKC");
-                var service = new ChargeService();
-                var Tokenoptions = new TokenCreateOptions
-                {
-                    Card = new CreditCardOptions
-                    {
-                        Number = "4242424242424242",
-                        ExpYear = 22,
-                        ExpMonth = 11,
-                        Cvc = "111",
-                        Name = "Sonu Sharma",
-                        AddressLine1 = "18",
-                        AddressLine2 = "SpringBoard",
-                        AddressCity = "Gurgoan",
-                        AddressZip = "284005",
-                        AddressState = "Haryana",
-                        AddressCountry = "India",
-                        Currency = "Mx",
-                    }
-                };
-
-                Tokenservice = new TokenService();
-                stripeToken = Tokenservice.Create(Tokenoptions);
-               // StripeLbl.Text = stripeToken.Id;
-
-
-                HttpClient client = new HttpClient();
-                var value_check = new Dictionary<string, string>
-                         {
-                            { "stripeToken", stripeToken.Id},
-                            { "email"  , "pushpoped@gmail.com"}
-                         };
-
-
-                var content = new FormUrlEncodedContent(value_check);
-                var response = await client.PostAsync("http://www.washdryapp.com/app/public/make-prueba", content);
-
-                switch (response.StatusCode)
-                {
-      
-                    case System.Net.HttpStatusCode.BadRequest:
-                        await DisplayAlert("error", "error status 400 Unauthorized", "ok");
-                        break;
+     
  
-                    case System.Net.HttpStatusCode.Forbidden:
-                        await DisplayAlert("error", "error status 403  ", "ok");
-                        break;
-                    
-                    case System.Net.HttpStatusCode.NotFound:
-                        await DisplayAlert("error", "error status 404  ", "ok");
-                        break;
-                     
-                    case System.Net.HttpStatusCode.OK:
-                        await DisplayAlert("error", "yeah status 200", "ok");
-                        string xjson = await response.Content.ReadAsStringAsync();
-                        break;
-                  
-           
-                    case System.Net.HttpStatusCode.RequestEntityTooLarge:
-                        await DisplayAlert("error", "error status 413  ", "ok");
-                        break;
-                    case System.Net.HttpStatusCode.RequestTimeout:
-                        await DisplayAlert("error", "error status 408  ", "ok");
-                        break;
-                  
-                   
-                   
-                    case System.Net.HttpStatusCode.Unauthorized:
-                        await DisplayAlert("error", "yeah status 401 Unauthorized", "ok");
-                        break;
-                   
-                }
-
-            }
-            catch (Exception ex)
-            {
-                var x = ex.ToString();                 
-              //  StripeLbl.Text = ex.ToString() ;
-
-            }
-            
-        }
-
         private async void btnAgendar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Agendar());
@@ -269,7 +205,7 @@ namespace WashDry.Menu
         private async void ListSolicitudes_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var content = e.Item as Solicitudes;
-            await Navigation.PushAsync(new EstadoDeServicio(Int32.Parse(content.id_solicitud)));
+            await Navigation.PushAsync(new EstadoDeServicio(Int32.Parse(content.id_solicitud), content.id));
         }
     }
 }
