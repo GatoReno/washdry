@@ -9,6 +9,9 @@ namespace WashDry.Models.ApiModels
 
         public string id_paquete { get; set; }
         public string nombre { get; set; }
+        public string nombre_ { get; set; }
+
+        public string precio { get; set; }
         public string descripcion { get; set; }
         public string status { get; set; }
     }

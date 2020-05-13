@@ -85,20 +85,30 @@
                                 <Label Text="Auto y paquetes" FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" TextColor="#128C7E" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                                 <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Source="iko.png" HeightRequest="140" />
 
-                                <Button Text="ver paquetes" BackgroundColor="Black" TextColor="#DCF8C6" Grid.Row="2" Grid.Column="0" />
+                                <Button Text="ver paquetes" BackgroundColor="Black" TextColor="#DCF8C6" IsVisible="False" Grid.Row="2" Grid.Column="0" />
 
 
-                                <Picker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,15,0,0" x:Name="PickerPaq" Title="Eliga una paquete" TextColor="Black" ItemsSource="{Binding Paquete}" ItemDisplayBinding="{Binding nombre}" SelectedIndex="{Binding id_auto}" VerticalOptions="Center"
+                                <Picker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,15,0,0" x:Name="PickerPaq" Title="Elegir paquete" TextColor="Black" ItemsSource="{Binding Paquete}" ItemDisplayBinding="{Binding nombre_}" SelectedIndex="{Binding id_auto}" VerticalOptions="Center"
                 />
 
 
-                                <Picker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="PickerAuto" Title="Eliga una Auto" TextColor="Black" ItemsSource="{Binding AutosModel}" ItemDisplayBinding="{Binding marca}" SelectedIndex="{Binding id_auto}" VerticalOptions="Center"
+                                <Picker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="PickerAuto" Title="Elija Auto" TextColor="Black" ItemsSource="{Binding AutosModel}" ItemDisplayBinding="{Binding marca}" SelectedIndex="{Binding id_auto}" VerticalOptions="Center"
                 />
 
 
-                                <Picker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="pickertamanio" Title="Tamaño de su auto"
-                                        ItemsSource="{Binding PaqueteIndividual}" ItemDisplayBinding="{Binding tipo_vehiculo}" SelectedIndex="{Binding id}"
-                                        TextColor="Black" IsVisible="False" VerticalOptions="Center"></Picker>
+                                <Picker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,15,0,0" x:Name="pickertamanio" Title="Elegir fragancia"
+                                       
+                                        TextColor="Black" IsVisible="False" VerticalOptions="Center">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Aroma carro nuevo</x:String>
+                                            <x:String>Aroma Marino</x:String>
+                                            <x:String>Aroma auto de lujo</x:String>
+
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                    
+                                </Picker>
 
 
 
@@ -240,7 +250,6 @@
                                 <Label Text="" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#128C7E" FontSize="Medium" x:Name="lblprice" HorizontalOptions="CenterAndExpand" />
                                 <DatePicker Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="_datePicker" TextColor="#128C7E" />
                                 <TimePicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#128C7E" x:Name="_timePicker" />
-
 
 
 

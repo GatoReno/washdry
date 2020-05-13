@@ -61,12 +61,15 @@ namespace WashDry.Views.Lavado
 
         private void TamPickerSelected(object sender, EventArgs e)
         {
-            var i = (PaqueteIndividual)pickertamanio.SelectedItem;
+            //var i = (PaqueteIndividual)pickertamanio.SelectedItem;
+
+            var picker = (Picker)sender;
+
+            var itemSelect = picker.SelectedItem;
 
 
-             id_paqindividual.Text = i.id;
-            FinalPrice.Text = "$ " +i.precio + " Mx";
-            lblprice.Text = "cargo : $ " + i.precio + " Mx";
+
+            id_paqindividual.Text = itemSelect.ToString();
             //id_paqindividual.Text = selectedItem.id;
 
             // _ = GetPrice(selectedItem.ToString());
@@ -222,6 +225,8 @@ namespace WashDry.Views.Lavado
                 var id = i.id_paquete.ToString();
                 id_paquete.Text = id;
                 paq1.Text = i.nombre;
+                FinalPrice.Text = i.precio;
+                lblprice.Text = " $ "+i.precio;
 
                 HttpClient client = new HttpClient();
                 var getpaqueteprecio = await client.GetAsync("http://www.washdryapp.com/app/public/paquete/individual/"+id) ;
@@ -237,7 +242,7 @@ namespace WashDry.Views.Lavado
 
                     if (result.Count > 1)
                     {
-                        pickertamanio.ItemsSource = result;
+                       // pickertamanio.ItemsSource = result;
                         pickertamanio.IsVisible = true;
                        
 
@@ -813,7 +818,7 @@ namespace WashDry.Views.Lavado
             var idloc = id_loc.Text;
             var lon = longitude.Text;
             var lat = latitud.Text;
-            var idpaq = id_paqindividual.Text;
+            var idpaq = id_paquete.Text;
             var tipoP = FDPPicker.SelectedItem;
 
 
@@ -854,6 +859,7 @@ namespace WashDry.Views.Lavado
                             {"calificacion","0" },
                             {"comentario"," " },
                             {"cambio","0.00" },
+                                                        {"fragancia",id_paqindividual.Text },
                             {"forma_pago",forma },
                 };
                             var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
@@ -940,6 +946,7 @@ namespace WashDry.Views.Lavado
                             {"calificacion","0" },
                             {"comentario","     " },
                             {"cambio",vaapgar },
+                            {"fragancia",id_paqindividual.Text },
                             {"forma_pago",forma },
                              };
                         var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
