@@ -72,7 +72,7 @@ namespace WashDry.Views.Servicio
                 {
                     Card = new CreditCardOptions
                     {
-                        Number = "4242424242424242",
+                        Number = Card,
                         ExpYear = Int32.Parse(Year.Text),
                         ExpMonth = Int32.Parse(Month.Text),
                         Cvc = Secret.Text,
@@ -125,11 +125,11 @@ namespace WashDry.Views.Servicio
                         break;
 
                     case System.Net.HttpStatusCode.OK:
-                        await DisplayAlert("error", "yeah status 200", "ok");
+                        await DisplayAlert("Pago exitoso", "Gracias , fue un placer atender su servicio.", "ok");
                         userDataBase.DeleteSolicitud(Int32.Parse(solx[0].id_solicitud));
                         string xjson = await response.Content.ReadAsStringAsync();
                         await  PopupNavigation.PopAsync();
-                            await Navigation.PushModalAsync(new Calificar());
+                            await Navigation.PushModalAsync(new Calificar(sid));
                         break;
 
 

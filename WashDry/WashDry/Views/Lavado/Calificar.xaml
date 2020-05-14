@@ -11,6 +11,9 @@
             <Label Text="Califica el servicio!"
                    FontSize="Large"
                  HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="winfo"
+     
+                HorizontalOptions="CenterAndExpand" />
             <Label Text="Gracias por la confianza!"
      
                 HorizontalOptions="CenterAndExpand" />

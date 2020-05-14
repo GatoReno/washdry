@@ -30,12 +30,7 @@ namespace WashDry.Menu
         public detail()
         {
             InitializeComponent();
-            _ = GetSolicitudesfromWeb();
-
-        
-          
-
-
+            _ = GetSolicitudesfromWeb();                  
         }
         private async Task GetSolicitudesfromWeb()
         {
@@ -102,9 +97,12 @@ namespace WashDry.Menu
                 {
                     ListSolicitudes.ItemsSource = solicitudes;
                     ListSolicitudes.IsVisible = true;
+                    lblestados.IsVisible = true;
+
                 }
                 else
                 {
+                    lblestados.IsVisible = false;
 
                     ListSolicitudes.IsVisible = false;
                 }
@@ -140,10 +138,12 @@ namespace WashDry.Menu
                 ListSolicitudes.ItemsSource = solicitudes;
                 _ = CurrentLocation();
                 ListSolicitudes.IsVisible = true;
+                lblestados.IsVisible = true;
             }
             else
             {
                 _ = CurrentLocation();
+                lblestados.IsVisible = false;
                 ListSolicitudes.IsVisible = false;
             }
 

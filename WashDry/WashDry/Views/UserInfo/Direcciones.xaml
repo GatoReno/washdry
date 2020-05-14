@@ -41,6 +41,10 @@
                 x:Name="Latitud"
                 IsVisible="False"
                 />
+            <Label
+                x:Name="gp"
+                IsVisible="False"
+                />
             <Label 
                 IsVisible="False"
                 x:Name="Longitud"

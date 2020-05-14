@@ -62,19 +62,18 @@
                      Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                     />
 
-                    <!--
-                <Button
-                    Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                    Margin="0,10,0,10"
-                    BackgroundColor="#DCF8C6"
-                    TextColor="#225374"
-                    Text="Contrato de servicio"</Button>
-
-                    -->
+ 
                 <Image Grid.Row="1" Grid.Column="0"
                        Grid.ColumnSpan="1"
                        x:Name="imgxwasher"
                        IsVisible="False"
+                       HorizontalOptions="Center"
+                        />
+
+                <Image Grid.Row="1" Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       x:Name="imglavado"
+                        IsVisible="False"
                        HorizontalOptions="Center"
                         />
 

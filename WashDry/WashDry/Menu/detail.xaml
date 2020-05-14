@@ -16,7 +16,7 @@
             <Label
                 x:Name="lblestados"
                 IsVisible="False"
-                    Text="Lavados"
+                    Text="Servicios activos"
                     TextColor="White"
                     ></Label>
             <ListView x:Name="ListSolicitudes"                      

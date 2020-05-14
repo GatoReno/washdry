@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Plugin.Connectivity;
 using Plugin.Geolocator;
+using QuickType;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +51,76 @@ namespace WashDry.Views.UserInfo
                 Address = "  usted se encuentra aqui",
 
             };
+
             Mapx.Pins.Add(pin);
+
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                await DisplayAlert("Error de conexion", "Asegurece de estar conectado a una red wifi u otro acceso a internet", "ok");
+                await Navigation.PopToRootAsync();
+            }
+            else
+            {
+                HttpClient client1 = new HttpClient();
+                var k = "AIzaSyBoKd3QoJ73KevoPbIgmixgU0Q5hvoK7PI";
+                var gv = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+
+                    pos.Latitude + ","+ pos.Longitude + "&radius=5&type=formatted_address&keyword=street&key=" + k);
+
+ 
+
+                if (gv.IsSuccessStatusCode)
+                {
+                    var strjsn = await gv.Content.ReadAsStringAsync();
+                    var jsond = JsonConvert.DeserializeObject<GooglePlaces>(strjsn);
+
+                    if (jsond.Status == "ZERO_RESULTS")
+                    {
+                        var gv2 = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                            pos.Latitude + "," + pos.Longitude + "&radius=15&type=formatted_address&keyword=street&key=" + k);
+                        var str2 = await gv2.Content.ReadAsStringAsync();
+                        var jsond2 = JsonConvert.DeserializeObject<GooglePlaces>(str2);
+                        if (jsond2.Status == "ZERO_RESULTS")
+                        {
+                            var gv3 = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                                                        pos.Latitude + "," + pos.Longitude + "&radius=151&type=formatted_address&keyword=street&key=" + k);
+                            var str3 = await gv3.Content.ReadAsStringAsync();
+                            var jsond3 = JsonConvert.DeserializeObject<GooglePlaces>(str3);
+                            if (jsond3.Status == "ZERO_RESULTS")
+                            {
+                                await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
+                                await Navigation.PopToRootAsync();
+                            }
+                            else
+                            {
+                                var vi = jsond3.Results[0].Vicinity;
+                                desc.Text = vi;
+                                gp.Text = vi;
+                            }
+                        }
+                        else
+                        {
+                            var vi = jsond2.Results[0].Vicinity;
+                            desc.Text = vi;
+                            gp.Text = vi;
+                        }
+                    }
+
+                    
+                    else { 
+                    var vi =  jsond.Results[0].Vicinity;
+                    desc.Text = vi;
+                        gp.Text = vi;
+                    }
+                }
+                else
+                {
+
+                    await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
+                    await Navigation.PopToRootAsync();
+                }
+            }
+          
+           
         }
 
         public async Task GetVisitasWeb()
@@ -174,8 +245,9 @@ namespace WashDry.Views.UserInfo
                 content.Add(latitude, "latitude");
                 content.Add(longitude, "longitude");
                 content.Add(descripcion, "descripcion");
+                    content.Add(descripcion, "descripcion");
 
-                var httpClient = new System.Net.Http.HttpClient();
+                    var httpClient = new System.Net.Http.HttpClient();
 
 
                

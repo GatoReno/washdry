@@ -343,8 +343,9 @@
                                 <Label Margin="0,10,0,0" Grid.Row="7" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="#075E54" Text="Hoy" />
                                 <Frame HasShadow="True" Grid.Row="7" Grid.Column="1" BackgroundColor="#128C7E" CornerRadius="10">
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Margin="0,0,0,0" TextColor="White" HorizontalOptions="CenterAndExpand">
-                                            <Label.FormattedText>
+                                        <Label Margin="0,0,0,0" TextColor="White" 
+                                               Text="20:00 min" HorizontalOptions="CenterAndExpand">
+                                           <!--" <Label.FormattedText>
                                                 <FormattedString>
 
                                                     <Span Text="{Binding StopWatchHours}"/>
@@ -354,7 +355,7 @@
                                                     <Span Text="{Binding StopWatchSeconds}"/>
 
                                                 </FormattedString>
-                                            </Label.FormattedText>
+                                            </Label.FormattedText>-->
 
                                         </Label>
                                     </StackLayout>
@@ -408,6 +409,8 @@
                 <Entry BindingContext="{x:Reference stepBar}" Text="{Binding StepSelected, StringFormat='{0}'}" FontAttributes="Bold" IsVisible="False" FontSize="Large" HorizontalOptions="Center" TextChanged="lblmain_TextChanged" BackgroundColor="White" VerticalOptions="CenterAndExpand"
           x:Name="lblmain"></Entry>
                 <Label IsVisible="False" x:Name="desc" />
+
+                <Label IsVisible="False" x:Name="directgp" />
                 <Label IsVisible="False" x:Name="longitude" />
                 <Label IsVisible="False" x:Name="latitud" />
                 <Label IsVisible="False" x:Name="id_washer" />

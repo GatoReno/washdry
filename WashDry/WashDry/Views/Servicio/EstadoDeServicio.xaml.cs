@@ -67,13 +67,21 @@ namespace WashDry.Views.Servicio
                             break;
                         case "4":
                             imgxwasher.Source = xjson[0].foto_washer;
+                            imglavado.Source = xjson[0].foto;
+                            imglavado.IsVisible = true;
                             btnpagartest.IsEnabled = true;
                             btnpagartest.IsVisible = true;
                             imgxwasher.IsVisible = true;
+                            btnCancel.IsVisible = false;
+                            if (xjson[0].forma_pago == "Efectivo")
+                            {
+                                btnpagartest.IsVisible = false;
+
+                            }
                             status = "En espera de pago";
                             break;
                         case "5":
-                            btnCancel.IsVisible = false;
+                         
                             
                             status = "Lavado pagado";
                             break;

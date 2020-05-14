@@ -37,61 +37,13 @@ namespace WashDry
         protected override void   OnSleep()
         {
 
-            // Handle when your app sleeps
-
-            //Device.StartTimer(TimeSpan.FromMinutes(1), () => //Will start after 1 min
-            //{
-            //    Task.Run(() =>
-            //    {
-            //        CrossLocalNotifications.Current.Show("Washdry", "Estas contectado a washdry  🚗");
-
-
-            //        // do something with time...
-            //    });
-
-            //    return false; // To repeat timer,always return true.If you want to stop the timer,return false
-            //});
-
-            //if (!sleepin)
-            //{
-            //    Device.StartTimer(TimeSpan.FromMinutes(1), () => //Will start after 1 min
-            //    {
-            //        Task.Run(() =>
-            //        {
-            //            CrossLocalNotifications.Current.Show("Washdry", "Estas contectado a washdry");
-
-
-            //            // do something with time...
-            //        });
-
-            //        return true; // To repeat timer,always return true.If you want to stop the timer,return false
-            //    });
-
-            //    sleepin = true;
-            //}
-            //else
-            //{
-            //    Device.StartTimer(TimeSpan.FromMinutes(1), () => //Will start after 1 min
-            //    {
-            //        Task.Run(() =>
-            //        {
-            //            CrossLocalNotifications.Current.Show("Washdry", "Estas contectado a washdry");
-
-
-            //            // do something with time...
-            //        });
-
-            //        return true; // To repeat timer,always return true.If you want to stop the timer,return false
-            //    });
-
-            //}
+            // Handle when your app sleeps             
 
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
-       
+        
                 //    CrossLocalNotifications.Current.Show("Washdry", "Pide tu proximo lavado ya 🚗");
             
 

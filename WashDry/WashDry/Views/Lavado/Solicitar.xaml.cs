@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Plugin.Connectivity;
 using Plugin.Geolocator;
+using QuickType;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,7 +68,7 @@ namespace WashDry.Views.Lavado
 
             var itemSelect = picker.SelectedItem;
 
-
+            frag1.Text = itemSelect.ToString();
 
             id_paqindividual.Text = itemSelect.ToString();
             //id_paqindividual.Text = selectedItem.id;
@@ -240,17 +241,8 @@ namespace WashDry.Views.Lavado
 
                     var result = JsonConvert.DeserializeObject<List<PaqueteIndividual>>(xjson);
 
-                    if (result.Count > 1)
-                    {
-                       // pickertamanio.ItemsSource = result;
-                        pickertamanio.IsVisible = true;
-                       
-
-                    }
-                    else {
-                        await DisplayAlert("Error", "Pudo haber un error del sistema intente en otro momento por favor", "Ok");
-                        await Navigation.PopToRootAsync();
-                    }
+                  
+                    pickertamanio.IsVisible = true;           
                    
                 }
                 else {
@@ -270,7 +262,7 @@ namespace WashDry.Views.Lavado
         }
 
 
-        private void PickerProductos_SelectedIndexChanged(System.Object sender, System.EventArgs e)
+        private async void PickerProductos_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             try
             {
@@ -281,6 +273,70 @@ namespace WashDry.Views.Lavado
                 desc.Text = i.descripcion;
                 latitud.Text = i.latitud;
                 _ = SetCurrentLocation();
+                if (!CrossConnectivity.Current.IsConnected)
+                {
+                    await DisplayAlert("Error de conexion", "Asegurece de estar conectado a una red wifi u otro acceso a internet", "ok");
+                    await Navigation.PopToRootAsync();
+                }
+                else
+                {
+                    HttpClient client1 = new HttpClient();
+                    var k = "AIzaSyBoKd3QoJ73KevoPbIgmixgU0Q5hvoK7PI";
+                    var gv = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                        i.latitud + "," + i.longitud + "&radius=5&type=formatted_address&keyword=street&key=" + k);
+
+
+
+                    if (gv.IsSuccessStatusCode)
+                    {
+                        var strjsn = await gv.Content.ReadAsStringAsync();
+                        var jsond = JsonConvert.DeserializeObject<GooglePlaces>(strjsn);
+
+                        if (jsond.Status == "ZERO_RESULTS")
+                        {
+                            var gv2 = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                                 i.latitud + "," + i.longitud + "&radius=15&type=formatted_address&keyword=street&key=" + k);
+                            var str2 = await gv2.Content.ReadAsStringAsync();
+                            var jsond2 = JsonConvert.DeserializeObject<GooglePlaces>(str2);
+                            if (jsond2.Status == "ZERO_RESULTS")
+                            {
+                                var gv3 = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                                                              i.latitud + "," + i.longitud + "&radius=151&type=formatted_address&keyword=street&key=" + k);
+                                var str3 = await gv3.Content.ReadAsStringAsync();
+                                var jsond3 = JsonConvert.DeserializeObject<GooglePlaces>(str3);
+                                if (jsond3.Status == "ZERO_RESULTS")
+                                {
+                                    await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
+                                    await Navigation.PopToRootAsync();
+                                }
+                                else
+                                {
+                                    var vi = jsond3.Results[0].Vicinity;
+                                    directgp.Text = vi;
+                                }
+                            }
+                            else
+                            {
+                                var vi = jsond2.Results[0].Vicinity;
+                                directgp.Text = vi;
+                            }
+                        }
+
+
+                        else
+                        {
+                            var vi = jsond.Results[0].Vicinity;
+                            directgp.Text = vi;
+                        }
+                    }
+                    else
+                    {
+
+                        await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
+                        await Navigation.PopToRootAsync();
+                    }
+                }
+
 
             }
             catch (Exception ex)
@@ -621,11 +677,81 @@ namespace WashDry.Views.Lavado
             };
 
             var x = 0000000;
-            id_loc.Text = x.ToString();
-            longitude.Text = pos.Latitude.ToString();
+            id_loc.Text = x.ToString(); 
+            longitude.Text = pos.Longitude.ToString();
             desc.Text = "ubicacion actual sin id";
-            latitud.Text = pos.Longitude.ToString();
+            latitud.Text = pos.Latitude.ToString();
+
+
+
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                await DisplayAlert("Error de conexion", "Asegurece de estar conectado a una red wifi u otro acceso a internet", "ok");
+                await Navigation.PopToRootAsync();
+            }
+            else
+            {
+                HttpClient client1 = new HttpClient();
+                var k = "AIzaSyBoKd3QoJ73KevoPbIgmixgU0Q5hvoK7PI";
+                var gv = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                    pos.Latitude + "," + pos.Longitude + "&radius=5&type=formatted_address&keyword=street&key=" + k);
+
+
+
+                if (gv.IsSuccessStatusCode)
+                {
+                    var strjsn = await gv.Content.ReadAsStringAsync();
+                    var jsond = JsonConvert.DeserializeObject<GooglePlaces>(strjsn);
+
+                    if (jsond.Status == "ZERO_RESULTS")
+                    {
+                        var gv2 = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                            pos.Latitude + "," + pos.Longitude + "&radius=15&type=formatted_address&keyword=street&key=" + k);
+                        var str2 = await gv2.Content.ReadAsStringAsync();
+                        var jsond2 = JsonConvert.DeserializeObject<GooglePlaces>(str2);
+                        if (jsond2.Status == "ZERO_RESULTS")
+                        {
+                            var gv3 = await client1.GetAsync("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+                                                        pos.Latitude + "," + pos.Longitude + "&radius=151&type=formatted_address&keyword=street&key=" + k);
+                            var str3 = await gv3.Content.ReadAsStringAsync();
+                            var jsond3 = JsonConvert.DeserializeObject<GooglePlaces>(str3);
+                            if (jsond3.Status == "ZERO_RESULTS")
+                            {
+                                await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
+                               // await Navigation.PopToRootAsync();
+                            }
+                            else
+                            {
+                                var vi = jsond3.Results[0].Vicinity;
+                                directgp.Text = vi;
+                            }
+                        }
+                        else
+                        {
+                            var vi = jsond2.Results[0].Vicinity;
+                            directgp.Text = vi;
+                        }
+                    }
+
+
+                    else
+                    {
+                        var vi = jsond.Results[0].Vicinity;
+                        directgp.Text = vi;
+                    }
+                }
+                else
+                {
+
+                    await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
+                    await Navigation.PopToRootAsync();
+                }
+            }
+
+
             Mapx.Pins.Add(pin);
+
+
         }
 
 
@@ -720,7 +846,7 @@ namespace WashDry.Views.Lavado
 
         
 
-        private void Cancelbtn_Clicked(object sender, EventArgs e)
+        private async void Cancelbtn_Clicked(object sender, EventArgs e)
         {
             frame1.IsVisible = true;
             stepBar.IsVisible = true;
@@ -728,6 +854,7 @@ namespace WashDry.Views.Lavado
             Cator.IsVisible = false;
             Cancelbtn.IsVisible = false;
             loadinglbl.IsVisible = false;
+            await Navigation.PopToRootAsync();
             /*    */
         }
 
@@ -815,12 +942,12 @@ namespace WashDry.Views.Lavado
             var vaapgar = "";
             var forma = "";
             var idwasher = id_washer.Text;
+            var direcgp = directgp.Text;
             var idloc = id_loc.Text;
             var lon = longitude.Text;
             var lat = latitud.Text;
             var idpaq = id_paquete.Text;
             var tipoP = FDPPicker.SelectedItem;
-
 
             if (lon.Length < 5 || lat.Length < 5)
             {
@@ -853,6 +980,7 @@ namespace WashDry.Views.Lavado
                             {"id_paquete" ,  idpaq},
                             {"id_auto" ,  idauto},
                             {"latitud" ,  lat},
+                            {"direccion_gp",direcgp },
                             {"longitud" ,  lon},
                             {"foto","no hay aun " },
                             {"fecha",dt },//"ddd, d:e MMMM"
@@ -886,7 +1014,7 @@ namespace WashDry.Views.Lavado
                             solicitudx = respjson_sol[0];
                             userDataBase.AddSolicitudes(solicitudx);
 
-                            await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
+                            await DisplayAlert("Exito", "solcitud hecha", "ok");
 
                             await Navigation.PopToRootAsync();
 
@@ -901,8 +1029,10 @@ namespace WashDry.Views.Lavado
 
                             var cancelpost = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/cliente_cancelar/", cancel_content);
                             await DisplayAlert("Error", "Pudo haber un error. Intente en otro momento." , "ok");
-                            await Navigation.PopToRootAsync();
+                           // await Navigation.PopToRootAsync();
                         }
+
+
 
                      //   await DisplayAlert("Exito", "solcitud hecha"/*+ respjson.id*/, "ok");
                     }
@@ -941,6 +1071,7 @@ namespace WashDry.Views.Lavado
                             {"id_auto" ,  idauto},
                             {"latitud" ,  lat},
                             {"longitud" ,  lon},
+                                                        {"direccion_gp",direcgp },
                             {"foto"," " },
                             {"fecha",dt },//"ddd, d:e MMMM"
                             {"calificacion","0" },
@@ -954,18 +1085,43 @@ namespace WashDry.Views.Lavado
 
                         if (response.IsSuccessStatusCode)
                         {
-                            HttpContent respx = response.Content;
-                            var json = await content.ReadAsStringAsync();
+                             var json = await response.Content.ReadAsStringAsync();
                             //falta algo aqui
 
-                            var respjson_sol = JsonConvert.DeserializeObject<List<Solicitudes>>(json);
-                            Solicitudes solicitudx = new Solicitudes();
-                            solicitudx = respjson_sol[0];
-                            userDataBase.AddSolicitudes(solicitudx);
 
-                            await DisplayAlert("Exito", "solcitud hecha", "ok");
+                          
+                            var respjson_ = JsonConvert.DeserializeObject<List<SolicitudResp200>>(json);
 
-                            await Navigation.PopToRootAsync();
+                            var response_ = await client.GetAsync("http://www.washdryapp.com/app/public/solicitud/lista_solicitud/" + respjson_[0].id);
+
+                            if (response_.IsSuccessStatusCode)
+                            {
+                                HttpContent resp_x = response_.Content;
+                                var json_X = await resp_x.ReadAsStringAsync();
+                                var respjson_sol = JsonConvert.DeserializeObject<List<Solicitudes>>(json_X);
+
+                                Solicitudes solicitudx = new Solicitudes();
+                                solicitudx = respjson_sol[0];
+                                userDataBase.AddSolicitudes(solicitudx);
+
+                                await DisplayAlert("Exito", "solcitud hecha", "ok");
+
+                                await Navigation.PopToRootAsync();
+
+                            }
+                            else
+                            {
+
+                                var cancel_values = new Dictionary<string, string> {
+                                { "id_solicitud", respjson_[0].id.ToString() },
+                                { "comentario", "Cancelado por error con SQLite"}
+                            };
+                                var cancel_content = new FormUrlEncodedContent(cancel_values); //solicitud/agrega
+
+                                var cancelpost = await client.PostAsync("http://www.washdryapp.com/app/public/solicitud/cliente_cancelar/", cancel_content);
+                                await DisplayAlert("Error", "Pudo haber un error. Intente en otro momento.", "ok");
+                                // await Navigation.PopToRootAsync();
+                            }
                         }
                         else
                         {

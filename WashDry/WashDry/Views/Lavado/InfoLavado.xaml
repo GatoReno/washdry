@@ -44,23 +44,24 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Text="Lavado del 11/11/11!"
-                                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-                   TextColor="#128C7E"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                                   x:Name="Mainlbl"
+                                   Grid.Row="0" Grid.Column="0"                                 Grid.ColumnSpan="2"
+                                   TextColor="#128C7E"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
                             <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                 Source="iko.png"
                 HeightRequest="140"
                 
                 />
 
-                            <Label Text="atendido por : Juan Carlos Bodoque"
+                            <Label x:Name="wname"
                    TextColor="#128C7E"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                  HorizontalOptions="CenterAndExpand" />
 
 
-                            <Label Text="cargo : $80"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-                   TextColor="#DCF8C6"
+                            <Label    Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                  TextColor="#128C7E" x:Name="precio"
                  HorizontalOptions="CenterAndExpand" />
                             <lv:RatingConception ItemsNumber="5" DrawType="Star"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
                     ImageWidth="25" ImageHeight="25"  DesignType="Standard" ColorUI="YellowLight" 
@@ -70,7 +71,13 @@
                     x:Name="ratingStar"
                     Margin="0,15,0,15" Voted="RatingConception_Voted" />
 
-                            <Label Text="tarjeta : **** **** **** *123" 
+                            <Image
+                                HeightRequest="200"
+                                WidthRequest="320"
+                                x:Name="ImageCar" 
+                                   Grid.Row="5" Grid.Column="0"   Grid.ColumnSpan="1"
+                                />
+                            <Label x:Name="Info" 
                                    Grid.Row="6" Grid.Column="0"   Grid.ColumnSpan="1"
                 VerticalOptions="CenterAndExpand"   
                    TextColor="#128C7E"
