@@ -677,7 +677,7 @@ namespace WashDry.Views.Lavado
             };
 
             var x = 0000000;
-            id_loc.Text = x.ToString(); 
+            id_loc.Text = x.ToString();     
             longitude.Text = pos.Longitude.ToString();
             desc.Text = "ubicacion actual sin id";
             latitud.Text = pos.Latitude.ToString();
@@ -948,7 +948,10 @@ namespace WashDry.Views.Lavado
             var lat = latitud.Text;
             var idpaq = id_paquete.Text;
             var tipoP = FDPPicker.SelectedItem;
-
+            if (string.IsNullOrEmpty(direcgp))
+            {
+                direcgp = "No se encontro niguna referencia";
+            }
             if (lon.Length < 5 || lat.Length < 5)
             {
                 errorlblconfir.IsVisible = true;

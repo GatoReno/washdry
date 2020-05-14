@@ -215,6 +215,12 @@ namespace WashDry.Views.UserInfo
         {
             var descx = desc.Text;
 
+            var gpx = gp.Text;
+            if (String.IsNullOrEmpty(gp.Text))
+            {
+                gpx = "Referencia no encontrada";
+            }
+
             if (string.IsNullOrEmpty(descx))
             {
                 await DisplayAlert("Descripcion", "Ingrese una descripcion", "ok");
@@ -238,14 +244,14 @@ namespace WashDry.Views.UserInfo
                     StringContent id_usuario = new StringContent(user_exist[0].id_cliente.ToString());
                     StringContent latitude = new StringContent(Latitud.Text);
                     StringContent longitude = new StringContent(Longitud.Text);
-                    StringContent descripcion = new StringContent(descx);
-
-                var content = new MultipartFormDataContent();
+                    StringContent descripcion = new StringContent(descx); 
+                        StringContent direccion_gp = new StringContent(descx);
+                    var content = new MultipartFormDataContent();
                 content.Add(id_usuario, "id_usuario");
                 content.Add(latitude, "latitude");
                 content.Add(longitude, "longitude");
                 content.Add(descripcion, "descripcion");
-                    content.Add(descripcion, "descripcion");
+                    content.Add(direccion_gp, "direccion_gp");
 
                     var httpClient = new System.Net.Http.HttpClient();
 
