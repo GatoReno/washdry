@@ -1093,9 +1093,9 @@ namespace WashDry.Views.Lavado
 
 
                           
-                            var respjson_ = JsonConvert.DeserializeObject<List<SolicitudResp200>>(json);
+                            var respjson_ = JsonConvert.DeserializeObject<SolicitudResp200>(json);
 
-                            var response_ = await client.GetAsync("http://www.washdryapp.com/app/public/solicitud/lista_solicitud/" + respjson_[0].id);
+                            var response_ = await client.GetAsync("http://www.washdryapp.com/app/public/solicitud/lista_solicitud/" + respjson_.id);
 
                             if (response_.IsSuccessStatusCode)
                             {
@@ -1116,7 +1116,7 @@ namespace WashDry.Views.Lavado
                             {
 
                                 var cancel_values = new Dictionary<string, string> {
-                                { "id_solicitud", respjson_[0].id.ToString() },
+                                { "id_solicitud", respjson_.id.ToString() },
                                 { "comentario", "Cancelado por error con SQLite"}
                             };
                                 var cancel_content = new FormUrlEncodedContent(cancel_values); //solicitud/agrega

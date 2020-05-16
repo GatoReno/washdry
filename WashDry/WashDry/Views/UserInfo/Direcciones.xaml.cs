@@ -37,7 +37,8 @@ namespace WashDry.Views.UserInfo
 
             var pos = await CrossGeolocator.Current.GetPositionAsync();
 
-
+            Latitud.Text = pos.Latitude.ToString();
+            Longitud.Text = pos.Longitude.ToString();
             Mapx.MoveToRegion(
             MapSpan.FromCenterAndRadius(
             new Position(pos.Latitude, pos.Longitude), Distance.FromMiles(1)));
@@ -88,7 +89,7 @@ namespace WashDry.Views.UserInfo
                             if (jsond3.Status == "ZERO_RESULTS")
                             {
                                 await DisplayAlert("Error de conexion", "El servidor esta teniendo problemas para encontrar su direccion, intente mas tarde", "ok");
-                                await Navigation.PopToRootAsync();
+                               // await Navigation.PopToRootAsync();
                             }
                             else
                             {
@@ -241,38 +242,45 @@ namespace WashDry.Views.UserInfo
                 {
                     userDataBase = new UserDataBase();
                     var user_exist = userDataBase.GetMembers().ToList();
-                    StringContent id_usuario = new StringContent(user_exist[0].id_cliente.ToString());
-                    StringContent latitude = new StringContent(Latitud.Text);
-                    StringContent longitude = new StringContent(Longitud.Text);
-                    StringContent descripcion = new StringContent(descx); 
-                        StringContent direccion_gp = new StringContent(descx);
-                    var content = new MultipartFormDataContent();
-                content.Add(id_usuario, "id_usuario");
-                content.Add(latitude, "latitude");
-                content.Add(longitude, "longitude");
-                content.Add(descripcion, "descripcion");
-                    content.Add(direccion_gp, "direccion_gp");
+                   
+                 
 
                     var httpClient = new System.Net.Http.HttpClient();
 
+                    var value_check = new Dictionary<string, string>
+                         {
+                            {"descripcion" ,  descx},
+                            {"id_usuario" ,  user_exist[0].id_cliente.ToString() },
+                             {"direccion" ,  gpx},
+                          //  {"direccion", descx },
+                            {"latitude" ,  Latitud.Text},
+                            {"longitude" ,  Longitud.Text},                            
+                             };
+                    var content = new FormUrlEncodedContent(value_check); //solicitud/agrega
 
-               
                     HttpClient client = new HttpClient();
  
-                    var url = "http://www.washdryapp.com/app/public/direccion/guardar" ;
+                    
                     //  IsSuccessStatusCode = false
 
 
-                    var responseMsg = await httpClient.PostAsync(url, content);
+                    var responseMsg = await httpClient.PostAsync("http://www.washdryapp.com/app/public/direccion/guardar", content);
                     // ... subir a internet
 
 
-                    if (responseMsg.IsSuccessStatusCode == false)
+                    if (responseMsg.IsSuccessStatusCode )
                     {
-                        await DisplayAlert("error", "error status 419 Probelmas con respuesta del server, intente mas tarde o reinicie la aplicacion", "ok");
+                        string xjson = await responseMsg.Content.ReadAsStringAsync();
+                        await DisplayAlert("Exito", "Direccion agregada correctamente. ", "ok");
+
+                        GetVisitasWeb();
+                        //await DisplayAlert("error", "error status 419 Probelmas con respuesta del server, intente mas tarde o reinicie la aplicacion", "ok");
                     }
                     else
                     {
+
+                        string xjson = await responseMsg.Content.ReadAsStringAsync();
+
                         switch (responseMsg.StatusCode)
                         {
 
@@ -290,15 +298,7 @@ namespace WashDry.Views.UserInfo
                                 await DisplayAlert("200", "error status 404  ", "ok");
                                 break;
 
-                            case System.Net.HttpStatusCode.OK:
-
-
-                                string xjson = await responseMsg.Content.ReadAsStringAsync();
-                                await DisplayAlert("error", "yeah status 200 : " + xjson, "ok");
-
-                                GetVisitasWeb();
-                                break;
-
+                            
                             case System.Net.HttpStatusCode.RequestEntityTooLarge:
                                 await DisplayAlert("error", "error status 413  ", "ok");
                                 break;
